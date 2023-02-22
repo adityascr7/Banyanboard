@@ -24,7 +24,7 @@
             </div>
             <div class="p-Home Flex2 bpt">
                 <div class="p-Home Flex4 bpt"><img class="p-Home Image2 bpt"
-                        src="logo atri.svg"
+                        src="/restaurant_website/app-assets/616da2c309aa0721dacedf0a_logo-restaurante-x-template.svg"
                         alt="No preview available"></div>
                 <div class="p-Home Flex138 bpt">
                     <a href="javascript:void(0)" class="p-Home TextBox1 bpt">Home</a>
@@ -56,20 +56,20 @@
                             class="p-Home Button4 bpt">Order online</button></div>
                 </div>
             </div>
-            <div class="p-Home Flex7 bpt"><img class="p-Home Image5 bpt" src="burger atri.jpeg" alt="No preview available"></div>
+            <div class="p-Home Flex7 bpt"><img class="p-Home Image5 bpt" src="/restaurant_website/app-assets/616d9a0b651769674022e7ba_home-hero-restaurante-x-template.jpeg" alt="No preview available"></div>
         </div>
         <div class="p-Home Flex11 bpt">
             <div class="p-Home TextBox10 bpt">Order from your favorite app today!</div>
             <div class="p-Home Flex12 bpt">
                 <div class="p-Home Flex371 bpt"><img class="p-Home Image6 bpt"
-                        src="doordash atri.svg"
+                        src="/restaurant_website/app-assets/616d9a0b63b4ee3fe71f5072_logo-doorash-restaurante-x-template.svg"
                         alt="No preview available"><img class="p-Home Image10 bpt"
-                        src="postmates.svg"
+                        src="/restaurant_website/app-assets/616d9a0bded3b95d9731ecc4_logo-postmates-restaurante-x-template.svg"
                         alt="No preview available"></div>
                 <div class="p-Home Flex373 bpt"><img class="p-Home Image198 bpt"
-                        src="rappi atri.svg"
+                        src="/restaurant_website/app-assets/616d9a0b326163db6497f05b_logo-rappi-restaurante-x-template.svg"
                         alt="No preview available"><img class="p-Home Image197 bpt"
-                        src="grubhub atri.svg"
+                        src="/restaurant_website/app-assets/616d9a0b5b82ce962fe1736b_logo-grubhub-restaurante-x-template.svg"
                         alt="No preview available"></div>
             </div>
         </div>
@@ -78,7 +78,7 @@
             <div class="p-Home Flex14 bpt">
                 <div class="p-Home Flex365 bpt">
                     <div class="p-Home Flex15 bpt"><img class="p-Home Image11 bpt"
-                            src="breakfast atri.svg"
+                            src="/restaurant_website/app-assets/616dcfaa447d37fed264e4ff_menu-breakfasts-restaurante-x-template.svg"
                             alt="No preview available">
                         <div class="p-Home TextBox13 bpt">Breakfast</div>
                         <div class="p-Home TextBox14 bpt">Lorem ipsum dolor sit amet consectetur adipiscing elit ugue
@@ -86,7 +86,7 @@
                         <div class="p-Home TextBox12 bpt">Explore Menu</div>
                     </div>
                     <div class="p-Home Flex366 bpt"><img class="p-Home Image195 bpt"
-                            src="main dishes atri.svg"
+                            src="/restaurant_website/app-assets/616dcfbb9e09be616e71d818_menu-main-dishes-restaurante-x-template.svg"
                             alt="No preview available">
                         <div class="p-Home TextBox383 bpt">Main Dishes</div>
                         <div class="p-Home TextBox384 bpt">Lorem ipsum dolor sit amet consectetur adipiscing elit ugue
@@ -96,7 +96,7 @@
                 </div>
                 <div class="p-Home Flex367 bpt">
                     <div class="p-Home Flex21 bpt"><img class="p-Home Image17 bpt"
-                            src="drinks atri.svg"
+                            src="/restaurant_website/app-assets/616dcfb5dd3ca61a6dd0ae1c_menu-drinks-restaurante-x-template.svg"
                             alt="No preview available">
                         <div class="p-Home TextBox31 bpt">Drinks</div>
                         <div class="p-Home TextBox30 bpt">Lorem ipsum dolor sit amet consectetur adipiscing elit ugue
@@ -104,7 +104,7 @@
                         <div class="p-Home TextBox32 bpt">Explore Menu</div>
                     </div>
                     <div class="p-Home Flex368 bpt"><img class="p-Home Image196 bpt"
-                            src="desserts atri.svg"
+                            src="/restaurant_website/app-assets/616dcfafe6321c66cb474f97_menu-desserts-restaurante-x-template.svg"
                             alt="No preview available">
                         <div class="p-Home TextBox386 bpt">Desserts</div>
                         <div class="p-Home TextBox387 bpt">Lorem ipsum dolor sit amet consectetur adipiscing elit ugue
@@ -118,14 +118,14 @@
         </div>
         <div class="p-Home Flex26 bpt">
             <div class="p-Home Flex27 bpt">
-                <img class="p-Home Image19 bpt" src="display atri.jpeg" alt="No preview available">
+                <img class="p-Home Image19 bpt" src="/restaurant_website/app-assets/616d9a0bdba0fb13cfd32fc0_about-home-restaurante-x-template-p-1080.jpeg" alt="No preview available">
             <div class="p-Home Flex29 bpt">
                 <div class="p-Home TextBox36 bpt">Come and visit us</div>
-                <div class="p-Home Flex30 bpt"><img class="p-Home Image20 bpt" src="location atri.svg" alt="No preview available">
+                <div class="p-Home Flex30 bpt"><img class="p-Home Image20 bpt" src="/restaurant_website/app-assets/616da2c3a1718503bfe60f49_location-icon-restaurante-x-template.svg" alt="No preview available">
                     <div class="p-Home TextBox38 bpt">837 W. Marshall Lane Marshalltown, IA 50158, Los Angeles</div></div>
-                    <div class="p-Home Flex35 bpt"><img class="p-Home Image25 bpt" src="phone atri.svg" alt="No preview available">
+                    <div class="p-Home Flex35 bpt"><img class="p-Home Image25 bpt" src="/restaurant_website/app-assets/616da2c36165d583fe91702b_phone-icon-restaurante-x-template.svg" alt="No preview available">
                         <div class="p-Home TextBox43 bpt">(414) 857 - 0107</div></div>
-                        <div class="p-Home Flex32 bpt"><img class="p-Home Image22 bpt" src="mail atri.svg" alt="No preview available">
+                        <div class="p-Home Flex32 bpt"><img class="p-Home Image22 bpt" src="/restaurant_website/app-assets/616da2c3400864a9087440a4_email-icon-restaurante-x-template.svg" alt="No preview available">
                             <div class="p-Home TextBox40 bpt">losangeles@restaurantex.com</div></div></div></div>
                             <div class="p-Home Flex28 bpt">
                                 <div class="p-Home TextBox44 bpt">About us</div>
@@ -146,7 +146,7 @@
                             <div class="p-Home Flex42 bpt">
                                 <div class="p-Home Product_Price_1 bpt">$ 10.99 USD</div>
                             </div><img class="p-Home Product_Image_1 bpt"
-                                src="classic burger atri.jpeg"
+                                src="app-assets/616dca333c0bd679a77bec56_classic-burger-restaurante-x-template-p-500.jpeg"
                                 alt="No preview available">
                             <div class="p-Home Product_Name_1 bpt">Classic Burger</div>
                             <div class="p-Home Product_About_1 bpt">Lorem ipsum dolor sit amet dolor consectetur
@@ -156,7 +156,7 @@
                             <div class="p-Home Flex43 bpt">
                                 <div class="p-Home Product_Price_2 bpt">$ 6.99 USD</div>
                             </div><img class="p-Home Product_Image_2 bpt"
-                                src="chocolate milkshake atri.jpeg"
+                                src="app-assets/616dc9ba43f4163d5f7b436e_chocolate-milkshake-restaurante-x-template-p-500.jpeg"
                                 alt="No preview available">
                             <div class="p-Home Product_Name_2 bpt">Choclate Milkshake</div>
                             <div class="p-Home Product_About_2 bpt">Lorem ipsum dolor sit amet dolor consectetur
@@ -168,7 +168,7 @@
                             <div class="p-Home Flex45 bpt">
                                 <div class="p-Home Product_Price_3 bpt">$ 5.99 USD</div>
                             </div><img class="p-Home Product_Image_3 bpt"
-                                src="classic fries atri.jpeg"
+                                src="app-assets/616dc9aac480169bcc819e69_classic-fries-restaurante-x-template-p-500.jpeg"
                                 alt="No preview available">
                             <div class="p-Home Product_Name_3 bpt">Classic Fries</div>
                             <div class="p-Home Product_About_3 bpt">Lorem ipsum dolor sit amet dolor consectetur
@@ -178,7 +178,7 @@
                             <div class="p-Home Flex47 bpt">
                                 <div class="p-Home Product_Price_4 bpt">$ 8.99 USD</div>
                             </div><img class="p-Home Product_Image_4 bpt"
-                                src="pancakes atri.jpeg"
+                                src="app-assets/616dc56043f416c4db7b3322_pancakes-restaurante-x-template-p-500.jpeg"
                                 alt="No preview available">
                             <div class="p-Home Product_Name_4 bpt">Pancakes</div>
                             <div class="p-Home Product_About_4 bpt">Lorem ipsum dolor sit amet dolor consectetur
@@ -192,7 +192,7 @@
                             <div class="p-Home Flex52 bpt">
                                 <div class="p-Home Product_Price_5 bpt">$ 3.99 USD</div>
                             </div><img class="p-Home Product_Image_5 bpt"
-                                src="icecream atri.jpeg"
+                                src="app-assets/616dc50743f41639377b2fd8_ice-cream-restaurante-x-template-p-500.jpeg"
                                 alt="No preview available">
                             <div class="p-Home Product_Name_5 bpt">Ice Cream</div>
                             <div class="p-Home Product_About_5 bpt">Lorem ipsum dolor sit amet dolor consectetur
@@ -202,7 +202,7 @@
                             <div class="p-Home Flex51 bpt">
                                 <div class="p-Home Product_Price_6 bpt">$ 9.99 USD</div>
                             </div><img class="p-Home Product_Image_6 bpt"
-                                src="chicken burger atri.jpeg"
+                                src="app-assets/616dc4d28ae55806547e5dba_chicken-burger-restaurante-x-template-p-500.jpeg"
                                 alt="No preview available">
                             <div class="p-Home Product_Name_6 bpt">Chicken Burger</div>
                             <div class="p-Home Product_About_6 bpt">Lorem ipsum dolor sit amet dolor consectetur
@@ -214,7 +214,7 @@
                             <div class="p-Home Flex50 bpt">
                                 <div class="p-Home Product_Price_7 bpt">$ 6.99 USD</div>
                             </div><img class="p-Home Product_Image_7 bpt"
-                                src="egg toast atri.jpeg"
+                                src="app-assets/616dc4908009251d2f5ac06b_egg-toast-restaurante-x-template-p-500.jpeg"
                                 alt="No preview available">
                             <div class="p-Home Product_Name_7 bpt">Egg toast</div>
                             <div class="p-Home Product_About_7 bpt">Lorem ipsum dolor sit amet dolor consectetur
@@ -224,7 +224,7 @@
                             <div class="p-Home Flex49 bpt">
                                 <div class="p-Home Product_Price_8 bpt">$ 1.99 USD</div>
                             </div><img class="p-Home Product_Image_8 bpt"
-                                src="regular soda atri.jpeg"
+                                src="app-assets/616dc414d54d4e45ccac841f_regular-soda-restaurante-x-template-p-500.jpeg"
                                 alt="No preview available">
                             <div class="p-Home Product_Name_8 bpt">Regular Soda</div>
                             <div class="p-Home Product_About_8 bpt">Lorem ipsum dolor sit amet dolor consectetur
@@ -257,24 +257,24 @@
                 vitae velit bibendum elementum.</div>
             <div class="p-Home Flex89 bpt">
                 <div class="p-Home Flex128 bpt"><img class="p-Home Image74 bpt"
-                        src="star atri.svg" alt="No preview available">
+                        src="/restaurant_website/app-assets/star-svgrepo-com.svg" alt="No preview available">
                 </div>
                 <div class="p-Home Flex64 bpt">
                     <div class="p-Home Flex65 bpt">
                         <div class="p-Home Flex131 bpt"><img class="p-Home Image44 bpt"
-                                src="star atri.svg" alt="No preview available">
+                                src="/restaurant_website/app-assets/star-svgrepo-com.svg" alt="No preview available">
                         </div>
                         <div class="p-Home Flex132 bpt"><img class="p-Home Image76 bpt"
-                                src="star atri.svg" alt="No preview available">
+                                src="/restaurant_website/app-assets/star-svgrepo-com.svg" alt="No preview available">
                         </div>
                         <div class="p-Home Flex133 bpt"><img class="p-Home Image77 bpt"
-                                src="star atri.svg" alt="No preview available">
+                                src="/restaurant_website/app-assets/star-svgrepo-com.svg" alt="No preview available">
                         </div>
                         <div class="p-Home Flex134 bpt"><img class="p-Home Image78 bpt"
-                                src="star atri.svg" alt="No preview available">
+                                src="/restaurant_website/app-assets/star-svgrepo-com.svg" alt="No preview available">
                         </div>
                         <div class="p-Home Flex135 bpt"><img class="p-Home Image79 bpt"
-                                src="star atri.svg" alt="No preview available">
+                                src="/restaurant_website/app-assets/star-svgrepo-com.svg" alt="No preview available">
                         </div>
                     </div>
                     <div class="p-Home TextBox78 bpt">“You must try these burgers”</div>
@@ -282,7 +282,7 @@
                         adipiscing massa gravida nisi cras enim quis nibholm varius amet gravida ut facilisis neque
                         egestas.</div>
                     <div class="p-Home Flex67 bpt"><img class="p-Home Image40 bpt"
-                            src="profile atri.jpg" alt="No preview available">
+                            src="/restaurant_website/app-assets/face1.jpg" alt="No preview available">
                         <div class="p-Home Flex68 bpt">
                             <div class="p-Home TextBox81 bpt">Matt Cannon</div>
                             <div class="p-Home TextBox80 bpt">San Diego, CA</div>
@@ -290,7 +290,7 @@
                     </div>
                 </div>
                 <div class="p-Home Flex129 bpt"><img class="p-Home Image75 bpt"
-                        src="preview1 atri.jpeg" alt="No preview available">
+                        src="/restaurant_website/app-assets/616dbe9e3823ad75e50cfc8d_blog-post-featured-image-01-restaurante-x-template.jpeg" alt="No preview available">
                 </div>
             </div>
             <div class="p-Home Carousel1 bpt">
@@ -323,7 +323,7 @@
             </div>
             <div class="p-Home Flex74 bpt">
                 <div class="p-Home Flex75 bpt"><img class="p-Home Image45 bpt"
-                        src="preview2 atri.jpeg"
+                        src="/restaurant_website/app-assets/616dbcaac6330b375d0f90ca_blog-post-featured-image-03-restaurante-x-template-p-500.jpeg"
                         alt="No preview available">
                     <div class="p-Home TextBox85 bpt">September 1, 2022</div>
                     <div class="p-Home TextBox86 bpt">The secret trick to prepare a perfect burger</div>
@@ -333,13 +333,13 @@
                 <div class="p-Home Flex76 bpt">
                     <div class="p-Home Flex77 bpt">
                         <div class="p-Home Flex81 bpt"><img class="p-Home Image49 bpt"
-                                src="preview3 atri.jpeg"
+                                src="/restaurant_website/app-assets/616dbc8ef398638f6395578f_blog-post-featured-image-04-restaurante-x-template-p-500.jpeg"
                                 alt="No preview available">
                             <div class="p-Home TextBox97 bpt">September 1, 2022</div>
                             <div class="p-Home TextBox96 bpt">The secret trick to prepare a perfect burger</div>
                         </div>
                         <div class="p-Home Flex82 bpt"><img class="p-Home Image51 bpt"
-                                src="preview4 atri.jpeg"
+                                src="/restaurant_website/app-assets/616dbc58e6083f444f1883f5_blog-post-featured-image-05-restaurante-x-template-p-500.jpeg"
                                 alt="No preview available">
                             <div class="p-Home TextBox99 bpt">September 1, 2022</div>
                             <div class="p-Home TextBox100 bpt">The secret trick to prepare a perfect burger</div>
@@ -347,13 +347,13 @@
                     </div>
                     <div class="p-Home Flex85 bpt">
                         <div class="p-Home Flex84 bpt"><img class="p-Home Image53 bpt"
-                                src="preview5 atri.jpeg"
+                                src="/restaurant_website/app-assets/616dbb79aa873fb79780189b_blog-post-featured-image-06-restaurante-x-template-p-500.jpeg"
                                 alt="No preview available">
                             <div class="p-Home TextBox103 bpt">September 1, 2022</div>
                             <div class="p-Home TextBox104 bpt">The secret trick to prepare a perfect burger</div>
                         </div>
                         <div class="p-Home Flex83 bpt"><img class="p-Home Image52 bpt"
-                                src="preview1 atri.jpeg"
+                                src="/restaurant_website/app-assets/616dbe9e3823ad75e50cfc8d_blog-post-featured-image-01-restaurante-x-template.jpeg"
                                 alt="No preview available">
                             <div class="p-Home TextBox102 bpt">September 1, 2022</div>
                             <div class="p-Home TextBox101 bpt">The secret trick to prepare a perfect burger</div>
@@ -368,17 +368,17 @@
                 <div class="p-Home TextBox106 bpt">Lorem ipsum dolor sit amet consectetur adipiscing elit ugue quam diam
                     vitae velit bibendum elementum.</div>
                 <div class="p-Home Flex93 bpt"><img class="p-Home Image54 bpt"
-                        src="location atri.svg"
+                        src="/restaurant_website/app-assets/616da2c3a1718503bfe60f49_location-icon-restaurante-x-template.svg"
                         alt="No preview available">
                     <div class="p-Home TextBox107 bpt">837 W. Marshall Lane Marshalltown, IA 50158, Los Angeles</div>
                 </div>
                 <div class="p-Home Flex94 bpt"><img class="p-Home Image55 bpt"
-                        src="phone atri.svg"
+                        src="/restaurant_website/app-assets/616da2c36165d583fe91702b_phone-icon-restaurante-x-template.svg"
                         alt="No preview available">
                     <div class="p-Home TextBox111 bpt">(414) 857 - 0107</div>
                 </div>
                 <div class="p-Home Flex95 bpt"><img class="p-Home Image56 bpt"
-                        src="mail atri.svg"
+                        src="/restaurant_website/app-assets/616da2c3400864a9087440a4_email-icon-restaurante-x-template.svg"
                         alt="No preview available">
                     <div class="p-Home TextBox112 bpt">losangeles@restaurentex.com</div>
                 </div>
@@ -433,38 +433,38 @@
                 </div>
             </div>
             <div class="p-Home Flex113 bpt"><img class="p-Home Image58 bpt"
-                    src="preview11 atri.jpeg"
+                    src="/restaurant_website/app-assets/616da2c40b5fd9150a07d9ad_Instagram-01-restaurante-x-template.jpeg"
                     alt="No preview available"><img class="p-Home Image59 bpt"
-                    src="preview22 atri.jpeg"
+                    src="/restaurant_website/app-assets/616da2c360af92b81a49e435_Instagram-02-restaurante-x-template.jpeg"
                     alt="No preview available">
                 <div class="p-Home Flex114 bpt">
                     <div class="p-Home Flex115 bpt"><img class="p-Home Image61 bpt"
-                            src="preview33 ati.jpeg"
+                            src="/restaurant_website/app-assets/616da2c3a17185be94e60f4b_Instagram-03-restaurante-x-template-p-500.jpeg"
                             alt="No preview available"><img class="p-Home Image60 bpt"
-                            src="preview44 atri.jpeg"
+                            src="/restaurant_website/app-assets/616da2c3a17185112de60f4a_Instagram-04-restaurante-x-template-p-500.jpeg"
                             alt="No preview available"></div>
                     <div class="p-Home Flex116 bpt"><img class="p-Home Image62 bpt"
-                            src="preview55 atri.jpeg"
+                            src="/restaurant_website/app-assets/616da2c376225e7ff4d983c1_Instagram-05-restaurante-x-template-p-500.jpeg"
                             alt="No preview available"><img class="p-Home Image63 bpt"
-                            src="preview66 atri.jpeg"
+                            src="/restaurant_website/app-assets/616da2c39920b1572849ffce_Instagram-06-restaurante-x-template-p-500.jpeg"
                             alt="No preview available"></div>
                 </div>
             </div>
         </div>
         <div class="p-Home Flex117 bpt">
             <div class="p-Home Flex118 bpt"><img class="p-Home Image64 bpt"
-                    src="logo atri.svg"
+                    src="/restaurant_website/app-assets/616da2c309aa0721dacedf0a_logo-restaurante-x-template.svg"
                     alt="No preview available">
                 <div class="p-Home TextBox123 bpt">Lorem ipsum dolor sit amet consectetur adipiscing elit ugue quam diam
                     vitae velit bibendum elementum.</div>
                 <div class="p-Home Flex121 bpt"><img class="p-Home Image65 bpt"
-                        src="star atri.svg" alt="No preview available"><img
-                        class="p-Home Image66 bpt" src="star atri.svg"
+                        src="/restaurant_website/app-assets/star-svgrepo-com.svg" alt="No preview available"><img
+                        class="p-Home Image66 bpt" src="/restaurant_website/app-assets/star-svgrepo-com.svg"
                         alt="No preview available"><img class="p-Home Image67 bpt"
-                        src="star atri.svg" alt="No preview available"><img
-                        class="p-Home Image68 bpt" src="star atri.svg"
+                        src="/restaurant_website/app-assets/star-svgrepo-com.svg" alt="No preview available"><img
+                        class="p-Home Image68 bpt" src="/restaurant_website/app-assets/star-svgrepo-com.svg"
                         alt="No preview available"><img class="p-Home Image69 bpt"
-                        src="star atri.svg" alt="No preview available"></div>
+                        src="/restaurant_website/app-assets/star-svgrepo-com.svg" alt="No preview available"></div>
             </div>
             <div class="p-Home Flex119 bpt">
                 <div class="p-Home Flex125 bpt">
@@ -492,14 +492,14 @@
                 <div class="p-Home TextBox124 bpt">Follow us on Instagram</div>
                 <div class="p-Home Flex124 bpt">
                     <div class="p-Home Flex123 bpt"><img class="p-Home Image72 bpt"
-                            src="preview 111 atri.jpeg"
+                            src="/restaurant_website/app-assets/616da2c3a17185be94e60f4b_Instagram-03-restaurante-x-template-p-500.jpeg"
                             alt="No preview available"><img class="p-Home Image73 bpt"
-                            src="preview 222 atri.jpeg"
+                            src="/restaurant_website/app-assets/616da2c3a17185112de60f4a_Instagram-04-restaurante-x-template-p-500.jpeg"
                             alt="No preview available"></div>
                     <div class="p-Home Flex122 bpt"><img class="p-Home Image71 bpt"
-                            src="preview 333 atri.jpeg"
+                            src="/restaurant_website/app-assets/616da2c376225e7ff4d983c1_Instagram-05-restaurante-x-template-p-500.jpeg"
                             alt="No preview available"><img class="p-Home Image70 bpt"
-                            src="preview 444 atri.jpeg"
+                            src="/restaurant_website/app-assets/616da2c39920b1572849ffce_Instagram-06-restaurante-x-template-p-500.jpeg"
                             alt="No preview available"></div>
                 </div>
             </div>
