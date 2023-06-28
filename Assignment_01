@@ -1,0 +1,966 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Audiowide">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Oswald">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Anton">
+    <title>Score Board</title>
+    <style>
+        @keyframes animate1 {
+            from{transform: perspective(600px) rotateX(90deg);}
+            to{transform: perspective(600px) rotateX(-45deg);}
+        }
+        #matchSummaryContainer{
+            animation-name: animate1;
+            animation-duration: 1s;
+            animation-iteration-count: 1;
+        }
+        @keyframes animate2 {
+            from{transform: perspective(600px) rotateX(90deg);}
+            to{transform: perspective(600px) rotateX(0deg);}
+        }
+        #scoreBoardContainer{
+            animation-name: animate2;
+            animation-duration: 1s;
+            animation-iteration-count: 1;
+        }
+        @keyframes animate3{
+            from {gap: 1000px;}
+            to {gap: 250px;}
+        }
+        #bestPlayerContainer{
+            animation-name: animate3;
+            animation-duration: 1s;
+            animation-iteration-count: 1;
+        }
+        @keyframes animate4{
+            from{transform: perspective(600px) rotateY(0deg);}
+            to{transform: perspective(600px) rotateY(45deg);}
+        }
+        #palaniTuskersLogoContainer{
+            animation-name: animate4;
+            animation-duration: 1s;
+            animation-iteration-count: 1;
+        }
+        @keyframes animate5{
+            from{transform: perspective(600px) rotateY(0deg);}
+            to{transform: perspective(600px) rotateY(-45deg);}
+        }
+        #nilgiriKnightsLogoContainer{
+            animation-name: animate5;
+            animation-duration: 1s;
+            animation-iteration-count: 1;
+        } 
+        @keyframes animate6{
+            from{opacity: 0.5;}
+            to{opacity: 1;}
+        }
+        #mainContainer{
+            animation-name: animate6;
+            animation-duration: 1s;
+            animation-iteration-count: 1;
+        }
+    </style>
+</head>
+<body 
+    style="
+        margin: 0px;
+        overflow: hidden;
+    "
+>
+    <div 
+        id="mainContainer" 
+        style="
+            background-image: url('https://thumbs.dreamstime.com/b/full-stadium-neoned-colorful-flashlights-background-full-stadium-neoned-colorful-flashlights-background-flyer-197148262.jpg');
+            background-size: cover;
+            height: 100vh;
+            width: 100%;
+        "
+    >
+        <div 
+            id="matchSummaryAndScoreCardContainer"
+            style="
+                align-items: center;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                row-gap: 0px;
+            "
+        > 
+            <!--match summary container and text-->
+            <div 
+                id="matchSummaryContainer"
+                style="
+                    align-items: center;
+                    background: linear-gradient(to right,rgba(200, 2, 101, 0.8),rgba(0, 0, 0, 0.9),rgba(0, 0, 0, 0.9),rgba(100, 211, 255, 0.8));
+                    border: 1px solid white;
+                    display: flex;
+                    height: 90px;
+                    justify-content: center;
+                    transform: perspective(600px) rotateX(-45deg);
+                    width: 696px;
+                    "
+            >
+                <h1 
+                    id="matchSummaryText"
+                    style="
+                        color: rgb(252, 252, 252);
+                        font-family:'Anton';
+                        font-size: 40px;
+                        font-weight: 200;
+                        transform: perspective(600px) rotateX(32.5deg);
+                        text-shadow: 0px 0px 10px rgb(35, 193, 255);
+                        "
+                    >
+                        MATCH SUMMARY
+                </h1>
+            </div>   
+            <div 
+                id="scoreBoardAndLogoContainer"
+                style="
+                    align-items: center;
+                    display: flex;
+                    flex-direction: row;
+                "
+            >
+                <div 
+                    id="scoreBoardContainer"
+                    style="
+                        width: 649px;
+                        height: 485px;
+                        display: flex;
+                        align-items: center;
+                        flex-direction: column;
+                        gap: 15px;
+                        border-left: 6px solid rgb(179, 0, 89);
+                        border-right: 6px solid rgb(71, 149, 180);
+                        margin-top: -5px;
+                        background: linear-gradient(to right,rgba(200, 2, 101, 0.8),rgb(0, 0, 0),rgb(0, 0, 0),rgba(100, 211, 255, 0.8));
+                        box-shadow: 0px 0px 3px white;
+                    "
+                >
+                    <div 
+                        id="top" 
+                        style="
+                            align-items: center;
+                            display: flex;
+                            flex-direction: row;
+                            gap: 40px;
+                            margin-top: 69px;
+                            position: absolute;
+                        "
+                    >
+                        <span 
+                            id="topSpan1"
+                            style="
+                                background: linear-gradient(to right, rgb(160, 0, 80), transparent);
+                                color: white;
+                                font-size: 13px;
+                                font-weight: 600;
+                                font-family: 'Audiowide';
+                                height: 40px;
+                                padding-top: 17px;
+                                padding-bottom: 266px;
+                                text-align: center;
+                                transform: scaleY(1.5);
+                                width: 150px;
+                            "
+                        >
+                            PALANI TUSKERS
+                        </span>
+                        <span 
+                            id="topSpan2"
+                            style="
+                                color: white;
+                                font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+                                font-size: 18px;
+                                font-weight: 600;
+                                height: 40px;
+                                padding-top: 17px;
+                                padding-bottom: 289px;
+                                transform: scaleY(1.4);
+                                text-align: center;
+                                width: 180px;
+                            "
+                        >
+                            MATCH 7
+                        </span>
+                        <span 
+                            id="topSpan3"
+                            style="
+                                background: linear-gradient(to left, rgb(63, 133, 160), transparent);
+                                color: white;
+                                font-family: Audiowide;
+                                font-size: 13px;
+                                font-weight: 600;
+                                padding-top: 17px;
+                                padding-bottom: 266px;
+                                height: 40px;
+                                text-align: center;
+                                transform: scaleY(1.5);
+                                width: 150px;
+                            "
+                        >
+                            NILGIRI KNIGHTS
+                        </span>
+                    </div>
+                    <div 
+                        id="fullTime" 
+                        style="
+                            align-items: center;
+                            border-radius: 5px;
+                            background: linear-gradient(to bottom, #f7f7f7,rgb(170, 170, 170),#f7f7f7);
+                            display: flex;
+                            gap: 32px;
+                            height: 60px;
+                            justify-content: center;
+                            margin-top: 78px;
+                            outline: 3px solid rgb(156, 156, 156);
+                            width:600px;
+                            z-index: 50;
+                        "
+                    >
+                        <span 
+                            id="fullTimeSpan1"
+                            style="
+                                align-items: center;
+                                background: linear-gradient(to bottom, rgb(200, 2, 100),rgb(126, 0, 63) 80%);
+                                color: white;
+                                display: flex;
+                                font-size: 50px;
+                                font-family:fantasy;
+                                height: 66px;
+                                justify-content: center;
+                                width:150px;
+                                z-index: 100;
+                            "
+                        >
+                            30
+                        </span>
+                        <span 
+                            style="
+                                color: black;
+                                font-size: 30px;
+                                font-family: fantasy;
+                                transform: scaleX(1.2);
+                                text-align: center;
+                                width: 200px;
+                            "
+                        >
+                            FULL TIME
+                        </span>
+                        <span 
+                            style="
+                                align-items: center;
+                                background: linear-gradient(to bottom, rgb(100, 211, 255),rgb(49, 103, 124) 80%);
+                                color: white;
+                                display: flex;
+                                font-family:fantasy;
+                                font-size: 50px;
+                                height: 66px;
+                                justify-content: center;
+                                width:150px;
+                                z-index: 100;
+                            "
+                        >
+                            18
+                        </span>
+                    </div>
+                    <div 
+                        id="raidPoints"
+                        style="
+                            align-items: center;
+                            background: linear-gradient(to right, rgba(200, 2, 101, 0.8),transparent 40%,transparent 60%,rgba(100, 211, 255, 0.8) 100%);
+                            border-radius: 40px;
+                            display: flex;
+                            flex-direction: row;
+                            gap: 42px;
+                            height: 40px;
+                            justify-content: center;
+                            width:610px;
+                            z-index: 50;
+                        "
+                    >
+                        <span 
+                            id="palaniTuskersRaidPoints" 
+                            style="
+                                align-items: center;
+                                background: linear-gradient(to bottom, rgb(200, 2, 100),rgb(126, 0, 63) 80%);
+                                color: white;
+                                display: flex;
+                                font-family: fantasy;
+                                font-size: 28px;
+                                height: 40px;
+                                justify-content: center;
+                                width: 150px;
+                            "
+                        >
+                            16
+                        </span>
+                        <span 
+                            id="raidPoints_" 
+                            style="
+                                color: white;
+                                font-family: 'Audiowide';
+                                font-size: 17px;
+                                font-weight: 600;
+                                transform: scaleY(1.3);
+                                text-align: center;
+                                width: 180px;
+                            "
+                        >
+                            RAID POINTS
+                        </span>
+                        <span 
+                            id="nilgiriKnightsRaidPoints" 
+                            style="
+                                align-items: center;
+                                background: linear-gradient(to bottom, rgb(100, 211, 255),rgb(49, 103, 124) 80%);
+                                color: white;
+                                display: flex;
+                                font-family: fantasy;
+                                font-size: 28px;
+                                height: 40px;
+                                justify-content: center;
+                                width: 150px;
+                            "
+                        >
+                            11
+                        </span>
+                    </div>
+                    <div 
+                        id="tacklePoints"
+                        style="
+                            align-items: center;
+                            background: linear-gradient(to right, rgba(200, 2, 101, 0.8),transparent 40%,transparent 60%,rgba(100, 211, 255, 0.8) 100%);
+                            border-radius: 40px;
+                            display: flex;
+                            flex-direction: row;
+                            gap: 42px;
+                            height: 40px;
+                            justify-content: center;
+                            width:610px;
+                            z-index: 50;
+                        "
+                    >
+                        <span 
+                            id="palani-tuskers-tackle-points" 
+                            style="
+                                align-items: center;
+                                background: linear-gradient(to bottom, rgb(200, 2, 100),rgb(126, 0, 63) 80%);
+                                color: white;
+                                display: flex;
+                                font-family: fantasy;
+                                font-size: 28px;
+                                height: 40px;
+                                justify-content: center;
+                                width: 150px;
+                            "
+                        >
+                            11
+                        </span>
+                        <span 
+                            id="tacklePoints" 
+                            style="
+                                color: white;
+                                font-family: 'Audiowide';
+                                font-size: 17px;
+                                font-weight: 600;
+                                transform: scaleY(1.3);
+                                text-align: center;
+                                width: 180px;
+                            "
+                        >
+                            TACKLE POINTS
+                        </span>
+                        <span 
+                            id="nilgiriKnightsTacklePoints" 
+                            style="
+                                align-items: center;
+                                background: linear-gradient(to bottom, rgb(100, 211, 255),rgb(49, 103, 124) 80%);
+                                color: white;
+                                display: flex;
+                                font-family: fantasy;
+                                font-size: 28px;
+                                height: 40px;
+                                justify-content: center;
+                                width: 150px;
+                            "
+                        >
+                            7
+                        </span>
+                    </div>
+                    <div 
+                        id="allOutPoints"
+                        style="
+                            align-items: center;
+                            background: linear-gradient(to right,rgba(200, 2, 101, 0.8),transparent 40%,transparent 60%,rgba(100, 211, 255, 0.8) 100%);
+                            border-radius: 40px;
+                            display: flex;
+                            flex-direction: row;
+                            gap: 42px;
+                            height: 40px;
+                            justify-content: center;
+                            width:610px;
+                            z-index: 50;
+                        "
+                    >
+                        <span 
+                            id="palaniTuskersAllOutPoints" 
+                            style="
+                                align-items: center;
+                                background: linear-gradient(to bottom, rgb(200, 2, 100),rgb(126, 0, 63) 80%);
+                                color: white;
+                                display: flex;
+                                font-family: fantasy;
+                                font-size: 28px;
+                                height: 40px;
+                                justify-content: center;
+                                width: 150px;
+                            "
+                        >
+                            2
+                        </span>
+                        <span 
+                            id="tacklePoints" 
+                            style="
+                                color: white;
+                                font-family: 'Audiowide';
+                                font-size: 17px;
+                                font-weight: 600;
+                                transform: scaleY(1.3);
+                                text-align: center;
+                                width: 180px;
+                            "
+                        >
+                            ALL OUT POINTS
+                        </span>
+                        <span 
+                            id="nilgiriKnightsTacklePoints" 
+                            style="
+                                align-items: center;
+                                background: linear-gradient(to bottom, rgb(100, 211, 255),rgb(49, 103, 124) 80%);
+                                display: flex;
+                                color: white;
+                                font-family: fantasy;
+                                font-size: 28px;
+                                height: 40px;
+                                justify-content: center;
+                                width: 150px;
+                            "
+                        >
+                            0
+                        </span>
+                    </div>
+                    <div 
+                        id="extras"
+                        style="
+                            align-items: center;
+                            background: linear-gradient(to right, rgba(200, 2, 101, 0.8),transparent 40%,transparent 60%,rgba(100, 211, 255, 0.8) 100%);
+                            border-radius: 40px;
+                            display: flex;
+                            flex-direction: row;
+                            gap: 42px;
+                            height: 40px;
+                            justify-content: center;
+                            width:610px;
+                            z-index: 50;
+                        "
+                    >
+                        <span 
+                            id="palaniTuskersExtras" 
+                            style="
+                                align-items: center;
+                                background: linear-gradient(to bottom, rgb(200, 2, 100),rgb(126, 0, 63) 80%);
+                                color: white;
+                                display: flex;
+                                font-family: fantasy;
+                                font-size: 28px;
+                                height: 40px;
+                                justify-content: center;
+                                width: 150px;
+                            "
+                        >
+                            1
+                        </span>
+                        <span 
+                            id="extras_" 
+                            style="
+                                color: white;
+                                font-family: 'Audiowide';
+                                font-size: 17px;
+                                font-weight: 600;
+                                transform: scaleY(1.3);
+                                text-align: center;
+                                width: 180px;
+                            "
+                        >
+                            EXTRAS
+                        </span>
+                        <span 
+                            id="nilgiriKnightsExras_" 
+                            style="
+                                align-items: center;
+                                background: linear-gradient(to bottom, rgb(100, 211, 255),rgb(49, 103, 124) 80%);
+                                color: white;
+                                display: flex;
+                                font-family: fantasy;
+                                font-size: 28px;
+                                height: 40px;
+                                justify-content: center;
+                                width: 150px;
+                            "
+                        >
+                            0
+                        </span>
+                    </div>
+                    <div 
+                        id="superRaids"
+                        style="
+                            align-items: center;
+                            background: linear-gradient(to right, rgba(200, 2, 101, 0.8),transparent 40%,transparent 60%,rgba(100, 211, 255, 0.8) 100%);
+                            border-radius: 40px;
+                            display: flex;
+                            flex-direction: row;
+                            gap: 42px;
+                            height: 40px;
+                            justify-content: center;
+                            width:610px;
+                            z-index: 50;
+                        "
+                    >
+                        <span 
+                            id="palaniTuskersSuperRaids" 
+                            style="
+                                align-items: center;
+                                background: linear-gradient(to bottom, rgb(200, 2, 100),rgb(126, 0, 63) 80%);
+                                color: white;
+                                display: flex;
+                                font-family: fantasy;
+                                font-size: 28px;
+                                height: 40px;
+                                justify-content: center;
+                                width: 150px;
+                            "
+                        >
+                            0
+                        </span>
+                        <span 
+                            id="superRaids_" 
+                            style="
+                                color: white;
+                                font-family: 'Audiowide';
+                                font-size: 17px;
+                                font-weight: 600;
+                                transform: scaleY(1.3);
+                                text-align: center;
+                                width: 180px;
+                            "
+                        >
+                            SUPER RAIDS
+                        </span>
+                        <span 
+                            id="nilgiriKnightsSuperRaids" 
+                            style="
+                                align-items: center;
+                                background: linear-gradient(to bottom, rgb(100, 211, 255),rgb(49, 103, 124) 80%);
+                                color: white;
+                                display: flex;
+                                font-family: fantasy;
+                                font-size: 28px;
+                                height: 40px;
+                                justify-content: center;
+                                width: 150px;
+                            "
+                        >
+                            1
+                        </span>
+                    </div>
+                    <div 
+                        id="superTackles"
+                        style="
+                            align-items: center;
+                            background: linear-gradient(to right, rgba(200, 2, 101, 0.8),transparent 40%,transparent 60%,rgba(100, 211, 255, 0.8) 100%);
+                            border-radius: 40px;
+                            display: flex;
+                            flex-direction: row;
+                            gap: 42px;
+                            height: 40px;
+                            justify-content: center;
+                            width:610px;
+                            z-index: 50;
+                        "
+                    >
+                        <span 
+                            id="palaniTuskersSuperRaids" 
+                            style="
+                                align-items: center;
+                                background: linear-gradient(to bottom, rgb(200, 2, 100),rgb(126, 0, 63) 80%);
+                                color: white;
+                                display: flex;
+                                font-family: fantasy;
+                                font-size: 28px;
+                                height: 40px;
+                                justify-content: center;
+                                width: 150px;
+                            "
+                        >
+                            1
+                        </span>
+                        <span 
+                            id="superRaids_" 
+                            style="
+                                color: white;
+                                font-family: 'Audiowide';
+                                font-size: 17px;
+                                font-weight: 600;
+                                transform: scaleY(1.3);
+                                text-align: center;
+                                width: 180px;
+                            "
+                        >
+                            SUPER TACKLES
+                        </span>
+                        <span 
+                            id="nilgiriKnightsSuperRaids" 
+                            style="
+                                align-items: center;
+                                background: linear-gradient(to bottom, rgb(100, 211, 255),rgb(49, 103, 124) 80%);
+                                color: white;
+                                display: flex;
+                                font-family: fantasy;
+                                font-size: 28px;
+                                height: 40px;
+                                justify-content: center;
+                                width: 150px;
+                            "
+                        >
+                            0
+                        </span>
+                    </div>
+                </div>
+            </div>
+            <div 
+                class="logoContainers"
+                style="
+                    align-items: center;
+                    display: flex;
+                    gap: 455px;
+                    justify-content: center;
+                    margin-top: 86px;
+                    position: absolute;
+                    z-index: 100;
+                "
+            >
+                <div 
+                    id="palaniTuskersLogoContainer"
+                    style="
+                        align-items: center;
+                        background-color: rgba(160, 0, 80, 0.5);
+                        display: flex;
+                        height: 93.8vh;
+                        justify-content: center;
+                        transform: perspective(600px) rotateY(45deg);
+                        width: 463px;
+                    "
+                >
+                    <img 
+                        id="palaniTuskersLogo"
+                        height="320px" 
+                        src="https://feed.yuvakabaddi.com/YKS-2022-SE/teamLogos/569.png"
+                    >
+                </div>
+                <div 
+                    id="nilgiriKnightsLogoContainer"
+                    style="
+                        align-items: center;
+                        background-color: rgba(63, 132, 160, 0.5);
+                        display: flex;
+                        height: 93.8vh;
+                        justify-content: center;
+                        transform: perspective(600px) rotateY(-45deg);
+                        width: 463px;
+                    "
+                >
+                    <img 
+                        id="nilgiriKnightsLogo"
+                        height="320px" 
+                        src="https://www.bullscore.com/feature_img_cron/logos/kabaddi/151.png"
+                    >
+                </div>
+            </div>
+        </div>
+        <div 
+            id="bestPlayerContainer"
+            style="
+                display: flex;
+                flex-direction: row;
+                gap: 250px;
+                justify-content: center;
+            "
+        >
+            <div 
+                id="palaniTuskersBestPlayerMainContainer"
+                style="
+                    align-items: center;
+                    display: flex;
+                    flex-direction: row;
+                    gap: 5px;">
+                <div 
+                    id="palaniTuskersBestPlayerSubContainer"
+                    style="
+                        width: 250px;
+                        height: 60px;
+                        z-index: 200;
+                        border-left: 50px solid rgb(224, 224, 224);
+                        margin-top: 20px;
+                        background-color: rgb(126, 0, 63);
+                        transform: skewX(20deg);
+                    "
+                >
+                    <div 
+                        id="palaniTuskersBestPlayerAndLogoContainer"
+                        style="
+                            display: flex;
+                            flex-direction: row;
+                            gap: 60px;
+                            justify-content: left;
+                        "
+                    >
+                        <img 
+                            height="75px" 
+                            src="https://feed.yuvakabaddi.com/YKS-2022-SE/teamLogos/569.png"
+                            style="
+                                margin-left: -85px;
+                                position: absolute;
+                            " 
+                        >
+                        <img 
+                            height="80px" 
+                            src="https://static.yuvakabaddi.com/images/player-images/6618.png"
+                            style="
+                                margin-left: 10px; 
+                                margin-top: -20px; 
+                                transform: skew(-20deg);
+                                position: absolute; 
+                            "
+                        >
+                        <span 
+                            id="palaniTuskersPlayerName"
+                            style="
+                                color: white;
+                                font-family: 'Oswald';
+                                font-size: 15px;
+                                font-weight: 400;
+                                margin-left: 110px;
+                                margin-top: 3px;
+                                transform: skew(-20deg);
+                            "
+                        >
+                            S.MUKESHKANNAN
+                        </span>
+                    </div>
+                    <div
+                        id="bestRaiderTextContainer"
+                        style="
+                            align-items: center;
+                            background-color: black;
+                            color: white;
+                            display: flex;
+                            float: left;
+                            font-family: 'Oswald';
+                            font-size: 15px;
+                            height: 30px;
+                            justify-content: right;
+                            margin-top: 5px;
+                            padding-right: 20px;
+                            width: 180px;
+                        "
+                    >
+                        <span 
+                            id="bestRaiderText"
+                            style="
+                                transform: skew(-20deg);
+                            "
+                        >
+                            BEST RAIDER
+                        </span>
+                    </div>
+                </div>
+                <div 
+                    id="palaniTuskersPointsContainer"
+                    style="
+                        align-items: center;
+                        background-color: rgb(126, 0, 63);
+                        border-right: 3px solid rgb(224, 224, 224);
+                        color: white;
+                        display: flex;
+                        flex-direction: column;
+                        font-family: 'Oswald';
+                        font-size: 15px;
+                        font-weight: 400;
+                        gap: 2px;
+                        height: 60px;
+                        justify-content: center;
+                        margin-top: 20px;
+                        transform: skewX(20deg);
+                        text-align: center;
+                        width: 100px;
+                    "
+                >
+                    <span 
+                        id="palaniTuskersPointsText"
+                        style="
+                            transform: skewX(-20deg);
+                        "
+                    >
+                        RAID POINTS
+                    </span>
+                    <span
+                        id="palaniTuskersPointsValue" 
+                        style="
+                            font-size: 20px;
+                            transform: skewX(-20deg);
+                        "
+                    >
+                        4
+                    </span>
+                </div>
+            </div>
+            <div 
+                id="nilgiriKnightPointsMainContainer"
+                style="
+                    align-items: center;
+                    display: flex;
+                    flex-direction: row;
+                    gap: 5px;
+                "
+            >
+                <div 
+                    id="nilgiriKnightPointsSubContainer"
+                    style="
+                        align-items: center;
+                        background-color: rgb(49, 103, 124);
+                        border-left: 3px solid rgb(224, 224, 224);
+                        color: white;
+                        display: flex;
+                        flex-direction: column;
+                        font-family: 'Oswald';
+                        font-size: 15px;
+                        font-weight: 400;
+                        gap: 2px;
+                        height: 60px;
+                        justify-content: center;
+                        margin-top: 20px;
+                        transform: skewX(-20deg);
+                        text-align: center;
+                        width: 100px;
+                    "
+                >
+                    <span 
+                        id="nilgiriKnightPointsText"
+                        style="
+                            transform: skewX(20deg);
+                        "
+                    >
+                        TACKLE POINTS
+                    </span>
+                    <span
+                        id="nilgiriKnightPointsValue" 
+                        style="
+                            font-size: 20px;
+                            transform: skewX(20deg);
+                        "
+                    >
+                        4
+                    </span>
+                </div>
+                <div 
+                    id="nilgiriKnightsBestPlayerMainContainer"
+                    style="
+                        background-color: rgb(49, 103, 124);
+                        border-right: 50px solid rgb(224, 224, 224);
+                        height: 60px;
+                        margin-top: 20px;
+                        transform: skewX(-20deg);
+                        width: 250px;
+                        z-index: 200;
+                    "
+                >
+                    <div 
+                        id="nilgiriKnightsBestPlayerAndLogoContainer"
+                        style="
+                            display: flex;
+                            flex-direction: row;
+                            gap: 60px;
+                            justify-content: right;
+                        "
+                    >
+                        <span
+                            id="nilgiriKnightsBestPlayerName"
+                            style="
+                                color: white;
+                                font-family: 'Oswald';
+                                font-size: 15px;
+                                font-weight: 400;
+                                margin-right: 110px;
+                                margin-top: 3px;
+                                transform: skew(20deg);
+                            "
+                        >
+                            PURUSHOTHAMAN
+                        </span>
+                            <img 
+                                height="80px" 
+                                src="https://static.yuvakabaddi.com/images/player-images/6638.png"
+                                style="
+                                    margin-right: 10px; 
+                                    margin-top: -20px; 
+                                    transform: skew(20deg);
+                                    position: absolute; 
+                                "
+                            >
+                            <img 
+                                height="75px" 
+                                src="https://www.bullscore.com/feature_img_cron/logos/kabaddi/151.png"
+                                style="
+                                    margin-right: -85px; 
+                                    position: absolute;
+                                    transform: skew(20deg);
+                                " 
+                            >
+                    </div>
+                    <div
+                        id="nilgiriKnightsBestDefenderContainer" 
+                        style="
+                            align-items: center; 
+                            background-color: black;
+                            color: white;
+                            display: flex;
+                            float: right;
+                            font-family: 'Oswald';
+                            font-size: 15px;
+                            height: 30px;
+                            margin-top: 5px;
+                            padding-left: 20px;
+                            width: 180px;
+                        "
+                    >
+                        <span 
+                            id="nilgiriKnightsBestDefenderText" 
+                            style="
+                                transform: skew(20deg);
+                            "
+                        >
+                            BEST DEFENDER
+                        </span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
