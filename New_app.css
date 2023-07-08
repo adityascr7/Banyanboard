@@ -1,0 +1,93 @@
+.App {
+  text-align: center;
+  
+}
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+        @keyframes animate1 {
+            from{transform: perspective(600px) rotateX(90deg);}
+            to{transform: perspective(600px) rotateX(-45deg);}
+        }
+        #matchSummaryContainer{
+            animation-name: animate1;
+            animation-duration: 1s;
+            animation-iteration-count: 1;
+        }
+        @keyframes animate2 {
+            from{transform: perspective(600px) rotateX(90deg);}
+            to{transform: perspective(600px) rotateX(0deg);}
+        }
+        #scoreBoardContainer{
+            animation-name: animate2;
+            animation-duration: 1s;
+            animation-iteration-count: 1;
+        }
+        @keyframes animate3{
+            from {gap: 1000px;}
+            to {gap: 250px;}
+        }
+        #bestPlayerContainer{
+            animation-name: animate3;
+            animation-duration: 1s;
+            animation-iteration-count: 1;
+        }
+        @keyframes animate4{
+            from{transform: perspective(600px) rotateY(0deg);}
+            to{transform: perspective(600px) rotateY(45deg);}
+        }
+        #palaniTuskersLogoContainer{
+            animation-name: animate4;
+            animation-duration: 1s;
+            animation-iteration-count: 1;
+        }
+        @keyframes animate5{
+            from{transform: perspective(600px) rotateY(0deg);}
+            to{transform: perspective(600px) rotateY(-45deg);}
+        }
+        #nilgiriKnightsLogoContainer{
+            animation-name: animate5;
+            animation-duration: 1s;
+            animation-iteration-count: 1;
+        } 
+        @keyframes animate6{
+            from{opacity: 0.5;}
+            to{opacity: 1;}
+        }
+        #mainContainer{
+            animation-name: animate6;
+            animation-duration: 1s;
+            animation-iteration-count: 1;
+        }
