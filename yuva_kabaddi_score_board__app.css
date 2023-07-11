@@ -57,7 +57,7 @@
         }
         @keyframes animate3{
             from {gap: 1000px;}
-            to {gap: 250px;}
+            to {gap: 19vw;}
         }
         #bestPlayerContainer{
             animation-name: animate3;
