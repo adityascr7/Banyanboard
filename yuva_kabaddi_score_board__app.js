@@ -19,7 +19,7 @@ function App() {
                 backgroundSize: "cover",
                 height: "100vh",
                 overflow: "hidden",
-                width: "100wh",
+                width: "100vw",
             }}
         >
             <div 
@@ -29,7 +29,8 @@ function App() {
                     display: "flex",
                     flexDirection: "column",
                     justifyContent: "center",
-                    rowGap: "0vh",
+                    marginTop: "1.5vh",
+                    rowGap: "2.1vh",
                 }}
             > 
                 
@@ -38,12 +39,12 @@ function App() {
                     style={{
                         alignItems: "center",
                         background: "linear-gradient(to right,rgba(200, 2, 101, 0.8),rgba(0, 0, 0, 0.9),rgba(0, 0, 0, 0.9),rgba(100, 211, 255, 0.8))",
+                        clipPath: "polygon(0% 0%, 100% 0%, 95% 100%, 5% 100%)",
                         border: "1px solid white",
                         display: "flex",
-                        height: "13.7vh",
+                        height: "10vh",
                         justifyContent: "center",
-                        transform: "perspective(43.92vw) rotateX(-45deg)",
-                        width: "51.1vw",
+                        width: "53.9vw",
                     }}
                 >
                     <h1 
@@ -51,11 +52,10 @@ function App() {
                         style={{
                             color: "rgb(252, 252, 252)",
                             fontFamily:'Anton',
-                            fontSize: "2.93vw",
+                            fontSize: "2vw",
                             fontWeight: "200",
-                            marginTop: "3.04vh",
-                            transform: "perspective(43.92vw) rotateX(33deg) scaleY(1.2) scaleX(0.9)",
                             textShadow: "0px 0px 10px rgb(35, 193, 255)",
+                            transform: "scaleX(1.2)",
                         }}
                     >
                         MATCH SUMMARY
@@ -606,9 +606,9 @@ function App() {
                     style={{
                         alignItems: "center",
                         display: "flex",
-                        gap: "31vw",
+                        gap: "48.3vw",
                         justifyContent: "center",
-                        marginTop: "13.1vh",
+                        marginTop: "12vh",
                         position: "absolute",
                         zIndex: "100",
                     }}
@@ -618,19 +618,18 @@ function App() {
                         style={{
                             alignItems: "center",
                             backgroundColor: "rgba(160, 0, 80, 0.5)",
+                            clipPath: "polygon(100% 20%, 0% 0%, 0% 100%, 100% 80%)",
                             display: "flex",
-                            height: "93.8vh",
+                            height: "100vh",
                             justifyContent: "center",
-                            transform: "perspective(43.92vw) rotateY(45deg)",
-                            width: "38vw",
+                            width: "26vw",
                         }}
                     >
                         <img 
                             id="palaniTuskersLogo" 
                             src="https://feed.yuvakabaddi.com/YKS-2022-SE/teamLogos/569.png"
                             style={{
-                                height: "48.71vh",
-                                transform:"perspective(900px) rotateY(-45deg) scaleX(1.5)",
+                                height: "40vh",
                             }}
                         ></img>
                     </div>
@@ -639,19 +638,18 @@ function App() {
                         style={{
                             alignItems: "center",
                             backgroundColor: "rgba(63, 132, 160, 0.5)",
+                            clipPath: "polygon(100% 0%, 0% 20%, 0% 80%, 100% 100%)",
                             display: "flex",
-                            height: "93.8vh",
+                            height: "100vh",
                             justifyContent: "center",
-                            transform: "perspective(43.92vw) rotateY(-45deg)",
-                            width: "38vw",
+                            width: "26vw",
                         }}
                     >
                         <img 
                             id="nilgiriKnightsLogo"
                             src="https://www.bullscore.com/feature_img_cron/logos/kabaddi/151.png"
                             style={{
-                                height: "48.71vh",
-                                transform:"perspective(900px) rotateY(45deg) scaleX(1.5)",
+                                height: "40vh",
                             }}
                         ></img>
                     </div>
@@ -700,6 +698,7 @@ function App() {
                                 style={{
                                     height: "11.41vh",
                                     marginLeft: "-6.22vw",
+                                    transform: "skew(-20deg)",
                                     position: "absolute",
                                 }}
                             >  
