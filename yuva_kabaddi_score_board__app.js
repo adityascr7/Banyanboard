@@ -29,8 +29,9 @@ function App() {
                     display: "flex",
                     flexDirection: "column",
                     justifyContent: "center",
-                    marginTop: "1.5vh",
-                    rowGap: "2.1vh",
+                    marginTop: `${(10/768)*100}vh`,
+                    rowGap: `${(10/768)*100}vh`,
+                    height: "85%",
                 }}
             > 
                 
@@ -40,11 +41,13 @@ function App() {
                         alignItems: "center",
                         background: "linear-gradient(to right,rgba(200, 2, 101, 0.8),rgba(0, 0, 0, 0.9),rgba(0, 0, 0, 0.9),rgba(100, 211, 255, 0.8))",
                         clipPath: "polygon(0% 0%, 100% 0%, 95% 100%, 5% 100%)",
-                        border: "1px solid white",
+                        border: "2px solid white",
+                        backgroundClip: "padding-box",
+                        boxSizing: "border-box",
                         display: "flex",
                         height: "10vh",
                         justifyContent: "center",
-                        width: "53.9vw",
+                        width: `${(736/1366)*100}vw`,
                     }}
                 >
                     <h1 
@@ -72,15 +75,14 @@ function App() {
                     <div 
                         id="scoreBoardContainer"
                         style={{
-                            width: "47.6vw",
-                            height: "73.8vh",
+                            width: `${(650/1366)*100}vw`,
+                            height: `${(567/768)*100}vh`,
                             display: "flex",
                             alignItems: "center",
                             flexDirection: "column",
-                            gap: "2.28vh",
+                            gap: `${(18/768)*100}vh`,
                             borderLeft: "0.44vw solid rgb(179, 0, 89)",
                             borderRight: "0.44vw solid rgb(71, 149, 180)",
-                            marginTop: "-0.76vh",
                             background: "linear-gradient(to right,rgba(200, 2, 101, 0.8),rgb(0, 0, 0),rgb(0, 0, 0),rgba(100, 211, 255, 0.8))",
                             boxShadow: "0px 0px 3px white",
                         }}
@@ -91,8 +93,8 @@ function App() {
                                 alignItems: "center",
                                 display: "flex",
                                 flexDirection: "row",
-                                gap: "2.9vw",
-                                marginTop: "10.5vh",
+                                gap: `${(40/1366)*100}vw`,
+                                marginTop: "10.6vh",
                                 position: "absolute",
                             }}
                         >
@@ -104,12 +106,12 @@ function App() {
                                     fontSize: "0.95vw",
                                     fontWeight: "600",
                                     fontFamily: "'Audiowide'",
-                                    height: "6.08vh",
+                                    height: `${(47/768)*100}vh`,
                                     paddingTop: "2.59vh",
                                     paddingBottom: "40.49vh",
                                     textAlign: "center",
                                     transform: "scaleY(1.5)",
-                                    width: "11vw",
+                                    width: `${(150/1366)*100}vw`,
                                 }}
                             >
                                 PALANI TUSKERS
@@ -121,12 +123,12 @@ function App() {
                                     fontFamily: "'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif",
                                     fontSize: "1.32vw",
                                     fontWeight: "600",
-                                    height: "6.08vh",
+                                    height: `${(47/768)*100}vh`,
                                     paddingTop: "2.59vh",
                                     paddingBottom: "44vh",
                                     transform: "scaleY(1.4)",
                                     textAlign: "center",
-                                    width: "13.2vw",
+                                    width: `${(180/1366)*100}vw`,
                                 }}
                             >
                                 MATCH 7
@@ -141,10 +143,10 @@ function App() {
                                     fontWeight: "600",
                                     paddingTop: "2.59vh",
                                     paddingBottom: "40.49vh",
-                                    height: "6.08vh",
+                                    height: `${(47/768)*100}vh`,
                                     textAlign: "center",
                                     transform: "scaleY(1.5)",
-                                    width: "11vw",
+                                    width: `${(150/1366)*100}vw`,
                                 }}
                             >
                                 NILGIRI KNIGHTS
@@ -158,11 +160,11 @@ function App() {
                                 background: "linear-gradient(to bottom, #f7f7f7,rgb(170, 170, 170),#f7f7f7)",
                                 display: "flex",
                                 gap: "2.34vw",
-                                height: "9.13vh",
+                                height: `${(68/768)*100}vh`,
                                 justifyContent: "center",
                                 marginTop: "11.87vh",
                                 outline: "3px solid rgb(156, 156, 156)",
-                                width: "44vw",
+                                width: `${(601/1366)*100}vw`,
                                 zIndex: "50",
                             }}
                         >
@@ -176,9 +178,9 @@ function App() {
                                     fontSize: "3.85vw",
                                     fontFamily: "'Bebas Neue'",
                                     fontWeight: "600",
-                                    height: "10vh",
+                                    height: `${(75/768)*100}vh`,
                                     justifyContent: "center",
-                                    width: "11vw",
+                                    width: `${(150/1366)*100}vw`,
                                     zIndex: "100",
                                 }}
                             >
@@ -192,7 +194,7 @@ function App() {
                                     fontWeight: "600",
                                     transform: "scaleX(1.2)",
                                     textAlign: "center",
-                                    width: "14.6vw",
+                                    width: `${(200/1366)*100}vw`,
                                 }}
                             >
                                 FULL TIME
@@ -206,9 +208,9 @@ function App() {
                                     fontFamily: "'Bebas Neue'",
                                     fontSize: "3.85vw",
                                     fontWeight: "600",
-                                    height: "10vh",
+                                    height: `${(75/768)*100}vh`,
                                     justifyContent: "center",
-                                    width: "11vw",
+                                    width: `${(150/1366)*100}vw`,
                                     zIndex: "100",
                                 }}
                             >
@@ -224,9 +226,9 @@ function App() {
                                 display: "flex",
                                 flexDirection: "row",
                                 gap: "3.07vw",
-                                height: "6.1vh",
+                                height: `${(47/768)*100}vh`,
                                 justifyContent: "center",
-                                width: "44.6vw",
+                                width: `${(609/1366)*100}vw`,
                                 zIndex: "50",
                             }}
                         >
@@ -240,9 +242,9 @@ function App() {
                                     fontFamily: "'Bebas Neue'", 
                                     fontWeight: "600",
                                     fontSize: "2.26vw",
-                                    height: "6.1vh",
+                                    height: `${(47/768)*100}vh`,
                                     justifyContent: "center",
-                                    width: "11vw",
+                                    width: `${(150/1366)*100}vw`,
                                 }}
                             >
                                 16
@@ -256,7 +258,7 @@ function App() {
                                     fontWeight: "600",
                                     transform: "scaleY(1.3)",
                                     textAlign: "center",
-                                    width: "13.2vw",
+                                    width: `${(180/1366)*100}vw`,
                                 }}
                             >
                                 RAID POINTS
@@ -271,9 +273,9 @@ function App() {
                                     fontFamily: "'Bebas Neue'", 
                                     fontWeight: "600",
                                     fontSize: "2.26vw",
-                                    height: "6.1vh",
+                                    height: `${(47/768)*100}vh`,
                                     justifyContent: "center",
-                                    width: "11vw",
+                                    width: `${(150/1366)*100}vw`
                                 }}
                             >
                                 11
@@ -288,7 +290,7 @@ function App() {
                                 display: "flex",
                                 flexDirection: "row",
                                 gap: "3.07vw",
-                                height: "6.1vh",
+                                height: `${(47/768)*100}vh`,
                                 justifyContent: "center",
                                 width: "44.6vw",
                                 zIndex: 50,
@@ -304,9 +306,9 @@ function App() {
                                     fontFamily: "'Bebas Neue'", 
                                     fontWeight: "600",
                                     fontSize: "2.26vw",
-                                    height: "6.1vh",
+                                    height: `${(47/768)*100}vh`,
                                     justifyContent: "center",
-                                    width: "11vw",
+                                    width: `${(150/1366)*100}vw`
                                 }}
                             >
                                 11
@@ -320,7 +322,7 @@ function App() {
                                     fontWeight: "600",
                                     transform: "scaleY(1.3)",
                                     textAlign: "center",
-                                    width: "13.2vw",
+                                    width: `${(180/1366)*100}vw`
                                 }}
                             >
                                 TACKLE POINTS
@@ -335,9 +337,9 @@ function App() {
                                     fontFamily: "'Bebas Neue'", 
                                     fontWeight: "600",
                                     fontSize: "2.26vw",
-                                    height: "6.1vh",
+                                    height: `${(47/768)*100}vh`,
                                     justifyContent: "center",
-                                    width: "11vw",
+                                    width: `${(150/1366)*100}vw`
                                 }}
                             >
                                 7
@@ -352,7 +354,7 @@ function App() {
                                 display: "flex",
                                 flexDirection: "row",
                                 gap: "3.07vw",
-                                height: "6.1vh",
+                                height: `${(47/768)*100}vh`,
                                 justifyContent: "center",
                                 width: "44.6vw",
                                 zIndex: "50",
@@ -368,9 +370,9 @@ function App() {
                                     fontFamily: "'Bebas Neue'", 
                                     fontWeight: "600",
                                     fontSize: "2.26vw",
-                                    height: "6.1vh",
+                                    height: `${(47/768)*100}vh`,
                                     justifyContent: "center",
-                                    width: "11vw",
+                                    width: `${(150/1366)*100}vw`
                                 }}
                             >
                                 2
@@ -384,7 +386,7 @@ function App() {
                                     fontWeight: "600",
                                     transform: "scaleY(1.3)",
                                     textAlign: "center",
-                                    width: "13.2vw",
+                                    width: `${(180/1366)*100}vw`
                                 }}
                             >
                                 ALL OUT POINTS
@@ -399,9 +401,9 @@ function App() {
                                     fontFamily: "'Bebas Neue'", 
                                     fontWeight: "600",
                                     fontSize: "2.26vw",
-                                    height: "6.1vh",
+                                    height: `${(47/768)*100}vh`,
                                     justifyContent: "center",
-                                    width: "11vw",
+                                    width: `${(150/1366)*100}vw`
                                 }}
                             >
                                 0
@@ -416,7 +418,7 @@ function App() {
                                 display: "flex",
                                 flexDirection: "row",
                                 gap: "3.07vw",
-                                height: "6.1vh",
+                                height: `${(47/768)*100}vh`,
                                 justifyContent: "center",
                                 width: "44.6vw",
                                 zIndex: "50",
@@ -432,9 +434,9 @@ function App() {
                                     fontFamily: "'Bebas Neue'", 
                                     fontWeight: "600",
                                     fontSize: "2.26vw",
-                                    height: "6.1vh",
+                                    height: `${(47/768)*100}vh`,
                                     justifyContent: "center",
-                                    width: "11vw",
+                                    width: `${(150/1366)*100}vw`
                                 }}
                             >
                                 1
@@ -448,7 +450,7 @@ function App() {
                                     fontWeight: "600",
                                     transform: "scaleY(1.3)",
                                     textAlign: "center",
-                                    width: "13.2vw",
+                                    width: `${(180/1366)*100}vw`
                                 }}
                             >
                                 EXTRAS
@@ -463,9 +465,9 @@ function App() {
                                     fontFamily: "'Bebas Neue'", 
                                     fontWeight: "600",
                                     fontSize: "2.26vw",
-                                    height: "6.1vh",
+                                    height: `${(47/768)*100}vh`,
                                     justifyContent: "center",
-                                    width: "11vw",
+                                    width: `${(150/1366)*100}vw`
                                 }}
                             >
                                 0
@@ -480,7 +482,7 @@ function App() {
                                 display: "flex",
                                 flexDirection: "row",
                                 gap: "3.07vw",
-                                height: "6.1vh",
+                                height: `${(47/768)*100}vh`,
                                 justifyContent: "center",
                                 width: "44.6vw",
                                 zIndex: "50",
@@ -496,9 +498,9 @@ function App() {
                                     fontFamily: "'Bebas Neue'", 
                                     fontWeight: "600",
                                     fontSize: "2.26vw",
-                                    height: "6.1vh",
+                                    height: `${(47/768)*100}vh`,
                                     justifyContent: "center",
-                                    width: "11vw",
+                                    width: `${(150/1366)*100}vw`
                                 }}
                             >
                                 0
@@ -512,7 +514,7 @@ function App() {
                                     fontWeight: "600",
                                     transform: "scaleY(1.3)",
                                     textAlign: "center",
-                                    width: "13.2vw",
+                                    width: `${(180/1366)*100}vw`
                                 }}
                             >
                                 SUPER RAIDS
@@ -527,9 +529,9 @@ function App() {
                                     fontFamily: "'Bebas Neue'", 
                                     fontWeight: "600",
                                     fontSize: "2.26vw",
-                                    height: "6.1vh",
+                                    height: `${(47/768)*100}vh`,
                                     justifyContent: "center",
-                                    width: "11vw",
+                                    width: `${(150/1366)*100}vw`
                                 }}
                             >
                                 1
@@ -544,7 +546,7 @@ function App() {
                                 display: "flex",
                                 flexDirection: "row",
                                 gap: "3.07vw",
-                                height: "6.1vh",
+                                height: `${(47/768)*100}vh`,
                                 justifyContent: "center",
                                 width: "44.6vw",
                                 zIndex: "50",
@@ -560,9 +562,9 @@ function App() {
                                     fontFamily: "'Bebas Neue'", 
                                     fontWeight: "600",
                                     fontSize: "2.26vw",
-                                    height: "6.1vh",
+                                    height: `${(47/768)*100}vh`,
                                     justifyContent: "center",
-                                    width: "11vw",
+                                    width: `${(150/1366)*100}vw`
                                 }}
                             >
                                 1
@@ -576,7 +578,7 @@ function App() {
                                     fontWeight: "600",
                                     transform: "scaleY(1.3)",
                                     textAlign: "center",
-                                    width: "13.2vw",
+                                    width: `${(180/1366)*100}vw`
                                 }}
                             >
                                 SUPER TACKLES
@@ -591,9 +593,9 @@ function App() {
                                     fontFamily: "'Bebas Neue'", 
                                     fontWeight: "600",
                                     fontSize: "2.26vw",
-                                    height: "6.1vh",
+                                    height: `${(47/768)*100}vh`,
                                     justifyContent: "center",
-                                    width: "11vw",
+                                    width: `${(150/1366)*100}vw`
                                 }}
                             >
                                 0
@@ -606,11 +608,13 @@ function App() {
                     style={{
                         alignItems: "center",
                         display: "flex",
-                        gap: "48.3vw",
+                        gap: `${(660/1366)*100}vw`,
+                        height: "100%",
                         justifyContent: "center",
                         marginTop: "12vh",
                         position: "absolute",
                         zIndex: "100",
+                        width: "100%",
                     }}
                 >
                     <div 
@@ -661,6 +665,7 @@ function App() {
                     display: "flex",
                     flexDirection: "row",
                     gap: "19vw",
+                    height: "15%",
                     justifyContent: "center",
                 }}
             >
@@ -670,17 +675,16 @@ function App() {
                         alignItems: "center",
                         display: "flex",
                         flexDirection: "row",
-                        gap: "0.37vw",
+                        gap: `${(5/1366)*100}vw`,
                     }}
                 >
                     <div 
                         id="palaniTuskersBestPlayerSubContainer"
                         style={{
-                            width: "18.3vw",
-                            height: "9.13vh",
+                            width: `${(250/1366)*100}vw`,
+                            height: `${(70/768)*100}vh`,
                             zIndex: "200",
                             borderLeft: "50px solid rgb(224, 224, 224)",
-                            marginTop: "3.04vh",
                             backgroundColor: "rgb(126, 0, 63)",
                             transform: "skewX(20deg)",
                         }}
@@ -691,6 +695,7 @@ function App() {
                                 display: "flex",
                                 flexDirection: "row",
                                 justifyContent: "left",
+                                position: "absolute",
                             }}
                         >
                             <img  
@@ -711,6 +716,7 @@ function App() {
                                     marginTop: "-3.04vh", 
                                     transform: "skew(-20deg)",
                                     position: "absolute", 
+                                    zIndex: "100",
                                 }}
                             >
                             </img>
@@ -741,7 +747,8 @@ function App() {
                                 fontSize: "1.1vw",
                                 height: "4.6vh",
                                 justifyContent: "right",
-                                marginTop: "0.76vh",
+                                marginTop: "4.5vh",
+                                position: "absolute",
                                 paddingRight: "1.46vw",
                                 width: "13.18vw",
                             }}
@@ -769,9 +776,8 @@ function App() {
                             fontSize: "1.1vw",
                             fontWeight: "400",
                             gap: "0.3vh",
-                            height: "9.13vh",
+                            height: `${(70/768)*100}vh`,
                             justifyContent: "center",
-                            marginTop: "3.04vh",
                             transform: "skewX(20deg)",
                             textAlign: "center",
                             width: "7.32vw",
@@ -802,7 +808,7 @@ function App() {
                         alignItems: "center",
                         display: "flex",
                         flexDirection: "row",
-                        gap: "0.37vw",
+                        gap: `${(5/1366)*100}vw`,
                     }}
                 >
                     <div 
@@ -818,9 +824,8 @@ function App() {
                             fontSize: "1.1vw",
                             fontWeight: "400",
                             gap: "0.3vh",
-                            height: "9.13vh",
+                            height: `${(70/768)*100}vh`,
                             justifyContent: "center",
-                            marginTop: "3.04vh",
                             transform: "skewX(-20deg)",
                             textAlign: "center",
                             width: "7.32vw",
@@ -849,10 +854,9 @@ function App() {
                         style={{
                             backgroundColor: "rgb(49, 103, 124)",
                             borderRight: "3.7vw solid rgb(224, 224, 224)",
-                            height: "9.13vh",
-                            marginTop: "3.04vh",
+                            height: `${(70/768)*100}vh`,
                             transform: "skewX(-20deg)",
-                            width: "18.3vw",
+                            width: `${(250/1366)*100}vw`,
                             zIndex: "200",
                         }}
                     >
@@ -873,6 +877,7 @@ function App() {
                                     fontWeight: "400",
                                     marginRight: "8.05vw",
                                     marginTop: "0.46vh",
+                                    position: "absolute",
                                     transform: "skew(20deg)",
                                 }}
                             >
@@ -909,7 +914,7 @@ function App() {
                                 fontFamily: "'Oswald'",
                                 fontSize: "1.1vw",
                                 height: "4.57vh",
-                                marginTop: "0.76vh",
+                                marginTop: "4.5vh",
                                 paddingLeft: "1.46vw",
                                 width: "13.18vw",
                             }}
