@@ -15,38 +15,32 @@ function App() {
         <div 
             id="mainContainer" 
             style={{
+                alignItems: "center",
                 backgroundImage: "url('https://thumbs.dreamstime.com/b/full-stadium-neoned-colorful-flashlights-background-full-stadium-neoned-colorful-flashlights-background-flyer-197148262.jpg')",
                 backgroundSize: "cover",
+                display: "flex",
+                flexDirection: "column",
+                gap: "1vh",
                 height: "100vh",
+                justifyContent: "center",
                 overflow: "hidden",
                 width: "100vw",
             }}
         >
-            <div 
-                id="matchSummaryAndScoreCardContainer"
-                style={{
-                    alignItems: "center",
-                    display: "flex",
-                    flexDirection: "column",
-                    justifyContent: "center",
-                    marginTop: `${(10/768)*100}vh`,
-                    rowGap: `${(10/768)*100}vh`,
-                    height: "85%",
-                }}
-            > 
-                
                 <div 
                     id="matchSummaryContainer"
                     style={{
                         alignItems: "center",
-                        background: "linear-gradient(to right,rgba(200, 2, 101, 0.8),rgba(0, 0, 0, 0.9),rgba(0, 0, 0, 0.9),rgba(100, 211, 255, 0.8))",
+                        background: "linear-gradient(to right, rgba(200, 2, 101, 1), rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.9), rgb(58, 213, 208))",
                         clipPath: "polygon(0% 0%, 100% 0%, 95% 100%, 5% 100%)",
-                        border: "2px solid white",
+                        border: "1px solid white",
+                        boxShadow: "0px 0px 4px white",
                         backgroundClip: "padding-box",
                         boxSizing: "border-box",
                         display: "flex",
-                        height: "10vh",
+                        height: "10%",
                         justifyContent: "center",
+                        marginTop: "1.2vh",
                         width: `${(736/1366)*100}vw`,
                     }}
                 >
@@ -54,37 +48,27 @@ function App() {
                         id="matchSummaryText"
                         style={{
                             color: "rgb(252, 252, 252)",
-                            fontFamily:'Anton',
-                            fontSize: "2vw",
-                            fontWeight: "200",
+                            fontFamily:'Oswald',
+                            fontSize: "2.3vw",
+                            fontWeight: "700",
                             textShadow: "0px 0px 10px rgb(35, 193, 255)",
-                            transform: "scaleX(1.2)",
                         }}
                     >
                         MATCH SUMMARY
                     </h1>
-                </div>   
-                <div 
-                    id="scoreBoardAndLogoContainer"
-                    style={{
-                        alignItems: "center",
-                        display: "flex",
-                        flexDirection: "row",
-                    }}
-                >
+                </div>
                     <div 
                         id="scoreBoardContainer"
                         style={{
-                            width: `${(650/1366)*100}vw`,
-                            height: `${(567/768)*100}vh`,
-                            display: "flex",
                             alignItems: "center",
+                            background: "linear-gradient(to right,rgba(200, 2, 101, 0.8),rgb(0, 0, 0),rgb(0, 0, 0),rgba(46, 133, 142, 0.8))",
+                            boxShadow: "0px 0px 3px white",
+                            display: "flex",
                             flexDirection: "column",
                             gap: `${(18/768)*100}vh`,
-                            borderLeft: "0.44vw solid rgb(179, 0, 89)",
-                            borderRight: "0.44vw solid rgb(71, 149, 180)",
-                            background: "linear-gradient(to right,rgba(200, 2, 101, 0.8),rgb(0, 0, 0),rgb(0, 0, 0),rgba(100, 211, 255, 0.8))",
-                            boxShadow: "0px 0px 3px white",
+                            height: "74%",
+                            position: "relative",
+                            width: `${(660/1366)*100}vw`,
                         }}
                     >
                         <div 
@@ -136,7 +120,7 @@ function App() {
                             <span 
                                 id="topSpan3"
                                 style={{
-                                    background: "linear-gradient(to left, rgb(63, 133, 160), transparent)",
+                                    background: "linear-gradient(to left, #3caeaa, transparent)",
                                     color: "white",
                                     fontFamily: "Audiowide",
                                     fontSize: "0.95vw",
@@ -202,7 +186,7 @@ function App() {
                             <span 
                                 style={{
                                     alignItems: "center",
-                                    background: "linear-gradient(to bottom, rgb(100, 211, 255),rgb(49, 103, 124) 80%)",
+                                    background: "linear-gradient(to bottom, #3ad5d0,#268a8a 80%)",
                                     color: "white",
                                     display: "flex",
                                     fontFamily: "'Bebas Neue'",
@@ -221,7 +205,7 @@ function App() {
                             id="raidPoints"
                             style={{
                                 alignItems: "center",
-                                background: "linear-gradient(to right, rgba(200, 2, 101, 0.8),transparent 40%,transparent 60%,rgba(100, 211, 255, 0.8) 100%)",
+                                background: "linear-gradient(to right, rgba(200, 2, 101, 0.8),transparent 40%,transparent 60%,rgba(58, 213,208, 0.8) 100%)",
                                 borderRadius: "40px",
                                 display: "flex",
                                 flexDirection: "row",
@@ -267,7 +251,7 @@ function App() {
                                 id="nilgiriKnightsRaidPoints" 
                                 style={{
                                     alignItems: "center",
-                                    background: "linear-gradient(to bottom, rgb(100, 211, 255),rgb(49, 103, 124) 80%)",
+                                    background: "linear-gradient(to bottom, #3ad5d0,#268a8a 80%)",
                                     color: "white",
                                     display: "flex",
                                     fontFamily: "'Bebas Neue'", 
@@ -285,7 +269,7 @@ function App() {
                             id="tacklePoints"
                             style={{
                                 alignItems: "center",
-                                background: "linear-gradient(to right, rgba(200, 2, 101, 0.8),transparent 40%,transparent 60%,rgba(100, 211, 255, 0.8) 100%)",
+                                background: "linear-gradient(to right, rgba(200, 2, 101, 0.8),transparent 40%,transparent 60%,rgba(58, 213,208, 0.8) 100%)",
                                 borderRadius: "40px",
                                 display: "flex",
                                 flexDirection: "row",
@@ -331,7 +315,7 @@ function App() {
                                 id="nilgiriKnightsTacklePoints" 
                                 style={{
                                     alignItems: "center",
-                                    background: "linear-gradient(to bottom, rgb(100, 211, 255),rgb(49, 103, 124) 80%)",
+                                    background: "linear-gradient(to bottom, #3ad5d0,#268a8a 80%)",
                                     color: "white",
                                     display: "flex",
                                     fontFamily: "'Bebas Neue'", 
@@ -349,7 +333,7 @@ function App() {
                             id="allOutPoints"
                             style={{
                                 alignItems: "center",
-                                background: "linear-gradient(to right,rgba(200, 2, 101, 0.8),transparent 40%,transparent 60%,rgba(100, 211, 255, 0.8) 100%)",
+                                background: "linear-gradient(to right, rgba(200, 2, 101, 0.8),transparent 40%,transparent 60%,rgba(58, 213,208, 0.8) 100%)",
                                 borderRadius: "40px",
                                 display: "flex",
                                 flexDirection: "row",
@@ -395,7 +379,7 @@ function App() {
                                 id="nilgiriKnightsTacklePoints" 
                                 style={{
                                     alignItems: "center",
-                                    background: "linear-gradient(to bottom, rgb(100, 211, 255),rgb(49, 103, 124) 80%)",
+                                    background: "linear-gradient(to bottom, #3ad5d0,#268a8a 80%)",
                                     display: "flex",
                                     color: "white",
                                     fontFamily: "'Bebas Neue'", 
@@ -413,7 +397,7 @@ function App() {
                             id="extras"
                             style={{
                                 alignItems: "center",
-                                background: "linear-gradient(to right, rgba(200, 2, 101, 0.8),transparent 40%,transparent 60%,rgba(100, 211, 255, 0.8) 100%)",
+                                background: "linear-gradient(to right, rgba(200, 2, 101, 0.8),transparent 40%,transparent 60%,rgba(58, 213,208, 0.8) 100%)",
                                 borderRadius: "40px",
                                 display: "flex",
                                 flexDirection: "row",
@@ -459,7 +443,7 @@ function App() {
                                 id="nilgiriKnightsExras_" 
                                 style={{
                                     alignItems: "center",
-                                    background: "linear-gradient(to bottom, rgb(100, 211, 255),rgb(49, 103, 124) 80%)",
+                                    background: "linear-gradient(to bottom, #3ad5d0,#268a8a 80%)",
                                     color: "white",
                                     display: "flex",
                                     fontFamily: "'Bebas Neue'", 
@@ -477,7 +461,7 @@ function App() {
                             id="superRaids"
                             style={{
                                 alignItems: "center",
-                                background: "linear-gradient(to right, rgba(200, 2, 101, 0.8),transparent 40%,transparent 60%,rgba(100, 211, 255, 0.8) 100%)",
+                                background: "linear-gradient(to right, rgba(200, 2, 101, 0.8),transparent 40%,transparent 60%,rgba(58, 213,208, 0.8) 100%)",
                                 borderRadius: "40px",
                                 display: "flex",
                                 flexDirection: "row",
@@ -523,7 +507,7 @@ function App() {
                                 id="nilgiriKnightsSuperRaids" 
                                 style={{
                                     alignItems: "center",
-                                    background: "linear-gradient(to bottom, rgb(100, 211, 255),rgb(49, 103, 124) 80%)",
+                                    background: "linear-gradient(to bottom, #3ad5d0,#268a8a 80%)",
                                     color: "white",
                                     display: "flex",
                                     fontFamily: "'Bebas Neue'", 
@@ -541,7 +525,7 @@ function App() {
                             id="superTackles"
                             style={{
                                 alignItems: "center",
-                                background: "linear-gradient(to right, rgba(200, 2, 101, 0.8),transparent 40%,transparent 60%,rgba(100, 211, 255, 0.8) 100%)",
+                                background: "linear-gradient(to right, rgba(200, 2, 101, 0.8),transparent 40%,transparent 60%,rgba(58, 213,208, 0.8) 100%)",
                                 borderRadius: "40px",
                                 display: "flex",
                                 flexDirection: "row",
@@ -587,7 +571,7 @@ function App() {
                                 id="nilgiriKnightsSuperRaids" 
                                 style={{
                                     alignItems: "center",
-                                    background: "linear-gradient(to bottom, rgb(100, 211, 255),rgb(49, 103, 124) 80%)",
+                                    background: "linear-gradient(to bottom, #3ad5d0,#268a8a 80%)",
                                     color: "white",
                                     display: "flex",
                                     fontFamily: "'Bebas Neue'", 
@@ -601,20 +585,50 @@ function App() {
                                 0
                             </span>
                         </div>
+                        <div 
+                            id="sideContainers"
+                            style={{
+                                alignItems: "center",
+                                display: "flex",
+                                flexDirection: "row",
+                                gap: "96.5%",
+                                height: "100%",
+                                width: "100%",
+                                justifyContent: "center",
+                                position: "absolute",
+                            }}
+                        >
+                            <div 
+                                id="leftContainer"
+                                style={{
+                                    height: "99%",
+                                    width: "0.8%",
+                                    backgroundColor: "rgba(200, 2, 101, 0.8)",
+                                    borderRadius: "10px",
+                                }}
+                            >
+                            </div>
+                            <div 
+                                id="rightContainer"
+                                style={{
+                                    height: "99%",
+                                    width: "0.8%",
+                                    backgroundColor: "rgba(58, 213, 208, 0.8)",
+                                    borderRadius: "10px",
+                                }}
+                            >
+                            </div>
+                        </div>
                     </div>
-                </div>
                 <div 
                     class="logoContainers"
                     style={{
                         alignItems: "center",
                         display: "flex",
                         gap: `${(660/1366)*100}vw`,
-                        height: "100%",
                         justifyContent: "center",
-                        marginTop: "12vh",
                         position: "absolute",
                         zIndex: "100",
-                        width: "100%",
                     }}
                 >
                     <div 
@@ -641,7 +655,7 @@ function App() {
                         id="nilgiriKnightsLogoContainer"
                         style={{
                             alignItems: "center",
-                            backgroundColor: "rgba(63, 132, 160, 0.5)",
+                            backgroundColor: "rgba(46, 133, 142, 0.5)",
                             clipPath: "polygon(100% 0%, 0% 20%, 0% 80%, 100% 100%)",
                             display: "flex",
                             height: "100vh",
@@ -658,14 +672,13 @@ function App() {
                         ></img>
                     </div>
                 </div>
-            </div>
             <div 
                 id="bestPlayerContainer"
                 style={{
                     display: "flex",
                     flexDirection: "row",
                     gap: "19vw",
-                    height: "15%",
+                    height: "12%",
                     justifyContent: "center",
                 }}
             >
@@ -815,7 +828,7 @@ function App() {
                         id="nilgiriKnightPointsSubContainer"
                         style={{
                             alignItems: "center",
-                            backgroundColor: "rgb(49, 103, 124)",
+                            backgroundColor: "rgb(46, 133, 142)",
                             borderLeft: "3px solid rgb(224, 224, 224)",
                             color: "white",
                             display: "flex",
@@ -852,7 +865,7 @@ function App() {
                     <div 
                         id="nilgiriKnightsBestPlayerMainContainer"
                         style={{
-                            backgroundColor: "rgb(49, 103, 124)",
+                            backgroundColor: "rgb(46, 133, 142)",
                             borderRight: "3.7vw solid rgb(224, 224, 224)",
                             height: `${(70/768)*100}vh`,
                             transform: "skewX(-20deg)",
