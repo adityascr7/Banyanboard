@@ -58,7 +58,7 @@ function App() {
             "boxShadow": "0px 0px 3px white",
             "display": "flex",
             "flexDirection": "column",
-            "height": "74%",
+            "height": "77%",
             "position": "relative",
             "width": `${(660/1366)*100}vw`
         },
@@ -103,7 +103,7 @@ function App() {
             "fontSize": `${(17/1366)*100}vw`,
             "fontWeight": "600",
             "fontFamily": "Roboto Condensed",
-            "height": `${(225/768)*100}vh`,
+            "height": `${(236/768)*100}vh`,
             "paddingTop": `${(28/768)*100}vh`,
             "paddingBottom": "41vh",
             "textAlign": "left",
@@ -116,7 +116,7 @@ function App() {
             "fontFamily": "Roboto Condensed",
             "fontSize": `${(22/1366)*100}vw`,
             "fontWeight": "600",
-            "height": `${(201/768)*100}vh`,
+            "height": `${(211/768)*100}vh`,
             "paddingTop": `${(18/768)*100}vh`,
             "paddingBottom": `${(340/768)*100}vh`,
             "textAlign": "center",
@@ -132,9 +132,50 @@ function App() {
             "paddingTop": `${(28/768)*100}vh`,
             "paddingBottom": "41vh",
             "paddingRight": "1%",
-            "height": `${(225/768)*100}vh`,
+            "height": `${(236/768)*100}vh`,
             "textAlign": "right",
             "width": `${(150/1366)*100}vw`
+        }
+
+    }
+    const CONFIGfullTime = {
+
+        "container": {
+            "alignItems": "center",
+            "borderRadius": "5px",
+            "background": "linear-gradient(to bottom, #f7f7f7,rgb(170, 170, 170),#f7f7f7)",
+            "display": "flex",
+            "gap": `${(32/1366)*100}vw`,
+            "height": "11.7%",
+            "justifyContent": "center",
+            "marginTop": `${(84/768)*100}vh`,
+            "outline": "3px solid rgb(156, 156, 156)",
+            "width": `${(601/1366)*100}vw`,
+            "zIndex": "50"
+        },
+
+        "Typography": {
+            "alignItems": "center",
+            "background": "linear-gradient(to bottom, rgb(200, 2, 100),rgb(126, 0, 63) 80%)",
+            "color": "white",
+            "display": "flex",
+            "fontSize": `${(52/1366)*100}vw`,
+            "fontFamily": "'Bebas Neue'",
+            "fontWeight": "600",
+            "height": "110%",
+            "justifyContent": "center",
+            "width": `${(150/1366)*100}vw`,
+            "zIndex": "100"
+        },
+
+        "fullTimeTypography": {
+            "color": "black",
+            "fontSize": `${(33/1366)*100}vw`,
+            "fontFamily": "'Bebas Neue'",
+            "fontWeight": "600",
+            "transform": "scaleX(1.2)",
+            "textAlign": "center",
+            "width": `${(200/1366)*100}vw`
         }
 
     }
@@ -147,7 +188,7 @@ function App() {
             "display": "flex",
             "flexDirection": "row",
             "gap": `${(42/1366)*100}vw`,
-            "height": `${(47/768)*100}vh`,
+            "height": "9.5%",
             "justifyContent": "center",
             "width": `${(609/1366)*100}vw`,
             "zIndex": "50"
@@ -161,7 +202,7 @@ function App() {
             "fontFamily": "'Bebas Neue'", 
             "fontWeight": "600",
             "fontSize": `${(30/1366)*100}vw`,
-            "height": `${(47/768)*100}vh`,
+            "height": "100%",
             "justifyContent": "center",
             "width": `${(150/1366)*100}vw`
         },
@@ -184,7 +225,7 @@ function App() {
             "fontFamily": "'Bebas Neue'", 
             "fontWeight": "600",
             "fontSize": `${(30/1366)*100}vw`,
-            "height": `${(47/768)*100}vh`,
+            "height": "100%",
             "justifyContent": "center",
             "width": `${(150/1366)*100}vw`
         }
@@ -509,7 +550,7 @@ function App() {
             </Box>
             <Stack 
                 id="scoreBoardContainer"
-                spacing={2}
+                spacing={1.6}
                 style={{
                     ...CONFIGscoreBoard.container
                 }}
@@ -548,63 +589,29 @@ function App() {
                 <Box 
                     id="fullTime" 
                     style={{
-                        alignItems: "center",
-                        borderRadius: "5px",
-                        background: "linear-gradient(to bottom, #f7f7f7,rgb(170, 170, 170),#f7f7f7)",
-                        display: "flex",
-                        gap: `${(32/1366)*100}vw`,
-                        height: `${(68/768)*100}vh`,
-                        justifyContent: "center",
-                        marginTop: `${(84/768)*100}vh`,
-                        outline: "3px solid rgb(156, 156, 156)",
-                        width: `${(601/1366)*100}vw`,
-                        zIndex: "50",
+                        ...CONFIGfullTime.container
                     }}
                 >
                     <Typography 
-                        id="fullTimeTypography1"
+                        id="fullTimePalaniTuskersScoreTypography"
                         style={{
-                            alignItems: "center",
-                            background: "linear-gradient(to bottom, rgb(200, 2, 100),rgb(126, 0, 63) 80%)",
-                            color: "white",
-                            display: "flex",
-                            fontSize: `${(52/1366)*100}vw`,
-                            fontFamily: "'Bebas Neue'",
-                            fontWeight: "600",
-                            height: `${(75/768)*100}vh`,
-                            justifyContent: "center",
-                            width: `${(150/1366)*100}vw`,
-                            zIndex: "100",
+                            ...CONFIGfullTime.typography
                         }}
                     >
                         30
                     </Typography>
                     <Typography 
+                        id="fullTimeNilgiriKnightsScoreTypography"
                         style={{
-                            color: "black",
-                            fontSize: `${(33/1366)*100}vw`,
-                            fontFamily: "'Bebas Neue'",
-                            fontWeight: "600",
-                            transform: "scaleX(1.2)",
-                            textAlign: "center",
-                            width: `${(200/1366)*100}vw`,
+                            ...CONFIGfullTime.fulltimeTypography
                         }}
                     >
                         FULL TIME
                     </Typography>
-                    <Typography 
+                    <Typography
+                        id="fullTimeNilgiriKnightsScoreTypography" 
                         style={{
-                            alignItems: "center",
-                            background: "linear-gradient(to bottom, #3ad5d0,#268a8a 80%)",
-                            color: "white",
-                            display: "flex",
-                            fontFamily: "'Bebas Neue'",
-                            fontSize: `${(52/1366)*100}vw`,
-                            fontWeight: "600",
-                            height: `${(75/768)*100}vh`,
-                            justifyContent: "center",
-                            width: `${(150/1366)*100}vw`,
-                            zIndex: "100",
+                            ...CONFIGfullTime.typography
                         }}
                     >
                         18
