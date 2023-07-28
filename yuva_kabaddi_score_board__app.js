@@ -34,7 +34,7 @@ function App() {
             "height": "10%",
             "justifyContent": "center",
             "marginTop": `${(8/768)*100}vh`,
-            "width": `${(720/1366)*100}vw`
+            "width": `${(677/1366)*100}vw`
 
         },
 
@@ -44,13 +44,12 @@ function App() {
             "fontFamily": "Oswald",
             "fontSize": `${(32/1366)*100}vw`,
             "fontWeight": "700",
-            // "textShadow": "0px 0px 10px rgb(35, 193, 255)",
             "textTransform": "uppercase"
 
         }
 
     }
-    const CONFIGscoreBoard = {
+    const CONFIGScoreBoard = {
 
         "container": {
             "alignItems": "center",
@@ -60,7 +59,7 @@ function App() {
             "flexDirection": "column",
             "height": "77%",
             "position": "relative",
-            "width": `${(660/1366)*100}vw`
+            "width": `${(620/1366)*100}vw`
         },
 
         "leftContainer": {
@@ -69,8 +68,7 @@ function App() {
             "backgroundColor": "rgba(200, 2, 101, 0.8)",
             "borderRadius": "10px",
             "position": "absolute",
-            "top": "0%",
-            "left": "1%",
+            "left": "0.5%",
             "marginTop": "0px",
         },
 
@@ -80,13 +78,12 @@ function App() {
             "backgroundColor": "rgba(58, 213, 208, 0.8)",
             "borderRadius": "10px",
             "position": "absolute",
-            "top": "0%",
-            "right": "1%",
+            "right": "0.5%",
             "marginTop": "0px",
         }
 
     }
-    const CONFIGrivalryTeamsAndMatchNumber = {
+    const CONFIGRivalryTeamsAndMatchNumber = {
 
         "container": {
             "alignItems": "center",
@@ -100,20 +97,20 @@ function App() {
         "palaniTuskersTypography": {
             "background": "linear-gradient(to right, rgb(160, 0, 80), transparent)",
             "color": "white",
-            "fontSize": `${(17/1366)*100}vw`,
+            "fontSize": `${(18/1366)*100}vw`,
             "fontWeight": "600",
-            "fontFamily": "Roboto Condensed",
+            "fontFamily": "Oswald",
             "height": `${(236/768)*100}vh`,
             "paddingTop": `${(28/768)*100}vh`,
             "paddingBottom": "41vh",
-            "textAlign": "left",
             "paddingLeft": "1%",
-            "width": `${(150/1366)*100}vw`
+            "textAlign": "left",
+            "width": `${(130/1366)*100}vw`
         },
 
         "match7Typography": {
             "color": "white",
-            "fontFamily": "Roboto Condensed",
+            "fontFamily": "Oswald",
             "fontSize": `${(22/1366)*100}vw`,
             "fontWeight": "600",
             "height": `${(211/768)*100}vh`,
@@ -126,19 +123,19 @@ function App() {
         "nilgiriKnightsTypography": {
             "background": "linear-gradient(to left, #3caeaa, transparent)",
             "color": "white",
-            "fontFamily": "Roboto Condensed",
-            "fontSize": `${(17/1366)*100}vw`,
+            "fontFamily": "Oswald",
+            "fontSize": `${(18/1366)*100}vw`,
             "fontWeight": "600",
+            "height": `${(236/768)*100}vh`,
             "paddingTop": `${(28/768)*100}vh`,
             "paddingBottom": "41vh",
             "paddingRight": "1%",
-            "height": `${(236/768)*100}vh`,
             "textAlign": "right",
-            "width": `${(150/1366)*100}vw`
+            "width": `${(130/1366)*100}vw`
         }
 
     }
-    const CONFIGfullTime = {
+    const CONFIGFullTime = {
 
         "container": {
             "alignItems": "center",
@@ -150,11 +147,11 @@ function App() {
             "justifyContent": "center",
             "marginTop": `${(84/768)*100}vh`,
             "outline": "3px solid rgb(156, 156, 156)",
-            "width": `${(601/1366)*100}vw`,
+            "width": `${(561/1366)*100}vw`,
             "zIndex": "50"
         },
 
-        "Typography": {
+        "palaniTuskerstypography": {
             "alignItems": "center",
             "background": "linear-gradient(to bottom, rgb(200, 2, 100),rgb(126, 0, 63) 80%)",
             "color": "white",
@@ -164,14 +161,28 @@ function App() {
             "fontWeight": "600",
             "height": "110%",
             "justifyContent": "center",
-            "width": `${(150/1366)*100}vw`,
+            "width": `${(130/1366)*100}vw`,
+            "zIndex": "100"
+        },
+
+        "nilgiriKnightstypography": {
+            "alignItems": "center",
+            "background": "linear-gradient(to bottom, #3ad5d0,#268a8a 80%)",
+            "color": "white",
+            "display": "flex",
+            "fontSize": `${(52/1366)*100}vw`,
+            "fontFamily": "'Bebas Neue'",
+            "fontWeight": "600",
+            "height": "110%",
+            "justifyContent": "center",
+            "width": `${(130/1366)*100}vw`,
             "zIndex": "100"
         },
 
         "fullTimeTypography": {
             "color": "black",
             "fontSize": `${(33/1366)*100}vw`,
-            "fontFamily": "'Bebas Neue'",
+            "fontFamily": "Bebas Neue",
             "fontWeight": "600",
             "transform": "scaleX(1.2)",
             "textAlign": "center",
@@ -179,7 +190,7 @@ function App() {
         }
 
     }
-    const CONFIGpoints = {
+    const CONFIGPoints = {
 
         "container": {
             "alignItems": "center",
@@ -190,7 +201,7 @@ function App() {
             "gap": `${(42/1366)*100}vw`,
             "height": "9.5%",
             "justifyContent": "center",
-            "width": `${(609/1366)*100}vw`,
+            "width": `${(569/1366)*100}vw`,
             "zIndex": "50"
         },
 
@@ -204,15 +215,15 @@ function App() {
             "fontSize": `${(30/1366)*100}vw`,
             "height": "100%",
             "justifyContent": "center",
-            "width": `${(150/1366)*100}vw`
+            "width": `${(130/1366)*100}vw`
         },
 
         "pointsTypography": {
             "color": "white",
-            "fontFamily": "'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif",
-            "fontSize": `${(19/1366)*100}vw`,
+            "fontFamily": "Oswald",
+            "fontSize": `${(23/1366)*100}vw`,
             "fontWeight": "600",
-            "transform": "scaleY(1.3)",
+            //"transform": "scaleY(1.3)",
             "textAlign": "center",
             "width": `${(180/1366)*100}vw`,
         },
@@ -227,11 +238,11 @@ function App() {
             "fontSize": `${(30/1366)*100}vw`,
             "height": "100%",
             "justifyContent": "center",
-            "width": `${(150/1366)*100}vw`
+            "width": `${(130/1366)*100}vw`
         }
 
     }
-    const CONFIGpalaniTuskersLogo = {
+    const CONFIGPalaniTuskersLogo = {
 
         "container": {
             "alignItems": "center",
@@ -240,10 +251,10 @@ function App() {
             "display": "flex",
             "height": "100%",
             "justifyContent": "center",
-            "top": "0%",
             "left": "0%",
             "position": "absolute",
-            "width": `${(353/1366)*100}vw`,
+            "top": "0%",
+            "width": `${(373/1366)*100}vw`,
             "zIndex": "100"
         },
         
@@ -252,20 +263,20 @@ function App() {
         }
 
     }
-    const CONFIGnilgiriKnightsLogo = {
+    const CONFIGNilgiriKnightsLogo = {
 
         "conntainer": {
-            alignItems: "center",
-            backgroundColor: "rgba(46, 133, 142, 0.5)",
-            clipPath: "polygon(100% 0%, 0% 20%, 0% 80%, 100% 100%)",
-            display: "flex",
-            height: "100%",
-            justifyContent: "center",
-            top: "0%",
-            right: "0%",
-            position: "absolute",
-            width: `${(353/1366)*100}vw`,
-            zIndex: "100"
+            "alignItems": "center",
+            "backgroundColor": "rgba(46, 133, 142, 0.5)",
+            "clipPath": "polygon(100% 0%, 0% 20%, 0% 80%, 100% 100%)",
+            "display": "flex",
+            "height": "100%",
+            "justifyContent": "center",
+            "position": "absolute",
+            "right": "0%",
+            "top": "0%",
+            "width": `${(373/1366)*100}vw`,
+            "zIndex": "100"
         },
 
         "logo": {
@@ -273,7 +284,7 @@ function App() {
         }
 
     }
-    const CONFIGbestPlayerContainer = {
+    const CONFIGBestPlayerContainer = {
         
         "display": "flex",
         "flexDirection": "row",
@@ -281,7 +292,7 @@ function App() {
         "justifyContent": "center"
 
     }
-    const CONFIGpalaniTuskersBestPlayer = {
+    const CONFIGPalaniTuskersBestPlayer = {
 
         "container": {
             "alignItems": "center",
@@ -309,13 +320,13 @@ function App() {
         "palaniTuskersBestPlayerName": {
 
             "container": {
-                "width": `${(250/1366)*100}vw`,
-                "height": `${(70/768)*100}vh`,
-                "borderWidth": `${(50/1366)*100}vw`,
-                "borderLeftStyle": "solid",
                 "borderColor": "rgba(58, 213, 208, 0.7)",
                 "backgroundColor": "rgb(126, 0, 63)",
+                "borderWidth": `${(50/1366)*100}vw`,
+                "borderLeftStyle": "solid",
                 "clipPath": "polygon(100% 0%, 0% 0%, 0% 100%, 94% 100% )",
+                "height": `${(70/768)*100}vh`,
+                "width": `${(250/1366)*100}vw`,
                 "zIndex": "200",
             },
 
@@ -335,6 +346,7 @@ function App() {
                     "alignItems": "center",
                     "backgroundColor": "black",
                     "color": "white",
+                    "clipPath": "polygon(100% 0%, 0% 0%, 0% 100%, 93% 100% )",
                     "display": "flex",
                     "float": "left",
                     "fontFamily": "Oswald",
@@ -344,7 +356,6 @@ function App() {
                     "marginTop": `${(35/768)*100}vh`,
                     "position": "absolute",
                     "paddingRight": `${(20/1366)*100}vw`,
-                    "clipPath": "polygon(100% 0%, 0% 0%, 0% 100%, 93% 100% )",
                     "width": `${(180/1366)*100}vw`
                 },
 
@@ -365,6 +376,7 @@ function App() {
                 "alignItems": "center",
                 "backgroundColor": "rgb(126, 0, 63)",
                 "color": "white",
+                "clipPath": "polygon(100% 0%, 13% 0%, 0% 100%, 84% 100% )",
                 "display": "flex",
                 "flexDirection": "column",
                 "fontFamily": "Oswald",
@@ -372,11 +384,10 @@ function App() {
                 "fontWeight": "400",
                 "height": `${(70/768)*100}vh`,
                 "justifyContent": "center",
-                "clipPath": "polygon(100% 0%, 13% 0%, 0% 100%, 84% 100% )",
-                "textAlign": "center",
-                "width": "10vw",
+                "left": "-3.5%",
                 "position": "relative",
-                "left": "-3.5%"
+                "textAlign": "center",
+                "width": "10vw"
             },
 
             "typography": {
@@ -393,7 +404,7 @@ function App() {
         }
 
     }
-    const CONFIGnigiriKnightsBestPlayer = {
+    const CONFIGNigiriKnightsBestPlayer = {
         
         "container": {
             "alignItems": "center",
@@ -502,7 +513,7 @@ function App() {
             "height": `${(85/768)*100}vh`,
             "marginRight": `${(-85/1366)*100}vw`, 
             "position": "relative",
-            "right": "12%",
+            "right": "10%",
             "top": "-25%",
             "zIndex": "300"
 
@@ -552,19 +563,19 @@ function App() {
                 id="scoreBoardContainer"
                 spacing={1.6}
                 style={{
-                    ...CONFIGscoreBoard.container
+                    ...CONFIGScoreBoard.container
                 }}
             >
                 <Box 
                     id="rivalryTeamsAndMatchNumber" 
                     style={{
-                        ...CONFIGrivalryTeamsAndMatchNumber.container
+                        ...CONFIGRivalryTeamsAndMatchNumber.container
                     }}
                 >
                     <Typography
                         id="palaniTuskersTypography"
                         style={{
-                            ...CONFIGrivalryTeamsAndMatchNumber.palaniTuskersTypography
+                            ...CONFIGRivalryTeamsAndMatchNumber.palaniTuskersTypography
                         }}
                     >
                         PALANI TUSKERS
@@ -572,7 +583,7 @@ function App() {
                     <Typography
                         id="match7Typography"
                         style={{
-                            ...CONFIGrivalryTeamsAndMatchNumber.match7Typography
+                            ...CONFIGRivalryTeamsAndMatchNumber.match7Typography
                         }}
                     >
                         MATCH 7
@@ -580,7 +591,7 @@ function App() {
                     <Typography
                         id="nilgiriKnightsTypography"
                         style={{
-                            ...CONFIGrivalryTeamsAndMatchNumber.nilgiriKnightsTypography
+                            ...CONFIGRivalryTeamsAndMatchNumber.nilgiriKnightsTypography
                         }}
                     >
                         NILGIRI KNIGHTS
@@ -589,13 +600,13 @@ function App() {
                 <Box 
                     id="fullTime" 
                     style={{
-                        ...CONFIGfullTime.container
+                        ...CONFIGFullTime.container
                     }}
                 >
                     <Typography 
                         id="fullTimePalaniTuskersScoreTypography"
                         style={{
-                            ...CONFIGfullTime.typography
+                            ...CONFIGFullTime.palaniTuskerstypography
                         }}
                     >
                         30
@@ -603,7 +614,7 @@ function App() {
                     <Typography 
                         id="fullTimeNilgiriKnightsScoreTypography"
                         style={{
-                            ...CONFIGfullTime.fulltimeTypography
+                            ...CONFIGFullTime.fullTimeTypography
                         }}
                     >
                         FULL TIME
@@ -611,7 +622,7 @@ function App() {
                     <Typography
                         id="fullTimeNilgiriKnightsScoreTypography" 
                         style={{
-                            ...CONFIGfullTime.typography
+                            ...CONFIGFullTime.nilgiriKnightstypography
                         }}
                     >
                         18
@@ -620,29 +631,29 @@ function App() {
                 <Box 
                     id="raidPoints"
                     style={{
-                        ...CONFIGpoints.container
+                        ...CONFIGPoints.container
                     }}
                 >
                     <Typography 
-                        id="palaniTuskersRaidPoints" 
+                        id="palaniTuskersRaidPointsNumberTypography" 
                         style={{
-                            ...CONFIGpoints.palaniTuskersPoints
+                            ...CONFIGPoints.palaniTuskersPoints
                         }}
                     >
                         16
                     </Typography>
                     <Typography 
-                        id="raidPoints_" 
+                        id="raidPointsTypography" 
                         style={{
-                            ...CONFIGpoints.pointsTypography
+                            ...CONFIGPoints.pointsTypography
                         }}
                     >
                         RAID POINTS
                     </Typography>
                     <Typography 
-                        id="nilgiriKnightsRaidPoints" 
+                        id="nilgiriKnightsRaidPointsNumberTypography" 
                         style={{
-                            ...CONFIGpoints.nilgiriKnightsPoints
+                            ...CONFIGPoints.nilgiriKnightsPoints
                         }}
                     >
                         11
@@ -651,29 +662,29 @@ function App() {
                 <Box 
                     id="tacklePoints"
                     style={{
-                        ...CONFIGpoints.container
+                        ...CONFIGPoints.container
                     }}
                 >
                     <Typography 
-                        id="palaniTuskersTacklePoints" 
+                        id="palaniTuskersTacklePointsNumberTypography" 
                         style={{
-                            ...CONFIGpoints.palaniTuskersPoints
+                            ...CONFIGPoints.palaniTuskersPoints
                         }}
                     >
                         11
                     </Typography>
                     <Typography 
-                        id="tacklePoints" 
+                        id="tacklePointsTypography" 
                         style={{
-                            ...CONFIGpoints.pointsTypography
+                            ...CONFIGPoints.pointsTypography
                         }}
                     >
                         TACKLE POINTS
                     </Typography>
                     <Typography 
-                        id="nilgiriKnightsTacklePoints" 
+                        id="nilgiriKnightsTacklePointsNumberTypography" 
                         style={{
-                            ...CONFIGpoints.nilgiriKnightsPoints
+                            ...CONFIGPoints.nilgiriKnightsPoints
                         }}
                     >
                         7
@@ -682,29 +693,29 @@ function App() {
                 <Box 
                     id="allOutPoints"
                     style={{
-                        ...CONFIGpoints.container
+                        ...CONFIGPoints.container
                     }}
                 >
                     <Typography 
-                        id="palaniTuskersAllOutPoints" 
+                        id="palaniTuskersAllOutPointsNumberTypography" 
                         style={{
-                            ...CONFIGpoints.palaniTuskersPoints
+                            ...CONFIGPoints.palaniTuskersPoints
                         }}
                     >
                         2
                     </Typography>
                     <Typography 
-                        id="tacklePoints" 
+                        id="tacklePointsTypography" 
                         style={{
-                            ...CONFIGpoints.pointsTypography
+                            ...CONFIGPoints.pointsTypography
                         }}
                     >
                         ALL OUT POINTS
                     </Typography>
                     <Typography 
-                        id="nilgiriKnightsTacklePoints" 
+                        id="nilgiriKnightsTacklePointsNumberTypography" 
                         style={{
-                            ...CONFIGpoints.nilgiriKnightsPoints
+                            ...CONFIGPoints.nilgiriKnightsPoints
                         }}
                     >
                         0
@@ -713,29 +724,29 @@ function App() {
                 <Box 
                     id="extras"
                     style={{
-                        ...CONFIGpoints.container
+                        ...CONFIGPoints.container
                     }}
                 >
                     <Typography 
-                        id="palaniTuskersExtras" 
+                        id="palaniTuskersExtrasNumberTypography" 
                         style={{
-                            ...CONFIGpoints.palaniTuskersPoints
+                            ...CONFIGPoints.palaniTuskersPoints
                         }}
                     >
                         1
                     </Typography>
                     <Typography 
-                        id="extras_" 
+                        id="extrasTypography" 
                         style={{
-                            ...CONFIGpoints.pointsTypography
+                            ...CONFIGPoints.pointsTypography
                         }}
                     >
                         EXTRAS
                     </Typography>
                     <Typography 
-                        id="nilgiriKnightsExras_" 
+                        id="nilgiriKnightsExtrasNumberTypography" 
                         style={{
-                            ...CONFIGpoints.nilgiriKnightsPoints
+                            ...CONFIGPoints.nilgiriKnightsPoints
                         }}
                     >
                         0
@@ -744,29 +755,29 @@ function App() {
                 <Box 
                     id="superRaids"
                     style={{
-                        ...CONFIGpoints.container
+                        ...CONFIGPoints.container
                     }}
                 >
                     <Typography
-                        id="palaniTuskersSuperRaids" 
+                        id="palaniTuskersSuperRaidsNumberTypography" 
                         style={{
-                            ...CONFIGpoints.palaniTuskersPoints
+                            ...CONFIGPoints.palaniTuskersPoints
                         }}
                     >
                         0
                     </Typography>
                     <Typography 
-                        id="superRaids_" 
+                        id="superRaidsTypography" 
                         style={{
-                            ...CONFIGpoints.pointsTypography
+                            ...CONFIGPoints.pointsTypography
                         }}
                     >
                         SUPER RAIDS
                     </Typography>
                     <Typography 
-                        id="nilgiriKnightsSuperRaids" 
+                        id="nilgiriKnightsSuperRaidsNumberTypography" 
                         style={{
-                            ...CONFIGpoints.nilgiriKnightsPoints
+                            ...CONFIGPoints.nilgiriKnightsPoints
                         }}
                     >
                         1
@@ -775,29 +786,29 @@ function App() {
                 <Box 
                     id="superTackles"
                     style={{
-                        ...CONFIGpoints.container
+                        ...CONFIGPoints.container
                     }}
                 >
                     <Typography 
-                        id="palaniTuskersSuperRaids" 
+                        id="palaniTuskersSuperRaidsNumberTypography" 
                         style={{
-                            ...CONFIGpoints.palaniTuskersPoints
+                            ...CONFIGPoints.palaniTuskersPoints
                         }}
                     >
                         1
                     </Typography>
                     <Typography 
-                        id="superRaids_" 
+                        id="superRaidsTypography" 
                         style={{
-                            ...CONFIGpoints.pointsTypography
+                            ...CONFIGPoints.pointsTypography
                         }}
                     >
                         SUPER TACKLES
                     </Typography>
                     <Typography 
-                        id="nilgiriKnightsSuperRaids" 
+                        id="nilgiriKnightsSuperRaidsNumberTypography" 
                         style={{
-                            ...CONFIGpoints.nilgiriKnightsPoints
+                            ...CONFIGPoints.nilgiriKnightsPoints
                         }}
                     >
                         0
@@ -806,14 +817,14 @@ function App() {
                 <Box 
                     id="leftContainer"
                     style={{
-                        ...CONFIGscoreBoard.leftContainer
+                        ...CONFIGScoreBoard.leftContainer
                     }}
                 >
                 </Box>
                 <Box 
                     id="rightContainer"
                     style={{
-                        ...CONFIGscoreBoard.rightContainer
+                        ...CONFIGScoreBoard.rightContainer
                     }}
                 >
                 </Box>
@@ -821,14 +832,14 @@ function App() {
             <Box 
                 id="palaniTuskersLogo"
                 style={{
-                    ...CONFIGpalaniTuskersLogo.container
+                    ...CONFIGPalaniTuskersLogo.container
                 }}
             >
                 <img 
                     id="palaniTuskersLogo" 
                     src="https://feed.yuvakabaddi.com/YKS-2022-SE/teamLogos/569.png"
                     style={{
-                        ...CONFIGpalaniTuskersLogo.logo
+                        ...CONFIGPalaniTuskersLogo.logo
                     }}
                 >
                 </img>
@@ -836,14 +847,14 @@ function App() {
             <Box
                 id="nilgiriKnightsLogo"
                 style={{
-                    ...CONFIGnilgiriKnightsLogo.conntainer
+                    ...CONFIGNilgiriKnightsLogo.conntainer
                 }}
             >
                 <img 
                     id="nilgiriKnightsLogo"
                     src="https://www.bullscore.com/feature_img_cron/logos/kabaddi/151.png"
                     style={{
-                        ...CONFIGnilgiriKnightsLogo.logo
+                        ...CONFIGNilgiriKnightsLogo.logo
                     }}
                 >
                 </img>
@@ -851,20 +862,20 @@ function App() {
             <Box 
                 id="bestPlayerContainer"
                 style={{
-                    ...CONFIGbestPlayerContainer
+                    ...CONFIGBestPlayerContainer
                 }}
             >
                 <Box
                     id="palaniTuskersBestPlayer"
                     style={{
-                        ...CONFIGpalaniTuskersBestPlayer.container
+                        ...CONFIGPalaniTuskersBestPlayer.container
                     }}
                 >
                     <img
                         id="palaniTuskersBestPlayerTeamLogo" 
                         src="https://feed.yuvakabaddi.com/YKS-2022-SE/teamLogos/569.png"
                         style={{
-                            ...CONFIGpalaniTuskersBestPlayer.teamLogo
+                            ...CONFIGPalaniTuskersBestPlayer.teamLogo
                         }}
                     >  
                     </img>
@@ -872,20 +883,20 @@ function App() {
                         id="palaniTuskersBestPlayerPlayer'sLogo"
                         src="https://static.yuvakabaddi.com/images/player-images/6618.png"
                         style={{
-                            ...CONFIGpalaniTuskersBestPlayer.playersLogo
+                            ...CONFIGPalaniTuskersBestPlayer.playersLogo
                         }}
                     >
                     </img>
                     <Box 
                         id="palaniTuskersBestPlayerNameContainer"
                         style={{
-                            ...CONFIGpalaniTuskersBestPlayer.palaniTuskersBestPlayerName.container
+                            ...CONFIGPalaniTuskersBestPlayer.palaniTuskersBestPlayerName.container
                         }}
                     >
                         <Typography 
                             id="palaniTuskersPlayerNameTypography"
                             style={{
-                                ...CONFIGpalaniTuskersBestPlayer.palaniTuskersBestPlayerName.typography
+                                ...CONFIGPalaniTuskersBestPlayer.palaniTuskersBestPlayerName.typography
                             }}
                         >
                             S.MUKESHKANNAN
@@ -893,13 +904,13 @@ function App() {
                         <Box
                             id="bestRaiderText"
                             style={{
-                                ...CONFIGpalaniTuskersBestPlayer.palaniTuskersBestPlayerName.bestRaiderText.container
+                                ...CONFIGPalaniTuskersBestPlayer.palaniTuskersBestPlayerName.bestRaiderText.container
                             }}
                         >
                             <Typography
                                 id="bestRaiderText"
                                 style={{
-                                    ...CONFIGpalaniTuskersBestPlayer.palaniTuskersBestPlayerName.bestRaiderText.typography
+                                    ...CONFIGPalaniTuskersBestPlayer.palaniTuskersBestPlayerName.bestRaiderText.typography
                                 }}
                             >
                                 BEST RAIDER
@@ -909,13 +920,13 @@ function App() {
                     <Box 
                         id="palaniTuskersPoints"
                         style={{
-                            ...CONFIGpalaniTuskersBestPlayer.palaniTuskersPoints.container
+                            ...CONFIGPalaniTuskersBestPlayer.palaniTuskersPoints.container
                         }}
                     >
                         <Typography
                             id="palaniTuskersPointsTypography"
                             style={{
-                                ...CONFIGpalaniTuskersBestPlayer.palaniTuskersPoints.typography
+                                ...CONFIGPalaniTuskersBestPlayer.palaniTuskersPoints.typography
                             }}
                         >
                             RAID POINTS
@@ -923,7 +934,7 @@ function App() {
                         <Typography
                             id="palaniTuskersPointsValue" 
                             style={{
-                                ...CONFIGpalaniTuskersBestPlayer.palaniTuskersPoints.value
+                                ...CONFIGPalaniTuskersBestPlayer.palaniTuskersPoints.value
                             }}
                         >
                             4
@@ -933,19 +944,19 @@ function App() {
                 <Box 
                     id="nilgiriKnightBestPlayer"
                     style={{
-                        ...CONFIGnigiriKnightsBestPlayer.container
+                        ...CONFIGNigiriKnightsBestPlayer.container
                     }}
                 >
                     <Box 
                         id="nilgiriKnightPoints"
                         style={{
-                            ...CONFIGnigiriKnightsBestPlayer.nilgiriKnightsPoints.container
+                            ...CONFIGNigiriKnightsBestPlayer.nilgiriKnightsPoints.container
                         }}
                     >
                         <Typography 
                             id="nilgiriKnightPointsTypography"
                             style={{
-                                ...CONFIGnigiriKnightsBestPlayer.nilgiriKnightsPoints.typography
+                                ...CONFIGNigiriKnightsBestPlayer.nilgiriKnightsPoints.typography
                             }}
                         >
                             TACKLE POINTS
@@ -953,7 +964,7 @@ function App() {
                         <Typography
                             id="nilgiriKnightPointsValue" 
                             style={{
-                                ...CONFIGnigiriKnightsBestPlayer.nilgiriKnightsPoints.value
+                                ...CONFIGNigiriKnightsBestPlayer.nilgiriKnightsPoints.value
                             }}
                         >
                             4
@@ -962,19 +973,19 @@ function App() {
                     <Box 
                         id="nilgiriKnightsBestPlayerMainContainer"
                         style={{
-                            ...CONFIGnigiriKnightsBestPlayer.nilgiriKnightsBestPlayerMainContainer.container
+                            ...CONFIGNigiriKnightsBestPlayer.nilgiriKnightsBestPlayerMainContainer.container
                         }}
                     >
                         <Box 
                             id="nilgiriKnightsBestPlayerAndLogoContainer"
                             style={{
-                                ...CONFIGnigiriKnightsBestPlayer.nilgiriKnightsBestPlayerMainContainer.nilgiriKnightsBestPlayerAndLogoContainer.container
+                                ...CONFIGNigiriKnightsBestPlayer.nilgiriKnightsBestPlayerMainContainer.nilgiriKnightsBestPlayerAndLogoContainer.container
                             }}
                         >
                             <Typography
                                 id="nilgiriKnightsBestPlayerName"
                                 style={{
-                                    ...CONFIGnigiriKnightsBestPlayer.nilgiriKnightsBestPlayerMainContainer.nilgiriKnightsBestPlayerAndLogoContainer.nilgiriKnightsBestPlayerName
+                                    ...CONFIGNigiriKnightsBestPlayer.nilgiriKnightsBestPlayerMainContainer.nilgiriKnightsBestPlayerAndLogoContainer.nilgiriKnightsBestPlayerName
                                 }}
                             >
                                 PURUSHOTHAMAN
@@ -983,13 +994,13 @@ function App() {
                         <Box
                             id="nilgiriKnightsBestDefender" 
                             style={{
-                                ...CONFIGnigiriKnightsBestPlayer.nilgiriKnightsBestPlayerMainContainer.nilgiriKnightsBestDefender.container
+                                ...CONFIGNigiriKnightsBestPlayer.nilgiriKnightsBestPlayerMainContainer.nilgiriKnightsBestDefender.container
                             }}
                         >
                             <Typography 
                                 id="nilgiriKnightsBestDefenderText" 
                                 style={{
-                                    ...CONFIGnigiriKnightsBestPlayer.nilgiriKnightsBestPlayerMainContainer.nilgiriKnightsBestDefender.typography
+                                    ...CONFIGNigiriKnightsBestPlayer.nilgiriKnightsBestPlayerMainContainer.nilgiriKnightsBestDefender.typography
                                 }}
                             >
                                 BEST DEFENDER
@@ -998,9 +1009,9 @@ function App() {
                     </Box>
                     <img
                         id="nilgiriKnightsTeamLogo" 
-                        src="https://www.bullscore.com/feature_img_cron/logos/kabaddi/151.png"
+                        src="https://feed.yuvakabaddi.com/YKS-2022-SE/teamLogos/569.png"
                         style={{
-                            ...CONFIGnigiriKnightsBestPlayer.teamLogo
+                            ...CONFIGNigiriKnightsBestPlayer.teamLogo
                         }}
                     >
                     </img>
@@ -1008,7 +1019,7 @@ function App() {
                         id="playersLogo"
                         src="https://static.yuvakabaddi.com/images/player-images/6638.png"
                         style={{
-                            ...CONFIGnigiriKnightsBestPlayer.playersLogo
+                            ...CONFIGNigiriKnightsBestPlayer.playersLogo
                         }}
                     >
                     </img>
