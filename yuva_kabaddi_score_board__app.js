@@ -98,7 +98,7 @@ function App() {
 
     const CONFIGMatchSummary = {
 
-        "container": {
+        "containerInside": {
 
             "alignItems": "center",
             "background": "linear-gradient(rgb(91 8 60), rgb(82 13 58))",
@@ -107,6 +107,18 @@ function App() {
             "borderColor": "white",
             "borderStyle": "solid",
             "boxSizing": "border-box",
+            "clipPath": "polygon(0% 0%, 100% 0%, 97% 100%, 3% 100%)",
+            "display": "flex",
+            "height": "99%",
+            "justifyContent": "center",
+            "width": `${(658/1366)*100}vw`
+
+        },
+
+        "outsideContainer": {
+
+            "alignItems": "center",
+            "backgroundColor": "white",
             "clipPath": "polygon(0% 0%, 100% 0%, 97% 100%, 3% 100%)",
             "display": "flex",
             "height": "10%",
@@ -153,6 +165,7 @@ function App() {
                 "fontFamily": "Oswald",
                 "fontSize": `${(15/1366)*100}vw`,
                 "fontWeight": "400",
+                "gap": `${(3/768)*100}vh`,
                 "height": `${(70/768)*100}vh`,
                 "justifyContent": "center",
                 "textAlign": "center",
@@ -381,6 +394,7 @@ function App() {
                 "fontFamily": "Oswald",
                 "fontSize": `${(15/1366)*100}vw`,
                 "fontWeight": "400",
+                "gap": `${(3/768)*100}vh`,
                 "height": `${(70/768)*100}vh`,
                 "justifyContent": "center",
                 "left": "-3.5%",
@@ -634,19 +648,26 @@ function App() {
             }}
         >
             <Box 
-                id="matchSummaryContainer"
+                id="matchSummaryContainerOutside"
                 style={{
-                    ...CONFIGMatchSummary.container
+                    ...CONFIGMatchSummary.outsideContainer
                 }}
             >
-                <Typography 
-                    id="matchSummaryTypography"
+                <Box 
+                    id="matchSummaryContainerInside"
                     style={{
-                        ...CONFIGMatchSummary.typography
+                        ...CONFIGMatchSummary.containerInside
                     }}
                 >
-                    MATCH SUMMARY
-                </Typography>
+                    <Typography 
+                        id="matchSummaryTypography"
+                        style={{
+                            ...CONFIGMatchSummary.typography
+                        }}
+                    >
+                        MATCH SUMMARY
+                    </Typography>
+                </Box>
             </Box>
             <Stack 
                 id="scoreBoardContainer"
