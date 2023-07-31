@@ -170,7 +170,7 @@ function App() {
                 "justifyContent": "center",
                 "textAlign": "center",
                 "width": "10vw",
-                "right": "-4%",
+                "left": "4%",
                 "position": "relative"
 
             },
@@ -236,29 +236,19 @@ function App() {
 
             },
 
-            "nilgiriKnightsBestPlayerAndLogoContainer": {
 
-                "container": {
+            "nilgiriKnightsBestPlayerName": {
 
-                    "display": "flex",
-                    "flexDirection": "row",
-                    "justifyContent": "right"
-
-                },
-
-                "nilgiriKnightsBestPlayerName": {
-
-                    "color": "white",
-                    "fontFamily": "Oswald",
-                    "fontSize": `${(15/1366)*100}vw`,
-                    "fontWeight": "400",
-                    "marginRight": `${(110/1366)*100}vw`,
-                    "marginTop": `${(3/768)*100}vh`,
-                    "position": "absolute"
-
-                }
+                "color": "white",
+                "fontFamily": "Oswald",
+                "fontSize": `${(15/1366)*100}vw`,
+                "fontWeight": "400",
+                "right": `${(110/1366)*100}vw`,
+                "marginTop": `${(3/768)*100}vh`,
+                "position": "absolute"
 
             }
+
 
         },
 
@@ -397,7 +387,7 @@ function App() {
                 "gap": `${(3/768)*100}vh`,
                 "height": `${(70/768)*100}vh`,
                 "justifyContent": "center",
-                "left": "-3.5%",
+                "right": "3.5%",
                 "position": "relative",
                 "textAlign": "center",
                 "width": "10vw"
@@ -1086,21 +1076,14 @@ function App() {
                             ...CONFIGNilgiriKnightsBestPlayer.nilgiriKnightsBestPlayerMainContainer.container
                         }}
                     >
-                        <Box 
-                            id="nilgiriKnightsBestPlayerAndLogoContainer"
+                        <Typography
+                            id="nilgiriKnightsBestPlayerName"
                             style={{
-                                ...CONFIGNilgiriKnightsBestPlayer.nilgiriKnightsBestPlayerMainContainer.nilgiriKnightsBestPlayerAndLogoContainer.container
+                                ...CONFIGNilgiriKnightsBestPlayer.nilgiriKnightsBestPlayerMainContainer.nilgiriKnightsBestPlayerName
                             }}
                         >
-                            <Typography
-                                id="nilgiriKnightsBestPlayerName"
-                                style={{
-                                    ...CONFIGNilgiriKnightsBestPlayer.nilgiriKnightsBestPlayerMainContainer.nilgiriKnightsBestPlayerAndLogoContainer.nilgiriKnightsBestPlayerName
-                                }}
-                            >
-                                PURUSHOTHAMAN
-                            </Typography>
-                        </Box>
+                            PURUSHOTHAMAN
+                        </Typography>
                         <Box
                             id="nilgiriKnightsBestDefender" 
                             style={{
@@ -1118,18 +1101,18 @@ function App() {
                         </Box>
                     </Box>
                     <img
-                        id="nilgiriKnightsTeamLogo" 
-                        src="https://feed.yuvakabaddi.com/YKS-2022-SE/teamLogos/569.png"
-                        style={{
-                            ...CONFIGNilgiriKnightsBestPlayer.teamLogo
-                        }}
-                    >
-                    </img>
-                    <img
                         id="playersLogo"
                         src="https://static.yuvakabaddi.com/images/player-images/6638.png"
                         style={{
                             ...CONFIGNilgiriKnightsBestPlayer.playersLogo
+                        }}
+                    >
+                    </img>
+                    <img
+                        id="nilgiriKnightsTeamLogo" 
+                        src="https://feed.yuvakabaddi.com/YKS-2022-SE/teamLogos/569.png"
+                        style={{
+                            ...CONFIGNilgiriKnightsBestPlayer.teamLogo
                         }}
                     >
                     </img>
