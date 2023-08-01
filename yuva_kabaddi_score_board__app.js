@@ -6,12 +6,13 @@ import Typography from '@mui/material/Typography';
 
 function App() {
 
-    const CONFIGBestPlayerContainer = {
+    const CONFIGBestPlayersContainer = {
 
         "display": "flex",
         "flexDirection": "row",
         "height": "12%",
-        "justifyContent": "center"
+        "justifyContent": "center",
+        "width": "70%"
 
     }
 
@@ -30,7 +31,7 @@ function App() {
             "height": "11.7%",
             "justifyContent": "center",
             "marginTop": `${(84/768)*100}vh`,
-            "width": `${(561/1366)*100}vw`,
+            "width": "90.5%",
             "zIndex": "50"
 
         },
@@ -43,7 +44,7 @@ function App() {
             "fontWeight": "600",
             "textAlign": "center",
             "transform": "scaleX(1.2)",
-            "width": `${(200/1366)*100}vw`
+            "width": "35.6%"
 
         },
 
@@ -58,7 +59,7 @@ function App() {
             "fontWeight": "600",
             "height": "110%",
             "justifyContent": "center",
-            "width": `${(130/1366)*100}vw`,
+            "width": "23.2%",
             "zIndex": "100"
 
         },
@@ -74,7 +75,7 @@ function App() {
             "fontWeight": "600",
             "height": "110%",
             "justifyContent": "center",
-            "width": `${(130/1366)*100}vw`,
+            "width": "23.2%",
             "zIndex": "100"
 
         }
@@ -98,20 +99,17 @@ function App() {
 
     const CONFIGMatchSummary = {
 
-        "containerInside": {
+        "insideContainer": {
 
             "alignItems": "center",
-            "background": "linear-gradient(rgb(91 8 60), rgb(82 13 58))",
-            "backgroundClip": "padding-box",
-            "border": `${(1/1366)*100}vw`,
-            "borderColor": "white",
-            "borderStyle": "solid",
-            "boxSizing": "border-box",
+            "background": "linear-gradient(to bottom, rgb(91 8 60), rgb(82 13 58))",
+            // "background": "linear-gradient(to bottom, rgb(32 1 20), rgb(53 10 32))",
+            // "background": "linear-gradient(to bottom, rgb(50 1 20), rgb(70 10 32))",
             "clipPath": "polygon(0% 0%, 100% 0%, 97% 100%, 3% 100%)",
             "display": "flex",
-            "height": "99%",
+            "height": "97%",
             "justifyContent": "center",
-            "width": `${(658/1366)*100}vw`
+            "width": "99.6%"
 
         },
 
@@ -124,7 +122,7 @@ function App() {
             "height": "10%",
             "justifyContent": "center",
             "marginTop": `${(8/768)*100}vh`,
-            "width": `${(660/1366)*100}vw`
+            "width": "48.3%"
 
         },
 
@@ -141,25 +139,26 @@ function App() {
 
     }
 
-    const CONFIGNilgiriKnightsBestPlayer = {
+    const CONFIGBestDefender = {
 
         "container": {
 
             "alignItems": "center",
             "display": "flex",
             "flexDirection": "row",
-            "position": "relative"
+            "position": "relative",
+            "width": "50%"
 
         },
 
-        "nilgiriKnightsPoints": {
+        "points": {
 
             "container": {
 
                 "alignItems": "center",
-                "backgroundColor": "rgb(126, 0, 63)",
+                "background": "linear-gradient(to bottom ,rgb(153, 33, 91), rgb(80, 17, 56))",
                 "color": "white",
-                "clipPath": "polygon(85% 0%, 0% 0%, 14% 100%, 100% 100%)",
+                "clipPath": "polygon(84% 0%, 0% 0%, 16% 100%, 100% 100%)",
                 "display": "flex",
                 "flexDirection": "column",
                 "fontFamily": "Oswald",
@@ -169,13 +168,14 @@ function App() {
                 "height": `${(70/768)*100}vh`,
                 "justifyContent": "center",
                 "textAlign": "center",
-                "width": "10vw",
-                "left": "4%",
-                "position": "relative"
+                "width": "30%",
+                "left": "3.5%",
+                "position": "relative",
+
 
             },
 
-            "typography": {
+            "name": {
 
                 "fontFamily": "Oswald",
                 "fontSize": `${(15/1366)*100}vw`,
@@ -196,34 +196,35 @@ function App() {
 
             "container": {
 
-                "backgroundColor": "rgb(126, 0, 63)",
+                "background": "linear-gradient(to bottom, rgb(111, 19, 56), rgb(63, 13, 49))",
                 "borderColor": "rgba(58, 213, 208, 0.7)",
                 "borderRightStyle": "solid",
                 "borderWidth": `${(50/1366)*100}vw`,
                 "height": `${(70/768)*100}vh`,
                 "width": `${(250/1366)*100}vw`,
                 "zIndex": "200",
-                "clipPath": "polygon(100% 0%, 0% 0%, 7% 100%, 100% 100%)",
-                "position": "relative"
+                "clipPath": "polygon(100% 0%, 0% 0%, 6% 100%, 100% 100%)",
+                "position": "relative",
+                "width": "70%",
 
             },
 
-            "nilgiriKnightsBestDefender": {
+            "playerName": {
 
                 "container": {
 
                     "alignItems": "center", 
                     "backgroundColor": "black",
                     "color": "white",
+                    "clip-path": "polygon(100% 0%, 5% 0%, 0% 100%, 100% 100%)",
                     "display": "flex",
                     "float": "right",
                     "fontFamily": "Oswald",
                     "fontSize": `${(15/1366)*100}vw`,
-                    "height": `${(37/768)*100}vh`,
+                    "height": "50%",
                     "marginTop": `${(35/768)*100}vh`,
                     "paddingLeft": `${(20/1366)*100}vw`,
-                    "width": `${(180/1366)*100}vw`,
-                    "clipPath": "polygon(100% 0%, 0% 0%, 5.5% 100%, 100% 100%)"
+                    "width": "70%"
 
                 },
 
@@ -243,7 +244,7 @@ function App() {
                 "fontFamily": "Oswald",
                 "fontSize": `${(15/1366)*100}vw`,
                 "fontWeight": "400",
-                "right": `${(110/1366)*100}vw`,
+                "right": "45%",
                 "marginTop": `${(3/768)*100}vh`,
                 "position": "absolute"
 
@@ -252,10 +253,10 @@ function App() {
 
         },
 
-        "playersLogo": {
+        "playerImage": {
 
-            "height": `${(93/768)*100}vh`,
-            "marginTop": `${(-25/768)*100}vh`, 
+            "height": "130%",
+            "marginTop": `${(-50/768)*100}vh`, 
             "position": "absolute", 
             "right": "8%",
             "zIndex": "300"
@@ -264,10 +265,10 @@ function App() {
 
         "teamLogo": {
 
-            "height": `${(85/768)*100}vh`,
+            "height": "90%",
             "marginRight": `${(-85/1366)*100}vw`, 
             "position": "relative",
-            "right": "10%",
+            "right": "8%",
             "top": "-25%",
             "zIndex": "300"
 
@@ -288,71 +289,43 @@ function App() {
             "position": "absolute",
             "right": "0%",
             "top": "0%",
-            "width": `${(373/1366)*100}vw`,
+            "width": "27.3%",
             "zIndex": "100"
 
         },
 
         "logo": {
 
-            "height": "40vh"
+            "height": "40%"
 
         }
 
     }
 
-    const CONFIGPalaniTuskersBestPlayer = {
+    const CONFIGBestRaider = {
 
         "container": {
 
             "alignItems": "center",
             "display": "flex",
             "flexDirection": "row",
-            "position": "relative"
+            "position": "relative",
+            "width": "50%"
 
         },
 
-        "palaniTuskersBestPlayerName": {
-
-            "bestRaiderText": {
-
-                "container": {
-
-                    "alignItems": "center",
-                    "backgroundColor": "black",
-                    "color": "white",
-                    "clipPath": "polygon(100% 0%, 0% 0%, 0% 100%, 95.5% 100% )",
-                    "display": "flex",
-                    "float": "left",
-                    "fontFamily": "Oswald",
-                    "fontSize": `${(15/1366)*100}vw`,
-                    "height": `${(37/768)*100}vh`,
-                    "justifyContent": "right",
-                    "marginTop": `${(35/768)*100}vh`,
-                    "position": "absolute",
-                    "paddingRight": `${(20/1366)*100}vw`,
-                    "width": `${(180/1366)*100}vw`
-
-                },
-
-                "typography": {
-
-                    "fontFamily": "Oswald",
-                    "fontSize": `${(15/1366)*100}vw`,
-
-                }
-
-            },
+        "playerName": {
 
             "container": {
 
-                "backgroundColor": "rgb(126, 0, 63)",
+                "background": "linear-gradient(to bottom, rgb(111, 19, 56), rgb(63, 13, 49))",
                 "borderColor": "rgba(58, 213, 208, 0.7)",
                 "borderLeftStyle": "solid",
                 "borderWidth": `${(50/1366)*100}vw`,
-                "clipPath": "polygon(100% 0%, 0% 0%, 0% 100%, 94% 100% )",
+                "clipPath": "polygon(100% 0%, 0% 0%, 0% 100%, 94% 100%)",
                 "height": `${(70/768)*100}vh`,
-                "width": `${(250/1366)*100}vw`,
+                "position": "relative",
+                "width": "70%",
                 "zIndex": "200"
 
             },
@@ -363,7 +336,7 @@ function App() {
                 "fontFamily": "Oswald",
                 "fontSize": `${(15/1366)*100}vw`,
                 "fontWeight": "400",
-                "marginLeft": `${(110/1366)*100}vw`,
+                "marginLeft": "45%",
                 "marginTop": `${(3/768)*100}vh`,
                 "position": "absolute"
 
@@ -371,14 +344,14 @@ function App() {
 
         },
 
-        "palaniTuskersPoints":{
+        "points":{
 
             "container": {
 
                 "alignItems": "center",
-                "backgroundColor": "rgb(126, 0, 63)",
+                "background": "linear-gradient(to bottom ,rgb(153, 33, 91), rgb(80, 17, 56))",
                 "color": "white",
-                "clipPath": "polygon(100% 0%, 13% 0%, 0% 100%, 84% 100% )",
+                "clipPath": "polygon(100% 0%, 16% 0%, 0% 100%, 84% 100%)",
                 "display": "flex",
                 "flexDirection": "column",
                 "fontFamily": "Oswald",
@@ -387,14 +360,13 @@ function App() {
                 "gap": `${(3/768)*100}vh`,
                 "height": `${(70/768)*100}vh`,
                 "justifyContent": "center",
-                "right": "3.5%",
                 "position": "relative",
+                "right": "3.5%",
                 "textAlign": "center",
-                "width": "10vw"
-
+                "width": "30%"
             },
 
-            "typography": {
+            "name": {
 
                 "fontFamily": "Oswald",
                 "fontSize": `${(15/1366)*100}vw`,
@@ -411,11 +383,11 @@ function App() {
 
         },
 
-        "playersLogo": {
+        "playerImage": {
 
-            "height": `${(93/768)*100}vh`,
+            "height": "130%",
             "left": "12%", 
-            "marginTop": `${(-25/768)*100}vh`,
+            "marginTop": `${(-50/768)*100}vh`,
             "position": "absolute", 
             "zIndex": "300"
 
@@ -423,11 +395,40 @@ function App() {
 
         "teamLogo": {
 
-            "height": `${(85/768)*100}vh`,
+            "height": "90%",
             "left": "-7%",
             "position": "absolute",
             "top": "-25%",
             "zIndex": "300"
+
+        },
+
+        "text": {
+
+            "container": {
+
+                "alignItems": "center",
+                "backgroundColor": "black",
+                "color": "white",
+                "clipPath": "polygon(95% 0%, 0% 0%, 0% 100%, 100% 100%)",
+                "display": "flex",
+                "float": "left",
+                "fontFamily": "Oswald",
+                "fontSize": `${(15/1366)*100}vw`,
+                "height": "50%",
+                "justifyContent": "right",
+                "marginTop": `${(35/768)*100}vh`,
+                "paddingRight": `${(20/1366)*100}vw`,
+                "width": "70%"
+
+            },
+
+            "typography": {
+
+                "fontFamily": "Oswald",
+                "fontSize": `${(15/1366)*100}vw`,
+
+            }
 
         }
 
@@ -446,14 +447,14 @@ function App() {
             "left": "0%",
             "position": "absolute",
             "top": "0%",
-            "width": `${(373/1366)*100}vw`,
+            "width": "27.3%",
             "zIndex": "100"
 
         },
 
         "logo": {
 
-            "height": "40vh",
+            "height": "40%",
 
         }
 
@@ -462,7 +463,7 @@ function App() {
     const CONFIGPoints = {
 
         "container": {
-            
+
             "alignItems": "center",
             "background": "linear-gradient(to right, rgba(176, 2, 92, 0.8),transparent 40%,transparent 60%,rgba(58, 213,208, 0.8) 100%)",
             "borderRadius": `${(40/1366)*100}vw`,
@@ -471,7 +472,7 @@ function App() {
             "gap": `${(42/1366)*100}vw`,
             "height": "9.5%",
             "justifyContent": "center",
-            "width": `${(569/1366)*100}vw`,
+            "width": "92%",
             "zIndex": "50"
 
         },
@@ -487,7 +488,7 @@ function App() {
             "fontSize": `${(30/1366)*100}vw`,
             "height": "100%",
             "justifyContent": "center",
-            "width": `${(130/1366)*100}vw`
+            "width": "22.8%"
 
         },
 
@@ -502,7 +503,7 @@ function App() {
             "fontSize": `${(30/1366)*100}vw`,
             "height": "100%",
             "justifyContent": "center",
-            "width": `${(130/1366)*100}vw`
+            "width": "22.8%"
 
         },
 
@@ -513,7 +514,7 @@ function App() {
             "fontSize": `${(23/1366)*100}vw`,
             "fontWeight": "600",
             "textAlign": "center",
-            "width": `${(180/1366)*100}vw`,
+            "width": "31.6%",
 
         }
 
@@ -559,7 +560,7 @@ function App() {
             "paddingRight": "1%",
             "textAlign": "right",
             "width": `${(130/1366)*100}vw`
-            
+
         },
 
         "palaniTuskersTypography": {
@@ -592,7 +593,7 @@ function App() {
             "gap": `${(14/768)*100}vh`,
             "height": "78%",
             "position": "relative",
-            "width": `${(620/1366)*100}vw`
+            "width": "45.4%"
 
         },
 
@@ -644,9 +645,9 @@ function App() {
                 }}
             >
                 <Box 
-                    id="matchSummaryContainerInside"
+                    id="matchSummaryInsideContainer"
                     style={{
-                        ...CONFIGMatchSummary.containerInside
+                        ...CONFIGMatchSummary.insideContainer
                     }}
                 >
                     <Typography 
@@ -960,57 +961,61 @@ function App() {
                 </img>
             </Box>
             <Box 
-                id="bestPlayerContainer"
+                id="bestPlayersContainer"
                 style={{
-                    ...CONFIGBestPlayerContainer
+                    ...CONFIGBestPlayersContainer
                 }}
             >
                 <Box
-                    id="palaniTuskersBestPlayer"
+                    id="bestRaiderContainer"
                     style={{
-                        ...CONFIGPalaniTuskersBestPlayer.container
+                        ...CONFIGBestRaider.container
                     }}
                 >
                     <img
-                        id="palaniTuskersBestPlayerTeamLogo" 
+                        id="bestRaiderTeamLogo" 
                         src="https://feed.yuvakabaddi.com/YKS-2022-SE/teamLogos/569.png"
                         style={{
-                            ...CONFIGPalaniTuskersBestPlayer.teamLogo
+                            ...CONFIGBestRaider.teamLogo
                         }}
                     >  
                     </img>
                     <img
-                        id="palaniTuskersBestPlayerPlayer'sLogo"
+                        id="bestRaiderPlayerImage"
                         src="https://static.yuvakabaddi.com/images/player-images/6618.png"
                         style={{
-                            ...CONFIGPalaniTuskersBestPlayer.playersLogo
+                            ...CONFIGBestRaider.playerImage
                         }}
                     >
                     </img>
                     <Box 
-                        id="palaniTuskersBestPlayerNameContainer"
+                        id="bestRaiderPlayerNameContainer"
                         style={{
-                            ...CONFIGPalaniTuskersBestPlayer.palaniTuskersBestPlayerName.container
+                            // ...CONFIGBestRaider.palaniTuskersBestPlayerName.container
+                            ...CONFIGBestRaider.playerName.container
                         }}
                     >
                         <Typography 
-                            id="palaniTuskersPlayerNameTypography"
+                            id="bestRaiderPlayerNameTypography"
                             style={{
-                                ...CONFIGPalaniTuskersBestPlayer.palaniTuskersBestPlayerName.typography
+                                // ...CONFIGBestRaider.palaniTuskersBestPlayerName.typography
+                                ...CONFIGBestRaider.playerName.typography
                             }}
                         >
                             S.MUKESHKANNAN
                         </Typography>
                         <Box
-                            id="bestRaiderText"
+                            id="bestRaiderTextContainer"
                             style={{
-                                ...CONFIGPalaniTuskersBestPlayer.palaniTuskersBestPlayerName.bestRaiderText.container
+                                // ...CONFIGBestRaider.palaniTuskersBestPlayerName.bestRaiderText.container
+                                ...CONFIGBestRaider.text.container
                             }}
                         >
                             <Typography
-                                id="bestRaiderText"
+                                id="bestRaiderTextTypography"
                                 style={{
-                                    ...CONFIGPalaniTuskersBestPlayer.palaniTuskersBestPlayerName.bestRaiderText.typography
+                                    // ...CONFIGBestRaider.palaniTuskersBestPlayerName.bestRaiderText.typography
+                                    ...CONFIGBestRaider.text.typography
                                 }}
                             >
                                 BEST RAIDER
@@ -1018,23 +1023,27 @@ function App() {
                         </Box>
                     </Box>
                     <Box 
-                        id="palaniTuskersPoints"
+                        id="bestRaiderRaidPointsContainer"
                         style={{
-                            ...CONFIGPalaniTuskersBestPlayer.palaniTuskersPoints.container
+                            // ...CONFIGBestRaider.palaniTuskersPoints.container
+                            ...CONFIGBestRaider.points.container
+
                         }}
                     >
                         <Typography
-                            id="palaniTuskersPointsTypography"
+                            id="bestRaiderRaidPointsNameTypography"
                             style={{
-                                ...CONFIGPalaniTuskersBestPlayer.palaniTuskersPoints.typography
+                                // ...CONFIGBestRaider.palaniTuskersPoints.typography
+                                ...CONFIGBestRaider.points.name
                             }}
                         >
                             RAID POINTS
                         </Typography>
                         <Typography
-                            id="palaniTuskersPointsValue" 
+                            id="bestRaiderRaidPointsTypography" 
                             style={{
-                                ...CONFIGPalaniTuskersBestPlayer.palaniTuskersPoints.value
+                                // ...CONFIGBestRaider.palaniTuskersPoints.value
+                                ...CONFIGBestRaider.points.value
                             }}
                         >
                             4
@@ -1044,19 +1053,19 @@ function App() {
                 <Box 
                     id="nilgiriKnightBestPlayer"
                     style={{
-                        ...CONFIGNilgiriKnightsBestPlayer.container
+                        ...CONFIGBestDefender.container
                     }}
                 >
                     <Box 
                         id="nilgiriKnightPoints"
                         style={{
-                            ...CONFIGNilgiriKnightsBestPlayer.nilgiriKnightsPoints.container
+                            ...CONFIGBestDefender.points.container
                         }}
                     >
                         <Typography 
                             id="nilgiriKnightPointsTypography"
                             style={{
-                                ...CONFIGNilgiriKnightsBestPlayer.nilgiriKnightsPoints.typography
+                                ...CONFIGBestDefender.points.name
                             }}
                         >
                             TACKLE POINTS
@@ -1064,7 +1073,7 @@ function App() {
                         <Typography
                             id="nilgiriKnightPointsValue" 
                             style={{
-                                ...CONFIGNilgiriKnightsBestPlayer.nilgiriKnightsPoints.value
+                                ...CONFIGBestDefender.points.value
                             }}
                         >
                             4
@@ -1073,27 +1082,27 @@ function App() {
                     <Box 
                         id="nilgiriKnightsBestPlayerMainContainer"
                         style={{
-                            ...CONFIGNilgiriKnightsBestPlayer.nilgiriKnightsBestPlayerMainContainer.container
+                            ...CONFIGBestDefender.nilgiriKnightsBestPlayerMainContainer.container
                         }}
                     >
                         <Typography
                             id="nilgiriKnightsBestPlayerName"
                             style={{
-                                ...CONFIGNilgiriKnightsBestPlayer.nilgiriKnightsBestPlayerMainContainer.nilgiriKnightsBestPlayerName
+                                ...CONFIGBestDefender.nilgiriKnightsBestPlayerMainContainer.nilgiriKnightsBestPlayerName
                             }}
                         >
                             PURUSHOTHAMAN
                         </Typography>
                         <Box
-                            id="nilgiriKnightsBestDefender" 
+                            id="playerName" 
                             style={{
-                                ...CONFIGNilgiriKnightsBestPlayer.nilgiriKnightsBestPlayerMainContainer.nilgiriKnightsBestDefender.container
+                                ...CONFIGBestDefender.nilgiriKnightsBestPlayerMainContainer.playerName.container
                             }}
                         >
                             <Typography 
-                                id="nilgiriKnightsBestDefenderText" 
+                                id="playerNameText" 
                                 style={{
-                                    ...CONFIGNilgiriKnightsBestPlayer.nilgiriKnightsBestPlayerMainContainer.nilgiriKnightsBestDefender.typography
+                                    ...CONFIGBestDefender.nilgiriKnightsBestPlayerMainContainer.playerName.typography
                                 }}
                             >
                                 BEST DEFENDER
@@ -1101,10 +1110,10 @@ function App() {
                         </Box>
                     </Box>
                     <img
-                        id="playersLogo"
+                        id="playerImage"
                         src="https://static.yuvakabaddi.com/images/player-images/6638.png"
                         style={{
-                            ...CONFIGNilgiriKnightsBestPlayer.playersLogo
+                            ...CONFIGBestDefender.playerImage
                         }}
                     >
                     </img>
@@ -1112,7 +1121,7 @@ function App() {
                         id="nilgiriKnightsTeamLogo" 
                         src="https://feed.yuvakabaddi.com/YKS-2022-SE/teamLogos/569.png"
                         style={{
-                            ...CONFIGNilgiriKnightsBestPlayer.teamLogo
+                            ...CONFIGBestDefender.teamLogo
                         }}
                     >
                     </img>
