@@ -12,7 +12,7 @@ function App() {
         "flexDirection": "row",
         "height": "12%",
         "justifyContent": "center",
-        "width": "70%"
+        "width": "65%"
 
     }
 
@@ -89,7 +89,7 @@ function App() {
         "backgroundImage": "url('https://thumbs.dreamstime.com/b/full-stadium-neoned-colorful-flashlights-background-full-stadium-neoned-colorful-flashlights-background-flyer-197148262.jpg')",
         "display": "flex",
         "flexDirection": "column",
-        "gap": "1vh",
+        "gap": "0.7%",
         "height": "100vh",
         "justifyContent": "center",
         "position": "relative",
@@ -119,7 +119,7 @@ function App() {
             "backgroundColor": "white",
             "clipPath": "polygon(0% 0%, 100% 0%, 97% 100%, 3% 100%)",
             "display": "flex",
-            "height": "10%",
+            "height": "9%",
             "justifyContent": "center",
             "marginTop": `${(8/768)*100}vh`,
             "width": "48.3%"
@@ -147,6 +147,7 @@ function App() {
             "display": "flex",
             "flexDirection": "row",
             "position": "relative",
+            "height": "100%",
             "width": "50%"
 
         },
@@ -158,7 +159,7 @@ function App() {
                 "alignItems": "center",
                 "background": "linear-gradient(to bottom ,rgb(153, 33, 91), rgb(80, 17, 56))",
                 "color": "white",
-                "clipPath": "polygon(84% 0%, 0% 0%, 16% 100%, 100% 100%)",
+                "clipPath": "polygon(87% 0%, 0% 0%, 13% 100%, 100% 100%)",
                 "display": "flex",
                 "flexDirection": "column",
                 "fontFamily": "Oswald",
@@ -169,7 +170,7 @@ function App() {
                 "justifyContent": "center",
                 "textAlign": "center",
                 "width": "30%",
-                "left": "3.5%",
+                "left": "3%",
                 "position": "relative",
 
 
@@ -177,33 +178,39 @@ function App() {
 
             "name": {
 
+                "alignItems": "center",
+                "display": "flex",
                 "fontFamily": "Oswald",
                 "fontSize": `${(15/1366)*100}vw`,
+                "height": "50%",
                 "paddingRight": "10%"
 
             },
 
             "value": {
 
+                "alignItems": "center",
+                "display": "flex",
                 "fontFamily": "Oswald",
-                "fontSize": `${(20/1366)*100}vw`
+                "fontSize": `${(20/1366)*100}vw`,
+                "height": "50%"
 
             }
 
         },
 
-        "nilgiriKnightsBestPlayerMainContainer": {
+        "bestDefenderContainer": {
 
             "container": {
 
                 "background": "linear-gradient(to bottom, rgb(111, 19, 56), rgb(63, 13, 49))",
                 "borderColor": "rgba(58, 213, 208, 0.7)",
                 "borderRightStyle": "solid",
-                "borderWidth": `${(50/1366)*100}vw`,
+                "borderWidth": `${(35/1366)*100}vw`,
                 "height": `${(70/768)*100}vh`,
                 "width": `${(250/1366)*100}vw`,
                 "zIndex": "200",
-                "clipPath": "polygon(100% 0%, 0% 0%, 6% 100%, 100% 100%)",
+                "clipPath": "polygon(100% 0%, 0% 0%, 5% 100%, 100% 100%)",
                 "position": "relative",
                 "width": "70%",
 
@@ -216,16 +223,22 @@ function App() {
                     "alignItems": "center", 
                     "backgroundColor": "black",
                     "color": "white",
-                    "clip-path": "polygon(100% 0%, 5% 0%, 0% 100%, 100% 100%)",
+                    "clip-path": "polygon(100% 0%, 3% 0%, 0% 100%, 100% 100%)",
                     "display": "flex",
                     "float": "right",
                     "fontFamily": "Oswald",
                     "fontSize": `${(15/1366)*100}vw`,
-                    "height": "50%",
-                    "marginTop": `${(35/768)*100}vh`,
+                    "height": "55%",
                     "paddingLeft": `${(20/1366)*100}vw`,
-                    "width": "70%"
+                    "width": "75%"
 
+                },
+
+                "nameContainer": {
+
+                    "height": "45%",
+                    "marginTop": "0.390625vh"
+    
                 },
 
                 "typography": {
@@ -238,14 +251,13 @@ function App() {
             },
 
 
-            "nilgiriKnightsBestPlayerName": {
+            "text": {
 
                 "color": "white",
                 "fontFamily": "Oswald",
                 "fontSize": `${(15/1366)*100}vw`,
                 "fontWeight": "400",
                 "right": "45%",
-                "marginTop": `${(3/768)*100}vh`,
                 "position": "absolute"
 
             }
@@ -258,7 +270,8 @@ function App() {
             "height": "130%",
             "marginTop": `${(-50/768)*100}vh`, 
             "position": "absolute", 
-            "right": "8%",
+            "right": "5%",
+            "width": "16%",
             "zIndex": "300"
 
         },
@@ -268,7 +281,7 @@ function App() {
             "height": "90%",
             "marginRight": `${(-85/1366)*100}vw`, 
             "position": "relative",
-            "right": "8%",
+            "right": "7%",
             "top": "-25%",
             "zIndex": "300"
 
@@ -321,12 +334,19 @@ function App() {
                 "background": "linear-gradient(to bottom, rgb(111, 19, 56), rgb(63, 13, 49))",
                 "borderColor": "rgba(58, 213, 208, 0.7)",
                 "borderLeftStyle": "solid",
-                "borderWidth": `${(50/1366)*100}vw`,
-                "clipPath": "polygon(100% 0%, 0% 0%, 0% 100%, 94% 100%)",
+                "borderWidth": `${(35/1366)*100}vw`,
+                "clipPath": "polygon(100% 0%, 0% 0%, 0% 100%, 95% 100%)",
                 "height": `${(70/768)*100}vh`,
                 "position": "relative",
                 "width": "70%",
                 "zIndex": "200"
+
+            },
+
+            "nameContainer": {
+
+                "height": "45%",
+                "marginTop": "0.390625vh"
 
             },
 
@@ -336,8 +356,8 @@ function App() {
                 "fontFamily": "Oswald",
                 "fontSize": `${(15/1366)*100}vw`,
                 "fontWeight": "400",
+                "height": "45%",
                 "marginLeft": "45%",
-                "marginTop": `${(3/768)*100}vh`,
                 "position": "absolute"
 
             }
@@ -351,7 +371,7 @@ function App() {
                 "alignItems": "center",
                 "background": "linear-gradient(to bottom ,rgb(153, 33, 91), rgb(80, 17, 56))",
                 "color": "white",
-                "clipPath": "polygon(100% 0%, 16% 0%, 0% 100%, 84% 100%)",
+                "clipPath": "polygon(100% 0%, 13% 0%, 0% 100%, 86% 100%)",
                 "display": "flex",
                 "flexDirection": "column",
                 "fontFamily": "Oswald",
@@ -361,23 +381,29 @@ function App() {
                 "height": `${(70/768)*100}vh`,
                 "justifyContent": "center",
                 "position": "relative",
-                "right": "3.5%",
+                "right": "3%",
                 "textAlign": "center",
                 "width": "30%"
             },
 
             "name": {
 
+                "alignItems": "center",
+                "display": "flex",
                 "fontFamily": "Oswald",
                 "fontSize": `${(15/1366)*100}vw`,
+                "height": "50%",
                 "paddingLeft": "10%"
 
             },
 
             "value": {
 
+                "alignItems": "center",
+                "display": "flex",
                 "fontFamily": "Oswald",
-                "fontSize": `${(20/1366)*100}vw`
+                "fontSize": `${(20/1366)*100}vw`,
+                "height": "50%",
 
             }
 
@@ -386,7 +412,8 @@ function App() {
         "playerImage": {
 
             "height": "130%",
-            "left": "12%", 
+            "width": "16%",
+            "left": "9%", 
             "marginTop": `${(-50/768)*100}vh`,
             "position": "absolute", 
             "zIndex": "300"
@@ -396,7 +423,7 @@ function App() {
         "teamLogo": {
 
             "height": "90%",
-            "left": "-7%",
+            "left": "-10%",
             "position": "absolute",
             "top": "-25%",
             "zIndex": "300"
@@ -410,16 +437,15 @@ function App() {
                 "alignItems": "center",
                 "backgroundColor": "black",
                 "color": "white",
-                "clipPath": "polygon(95% 0%, 0% 0%, 0% 100%, 100% 100%)",
+                "clipPath": "polygon(97% 0%, 0% 0%, 0% 100%, 100% 100%)",
                 "display": "flex",
                 "float": "left",
                 "fontFamily": "Oswald",
                 "fontSize": `${(15/1366)*100}vw`,
-                "height": "50%",
+                "height": "55%",
                 "justifyContent": "right",
-                "marginTop": `${(35/768)*100}vh`,
                 "paddingRight": `${(20/1366)*100}vw`,
-                "width": "70%"
+                "width": "75%"
 
             },
 
@@ -554,7 +580,7 @@ function App() {
             "fontFamily": "Oswald",
             "fontSize": `${(18/1366)*100}vw`,
             "fontWeight": "600",
-            "height": `${(238/768)*100}vh`,
+            "height": `${(240/768)*100}vh`,
             "paddingTop": `${(28/768)*100}vh`,
             "paddingBottom": "41vh",
             "paddingRight": "1%",
@@ -570,7 +596,7 @@ function App() {
             "fontSize": `${(18/1366)*100}vw`,
             "fontWeight": "600",
             "fontFamily": "Oswald",
-            "height": `${(238/768)*100}vh`,
+            "height": `${(240/768)*100}vh`,
             "paddingTop": `${(28/768)*100}vh`,
             "paddingBottom": "41vh",
             "paddingLeft": "1%",
@@ -591,7 +617,7 @@ function App() {
             "display": "flex",
             "flexDirection": "column",
             "gap": `${(14/768)*100}vh`,
-            "height": "78%",
+            "height": "76%",
             "position": "relative",
             "width": "45.4%"
 
@@ -989,21 +1015,28 @@ function App() {
                     >
                     </img>
                     <Box 
-                        id="bestRaiderPlayerNameContainer"
+                        id="bestRaiderPlayerContainer"
                         style={{
                             // ...CONFIGBestRaider.palaniTuskersBestPlayerName.container
                             ...CONFIGBestRaider.playerName.container
                         }}
                     >
-                        <Typography 
-                            id="bestRaiderPlayerNameTypography"
-                            style={{
-                                // ...CONFIGBestRaider.palaniTuskersBestPlayerName.typography
-                                ...CONFIGBestRaider.playerName.typography
+                        <Box
+                            id="bestRaiderPlayerNameContainer"
+                            style = {{
+                                ...CONFIGBestRaider.playerName.nameContainer
                             }}
                         >
-                            S.MUKESHKANNAN
-                        </Typography>
+                            <Typography 
+                                id="bestRaiderPlayerNameTypography"
+                                style={{
+                                    // ...CONFIGBestRaider.palaniTuskersBestPlayerName.typography
+                                    ...CONFIGBestRaider.playerName.typography
+                                }}
+                            >
+                                S.MUKESHKANNAN
+                            </Typography>
+                        </Box>
                         <Box
                             id="bestRaiderTextContainer"
                             style={{
@@ -1051,19 +1084,19 @@ function App() {
                     </Box>
                 </Box>
                 <Box 
-                    id="nilgiriKnightBestPlayer"
+                    id="bestDefenderPlayerContainer"
                     style={{
                         ...CONFIGBestDefender.container
                     }}
                 >
                     <Box 
-                        id="nilgiriKnightPoints"
+                        id="bestDefenderPointsContainer"
                         style={{
                             ...CONFIGBestDefender.points.container
                         }}
                     >
                         <Typography 
-                            id="nilgiriKnightPointsTypography"
+                            id="bestDefenderPointsTypography"
                             style={{
                                 ...CONFIGBestDefender.points.name
                             }}
@@ -1080,29 +1113,36 @@ function App() {
                         </Typography>
                     </Box>
                     <Box 
-                        id="nilgiriKnightsBestPlayerMainContainer"
+                        id="bestDefenderPlayerContainer"
                         style={{
-                            ...CONFIGBestDefender.nilgiriKnightsBestPlayerMainContainer.container
+                            ...CONFIGBestDefender.bestDefenderContainer.container
                         }}
                     >
-                        <Typography
-                            id="nilgiriKnightsBestPlayerName"
-                            style={{
-                                ...CONFIGBestDefender.nilgiriKnightsBestPlayerMainContainer.nilgiriKnightsBestPlayerName
+                        <Box
+                            id="bestDefenderPlayerNameContainer"
+                            style = {{
+                                ...CONFIGBestRaider.playerName.nameContainer
                             }}
                         >
-                            PURUSHOTHAMAN
-                        </Typography>
+                            <Typography
+                                id="bestDefenderPlayerNameTypography"
+                                style={{
+                                    ...CONFIGBestDefender.bestDefenderContainer.text
+                                }}
+                            >
+                                PURUSHOTHAMAN
+                            </Typography>
+                        </Box>
                         <Box
                             id="playerName" 
                             style={{
-                                ...CONFIGBestDefender.nilgiriKnightsBestPlayerMainContainer.playerName.container
+                                ...CONFIGBestDefender.bestDefenderContainer.playerName.container
                             }}
                         >
                             <Typography 
                                 id="playerNameText" 
                                 style={{
-                                    ...CONFIGBestDefender.nilgiriKnightsBestPlayerMainContainer.playerName.typography
+                                    ...CONFIGBestDefender.bestDefenderContainer.playerName.typography
                                 }}
                             >
                                 BEST DEFENDER
@@ -1118,7 +1158,7 @@ function App() {
                     >
                     </img>
                     <img
-                        id="nilgiriKnightsTeamLogo" 
+                        id="playerLogo" 
                         src="https://feed.yuvakabaddi.com/YKS-2022-SE/teamLogos/569.png"
                         style={{
                             ...CONFIGBestDefender.teamLogo
