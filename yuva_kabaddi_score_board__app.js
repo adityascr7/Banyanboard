@@ -12,7 +12,7 @@ function App() {
         "flexDirection": "row",
         "height": "12%",
         "justifyContent": "center",
-        "width": "65%"
+        "width": "75%"
 
     }
 
@@ -22,12 +22,12 @@ function App() {
 
             "alignItems": "center",
             "background": "linear-gradient(to bottom, #f7f7f7,rgb(170, 170, 170),#f7f7f7)",
-            "border": `${(3/1366)*100}vw`,
+            "border": "3%",
             "borderColor": "rgb(156, 156, 156)",
             "borderRadius": `${(9/1366)*100}vw`,
             "borderStyle": "solid",
             "display": "flex",
-            "gap": `${(32/1366)*100}vw`,
+            "gap": "5.7%",
             "height": "11.7%",
             "justifyContent": "center",
             "marginTop": `${(84/768)*100}vh`,
@@ -121,7 +121,7 @@ function App() {
             "display": "flex",
             "height": "9%",
             "justifyContent": "center",
-            "marginTop": `${(8/768)*100}vh`,
+            "marginTop": "0.5%",
             "width": "48.3%"
 
         },
@@ -132,7 +132,6 @@ function App() {
             "fontFamily": "Oswald",
             "fontSize": `${(36/1366)*100}vw`,
             "fontWeight": "700",
-            "marginBottom": `${(8/768)*100}vh`,
             "textTransform": "uppercase"
 
         }
@@ -147,8 +146,57 @@ function App() {
             "display": "flex",
             "flexDirection": "row",
             "position": "relative",
-            "height": "100%",
             "width": "50%"
+
+        },
+
+        "playerName": {
+
+            "container": {
+
+                "background": "linear-gradient(to bottom, rgb(111, 19, 56), rgb(63, 13, 49))",
+                "borderColor": "rgba(58, 213, 208, 0.7)",
+                "borderRightStyle": "solid",
+                "borderWidth": `${(35/1366)*100}vw`,
+                "clipPath": "polygon(100% 0%, 0% 0%, 4.5% 100%, 100% 100%)",
+                "height": "80%",
+                "position": "relative",
+                "width": "70%",
+                "zIndex": "200"
+
+            },
+
+            "nameContainer": {
+
+                "alignItems": "center",
+                "display": "flex",
+                "height": "50%",
+                "justifyContent": "flex-start"
+
+            },
+
+            "typography": {
+
+                "color": "white",
+                "fontFamily": "Oswald",
+                "fontSize": `${(15/1366)*100}vw`,
+                "fontWeight": "400",
+                "marginLeft": "10%",
+                "overflowWrap": "break-word",
+                "textShadow": "0 0 0.1vw white"
+
+            }
+
+        },
+
+        "playerImage": {
+
+            "height": "130%",
+            "bottom": "10%", 
+            "position": "absolute", 
+            "right": "9%",
+            "width": "16%",
+            "zIndex": "300"
 
         },
 
@@ -159,19 +207,19 @@ function App() {
                 "alignItems": "center",
                 "background": "linear-gradient(to bottom ,rgb(153, 33, 91), rgb(80, 17, 56))",
                 "color": "white",
-                "clipPath": "polygon(87% 0%, 0% 0%, 13% 100%, 100% 100%)",
+                "clipPath": "polygon(88% 0%, 0% 0%, 14.4% 100%, 100% 100%)",
                 "display": "flex",
                 "flexDirection": "column",
                 "fontFamily": "Oswald",
                 "fontSize": `${(15/1366)*100}vw`,
                 "fontWeight": "400",
-                "gap": `${(3/768)*100}vh`,
-                "height": `${(70/768)*100}vh`,
+                "height": "80%",
                 "justifyContent": "center",
+                "left": "2.6%",
+                "position": "relative",
                 "textAlign": "center",
                 "width": "30%",
-                "left": "3%",
-                "position": "relative",
+
 
 
             },
@@ -183,7 +231,8 @@ function App() {
                 "fontFamily": "Oswald",
                 "fontSize": `${(15/1366)*100}vw`,
                 "height": "50%",
-                "paddingRight": "10%"
+                "paddingRight": "10%",
+                "textShadow": "0 0 0.2vw white"
 
             },
 
@@ -193,97 +242,48 @@ function App() {
                 "display": "flex",
                 "fontFamily": "Oswald",
                 "fontSize": `${(20/1366)*100}vw`,
-                "height": "50%"
+                "height": "50%",
+                "textShadow": "0 0 0.2vw white"
 
             }
-
-        },
-
-        "bestDefenderContainer": {
-
-            "container": {
-
-                "background": "linear-gradient(to bottom, rgb(111, 19, 56), rgb(63, 13, 49))",
-                "borderColor": "rgba(58, 213, 208, 0.7)",
-                "borderRightStyle": "solid",
-                "borderWidth": `${(35/1366)*100}vw`,
-                "height": `${(70/768)*100}vh`,
-                "width": `${(250/1366)*100}vw`,
-                "zIndex": "200",
-                "clipPath": "polygon(100% 0%, 0% 0%, 5% 100%, 100% 100%)",
-                "position": "relative",
-                "width": "70%",
-
-            },
-
-            "playerName": {
-
-                "container": {
-
-                    "alignItems": "center", 
-                    "backgroundColor": "black",
-                    "color": "white",
-                    "clip-path": "polygon(100% 0%, 3% 0%, 0% 100%, 100% 100%)",
-                    "display": "flex",
-                    "float": "right",
-                    "fontFamily": "Oswald",
-                    "fontSize": `${(15/1366)*100}vw`,
-                    "height": "55%",
-                    "paddingLeft": `${(20/1366)*100}vw`,
-                    "width": "75%"
-
-                },
-
-                "nameContainer": {
-
-                    "height": "45%",
-                    "marginTop": "0.390625vh"
-    
-                },
-
-                "typography": {
-
-                    "fontFamily": "Oswald",
-                    "fontSize": `${(15/1366)*100}vw`
-
-                }
-
-            },
-
-
-            "text": {
-
-                "color": "white",
-                "fontFamily": "Oswald",
-                "fontSize": `${(15/1366)*100}vw`,
-                "fontWeight": "400",
-                "right": "45%",
-                "position": "absolute"
-
-            }
-
-
-        },
-
-        "playerImage": {
-
-            "height": "130%",
-            "marginTop": `${(-50/768)*100}vh`, 
-            "position": "absolute", 
-            "right": "5%",
-            "width": "16%",
-            "zIndex": "300"
 
         },
 
         "teamLogo": {
 
             "height": "90%",
-            "marginRight": `${(-85/1366)*100}vw`, 
-            "position": "relative",
-            "right": "7%",
+            "position": "absolute",
+            "right": "-10%",
             "top": "-25%",
             "zIndex": "300"
+
+        },
+
+        "text": {
+
+            "container": {
+
+                "alignItems": "center", 
+                "backgroundColor": "black",
+                "color": "white",
+                "clip-path": "polygon(100% 0%, 3% 0%, 0% 100%, 100% 100%)",
+                "display": "flex",
+                "float": "right",
+                "fontFamily": "Oswald",
+                "fontSize": `${(15/1366)*100}vw`,
+                "height": "50%",
+                "paddingLeft": "7%",
+                "width": "75%"
+
+            },
+
+            "typography": {
+
+                "fontFamily": "Oswald",
+                "fontSize": `${(15/1366)*100}vw`,
+                "textShadow": "0 0 0.1vw white"
+
+            }
 
         }
 
@@ -335,8 +335,8 @@ function App() {
                 "borderColor": "rgba(58, 213, 208, 0.7)",
                 "borderLeftStyle": "solid",
                 "borderWidth": `${(35/1366)*100}vw`,
-                "clipPath": "polygon(100% 0%, 0% 0%, 0% 100%, 95% 100%)",
-                "height": `${(70/768)*100}vh`,
+                "clipPath": "polygon(100% 0%, 0% 0%, 0% 100%, 95.5% 100%)",
+                "height": "80%",
                 "position": "relative",
                 "width": "70%",
                 "zIndex": "200"
@@ -345,8 +345,10 @@ function App() {
 
             "nameContainer": {
 
-                "height": "45%",
-                "marginTop": "0.390625vh"
+                "alignItems": "center",
+                "display": "flex",
+                "height": "50%",
+                "justifyContent": "flex-end"
 
             },
 
@@ -356,11 +358,22 @@ function App() {
                 "fontFamily": "Oswald",
                 "fontSize": `${(15/1366)*100}vw`,
                 "fontWeight": "400",
-                "height": "45%",
-                "marginLeft": "45%",
-                "position": "absolute"
+                "marginRight": "10%",
+                "overflowWrap": "break-word",
+                "textShadow": "0 0 0.1vw white"
 
             }
+
+        },
+
+        "playerImage": {
+
+            "height": "130%",
+            "left": "9%", 
+            "bottom": "10%",
+            "position": "absolute",
+            "width": "16%", 
+            "zIndex": "300"
 
         },
 
@@ -371,17 +384,16 @@ function App() {
                 "alignItems": "center",
                 "background": "linear-gradient(to bottom ,rgb(153, 33, 91), rgb(80, 17, 56))",
                 "color": "white",
-                "clipPath": "polygon(100% 0%, 13% 0%, 0% 100%, 86% 100%)",
+                "clipPath": "polygon(100% 0%, 11.4% 0%, 0% 100%, 85% 100%)",
                 "display": "flex",
                 "flexDirection": "column",
                 "fontFamily": "Oswald",
                 "fontSize": `${(15/1366)*100}vw`,
                 "fontWeight": "400",
-                "gap": `${(3/768)*100}vh`,
-                "height": `${(70/768)*100}vh`,
+                "height": "80%",
                 "justifyContent": "center",
                 "position": "relative",
-                "right": "3%",
+                "right": "2.6%",
                 "textAlign": "center",
                 "width": "30%"
             },
@@ -393,7 +405,8 @@ function App() {
                 "fontFamily": "Oswald",
                 "fontSize": `${(15/1366)*100}vw`,
                 "height": "50%",
-                "paddingLeft": "10%"
+                "paddingLeft": "10%",
+                "textShadow": "0 0 0.2vw white"
 
             },
 
@@ -404,19 +417,9 @@ function App() {
                 "fontFamily": "Oswald",
                 "fontSize": `${(20/1366)*100}vw`,
                 "height": "50%",
+                "textShadow": "0 0 0.2vw white"
 
             }
-
-        },
-
-        "playerImage": {
-
-            "height": "130%",
-            "width": "16%",
-            "left": "9%", 
-            "marginTop": `${(-50/768)*100}vh`,
-            "position": "absolute", 
-            "zIndex": "300"
 
         },
 
@@ -442,9 +445,9 @@ function App() {
                 "float": "left",
                 "fontFamily": "Oswald",
                 "fontSize": `${(15/1366)*100}vw`,
-                "height": "55%",
+                "height": "50%",
                 "justifyContent": "right",
-                "paddingRight": `${(20/1366)*100}vw`,
+                "paddingRight": "7%",
                 "width": "75%"
 
             },
@@ -453,6 +456,7 @@ function App() {
 
                 "fontFamily": "Oswald",
                 "fontSize": `${(15/1366)*100}vw`,
+                "textShadow": "0 0 0.1vw white"
 
             }
 
@@ -495,7 +499,7 @@ function App() {
             "borderRadius": `${(40/1366)*100}vw`,
             "display": "flex",
             "flexDirection": "row",
-            "gap": `${(42/1366)*100}vw`,
+            "gap": "7.4%",
             "height": "9.5%",
             "justifyContent": "center",
             "width": "92%",
@@ -553,9 +557,11 @@ function App() {
             "alignItems": "center",
             "display": "flex",
             "flexDirection": "row",
-            "gap": `${(40/1366)*100}vw`,
-            "marginTop": `${(0/768)*100}vh`,
-            "position": "absolute"
+            "gap": "10%",
+            "height": "100%",
+            "justifyContent": "center",
+            "position": "absolute",
+            "width": "85%"
 
         },
 
@@ -565,11 +571,11 @@ function App() {
             "fontFamily": "Oswald",
             "fontSize": `${(22/1366)*100}vw`,
             "fontWeight": "600",
-            "height": `${(211/768)*100}vh`,
-            "paddingTop": `${(18/768)*100}vh`,
+            "height": "37%",
+            "paddingTop": "3%",
             "paddingBottom": `${(340/768)*100}vh`,
             "textAlign": "center",
-            "width": `${(180/1366)*100}vw`
+            "width": "31.6%"
 
         },
 
@@ -580,12 +586,12 @@ function App() {
             "fontFamily": "Oswald",
             "fontSize": `${(18/1366)*100}vw`,
             "fontWeight": "600",
-            "height": `${(240/768)*100}vh`,
+            "height": "41.1%",
             "paddingTop": `${(28/768)*100}vh`,
             "paddingBottom": "41vh",
             "paddingRight": "1%",
             "textAlign": "right",
-            "width": `${(130/1366)*100}vw`
+            "width": "22.8%"
 
         },
 
@@ -596,12 +602,12 @@ function App() {
             "fontSize": `${(18/1366)*100}vw`,
             "fontWeight": "600",
             "fontFamily": "Oswald",
-            "height": `${(240/768)*100}vh`,
+            "height": "41.1%",
             "paddingTop": `${(28/768)*100}vh`,
             "paddingBottom": "41vh",
             "paddingLeft": "1%",
             "textAlign": "left",
-            "width": `${(130/1366)*100}vw`
+            "width": "22.8%"
 
         }
 
@@ -665,7 +671,7 @@ function App() {
             }}
         >
             <Box 
-                id="matchSummaryContainerOutside"
+                id="matchSummaryOutsideContainer"
                 style={{
                     ...CONFIGMatchSummary.outsideContainer
                 }}
@@ -1017,7 +1023,6 @@ function App() {
                     <Box 
                         id="bestRaiderPlayerContainer"
                         style={{
-                            // ...CONFIGBestRaider.palaniTuskersBestPlayerName.container
                             ...CONFIGBestRaider.playerName.container
                         }}
                     >
@@ -1030,7 +1035,6 @@ function App() {
                             <Typography 
                                 id="bestRaiderPlayerNameTypography"
                                 style={{
-                                    // ...CONFIGBestRaider.palaniTuskersBestPlayerName.typography
                                     ...CONFIGBestRaider.playerName.typography
                                 }}
                             >
@@ -1040,14 +1044,12 @@ function App() {
                         <Box
                             id="bestRaiderTextContainer"
                             style={{
-                                // ...CONFIGBestRaider.palaniTuskersBestPlayerName.bestRaiderText.container
                                 ...CONFIGBestRaider.text.container
                             }}
                         >
                             <Typography
                                 id="bestRaiderTextTypography"
                                 style={{
-                                    // ...CONFIGBestRaider.palaniTuskersBestPlayerName.bestRaiderText.typography
                                     ...CONFIGBestRaider.text.typography
                                 }}
                             >
@@ -1058,15 +1060,12 @@ function App() {
                     <Box 
                         id="bestRaiderRaidPointsContainer"
                         style={{
-                            // ...CONFIGBestRaider.palaniTuskersPoints.container
                             ...CONFIGBestRaider.points.container
-
                         }}
                     >
                         <Typography
                             id="bestRaiderRaidPointsNameTypography"
                             style={{
-                                // ...CONFIGBestRaider.palaniTuskersPoints.typography
                                 ...CONFIGBestRaider.points.name
                             }}
                         >
@@ -1075,7 +1074,6 @@ function App() {
                         <Typography
                             id="bestRaiderRaidPointsTypography" 
                             style={{
-                                // ...CONFIGBestRaider.palaniTuskersPoints.value
                                 ...CONFIGBestRaider.points.value
                             }}
                         >
@@ -1084,19 +1082,19 @@ function App() {
                     </Box>
                 </Box>
                 <Box 
-                    id="bestDefenderPlayerContainer"
+                    id="bestDefenderContainer"
                     style={{
                         ...CONFIGBestDefender.container
                     }}
                 >
                     <Box 
-                        id="bestDefenderPointsContainer"
+                        id="bestDefenderTacklePointsContainer"
                         style={{
                             ...CONFIGBestDefender.points.container
                         }}
                     >
                         <Typography 
-                            id="bestDefenderPointsTypography"
+                            id="bestDefenderTacklePointsNameTypography"
                             style={{
                                 ...CONFIGBestDefender.points.name
                             }}
@@ -1104,7 +1102,7 @@ function App() {
                             TACKLE POINTS
                         </Typography>
                         <Typography
-                            id="nilgiriKnightPointsValue" 
+                            id="bestRaiderTacklePointsTypography" 
                             style={{
                                 ...CONFIGBestDefender.points.value
                             }}
@@ -1115,34 +1113,34 @@ function App() {
                     <Box 
                         id="bestDefenderPlayerContainer"
                         style={{
-                            ...CONFIGBestDefender.bestDefenderContainer.container
+                            ...CONFIGBestDefender.playerName.container
                         }}
                     >
                         <Box
                             id="bestDefenderPlayerNameContainer"
                             style = {{
-                                ...CONFIGBestRaider.playerName.nameContainer
+                                ...CONFIGBestDefender.playerName.nameContainer
                             }}
                         >
                             <Typography
                                 id="bestDefenderPlayerNameTypography"
                                 style={{
-                                    ...CONFIGBestDefender.bestDefenderContainer.text
+                                    ...CONFIGBestDefender.playerName.typography
                                 }}
                             >
-                                PURUSHOTHAMAN
+                                PURUSHOTHAMAN PALANIVELU
                             </Typography>
                         </Box>
                         <Box
-                            id="playerName" 
+                            id="bestDefenderTextContainer" 
                             style={{
-                                ...CONFIGBestDefender.bestDefenderContainer.playerName.container
+                                ...CONFIGBestDefender.text.container
                             }}
                         >
                             <Typography 
-                                id="playerNameText" 
+                                id="bestDefenderTextTypography" 
                                 style={{
-                                    ...CONFIGBestDefender.bestDefenderContainer.playerName.typography
+                                    ...CONFIGBestDefender.text.typography
                                 }}
                             >
                                 BEST DEFENDER
@@ -1150,7 +1148,7 @@ function App() {
                         </Box>
                     </Box>
                     <img
-                        id="playerImage"
+                        id="bestDefenderPlayerImage"
                         src="https://static.yuvakabaddi.com/images/player-images/6638.png"
                         style={{
                             ...CONFIGBestDefender.playerImage
@@ -1158,7 +1156,7 @@ function App() {
                     >
                     </img>
                     <img
-                        id="playerLogo" 
+                        id="bestDefenderTeamLogo" 
                         src="https://feed.yuvakabaddi.com/YKS-2022-SE/teamLogos/569.png"
                         style={{
                             ...CONFIGBestDefender.teamLogo
