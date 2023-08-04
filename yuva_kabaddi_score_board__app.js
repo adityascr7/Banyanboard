@@ -16,6 +16,312 @@ function App() {
 
     }
 
+    const CONFIGBestPlayerA = {
+
+        "container": {
+
+            "alignItems": "center",
+            "display": "flex",
+            "flexDirection": "row",
+            "position": "relative",
+            "width": "50%"
+
+        },
+
+        "playerImage": {
+
+            "height": "130%",
+            "left": "9%", 
+            "bottom": "10%",
+            "position": "absolute",
+            "width": "16%", 
+            "zIndex": "300"
+
+        },
+
+        "playerName": {
+
+            "container": {
+
+                "alignItems": "center",
+                "display": "flex",
+                "height": "50%",
+                "justifyContent": "flex-end"
+
+            },
+
+            "typography": {
+
+                "color": "white",
+                "fontFamily": "Oswald",
+                "fontSize": `${(15/1366)*100}vw`,
+                "fontWeight": "400",
+                "marginRight": "10%",
+                "overflowWrap": "break-word",
+                "textShadow": "0 0 0.1vw white",
+                "textTransform": "uppercase"
+
+            }
+
+        },
+
+        "playerNameAndRoleContainer": {
+
+            "background": "linear-gradient(to bottom, rgb(111, 19, 56), rgb(63, 13, 49))",
+            "borderColor": "rgba(58, 213, 208, 0.7)",
+            "borderLeftStyle": "solid",
+            "borderWidth": `${(35/1366)*100}vw`,
+            "clipPath": "polygon(100% 0%, 0% 0%, 0% 100%, 95.5% 100%)",
+            "height": "80%",
+            "position": "relative",
+            "width": "70%",
+            "zIndex": "200"
+
+        },
+
+        "playerRole": {
+
+            "container": {
+
+                "alignItems": "center",
+                "backgroundColor": "black",
+                "color": "white",
+                "clipPath": "polygon(97% 0%, 0% 0%, 0% 100%, 100% 100%)",
+                "display": "flex",
+                "float": "left",
+                "fontFamily": "Oswald",
+                "fontSize": `${(15/1366)*100}vw`,
+                "height": "50%",
+                "justifyContent": "right",
+                "paddingRight": "7%",
+                "width": "75%"
+
+            },
+
+            "typography": {
+
+                "fontFamily": "Oswald",
+                "fontSize": `${(15/1366)*100}vw`,
+                "textShadow": "0 0 0.1vw white",
+                "textTransform": "uppercase"
+
+            }
+
+        },
+
+        "points":{
+
+            "container": {
+
+                "alignItems": "center",
+                "background": "linear-gradient(to bottom ,rgb(153, 33, 91), rgb(80, 17, 56))",
+                "color": "white",
+                "clipPath": "polygon(100% 0%, 11.4% 0%, 0% 100%, 85% 100%)",
+                "display": "flex",
+                "flexDirection": "column",
+                "fontFamily": "Oswald",
+                "fontSize": `${(15/1366)*100}vw`,
+                "fontWeight": "400",
+                "height": "80%",
+                "justifyContent": "center",
+                "position": "relative",
+                "right": "2.6%",
+                "textAlign": "center",
+                "width": "30%"
+            },
+
+            "name": {
+
+                "alignItems": "center",
+                "display": "flex",
+                "fontFamily": "Oswald",
+                "fontSize": `${(15/1366)*100}vw`,
+                "height": "50%",
+                "paddingLeft": "10%",
+                "textShadow": "0 0 0.2vw white",
+                "textTransform": "uppercase"
+
+            },
+
+            "value": {
+
+                "alignItems": "center",
+                "display": "flex",
+                "fontFamily": "Oswald",
+                "fontSize": `${(20/1366)*100}vw`,
+                "height": "50%",
+                "textShadow": "0 0 0.2vw white"
+
+            }
+
+        },
+
+        "teamLogo": {
+
+            "height": "90%",
+            "left": "-10%",
+            "position": "absolute",
+            "top": "-25%",
+            "zIndex": "300"
+
+        }
+
+    }
+
+    const CONFIGBestPlayerB = {
+
+        "container": {
+
+            "alignItems": "center",
+            "display": "flex",
+            "flexDirection": "row",
+            "position": "relative",
+            "width": "50%"
+
+        },
+
+        "playerImage": {
+
+            "height": "130%",
+            "bottom": "10%", 
+            "position": "absolute", 
+            "right": "9%",
+            "width": "16%",
+            "zIndex": "300"
+
+        },
+
+        "playerName": {
+
+            "container": {
+
+                "alignItems": "center",
+                "display": "flex",
+                "height": "50%",
+                "justifyContent": "flex-start"
+
+            },
+
+            "typography": {
+
+                "color": "white",
+                "fontFamily": "Oswald",
+                "fontSize": `${(15/1366)*100}vw`,
+                "fontWeight": "400",
+                "marginLeft": "10%",
+                "overflowWrap": "break-word",
+                "textShadow": "0 0 0.1vw white",
+                "textTransform": "uppercase"
+
+            }
+
+        },
+
+        "playerNameAndRoleContainer": {
+
+            "background": "linear-gradient(to bottom, rgb(111, 19, 56), rgb(63, 13, 49))",
+            "borderColor": "rgba(58, 213, 208, 0.7)",
+            "borderRightStyle": "solid",
+            "borderWidth": `${(35/1366)*100}vw`,
+            "clipPath": "polygon(100% 0%, 0% 0%, 4.5% 100%, 100% 100%)",
+            "height": "80%",
+            "position": "relative",
+            "width": "70%",
+            "zIndex": "200"
+
+        },
+
+        "playerRole": {
+
+            "container": {
+
+                "alignItems": "center", 
+                "backgroundColor": "black",
+                "color": "white",
+                "clip-path": "polygon(100% 0%, 3% 0%, 0% 100%, 100% 100%)",
+                "display": "flex",
+                "float": "right",
+                "fontFamily": "Oswald",
+                "fontSize": `${(15/1366)*100}vw`,
+                "height": "50%",
+                "justifyContent": "left",
+                "paddingLeft": "7%",
+                "width": "75%"
+
+            },
+
+            "typography": {
+
+                "fontFamily": "Oswald",
+                "fontSize": `${(15/1366)*100}vw`,
+                "textShadow": "0 0 0.1vw white",
+                "textTransform": "uppercase"
+
+            }
+
+        },
+
+        "points": {
+
+            "container": {
+
+                "alignItems": "center",
+                "background": "linear-gradient(to bottom ,rgb(153, 33, 91), rgb(80, 17, 56))",
+                "color": "white",
+                "clipPath": "polygon(88% 0%, 0% 0%, 14.4% 100%, 100% 100%)",
+                "display": "flex",
+                "flexDirection": "column",
+                "fontFamily": "Oswald",
+                "fontSize": `${(15/1366)*100}vw`,
+                "fontWeight": "400",
+                "height": "80%",
+                "justifyContent": "center",
+                "left": "2.6%",
+                "position": "relative",
+                "textAlign": "center",
+                "width": "30%",
+
+
+
+            },
+
+            "name": {
+
+                "alignItems": "center",
+                "display": "flex",
+                "fontFamily": "Oswald",
+                "fontSize": `${(15/1366)*100}vw`,
+                "height": "50%",
+                "paddingRight": "10%",
+                "textShadow": "0 0 0.2vw white"
+
+            },
+
+            "value": {
+
+                "alignItems": "center",
+                "display": "flex",
+                "fontFamily": "Oswald",
+                "fontSize": `${(20/1366)*100}vw`,
+                "height": "50%",
+                "textShadow": "0 0 0.2vw white"
+
+            }
+
+        },
+
+        "teamLogo": {
+
+            "height": "90%",
+            "position": "absolute",
+            "right": "-10%",
+            "top": "-25%",
+            "zIndex": "300"
+
+        },
+
+    }
+
     const CONFIGFullTime = {
 
         "container": {
@@ -44,6 +350,7 @@ function App() {
             "fontWeight": "600",
             "textAlign": "center",
             "transform": "scaleX(1.2)",
+            "textTransform": "uppercase",
             "width": "35.6%"
 
         },
@@ -138,358 +445,6 @@ function App() {
 
     }
 
-    const CONFIGBestDefender = {
-
-        "container": {
-
-            "alignItems": "center",
-            "display": "flex",
-            "flexDirection": "row",
-            "position": "relative",
-            "width": "50%"
-
-        },
-
-        "playerName": {
-
-            "container": {
-
-                "background": "linear-gradient(to bottom, rgb(111, 19, 56), rgb(63, 13, 49))",
-                "borderColor": "rgba(58, 213, 208, 0.7)",
-                "borderRightStyle": "solid",
-                "borderWidth": `${(35/1366)*100}vw`,
-                "clipPath": "polygon(100% 0%, 0% 0%, 4.5% 100%, 100% 100%)",
-                "height": "80%",
-                "position": "relative",
-                "width": "70%",
-                "zIndex": "200"
-
-            },
-
-            "nameContainer": {
-
-                "alignItems": "center",
-                "display": "flex",
-                "height": "50%",
-                "justifyContent": "flex-start"
-
-            },
-
-            "typography": {
-
-                "color": "white",
-                "fontFamily": "Oswald",
-                "fontSize": `${(15/1366)*100}vw`,
-                "fontWeight": "400",
-                "marginLeft": "10%",
-                "overflowWrap": "break-word",
-                "textShadow": "0 0 0.1vw white"
-
-            }
-
-        },
-
-        "playerImage": {
-
-            "height": "130%",
-            "bottom": "10%", 
-            "position": "absolute", 
-            "right": "9%",
-            "width": "16%",
-            "zIndex": "300"
-
-        },
-
-        "points": {
-
-            "container": {
-
-                "alignItems": "center",
-                "background": "linear-gradient(to bottom ,rgb(153, 33, 91), rgb(80, 17, 56))",
-                "color": "white",
-                "clipPath": "polygon(88% 0%, 0% 0%, 14.4% 100%, 100% 100%)",
-                "display": "flex",
-                "flexDirection": "column",
-                "fontFamily": "Oswald",
-                "fontSize": `${(15/1366)*100}vw`,
-                "fontWeight": "400",
-                "height": "80%",
-                "justifyContent": "center",
-                "left": "2.6%",
-                "position": "relative",
-                "textAlign": "center",
-                "width": "30%",
-
-
-
-            },
-
-            "name": {
-
-                "alignItems": "center",
-                "display": "flex",
-                "fontFamily": "Oswald",
-                "fontSize": `${(15/1366)*100}vw`,
-                "height": "50%",
-                "paddingRight": "10%",
-                "textShadow": "0 0 0.2vw white"
-
-            },
-
-            "value": {
-
-                "alignItems": "center",
-                "display": "flex",
-                "fontFamily": "Oswald",
-                "fontSize": `${(20/1366)*100}vw`,
-                "height": "50%",
-                "textShadow": "0 0 0.2vw white"
-
-            }
-
-        },
-
-        "teamLogo": {
-
-            "height": "90%",
-            "position": "absolute",
-            "right": "-10%",
-            "top": "-25%",
-            "zIndex": "300"
-
-        },
-
-        "text": {
-
-            "container": {
-
-                "alignItems": "center", 
-                "backgroundColor": "black",
-                "color": "white",
-                "clip-path": "polygon(100% 0%, 3% 0%, 0% 100%, 100% 100%)",
-                "display": "flex",
-                "float": "right",
-                "fontFamily": "Oswald",
-                "fontSize": `${(15/1366)*100}vw`,
-                "height": "50%",
-                "paddingLeft": "7%",
-                "width": "75%"
-
-            },
-
-            "typography": {
-
-                "fontFamily": "Oswald",
-                "fontSize": `${(15/1366)*100}vw`,
-                "textShadow": "0 0 0.1vw white"
-
-            }
-
-        }
-
-    }
-
-    const CONFIGNilgiriKnightsLogo = {
-
-        "conntainer": {
-
-            "alignItems": "center",
-            "backgroundColor": "rgba(46, 133, 142, 0.5)",
-            "clipPath": "polygon(100% 0%, 0% 20%, 0% 80%, 100% 100%)",
-            "display": "flex",
-            "height": "100%",
-            "justifyContent": "center",
-            "position": "absolute",
-            "right": "0%",
-            "top": "0%",
-            "width": "27.3%",
-            "zIndex": "100"
-
-        },
-
-        "logo": {
-
-            "height": "40%"
-
-        }
-
-    }
-
-    const CONFIGBestRaider = {
-
-        "container": {
-
-            "alignItems": "center",
-            "display": "flex",
-            "flexDirection": "row",
-            "position": "relative",
-            "width": "50%"
-
-        },
-
-        "playerName": {
-
-            "container": {
-
-                "background": "linear-gradient(to bottom, rgb(111, 19, 56), rgb(63, 13, 49))",
-                "borderColor": "rgba(58, 213, 208, 0.7)",
-                "borderLeftStyle": "solid",
-                "borderWidth": `${(35/1366)*100}vw`,
-                "clipPath": "polygon(100% 0%, 0% 0%, 0% 100%, 95.5% 100%)",
-                "height": "80%",
-                "position": "relative",
-                "width": "70%",
-                "zIndex": "200"
-
-            },
-
-            "nameContainer": {
-
-                "alignItems": "center",
-                "display": "flex",
-                "height": "50%",
-                "justifyContent": "flex-end"
-
-            },
-
-            "typography": {
-
-                "color": "white",
-                "fontFamily": "Oswald",
-                "fontSize": `${(15/1366)*100}vw`,
-                "fontWeight": "400",
-                "marginRight": "10%",
-                "overflowWrap": "break-word",
-                "textShadow": "0 0 0.1vw white"
-
-            }
-
-        },
-
-        "playerImage": {
-
-            "height": "130%",
-            "left": "9%", 
-            "bottom": "10%",
-            "position": "absolute",
-            "width": "16%", 
-            "zIndex": "300"
-
-        },
-
-        "points":{
-
-            "container": {
-
-                "alignItems": "center",
-                "background": "linear-gradient(to bottom ,rgb(153, 33, 91), rgb(80, 17, 56))",
-                "color": "white",
-                "clipPath": "polygon(100% 0%, 11.4% 0%, 0% 100%, 85% 100%)",
-                "display": "flex",
-                "flexDirection": "column",
-                "fontFamily": "Oswald",
-                "fontSize": `${(15/1366)*100}vw`,
-                "fontWeight": "400",
-                "height": "80%",
-                "justifyContent": "center",
-                "position": "relative",
-                "right": "2.6%",
-                "textAlign": "center",
-                "width": "30%"
-            },
-
-            "name": {
-
-                "alignItems": "center",
-                "display": "flex",
-                "fontFamily": "Oswald",
-                "fontSize": `${(15/1366)*100}vw`,
-                "height": "50%",
-                "paddingLeft": "10%",
-                "textShadow": "0 0 0.2vw white"
-
-            },
-
-            "value": {
-
-                "alignItems": "center",
-                "display": "flex",
-                "fontFamily": "Oswald",
-                "fontSize": `${(20/1366)*100}vw`,
-                "height": "50%",
-                "textShadow": "0 0 0.2vw white"
-
-            }
-
-        },
-
-        "teamLogo": {
-
-            "height": "90%",
-            "left": "-10%",
-            "position": "absolute",
-            "top": "-25%",
-            "zIndex": "300"
-
-        },
-
-        "text": {
-
-            "container": {
-
-                "alignItems": "center",
-                "backgroundColor": "black",
-                "color": "white",
-                "clipPath": "polygon(97% 0%, 0% 0%, 0% 100%, 100% 100%)",
-                "display": "flex",
-                "float": "left",
-                "fontFamily": "Oswald",
-                "fontSize": `${(15/1366)*100}vw`,
-                "height": "50%",
-                "justifyContent": "right",
-                "paddingRight": "7%",
-                "width": "75%"
-
-            },
-
-            "typography": {
-
-                "fontFamily": "Oswald",
-                "fontSize": `${(15/1366)*100}vw`,
-                "textShadow": "0 0 0.1vw white"
-
-            }
-
-        }
-
-    }
-
-    const CONFIGPalaniTuskersLogo = {
-
-        "container": {
-
-            "alignItems": "center",
-            "backgroundColor": "rgba(160, 0, 80, 0.5)",
-            "clipPath": "polygon(100% 20%, 0% 0%, 0% 100%, 100% 80%)",
-            "display": "flex",
-            "height": "100%",
-            "justifyContent": "center",
-            "left": "0%",
-            "position": "absolute",
-            "top": "0%",
-            "width": "27.3%",
-            "zIndex": "100"
-
-        },
-
-        "logo": {
-
-            "height": "40%",
-
-        }
-
-    }
-
     const CONFIGPoints = {
 
         "container": {
@@ -544,6 +499,7 @@ function App() {
             "fontSize": `${(23/1366)*100}vw`,
             "fontWeight": "600",
             "textAlign": "center",
+            "textTransform": "uppercase",
             "width": "31.6%",
 
         }
@@ -557,7 +513,7 @@ function App() {
             "alignItems": "center",
             "display": "flex",
             "flexDirection": "row",
-            "gap": "10%",
+            "gap": "11%",
             "height": "100%",
             "justifyContent": "center",
             "position": "absolute",
@@ -575,6 +531,7 @@ function App() {
             "paddingTop": "3%",
             "paddingBottom": `${(340/768)*100}vh`,
             "textAlign": "center",
+            "textTransform": "uppercase",
             "width": "31.6%"
 
         },
@@ -589,8 +546,9 @@ function App() {
             "height": "41.1%",
             "paddingTop": `${(28/768)*100}vh`,
             "paddingBottom": "41vh",
-            "paddingRight": "1%",
-            "textAlign": "right",
+            //"paddingRight": "1%",
+            "textAlign": "center",
+            "textTransform": "uppercase",
             "width": "22.8%"
 
         },
@@ -605,8 +563,9 @@ function App() {
             "height": "41.1%",
             "paddingTop": `${(28/768)*100}vh`,
             "paddingBottom": "41vh",
-            "paddingLeft": "1%",
-            "textAlign": "left",
+            //"paddingLeft": "1%",
+            "textAlign": "center",
+            "textTransform": "uppercase",
             "width": "22.8%"
 
         }
@@ -650,6 +609,58 @@ function App() {
             "position": "absolute",
             "right": "0.5%",
             "width": "1%"
+
+        }
+
+    }
+
+    const CONFIGTeamALogo = {
+
+        "container": {
+
+            "alignItems": "center",
+            "backgroundColor": "rgba(160, 0, 80, 0.5)",
+            "clipPath": "polygon(100% 20%, 0% 0%, 0% 100%, 100% 80%)",
+            "display": "flex",
+            "height": "100%",
+            "justifyContent": "center",
+            "left": "0%",
+            "position": "absolute",
+            "top": "0%",
+            "width": "27.3%",
+            "zIndex": "100"
+
+        },
+
+        "logo": {
+
+            "height": "40%"
+
+        }
+
+    }
+
+    const CONFIGTeamBLogo = {
+
+        "conntainer": {
+
+            "alignItems": "center",
+            "backgroundColor": "rgba(46, 133, 142, 0.5)",
+            "clipPath": "polygon(100% 0%, 0% 20%, 0% 80%, 100% 100%)",
+            "display": "flex",
+            "height": "100%",
+            "justifyContent": "center",
+            "position": "absolute",
+            "right": "0%",
+            "top": "0%",
+            "width": "27.3%",
+            "zIndex": "100"
+
+        },
+
+        "logo": {
+
+            "height": "40%"
 
         }
 
@@ -706,12 +717,13 @@ function App() {
                     }}
                 >
                     <Typography
-                        id="palaniTuskersNameTypography"
+                        id="teamANameTypography"
                         style={{
                             ...CONFIGPlayingTeamsAndMatchName.palaniTuskersTypography
                         }}
                     >
-                        PALANI TUSKERS
+                        {/* PALANI TUSKERS */}
+                        MANCHESTER UNITED
                     </Typography>
                     <Typography
                         id="matchNameTypography"
@@ -719,232 +731,254 @@ function App() {
                             ...CONFIGPlayingTeamsAndMatchName.match7Typography
                         }}
                     >
-                        MATCH 7
+                        {/* MATCH 7 */}
+                        LEAGUE MATCH
                     </Typography>
                     <Typography
-                        id="nilgiriKnightsNameTypography"
+                        id="teamBNameTypography"
                         style={{
                             ...CONFIGPlayingTeamsAndMatchName.nilgiriKnightsTypography
                         }}
                     >
-                        NILGIRI KNIGHTS
+                        {/* NILGIRI KNIGHTS */}
+                        CHELSEA
                     </Typography>
                 </Box>
                 <Box 
-                    id="fullTimeContainer" 
+                    id="allTimescoreContainer" 
                     style={{
                         ...CONFIGFullTime.container
                     }}
                 >
                     <Typography 
-                        id="fullTimePalaniTuskersScoreTypography"
+                        id="teamAallTimescoreValueTypography"
                         style={{
                             ...CONFIGFullTime.palaniTuskerstypography
                         }}
                     >
-                        30
+                        {/* 30 */}
+                        5
                     </Typography>
                     <Typography 
-                        id="fullTimeNameTypography"
+                        id="allTimescoreTypography"
                         style={{
                             ...CONFIGFullTime.fullTimeTypography
                         }}
                     >
-                        FULL TIME
+                        {/* FULL TIME */}
+                        GOALS
                     </Typography>
                     <Typography
-                        id="fullTimeNilgiriKnightsScoreTypography" 
+                        id="teamBallTimescoreValueTypography" 
                         style={{
                             ...CONFIGFullTime.nilgiriKnightstypography
                         }}
                     >
-                        18
+                        {/* 18 */}
+                        3
                     </Typography>
                 </Box>
                 <Box 
-                    id="raidPointsContainer"
+                    id="score1Container"
                     style={{
                         ...CONFIGPoints.container
                     }}
                 >
                     <Typography 
-                        id="raidPointsPalaniTuskersScoreTypography" 
+                        id="teamAscore1ValueTypography" 
                         style={{
                             ...CONFIGPoints.palaniTuskersPoints
                         }}
                     >
+                        {/* 16 */}
+                        20
+                    </Typography>
+                    <Typography 
+                        id="score1Typography" 
+                        style={{
+                            ...CONFIGPoints.pointsTypography
+                        }}
+                    >
+                        {/* RAID POINTS */}
+                        SHOTS
+                    </Typography>
+                    <Typography 
+                        id="teamBscore1ValueTypography" 
+                        style={{
+                            ...CONFIGPoints.nilgiriKnightsPoints
+                        }}
+                    >
+                        {/* 11 */}
                         16
                     </Typography>
-                    <Typography 
-                        id="raidPointsNameTypography" 
-                        style={{
-                            ...CONFIGPoints.pointsTypography
-                        }}
-                    >
-                        RAID POINTS
-                    </Typography>
-                    <Typography 
-                        id="raidPointsNilgiriKnightsScoreTypography" 
-                        style={{
-                            ...CONFIGPoints.nilgiriKnightsPoints
-                        }}
-                    >
-                        11
-                    </Typography>
                 </Box>
                 <Box 
-                    id="tacklePointsContainer"
+                    id="score2Container"
                     style={{
                         ...CONFIGPoints.container
                     }}
                 >
                     <Typography 
-                        id="palaniTuskersTacklePointsNumberTypography" 
+                        id="teamAscore2ValueTypography" 
                         style={{
                             ...CONFIGPoints.palaniTuskersPoints
                         }}
                     >
-                        11
+                        {/* 11 */}
+                        15
                     </Typography>
                     <Typography 
-                        id="tacklePointsNameTypography" 
+                        id="score2Typography" 
                         style={{
                             ...CONFIGPoints.pointsTypography
                         }}
                     >
-                        TACKLE POINTS
+                        {/* TACKLE POINTS */}
+                        SHOTS ON TARGET
                     </Typography>
                     <Typography 
-                        id="nilgiriKnightsTacklePointsNumberTypography" 
+                        id="teamBscore1ValueTypography" 
                         style={{
                             ...CONFIGPoints.nilgiriKnightsPoints
                         }}
                     >
+                        {/* 7 */}
+                        10
+                    </Typography>
+                </Box>
+                <Box 
+                    id="score3Container"
+                    style={{
+                        ...CONFIGPoints.container
+                    }}
+                >
+                    <Typography 
+                        id="teamAscore3ValueTypography" 
+                        style={{
+                            ...CONFIGPoints.palaniTuskersPoints
+                        }}
+                    >
+                        {/* 2 */}
+                        5
+                    </Typography>
+                    <Typography 
+                        id="score3Typography" 
+                        style={{
+                            ...CONFIGPoints.pointsTypography
+                        }}
+                    >
+                        {/* ALL OUT POINTS */}
+                        SHOTS OFF TARGET
+                    </Typography>
+                    <Typography 
+                        id="teamBscore3ValueTypography" 
+                        style={{
+                            ...CONFIGPoints.nilgiriKnightsPoints
+                        }}
+                    >
+                        6
+                    </Typography>
+                </Box>
+                <Box 
+                    id="score4Container"
+                    style={{
+                        ...CONFIGPoints.container
+                    }}
+                >
+                    <Typography 
+                        id="teamAscore4ValueTypography" 
+                        style={{
+                            ...CONFIGPoints.palaniTuskersPoints
+                        }}
+                    >
+                        {/* 1 */}
+                        10
+                    </Typography>
+                    <Typography 
+                        id="score4Typography" 
+                        style={{
+                            ...CONFIGPoints.pointsTypography
+                        }}
+                    >
+                        {/* EXTRAS */}
+                        SAVES
+                    </Typography>
+                    <Typography 
+                        id="teamBscore4ValueTypography" 
+                        style={{
+                            ...CONFIGPoints.nilgiriKnightsPoints
+                        }}
+                    >
+                        {/* 0 */}
                         7
                     </Typography>
                 </Box>
                 <Box 
-                    id="allOutPoints"
-                    style={{
-                        ...CONFIGPoints.container
-                    }}
-                >
-                    <Typography 
-                        id="palaniTuskersAllOutPointsNumberTypography" 
-                        style={{
-                            ...CONFIGPoints.palaniTuskersPoints
-                        }}
-                    >
-                        2
-                    </Typography>
-                    <Typography 
-                        id="tacklePointsTypography" 
-                        style={{
-                            ...CONFIGPoints.pointsTypography
-                        }}
-                    >
-                        ALL OUT POINTS
-                    </Typography>
-                    <Typography 
-                        id="nilgiriKnightsTacklePointsNumberTypography" 
-                        style={{
-                            ...CONFIGPoints.nilgiriKnightsPoints
-                        }}
-                    >
-                        0
-                    </Typography>
-                </Box>
-                <Box 
-                    id="extras"
-                    style={{
-                        ...CONFIGPoints.container
-                    }}
-                >
-                    <Typography 
-                        id="palaniTuskersExtrasNumberTypography" 
-                        style={{
-                            ...CONFIGPoints.palaniTuskersPoints
-                        }}
-                    >
-                        1
-                    </Typography>
-                    <Typography 
-                        id="extrasTypography" 
-                        style={{
-                            ...CONFIGPoints.pointsTypography
-                        }}
-                    >
-                        EXTRAS
-                    </Typography>
-                    <Typography 
-                        id="nilgiriKnightsExtrasNumberTypography" 
-                        style={{
-                            ...CONFIGPoints.nilgiriKnightsPoints
-                        }}
-                    >
-                        0
-                    </Typography>
-                </Box>
-                <Box 
-                    id="superRaids"
+                    id="score5Container"
                     style={{
                         ...CONFIGPoints.container
                     }}
                 >
                     <Typography
-                        id="palaniTuskersSuperRaidsNumberTypography" 
+                        id="teamAscore5ValueTypography" 
                         style={{
                             ...CONFIGPoints.palaniTuskersPoints
                         }}
                     >
-                        0
+                        {/* 0 */}
+                        55%
                     </Typography>
                     <Typography 
-                        id="superRaidsTypography" 
+                        id="score5Typography" 
                         style={{
                             ...CONFIGPoints.pointsTypography
                         }}
                     >
-                        SUPER RAIDS
+                        {/* SUPER RAIDS */}
+                        POSSESSION
                     </Typography>
                     <Typography 
-                        id="nilgiriKnightsSuperRaidsNumberTypography" 
+                        id="teamBscore5ValueTypography" 
                         style={{
                             ...CONFIGPoints.nilgiriKnightsPoints
                         }}
                     >
-                        1
+                        {/* 1 */}
+                        45%
                     </Typography>
                 </Box>
                 <Box 
-                    id="superTackles"
+                    id="score6Container"
                     style={{
                         ...CONFIGPoints.container
                     }}
                 >
                     <Typography 
-                        id="palaniTuskersSuperRaidsNumberTypography" 
+                        id="teamAscore6ValueTypography" 
                         style={{
                             ...CONFIGPoints.palaniTuskersPoints
                         }}
                     >
-                        1
+                        {/* 1 */}
+                        3
                     </Typography>
                     <Typography 
-                        id="superRaidsTypography" 
+                        id="score6Typography" 
                         style={{
                             ...CONFIGPoints.pointsTypography
                         }}
                     >
-                        SUPER TACKLES
+                        {/* SUPER TACKLES */}
+                        YELLOW CARDS
                     </Typography>
                     <Typography 
-                        id="nilgiriKnightsSuperRaidsNumberTypography" 
+                        id="teamBscore6ValueTypography" 
                         style={{
                             ...CONFIGPoints.nilgiriKnightsPoints
                         }}
                     >
-                        0
+                        {/* 0 */}
+                        5
                     </Typography>
                 </Box>
                 <Box 
@@ -963,31 +997,33 @@ function App() {
                 </Box>
             </Stack>
             <Box 
-                id="palaniTuskersLogo"
+                id="teamALogoContainer"
                 style={{
-                    ...CONFIGPalaniTuskersLogo.container
+                    ...CONFIGTeamALogo.container
                 }}
             >
                 <img 
-                    id="palaniTuskersLogo" 
-                    src="https://feed.yuvakabaddi.com/YKS-2022-SE/teamLogos/569.png"
+                    id="teamALogo" 
+                    // src="https://feed.yuvakabaddi.com/YKS-2022-SE/teamLogos/569.png"
+                    src="https://www.pngall.com/wp-content/uploads/12/Manchester-United-F.C.-Logo-PNG-Image.png"
                     style={{
-                        ...CONFIGPalaniTuskersLogo.logo
+                        ...CONFIGTeamALogo.logo
                     }}
                 >
                 </img>
             </Box>
             <Box
-                id="nilgiriKnightsLogo"
+                id="teamBLogoContainer"
                 style={{
-                    ...CONFIGNilgiriKnightsLogo.conntainer
+                    ...CONFIGTeamBLogo.conntainer
                 }}
             >
                 <img 
-                    id="nilgiriKnightsLogo"
-                    src="https://www.bullscore.com/feature_img_cron/logos/kabaddi/151.png"
+                    id="teamBLogo"
+                    // src="https://www.bullscore.com/feature_img_cron/logos/kabaddi/151.png"
+                    src="https://assets.stickpng.com/images/580b57fcd9996e24bc43c4e1.png"
                     style={{
-                        ...CONFIGNilgiriKnightsLogo.logo
+                        ...CONFIGTeamBLogo.logo
                     }}
                 >
                 </img>
@@ -999,148 +1035,157 @@ function App() {
                 }}
             >
                 <Box
-                    id="bestRaiderContainer"
+                    id="bestPlayerAContainer"
                     style={{
-                        ...CONFIGBestRaider.container
+                        ...CONFIGBestPlayerA.container
                     }}
                 >
                     <img
-                        id="bestRaiderTeamLogo" 
-                        src="https://feed.yuvakabaddi.com/YKS-2022-SE/teamLogos/569.png"
+                        id="bestPlayerATeamLogo" 
+                        // src="https://feed.yuvakabaddi.com/YKS-2022-SE/teamLogos/569.png"
+                        src="https://www.pngall.com/wp-content/uploads/12/Manchester-United-F.C.-Logo-PNG-Image.png"
                         style={{
-                            ...CONFIGBestRaider.teamLogo
+                            ...CONFIGBestPlayerA.teamLogo
                         }}
                     >  
                     </img>
                     <img
-                        id="bestRaiderPlayerImage"
-                        src="https://static.yuvakabaddi.com/images/player-images/6618.png"
+                        id="bestPlayerAImage"
+                        // src="https://static.yuvakabaddi.com/images/player-images/6618.png"
+                        src="https://www.footyrenders.com/render/marcus-rashford-68-390x326.png"
                         style={{
-                            ...CONFIGBestRaider.playerImage
+                            ...CONFIGBestPlayerA.playerImage
                         }}
                     >
                     </img>
                     <Box 
-                        id="bestRaiderPlayerContainer"
+                        id="bestPlayerANameAndRoleContainer"
                         style={{
-                            ...CONFIGBestRaider.playerName.container
+                            ...CONFIGBestPlayerA.playerNameAndRoleContainer
                         }}
                     >
                         <Box
-                            id="bestRaiderPlayerNameContainer"
+                            id="bestPlayerANameContainer"
                             style = {{
-                                ...CONFIGBestRaider.playerName.nameContainer
+                                ...CONFIGBestPlayerA.playerName.container
                             }}
                         >
                             <Typography 
-                                id="bestRaiderPlayerNameTypography"
+                                id="bestPlayerANameTypography"
                                 style={{
-                                    ...CONFIGBestRaider.playerName.typography
+                                    ...CONFIGBestPlayerA.playerName.typography
                                 }}
                             >
-                                S.MUKESHKANNAN
+                                {/* S.MUKESHKANNAN */}
+                                MARCUS RASHFORD
                             </Typography>
                         </Box>
                         <Box
-                            id="bestRaiderTextContainer"
+                            id="bestPlayerARoleContainer"
                             style={{
-                                ...CONFIGBestRaider.text.container
+                                ...CONFIGBestPlayerA.playerRole.container
                             }}
                         >
                             <Typography
-                                id="bestRaiderTextTypography"
+                                id="bestPlayerARoleTypography"
                                 style={{
-                                    ...CONFIGBestRaider.text.typography
+                                    ...CONFIGBestPlayerA.playerRole.typography
                                 }}
                             >
-                                BEST RAIDER
+                                {/* BEST RAIDER */}
+                                BEST ATTACKER
                             </Typography>
                         </Box>
                     </Box>
                     <Box 
-                        id="bestRaiderRaidPointsContainer"
+                        id="bestPlayerAPointsContainer"
                         style={{
-                            ...CONFIGBestRaider.points.container
+                            ...CONFIGBestPlayerA.points.container
                         }}
                     >
                         <Typography
-                            id="bestRaiderRaidPointsNameTypography"
+                            id="bestPlayerAPointsNameTypography"
                             style={{
-                                ...CONFIGBestRaider.points.name
+                                ...CONFIGBestPlayerA.points.name
                             }}
                         >
-                            RAID POINTS
+                            {/* RAID POINTS */}
+                            GOALS SCORED
                         </Typography>
                         <Typography
-                            id="bestRaiderRaidPointsTypography" 
+                            id="bestPlayerAPointsValueTypography"
                             style={{
-                                ...CONFIGBestRaider.points.value
+                                ...CONFIGBestPlayerA.points.value
                             }}
                         >
-                            4
+                            {/* 4 */}
+                            3
                         </Typography>
                     </Box>
                 </Box>
                 <Box 
-                    id="bestDefenderContainer"
+                    id="bestPlayerBContainer"
                     style={{
-                        ...CONFIGBestDefender.container
+                        ...CONFIGBestPlayerB.container
                     }}
                 >
                     <Box 
-                        id="bestDefenderTacklePointsContainer"
+                        id="bestPlayerBPointsContainer"
                         style={{
-                            ...CONFIGBestDefender.points.container
+                            ...CONFIGBestPlayerB.points.container
                         }}
                     >
                         <Typography 
-                            id="bestDefenderTacklePointsNameTypography"
+                            id="bestPlayerBPointsNameTypography"
                             style={{
-                                ...CONFIGBestDefender.points.name
+                                ...CONFIGBestPlayerB.points.name
                             }}
                         >
-                            TACKLE POINTS
+                            {/* TACKLE POINTS */}
+                            SHOTS BLOCKED
                         </Typography>
                         <Typography
-                            id="bestRaiderTacklePointsTypography" 
+                            id="bestPlayerBPointsValueTypography" 
                             style={{
-                                ...CONFIGBestDefender.points.value
+                                ...CONFIGBestPlayerB.points.value
                             }}
                         >
-                            4
+                            {/* 4 */}
+                            5
                         </Typography>
                     </Box>
                     <Box 
-                        id="bestDefenderPlayerContainer"
+                        id="bestPlayerBNameAndRoleContainer"
                         style={{
-                            ...CONFIGBestDefender.playerName.container
+                            ...CONFIGBestPlayerB.playerNameAndRoleContainer
                         }}
                     >
                         <Box
-                            id="bestDefenderPlayerNameContainer"
+                            id="bestPlayerBNameContainer"
                             style = {{
-                                ...CONFIGBestDefender.playerName.nameContainer
+                                ...CONFIGBestPlayerB.playerName.container
                             }}
                         >
                             <Typography
-                                id="bestDefenderPlayerNameTypography"
+                                id="bestPlayerBNameTypography"
                                 style={{
-                                    ...CONFIGBestDefender.playerName.typography
+                                    ...CONFIGBestPlayerB.playerName.typography
                                 }}
                             >
-                                PURUSHOTHAMAN PALANIVELU
+                                {/* PURUSHOTHAMAN PALANIVELU */}
+                                LISANDRO MARTINEZ
                             </Typography>
                         </Box>
                         <Box
-                            id="bestDefenderTextContainer" 
+                            id="bestPlayerBRoleContainer" 
                             style={{
-                                ...CONFIGBestDefender.text.container
+                                ...CONFIGBestPlayerB.playerRole.container
                             }}
                         >
                             <Typography 
-                                id="bestDefenderTextTypography" 
+                                id="bestPlayerBRoleTypography" 
                                 style={{
-                                    ...CONFIGBestDefender.text.typography
+                                    ...CONFIGBestPlayerB.playerRole.typography
                                 }}
                             >
                                 BEST DEFENDER
@@ -1148,18 +1193,20 @@ function App() {
                         </Box>
                     </Box>
                     <img
-                        id="bestDefenderPlayerImage"
-                        src="https://static.yuvakabaddi.com/images/player-images/6638.png"
+                        id="bestPlayerBImage"
+                        // src="https://static.yuvakabaddi.com/images/player-images/6638.png"
+                        src="https://www.footyrenders.com/render/lisandro-martinez-4-303x540.png"
                         style={{
-                            ...CONFIGBestDefender.playerImage
+                            ...CONFIGBestPlayerB.playerImage
                         }}
                     >
                     </img>
                     <img
-                        id="bestDefenderTeamLogo" 
-                        src="https://feed.yuvakabaddi.com/YKS-2022-SE/teamLogos/569.png"
+                        id="bestPlayerBTeamLogo" 
+                        // src="https://feed.yuvakabaddi.com/YKS-2022-SE/teamLogos/569.png"
+                        src="https://www.pngall.com/wp-content/uploads/12/Manchester-United-F.C.-Logo-PNG-Image.png"
                         style={{
-                            ...CONFIGBestDefender.teamLogo
+                            ...CONFIGBestPlayerB.teamLogo
                         }}
                     >
                     </img>
