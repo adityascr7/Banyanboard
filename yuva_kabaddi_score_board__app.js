@@ -322,7 +322,7 @@ function App() {
 
     }
 
-    const CONFIGFullTime = {
+    const CONFIGallTime = {
 
         "container": {
 
@@ -342,7 +342,7 @@ function App() {
 
         },
 
-        "fullTimeTypography": {
+        "allTimeTypography": {
 
             "color": "black",
             "fontFamily": "Bebas Neue",
@@ -355,7 +355,7 @@ function App() {
 
         },
 
-        "nilgiriKnightstypography": {
+        "teamBTypography": {
 
             "alignItems": "center",
             "background": "linear-gradient(to bottom, #3ad5d0,#268a8a 80%)",
@@ -371,7 +371,7 @@ function App() {
 
         },
 
-        "palaniTuskerstypography": {
+        "teamAtypography": {
 
             "alignItems": "center",
             "background": "linear-gradient(to bottom, #b0025c, #6e0e4c 80%)",
@@ -462,7 +462,7 @@ function App() {
 
         },
 
-        "nilgiriKnightsPoints": {
+        "teamBPoints": {
 
             "alignItems": "center",
             "background": "linear-gradient(to bottom, #3ad5d0,#268a8a 80%)",
@@ -477,7 +477,7 @@ function App() {
 
         },
 
-        "palaniTuskersPoints": {
+        "teamAPoints": {
 
             "alignItems": "center",
             "background": "linear-gradient(to bottom, #b0025c, #6e0e4c 80%)",
@@ -536,7 +536,7 @@ function App() {
 
         },
 
-        "nilgiriKnightsTypography": {
+        "teamBTypography": {
 
             "background": "linear-gradient(to left, #3caeaa, transparent)",
             "color": "white",
@@ -553,7 +553,7 @@ function App() {
 
         },
 
-        "palaniTuskersTypography": {
+        "teamAtypography": {
 
             "background": "linear-gradient(to right, #a50055, transparent)",
             "color": "white",
@@ -719,7 +719,7 @@ function App() {
                     <Typography
                         id="teamANameTypography"
                         style={{
-                            ...CONFIGPlayingTeamsAndMatchName.palaniTuskersTypography
+                            ...CONFIGPlayingTeamsAndMatchName.teamAtypography
                         }}
                     >
                         {/* PALANI TUSKERS */}
@@ -737,7 +737,7 @@ function App() {
                     <Typography
                         id="teamBNameTypography"
                         style={{
-                            ...CONFIGPlayingTeamsAndMatchName.nilgiriKnightsTypography
+                            ...CONFIGPlayingTeamsAndMatchName.teamBTypography
                         }}
                     >
                         {/* NILGIRI KNIGHTS */}
@@ -747,13 +747,13 @@ function App() {
                 <Box 
                     id="allTimescoreContainer" 
                     style={{
-                        ...CONFIGFullTime.container
+                        ...CONFIGallTime.container
                     }}
                 >
                     <Typography 
                         id="teamAallTimescoreValueTypography"
                         style={{
-                            ...CONFIGFullTime.palaniTuskerstypography
+                            ...CONFIGallTime.teamAtypography
                         }}
                     >
                         {/* 30 */}
@@ -762,7 +762,7 @@ function App() {
                     <Typography 
                         id="allTimescoreTypography"
                         style={{
-                            ...CONFIGFullTime.fullTimeTypography
+                            ...CONFIGallTime.allTimeTypography
                         }}
                     >
                         {/* FULL TIME */}
@@ -771,7 +771,7 @@ function App() {
                     <Typography
                         id="teamBallTimescoreValueTypography" 
                         style={{
-                            ...CONFIGFullTime.nilgiriKnightstypography
+                            ...CONFIGallTime.teamBTypography
                         }}
                     >
                         {/* 18 */}
@@ -787,7 +787,7 @@ function App() {
                     <Typography 
                         id="teamAscore1ValueTypography" 
                         style={{
-                            ...CONFIGPoints.palaniTuskersPoints
+                            ...CONFIGPoints.teamAPoints
                         }}
                     >
                         {/* 16 */}
@@ -805,7 +805,7 @@ function App() {
                     <Typography 
                         id="teamBscore1ValueTypography" 
                         style={{
-                            ...CONFIGPoints.nilgiriKnightsPoints
+                            ...CONFIGPoints.teamBPoints
                         }}
                     >
                         {/* 11 */}
@@ -821,7 +821,7 @@ function App() {
                     <Typography 
                         id="teamAscore2ValueTypography" 
                         style={{
-                            ...CONFIGPoints.palaniTuskersPoints
+                            ...CONFIGPoints.teamAPoints
                         }}
                     >
                         {/* 11 */}
@@ -839,7 +839,7 @@ function App() {
                     <Typography 
                         id="teamBscore1ValueTypography" 
                         style={{
-                            ...CONFIGPoints.nilgiriKnightsPoints
+                            ...CONFIGPoints.teamBPoints
                         }}
                     >
                         {/* 7 */}
@@ -855,7 +855,7 @@ function App() {
                     <Typography 
                         id="teamAscore3ValueTypography" 
                         style={{
-                            ...CONFIGPoints.palaniTuskersPoints
+                            ...CONFIGPoints.teamAPoints
                         }}
                     >
                         {/* 2 */}
@@ -873,7 +873,7 @@ function App() {
                     <Typography 
                         id="teamBscore3ValueTypography" 
                         style={{
-                            ...CONFIGPoints.nilgiriKnightsPoints
+                            ...CONFIGPoints.teamBPoints
                         }}
                     >
                         6
@@ -888,7 +888,7 @@ function App() {
                     <Typography 
                         id="teamAscore4ValueTypography" 
                         style={{
-                            ...CONFIGPoints.palaniTuskersPoints
+                            ...CONFIGPoints.teamAPoints
                         }}
                     >
                         {/* 1 */}
@@ -906,7 +906,7 @@ function App() {
                     <Typography 
                         id="teamBscore4ValueTypography" 
                         style={{
-                            ...CONFIGPoints.nilgiriKnightsPoints
+                            ...CONFIGPoints.teamBPoints
                         }}
                     >
                         {/* 0 */}
@@ -922,7 +922,7 @@ function App() {
                     <Typography
                         id="teamAscore5ValueTypography" 
                         style={{
-                            ...CONFIGPoints.palaniTuskersPoints
+                            ...CONFIGPoints.teamAPoints
                         }}
                     >
                         {/* 0 */}
@@ -940,7 +940,7 @@ function App() {
                     <Typography 
                         id="teamBscore5ValueTypography" 
                         style={{
-                            ...CONFIGPoints.nilgiriKnightsPoints
+                            ...CONFIGPoints.teamBPoints
                         }}
                     >
                         {/* 1 */}
@@ -956,7 +956,7 @@ function App() {
                     <Typography 
                         id="teamAscore6ValueTypography" 
                         style={{
-                            ...CONFIGPoints.palaniTuskersPoints
+                            ...CONFIGPoints.teamAPoints
                         }}
                     >
                         {/* 1 */}
@@ -974,7 +974,7 @@ function App() {
                     <Typography 
                         id="teamBscore6ValueTypography" 
                         style={{
-                            ...CONFIGPoints.nilgiriKnightsPoints
+                            ...CONFIGPoints.teamBPoints
                         }}
                     >
                         {/* 0 */}
