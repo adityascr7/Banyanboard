@@ -58,7 +58,7 @@ function App() {
                 "fontWeight": "400",
                 "marginRight": "10%",
                 "overflowWrap": "break-word",
-                "textShadow": "0 0 0.1vw white",
+                "textShadow": "0 0 0.2vw black",
                 "textTransform": "uppercase"
 
             }
@@ -71,7 +71,7 @@ function App() {
             "borderColor": "rgba(58, 213, 208, 0.7)",
             "borderLeftStyle": "solid",
             "borderWidth": `${(35/1366)*100}vw`,
-            "clipPath": "polygon(100% 0%, 0% 0%, 0% 100%, 95.5% 100%)",
+            "clipPath": "polygon(100% 0%, 0% 0%, 0% 100%, 96.1% 100%)",
             "height": "80%",
             "position": "relative",
             "width": "70%",
@@ -116,7 +116,7 @@ function App() {
                 "alignItems": "center",
                 "background": "linear-gradient(to bottom ,rgb(153, 33, 91), rgb(80, 17, 56))",
                 "color": "white",
-                "clipPath": "polygon(100% 0%, 11.4% 0%, 0% 100%, 85% 100%)",
+                "clipPath": "polygon(100% 0%, 10% 0%, 0% 100%, 86% 100%)",
                 "display": "flex",
                 "flexDirection": "column",
                 "fontFamily": "Oswald",
@@ -125,7 +125,7 @@ function App() {
                 "height": "80%",
                 "justifyContent": "center",
                 "position": "relative",
-                "right": "2.6%",
+                "right": "2.3%",
                 "textAlign": "center",
                 "width": "30%"
             },
@@ -138,7 +138,7 @@ function App() {
                 "fontSize": `${(15/1366)*100}vw`,
                 "height": "50%",
                 "paddingLeft": "10%",
-                "textShadow": "0 0 0.2vw white",
+                "textShadow": "0 0 0.2vw black",
                 "textTransform": "uppercase"
 
             },
@@ -150,7 +150,7 @@ function App() {
                 "fontFamily": "Oswald",
                 "fontSize": `${(20/1366)*100}vw`,
                 "height": "50%",
-                "textShadow": "0 0 0.2vw white"
+                "textShadow": "0 0 0.2vw black",
 
             }
 
@@ -210,7 +210,7 @@ function App() {
                 "fontWeight": "400",
                 "marginLeft": "10%",
                 "overflowWrap": "break-word",
-                "textShadow": "0 0 0.1vw white",
+                "textShadow": "0 0 0.2vw black",
                 "textTransform": "uppercase"
 
             }
@@ -223,7 +223,7 @@ function App() {
             "borderColor": "rgba(58, 213, 208, 0.7)",
             "borderRightStyle": "solid",
             "borderWidth": `${(35/1366)*100}vw`,
-            "clipPath": "polygon(100% 0%, 0% 0%, 4.5% 100%, 100% 100%)",
+            "clipPath": "polygon(100% 0%, 0% 0%, 4% 100%, 100% 100%)",
             "height": "80%",
             "position": "relative",
             "width": "70%",
@@ -268,7 +268,7 @@ function App() {
                 "alignItems": "center",
                 "background": "linear-gradient(to bottom ,rgb(153, 33, 91), rgb(80, 17, 56))",
                 "color": "white",
-                "clipPath": "polygon(88% 0%, 0% 0%, 14.4% 100%, 100% 100%)",
+                "clipPath": "polygon(89.4% 0%, 0% 0%, 13% 100%, 100% 100%)",
                 "display": "flex",
                 "flexDirection": "column",
                 "fontFamily": "Oswald",
@@ -276,7 +276,7 @@ function App() {
                 "fontWeight": "400",
                 "height": "80%",
                 "justifyContent": "center",
-                "left": "2.6%",
+                "left": "2.3%",
                 "position": "relative",
                 "textAlign": "center",
                 "width": "30%",
@@ -293,7 +293,7 @@ function App() {
                 "fontSize": `${(15/1366)*100}vw`,
                 "height": "50%",
                 "paddingRight": "10%",
-                "textShadow": "0 0 0.2vw white"
+                "textShadow": "0 0 0.2vw black"
 
             },
 
@@ -304,7 +304,7 @@ function App() {
                 "fontFamily": "Oswald",
                 "fontSize": `${(20/1366)*100}vw`,
                 "height": "50%",
-                "textShadow": "0 0 0.2vw white"
+                "textShadow": "0 0 0.2vw black"
 
             }
 
@@ -506,64 +506,111 @@ function App() {
 
     }
 
-    const CONFIGPlayingTeamsAndMatchName = {
+    const CONFIGPlayingTeamsAndMatchNameAndBackDropContainer = {
 
         "container": {
 
             "alignItems": "center",
             "display": "flex",
             "flexDirection": "row",
-            "gap": "11%",
+            "gap": "7.9%",
             "height": "100%",
             "justifyContent": "center",
             "position": "absolute",
-            "width": "85%"
+            "width": "90.5%"
 
         },
 
-        "match7Typography": {
+        "matchNameBackDrop": {
 
             "color": "white",
             "fontFamily": "Oswald",
             "fontSize": `${(22/1366)*100}vw`,
             "fontWeight": "600",
-            "height": "37%",
-            "paddingTop": "3%",
-            "paddingBottom": `${(340/768)*100}vh`,
+            "height": "100%",
             "textAlign": "center",
             "textTransform": "uppercase",
             "width": "31.6%"
 
         },
 
-        "teamBTypography": {
+        "playingTeamsAndMatchNameContainer": {
 
-            "background": "linear-gradient(to left, #3caeaa, transparent)",
-            "color": "white",
-            "fontFamily": "Oswald",
-            "fontSize": `${(18/1366)*100}vw`,
-            "fontWeight": "600",
-            "height": "41.1%",
-            "paddingTop": `${(28/768)*100}vh`,
-            "paddingBottom": "41vh",
-            //"paddingRight": "1%",
-            "textAlign": "center",
-            "textTransform": "uppercase",
-            "width": "22.8%"
+            "container": {
+
+                "alignItems": "center",
+                "color": "white",
+                "display": "flex",
+                "flexDirection": "row",
+                "gap": "5.7%",
+                "height": "14%",
+                "justifyContent": "center",
+                "position": "absolute",
+                "top": "0",
+                "width": "100%"
+
+            },
+
+            "matchNameTypography": {
+
+                "color": "white",
+                "fontFamily": "Oswald",
+                "fontSize": `${(22/1366)*100}vw`,
+                "fontWeight": "600",
+                "textAlign": "center",
+                "textTransform": "uppercase",
+                "width": "35.6%"
+
+            },
+
+            "teamATypography": {
+
+                "color": "white",
+                "fontFamily": "Oswald",
+                "fontSize": `${(18/1366)*100}vw`,
+                "fontWeight": "600",
+                "textAlign": "center",
+                "textTransform": "uppercase",
+                "width": "23.2%"
+                
+            },
+
+            "teamBTypography": {
+
+                "color": "white",
+                "fontFamily": "Oswald",
+                "fontSize": `${(18/1366)*100}vw`,
+                "fontWeight": "600",
+                "textAlign": "center",
+                "textTransform": "uppercase",
+                "width": "23.2%"
+                
+            }
 
         },
 
-        "teamAtypography": {
+        "teamABackDrop": {
 
             "background": "linear-gradient(to right, #a50055, transparent)",
             "color": "white",
             "fontSize": `${(18/1366)*100}vw`,
             "fontWeight": "600",
             "fontFamily": "Oswald",
-            "height": "41.1%",
-            "paddingTop": `${(28/768)*100}vh`,
-            "paddingBottom": "41vh",
-            //"paddingLeft": "1%",
+            "height": "100%",
+            "textAlign": "center",
+            "textTransform": "uppercase",
+            "width": "22.8%"
+
+        },
+
+        "teamBBackDrop": {
+
+            "background": "linear-gradient(to left, #3caeaa, transparent)",
+            "color": "white",
+            "fontFamily": "Oswald",
+            "fontSize": `${(18/1366)*100}vw`,
+            "fontWeight": "600",
+            "height": "100%",
             "textAlign": "center",
             "textTransform": "uppercase",
             "width": "22.8%"
@@ -711,38 +758,63 @@ function App() {
                 }}
             >
                 <Box 
-                    id="playingTeamsAndMatchNameContainer" 
+                    id="playingTeamsAndMatchNameAndBackDropContainer" 
                     style={{
-                        ...CONFIGPlayingTeamsAndMatchName.container
+                        ...CONFIGPlayingTeamsAndMatchNameAndBackDropContainer.container
                     }}
                 >
-                    <Typography
+                    <Box
                         id="teamANameTypography"
                         style={{
-                            ...CONFIGPlayingTeamsAndMatchName.teamAtypography
+                            ...CONFIGPlayingTeamsAndMatchNameAndBackDropContainer.teamABackDrop
                         }}
                     >
-                        {/* PALANI TUSKERS */}
-                        MANCHESTER UNITED
-                    </Typography>
-                    <Typography
+                    </Box>
+                    <Box
                         id="matchNameTypography"
                         style={{
-                            ...CONFIGPlayingTeamsAndMatchName.match7Typography
+                            ...CONFIGPlayingTeamsAndMatchNameAndBackDropContainer.matchNameBackDrop
                         }}
                     >
-                        {/* MATCH 7 */}
-                        LEAGUE MATCH
-                    </Typography>
-                    <Typography
+                    </Box>
+                    <Box
                         id="teamBNameTypography"
                         style={{
-                            ...CONFIGPlayingTeamsAndMatchName.teamBTypography
+                            ...CONFIGPlayingTeamsAndMatchNameAndBackDropContainer.teamBBackDrop
                         }}
                     >
-                        {/* NILGIRI KNIGHTS */}
-                        CHELSEA
-                    </Typography>
+                    </Box>
+                    <Box
+                        id="playingTeamsAndMatchNameContainer"
+                        style={{
+                            ...CONFIGPlayingTeamsAndMatchNameAndBackDropContainer.playingTeamsAndMatchNameContainer.container
+                        }}
+                    >
+                        <Typography
+                            id="teamATypography"
+                            style={{
+                                ...CONFIGPlayingTeamsAndMatchNameAndBackDropContainer.playingTeamsAndMatchNameContainer.teamATypography
+                            }}
+                        >
+                            MANCHESTER UNITED
+                        </Typography>
+                        <Typography
+                            id="matchNameTypography"
+                            style={{
+                                ...CONFIGPlayingTeamsAndMatchNameAndBackDropContainer.playingTeamsAndMatchNameContainer.matchNameTypography
+                            }}
+                        >
+                            LEAGUE MATCH
+                        </Typography>
+                        <Typography
+                            id="teamBTypography"
+                            style={{
+                                ...CONFIGPlayingTeamsAndMatchNameAndBackDropContainer.playingTeamsAndMatchNameContainer.teamBTypography
+                            }}
+                        >
+                            CHELSEA
+                        </Typography>
+                    </Box>
                 </Box>
                 <Box 
                     id="allTimescoreContainer" 
