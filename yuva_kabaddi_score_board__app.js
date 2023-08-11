@@ -322,7 +322,7 @@ function App() {
 
     }
 
-    const CONFIGallTime = {
+    const CONFIGPrimaryScoreType = {
 
         "container": {
 
@@ -332,17 +332,19 @@ function App() {
             "borderColor": "rgb(156, 156, 156)",
             "borderRadius": `${(9/1366)*100}vw`,
             "borderStyle": "solid",
+            "borderWidth": `${(5/768)*100}vh`,
+            // "borderWidth": `${(5/1366)*100}vw`,
             "display": "flex",
             "gap": "5.7%",
-            "height": "11.7%",
+            "height": "12%",
             "justifyContent": "center",
             "marginTop": `${(84/768)*100}vh`,
-            "width": "90.5%",
+            "width": "90%",
             "zIndex": "50"
 
         },
 
-        "allTimeTypography": {
+        "name": {
 
             "color": "black",
             "fontFamily": "Bebas Neue",
@@ -355,23 +357,7 @@ function App() {
 
         },
 
-        "teamBTypography": {
-
-            "alignItems": "center",
-            "background": "linear-gradient(to bottom, #3ad5d0,#268a8a 80%)",
-            "color": "white",
-            "display": "flex",
-            "fontFamily": "Bebas Neue",
-            "fontSize": `${(52/1366)*100}vw`,
-            "fontWeight": "600",
-            "height": "110%",
-            "justifyContent": "center",
-            "width": "23.2%",
-            "zIndex": "100"
-
-        },
-
-        "teamAtypography": {
+        "teamAPoints": {
 
             "alignItems": "center",
             "background": "linear-gradient(to bottom, #b0025c, #6e0e4c 80%)",
@@ -380,7 +366,23 @@ function App() {
             "fontFamily": "'Bebas Neue'",
             "fontSize": `${(52/1366)*100}vw`,
             "fontWeight": "600",
-            "height": "110%",
+            "height": "114%",
+            "justifyContent": "center",
+            "width": "23.2%",
+            "zIndex": "100"
+
+        },
+
+        "teamBPoints": {
+
+            "alignItems": "center",
+            "background": "linear-gradient(to bottom, #3ad5d0,#268a8a 80%)",
+            "color": "white",
+            "display": "flex",
+            "fontFamily": "Bebas Neue",
+            "fontSize": `${(52/1366)*100}vw`,
+            "fontWeight": "600",
+            "height": "114%",
             "justifyContent": "center",
             "width": "23.2%",
             "zIndex": "100"
@@ -429,7 +431,7 @@ function App() {
             "height": "9%",
             "justifyContent": "center",
             "marginTop": "0.5%",
-            "width": "48.3%"
+            "width": "50%"
 
         },
 
@@ -440,67 +442,6 @@ function App() {
             "fontSize": `${(36/1366)*100}vw`,
             "fontWeight": "700",
             "textTransform": "uppercase"
-
-        }
-
-    }
-
-    const CONFIGPoints = {
-
-        "container": {
-
-            "alignItems": "center",
-            "background": "linear-gradient(to right, rgba(176, 2, 92, 0.8),transparent 40%,transparent 60%,rgba(58, 213,208, 0.8) 100%)",
-            "borderRadius": `${(40/1366)*100}vw`,
-            "display": "flex",
-            "flexDirection": "row",
-            "gap": "7.4%",
-            "height": "9.5%",
-            "justifyContent": "center",
-            "width": "92%",
-            "zIndex": "50"
-
-        },
-
-        "teamBPoints": {
-
-            "alignItems": "center",
-            "background": "linear-gradient(to bottom, #3ad5d0,#268a8a 80%)",
-            "color": "white",
-            "display": "flex",
-            "fontFamily": "'Bebas Neue'", 
-            "fontWeight": "600",
-            "fontSize": `${(30/1366)*100}vw`,
-            "height": "100%",
-            "justifyContent": "center",
-            "width": "22.8%"
-
-        },
-
-        "teamAPoints": {
-
-            "alignItems": "center",
-            "background": "linear-gradient(to bottom, #b0025c, #6e0e4c 80%)",
-            "color": "white",
-            "display": "flex",
-            "fontFamily": "'Bebas Neue'", 
-            "fontWeight": "600",
-            "fontSize": `${(30/1366)*100}vw`,
-            "height": "100%",
-            "justifyContent": "center",
-            "width": "22.8%"
-
-        },
-
-        "pointsTypography": {
-
-            "color": "white",
-            "fontFamily": "Oswald",
-            "fontSize": `${(23/1366)*100}vw`,
-            "fontWeight": "600",
-            "textAlign": "center",
-            "textTransform": "uppercase",
-            "width": "31.6%",
 
         }
 
@@ -517,7 +458,7 @@ function App() {
             "height": "100%",
             "justifyContent": "center",
             "position": "absolute",
-            "width": "90.5%"
+            "width": "90%"
 
         },
 
@@ -572,7 +513,7 @@ function App() {
                 "textAlign": "center",
                 "textTransform": "uppercase",
                 "width": "23.2%"
-                
+
             },
 
             "teamBTypography": {
@@ -584,7 +525,7 @@ function App() {
                 "textAlign": "center",
                 "textTransform": "uppercase",
                 "width": "23.2%"
-                
+
             }
 
         },
@@ -619,23 +560,84 @@ function App() {
 
     }
 
-    const CONFIGScoreBoard = {
+    const CONFIGPoints = {
 
         "container": {
+
+            "alignItems": "center",
+            "background": "linear-gradient(to right, rgba(176, 2, 92, 0.8),transparent 40%,transparent 60%,rgba(58, 213,208, 0.8) 100%)",
+            "borderRadius": `${(40/1366)*100}vw`,
+            "display": "flex",
+            "flexDirection": "row",
+            "gap": "7%",
+            "height": "14%",
+            "justifyContent": "center",
+            "width": "92%",
+            "zIndex": "50"
+
+        },
+
+        "pointsTypography": {
+
+            "color": "white",
+            "fontFamily": "Oswald",
+            "fontSize": `${(23/1366)*100}vw`,
+            "fontWeight": "600",
+            "textAlign": "center",
+            "textTransform": "uppercase",
+            "width": "31.6%",
+
+        },
+
+        "teamAPoints": {
+
+            "alignItems": "center",
+            "background": "linear-gradient(to bottom, #b0025c, #6e0e4c 80%)",
+            "color": "white",
+            "display": "flex",
+            "fontFamily": "'Bebas Neue'", 
+            "fontWeight": "600",
+            "fontSize": `${(30/1366)*100}vw`,
+            "height": "100%",
+            "justifyContent": "center",
+            "width": "22.8%"
+
+        },
+
+        "teamBPoints": {
+
+            "alignItems": "center",
+            "background": "linear-gradient(to bottom, #3ad5d0,#268a8a 80%)",
+            "color": "white",
+            "display": "flex",
+            "fontFamily": "'Bebas Neue'", 
+            "fontWeight": "600",
+            "fontSize": `${(30/1366)*100}vw`,
+            "height": "100%",
+            "justifyContent": "center",
+            "width": "22.8%"
+
+        }
+
+    }
+
+    const CONFIGScoreBoard = {
+
+        "outermostContainer": {
 
             "alignItems": "center",
             "background": "linear-gradient(to right,rgba(110, 14, 76, 0.9),rgb(0, 0, 0),rgb(0, 0, 0),rgba(46, 133, 142, 0.8))",
             "boxShadow": "0vw 0vw 0.3vw white",
             "display": "flex",
             "flexDirection": "column",
-            "gap": `${(14/768)*100}vh`,
+            "gap": `${(2/768)*100}vh`,
             "height": "76%",
             "position": "relative",
-            "width": "45.4%"
+            "width": "47%"
 
         },
 
-        "leftContainer": {
+        "leftNarrowEmptyContainer": {
 
             "backgroundColor": "rgba(200, 2, 101, 0.8)",
             "borderRadius": `${(14/1366)*100}vw`,
@@ -647,7 +649,7 @@ function App() {
 
         },
 
-        "rightContainer": {
+        "rightNarrowEmptyContainer": {
 
             "backgroundColor": "rgba(58, 213, 208, 0.8)",
             "borderRadius": `${(14/1366)*100}vw`,
@@ -658,6 +660,18 @@ function App() {
             "width": "1%"
 
         }
+
+    }
+
+    const CONFIGScoreTypePointsContainer = {
+
+        "alignItems": "center",
+        "display": "flex",
+        "flexDirection": "column",
+        "gap": "2.3%",
+        "height": "74%",
+        "justifyContent": "center",
+        "width": "100%"
 
     }
 
@@ -674,7 +688,7 @@ function App() {
             "left": "0%",
             "position": "absolute",
             "top": "0%",
-            "width": "27.3%",
+            "width": "26.5%",
             "zIndex": "100"
 
         },
@@ -700,7 +714,7 @@ function App() {
             "position": "absolute",
             "right": "0%",
             "top": "0%",
-            "width": "27.3%",
+            "width": "26.5%",
             "zIndex": "100"
 
         },
@@ -728,6 +742,7 @@ function App() {
                 ...CONFIGMainContainer
             }}
         >
+            {/* Match summary container (located at top of the screen) */}
             <Box 
                 id="matchSummaryOutsideContainer"
                 style={{
@@ -750,13 +765,14 @@ function App() {
                     </Typography>
                 </Box>
             </Box>
+            {/* Scoreboard container (loacted at centre of the screen) */}
             <Stack 
                 id="scoreBoardContainer"
-                //spacing={1.6}
                 style={{
-                    ...CONFIGScoreBoard.container
+                    ...CONFIGScoreBoard.outermostContainer
                 }}
             >
+                {/* Best players A and B container (located at bottom of the screen) */}
                 <Box 
                     id="playingTeamsAndMatchNameAndBackDropContainer" 
                     style={{
@@ -816,258 +832,270 @@ function App() {
                         </Typography>
                     </Box>
                 </Box>
+                {/* Primary score type points container */}
                 <Box 
-                    id="allTimescoreContainer" 
+                    id="primaryScoreTypePointsContainer" 
                     style={{
-                        ...CONFIGallTime.container
+                        ...CONFIGPrimaryScoreType.container
                     }}
                 >
                     <Typography 
-                        id="teamAallTimescoreValueTypography"
+                        id="teamAPrimaryScoreTypePointsTypography"
                         style={{
-                            ...CONFIGallTime.teamAtypography
+                            ...CONFIGPrimaryScoreType.teamAPoints
                         }}
                     >
                         {/* 30 */}
                         5
                     </Typography>
                     <Typography 
-                        id="allTimescoreTypography"
+                        id="primaryScoreTypeNameTypography"
                         style={{
-                            ...CONFIGallTime.allTimeTypography
+                            ...CONFIGPrimaryScoreType.name
                         }}
                     >
                         {/* FULL TIME */}
                         GOALS
                     </Typography>
                     <Typography
-                        id="teamBallTimescoreValueTypography" 
+                        id="teamBPrimaryScoreTypePointsTypography" 
                         style={{
-                            ...CONFIGallTime.teamBTypography
+                            ...CONFIGPrimaryScoreType.teamBPoints
                         }}
                     >
                         {/* 18 */}
                         3
                     </Typography>
                 </Box>
-                <Box 
-                    id="score1Container"
+                {/* Secondary score type points container */}
+                <Box
+                    id="secondaryScoreTypePointsContainer"
                     style={{
-                        ...CONFIGPoints.container
+                        ...CONFIGScoreTypePointsContainer
                     }}
                 >
-                    <Typography 
-                        id="teamAscore1ValueTypography" 
+                    <Box 
+                        id="score1Container"
                         style={{
-                            ...CONFIGPoints.teamAPoints
+                            ...CONFIGPoints.container
                         }}
                     >
-                        {/* 16 */}
-                        20
-                    </Typography>
-                    <Typography 
-                        id="score1Typography" 
+                        <Typography 
+                            id="teamAscore1ValueTypography" 
+                            style={{
+                                ...CONFIGPoints.teamAPoints
+                            }}
+                        >
+                            {/* 16 */}
+                            20
+                        </Typography>
+                        <Typography 
+                            id="score1Typography" 
+                            style={{
+                                ...CONFIGPoints.pointsTypography
+                            }}
+                        >
+                            {/* RAID POINTS */}
+                            SHOTS
+                        </Typography>
+                        <Typography 
+                            id="teamBscore1ValueTypography" 
+                            style={{
+                                ...CONFIGPoints.teamBPoints
+                            }}
+                        >
+                            {/* 11 */}
+                            16
+                        </Typography>
+                    </Box>
+                    <Box 
+                        id="score2Container"
                         style={{
-                            ...CONFIGPoints.pointsTypography
+                            ...CONFIGPoints.container
                         }}
                     >
-                        {/* RAID POINTS */}
-                        SHOTS
-                    </Typography>
-                    <Typography 
-                        id="teamBscore1ValueTypography" 
+                        <Typography 
+                            id="teamAscore2ValueTypography" 
+                            style={{
+                                ...CONFIGPoints.teamAPoints
+                            }}
+                        >
+                            {/* 11 */}
+                            15
+                        </Typography>
+                        <Typography 
+                            id="score2Typography" 
+                            style={{
+                                ...CONFIGPoints.pointsTypography
+                            }}
+                        >
+                            {/* TACKLE POINTS */}
+                            SHOTS ON TARGET
+                        </Typography>
+                        <Typography 
+                            id="teamBscore1ValueTypography" 
+                            style={{
+                                ...CONFIGPoints.teamBPoints
+                            }}
+                        >
+                            {/* 7 */}
+                            10
+                        </Typography>
+                    </Box>
+                    <Box 
+                        id="score3Container"
                         style={{
-                            ...CONFIGPoints.teamBPoints
+                            ...CONFIGPoints.container
                         }}
                     >
-                        {/* 11 */}
-                        16
-                    </Typography>
+                        <Typography 
+                            id="teamAscore3ValueTypography" 
+                            style={{
+                                ...CONFIGPoints.teamAPoints
+                            }}
+                        >
+                            {/* 2 */}
+                            5
+                        </Typography>
+                        <Typography 
+                            id="score3Typography" 
+                            style={{
+                                ...CONFIGPoints.pointsTypography
+                            }}
+                        >
+                            {/* ALL OUT POINTS */}
+                            SHOTS OFF TARGET
+                        </Typography>
+                        <Typography 
+                            id="teamBscore3ValueTypography" 
+                            style={{
+                                ...CONFIGPoints.teamBPoints
+                            }}
+                        >
+                            6
+                        </Typography>
+                    </Box>
+                    <Box 
+                        id="score4Container"
+                        style={{
+                            ...CONFIGPoints.container
+                        }}
+                    >
+                        <Typography 
+                            id="teamAscore4ValueTypography" 
+                            style={{
+                                ...CONFIGPoints.teamAPoints
+                            }}
+                        >
+                            {/* 1 */}
+                            10
+                        </Typography>
+                        <Typography 
+                            id="score4Typography" 
+                            style={{
+                                ...CONFIGPoints.pointsTypography
+                            }}
+                        >
+                            {/* EXTRAS */}
+                            SAVES
+                        </Typography>
+                        <Typography 
+                            id="teamBscore4ValueTypography" 
+                            style={{
+                                ...CONFIGPoints.teamBPoints
+                            }}
+                        >
+                            {/* 0 */}
+                            7
+                        </Typography>
+                    </Box>
+                    <Box 
+                        id="score5Container"
+                        style={{
+                            ...CONFIGPoints.container
+                        }}
+                    >
+                        <Typography
+                            id="teamAscore5ValueTypography" 
+                            style={{
+                                ...CONFIGPoints.teamAPoints
+                            }}
+                        >
+                            {/* 0 */}
+                            55%
+                        </Typography>
+                        <Typography 
+                            id="score5Typography" 
+                            style={{
+                                ...CONFIGPoints.pointsTypography
+                            }}
+                        >
+                            {/* SUPER RAIDS */}
+                            POSSESSION
+                        </Typography>
+                        <Typography 
+                            id="teamBscore5ValueTypography" 
+                            style={{
+                                ...CONFIGPoints.teamBPoints
+                            }}
+                        >
+                            {/* 1 */}
+                            45%
+                        </Typography>
+                    </Box>
+                    <Box 
+                        id="score6Container"
+                        style={{
+                            ...CONFIGPoints.container
+                        }}
+                    >
+                        <Typography 
+                            id="teamAscore6ValueTypography" 
+                            style={{
+                                ...CONFIGPoints.teamAPoints
+                            }}
+                        >
+                            {/* 1 */}
+                            3
+                        </Typography>
+                        <Typography 
+                            id="score6Typography" 
+                            style={{
+                                ...CONFIGPoints.pointsTypography
+                            }}
+                        >
+                            {/* SUPER TACKLES */}
+                            YELLOW CARDS
+                        </Typography>
+                        <Typography 
+                            id="teamBscore6ValueTypography" 
+                            style={{
+                                ...CONFIGPoints.teamBPoints
+                            }}
+                        >
+                            {/* 0 */}
+                            5
+                        </Typography>
+                    </Box>
                 </Box>
+                {/* left narrow empty container (located at left side of the scoreboard) */}
                 <Box 
-                    id="score2Container"
+                    id="leftNarrowEmptyContainer"
                     style={{
-                        ...CONFIGPoints.container
+                        ...CONFIGScoreBoard.leftNarrowEmptyContainer
                     }}
                 >
-                    <Typography 
-                        id="teamAscore2ValueTypography" 
-                        style={{
-                            ...CONFIGPoints.teamAPoints
-                        }}
-                    >
-                        {/* 11 */}
-                        15
-                    </Typography>
-                    <Typography 
-                        id="score2Typography" 
-                        style={{
-                            ...CONFIGPoints.pointsTypography
-                        }}
-                    >
-                        {/* TACKLE POINTS */}
-                        SHOTS ON TARGET
-                    </Typography>
-                    <Typography 
-                        id="teamBscore1ValueTypography" 
-                        style={{
-                            ...CONFIGPoints.teamBPoints
-                        }}
-                    >
-                        {/* 7 */}
-                        10
-                    </Typography>
                 </Box>
+                {/* right narrow empty container (located at right side of the scoreboard) */}
                 <Box 
-                    id="score3Container"
+                    id="rightNarrowEmptyContainer"
                     style={{
-                        ...CONFIGPoints.container
-                    }}
-                >
-                    <Typography 
-                        id="teamAscore3ValueTypography" 
-                        style={{
-                            ...CONFIGPoints.teamAPoints
-                        }}
-                    >
-                        {/* 2 */}
-                        5
-                    </Typography>
-                    <Typography 
-                        id="score3Typography" 
-                        style={{
-                            ...CONFIGPoints.pointsTypography
-                        }}
-                    >
-                        {/* ALL OUT POINTS */}
-                        SHOTS OFF TARGET
-                    </Typography>
-                    <Typography 
-                        id="teamBscore3ValueTypography" 
-                        style={{
-                            ...CONFIGPoints.teamBPoints
-                        }}
-                    >
-                        6
-                    </Typography>
-                </Box>
-                <Box 
-                    id="score4Container"
-                    style={{
-                        ...CONFIGPoints.container
-                    }}
-                >
-                    <Typography 
-                        id="teamAscore4ValueTypography" 
-                        style={{
-                            ...CONFIGPoints.teamAPoints
-                        }}
-                    >
-                        {/* 1 */}
-                        10
-                    </Typography>
-                    <Typography 
-                        id="score4Typography" 
-                        style={{
-                            ...CONFIGPoints.pointsTypography
-                        }}
-                    >
-                        {/* EXTRAS */}
-                        SAVES
-                    </Typography>
-                    <Typography 
-                        id="teamBscore4ValueTypography" 
-                        style={{
-                            ...CONFIGPoints.teamBPoints
-                        }}
-                    >
-                        {/* 0 */}
-                        7
-                    </Typography>
-                </Box>
-                <Box 
-                    id="score5Container"
-                    style={{
-                        ...CONFIGPoints.container
-                    }}
-                >
-                    <Typography
-                        id="teamAscore5ValueTypography" 
-                        style={{
-                            ...CONFIGPoints.teamAPoints
-                        }}
-                    >
-                        {/* 0 */}
-                        55%
-                    </Typography>
-                    <Typography 
-                        id="score5Typography" 
-                        style={{
-                            ...CONFIGPoints.pointsTypography
-                        }}
-                    >
-                        {/* SUPER RAIDS */}
-                        POSSESSION
-                    </Typography>
-                    <Typography 
-                        id="teamBscore5ValueTypography" 
-                        style={{
-                            ...CONFIGPoints.teamBPoints
-                        }}
-                    >
-                        {/* 1 */}
-                        45%
-                    </Typography>
-                </Box>
-                <Box 
-                    id="score6Container"
-                    style={{
-                        ...CONFIGPoints.container
-                    }}
-                >
-                    <Typography 
-                        id="teamAscore6ValueTypography" 
-                        style={{
-                            ...CONFIGPoints.teamAPoints
-                        }}
-                    >
-                        {/* 1 */}
-                        3
-                    </Typography>
-                    <Typography 
-                        id="score6Typography" 
-                        style={{
-                            ...CONFIGPoints.pointsTypography
-                        }}
-                    >
-                        {/* SUPER TACKLES */}
-                        YELLOW CARDS
-                    </Typography>
-                    <Typography 
-                        id="teamBscore6ValueTypography" 
-                        style={{
-                            ...CONFIGPoints.teamBPoints
-                        }}
-                    >
-                        {/* 0 */}
-                        5
-                    </Typography>
-                </Box>
-                <Box 
-                    id="leftContainer"
-                    style={{
-                        ...CONFIGScoreBoard.leftContainer
-                    }}
-                >
-                </Box>
-                <Box 
-                    id="rightContainer"
-                    style={{
-                        ...CONFIGScoreBoard.rightContainer
+                        ...CONFIGScoreBoard.rightNarrowEmptyContainer
                     }}
                 >
                 </Box>
             </Stack>
+            {/* Team A logo container (located at left side of the screen) */}
             <Box 
                 id="teamALogoContainer"
                 style={{
@@ -1084,6 +1112,7 @@ function App() {
                 >
                 </img>
             </Box>
+            {/* Team B logo container (located at right side of the screen) */}
             <Box
                 id="teamBLogoContainer"
                 style={{
@@ -1100,12 +1129,14 @@ function App() {
                 >
                 </img>
             </Box>
+            {/* Best players A and B container (located at bottom of the screen) */}
             <Box 
                 id="bestPlayersContainer"
                 style={{
                     ...CONFIGBestPlayersContainer
                 }}
             >
+                {/* best player A container (located at bottom left of the screen) */} 
                 <Box
                     id="bestPlayerAContainer"
                     style={{
@@ -1195,6 +1226,7 @@ function App() {
                         </Typography>
                     </Box>
                 </Box>
+                {/* best player B container (located at bottom right of the screen) */}
                 <Box 
                     id="bestPlayerBContainer"
                     style={{
