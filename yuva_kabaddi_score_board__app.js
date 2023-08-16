@@ -19,15 +19,25 @@ function App() {
     // paddingRight: `${tournamentData.style.CONFIGMatchPlayer1.typography.typographyFirstElement.paddingRightRatio}vw`,
     // paddingTop: `${tournamentData.style.CONFIGMatchPlayer1.typography.typographyFirstElement.paddingTopRatio}vh`,
 
+    // Pending (13-08-2023)
+
+    // borderRadius --> borderRadiusRatio
+    // borderWidth -->   borderWidthRatio
+    // marginLeft -->  marginLeftRatio
+    // marginRight -->  marginRightRatio
+    // marginTop--> marginTopRatio
+    // paddingRight --> paddingRightRatio
+
+
     const CONFIG1 = {
 
 		"animationTiming": "1000ms",
-		"defaultNumberOfColumnsInGrid": 2,
-		"defaultNumberOfMatches": 4,
 		"fontSizeFactor": 1,
 		"mobileScreenFactor": 2.5,
 		"playerNameMaxLength": 20,
 		"smallScreenFactor": 2,
+        "teamAColor": "purple",
+        "teamBColor": "green",
 		"transitionDelay1": "0ms",
 		"transitionDelay2": "500ms",
 		"transitionDelay3": "1000ms",
@@ -35,8 +45,9 @@ function App() {
 		"transitionDelay5": "2000ms",
 		"transitionDelay6": "2500ms",
 		"transitionDelay7": "3000ms",
-		"transitionDelay8": "3500ms"
-
+		"transitionDelay8": "3500ms",
+        "typographyColorUsual": "white",
+        "typographyColorPrimaryScoreTypeName": "black",
 	}
 
     const CONFIGBestPlayerA = {
@@ -53,9 +64,9 @@ function App() {
 
         "playerImage": {
 
+            "bottom": "10%",
             "height": "130%",
             "left": "9%", 
-            "bottom": "10%",
             "position": "absolute",
             "width": "16%", 
             "zIndex": "300"
@@ -75,12 +86,13 @@ function App() {
 
             "typography": {
 
-                "color": "white",
+                "color": CONFIG1.typographyColorUsual,
                 "fontFamily": "Oswald",
                 //"fontSize": `${(15/1366)*100}vw`,
-                "fontSize": 1.1, // 1500/1366
+                "fontSizeRatio": 1.1, // 1500/1366
                 "fontWeight": "400",
-                "marginRight": "10%",
+                //"marginRight": "30px",
+                "marginRightRatio": 2.2, //3000/1366
                 "overflowWrap": "break-word",
                 "textShadow": "0 0 0.2vw black",
                 "textTransform": "uppercase"
@@ -94,7 +106,8 @@ function App() {
             "background": "linear-gradient(to bottom, rgb(111, 19, 56), rgb(63, 13, 49))",
             "borderColor": "rgba(58, 213, 208, 0.7)",
             "borderLeftStyle": "solid",
-            "borderWidth": `${(35/1366)*100}vw`,
+            //"borderWidth": `${(35/1366)*100}vw`,
+            "borderWidthRatio": 2.56, // 3500/1366
             "clipPath": "polygon(100% 0%, 0% 0%, 0% 100%, 96.1% 100%)",
             "height": "80%",
             "position": "relative",
@@ -109,7 +122,6 @@ function App() {
 
                 "alignItems": "center",
                 "backgroundColor": "black",
-                "color": "white",
                 "clipPath": "polygon(97% 0%, 0% 0%, 0% 100%, 100% 100%)",
                 "display": "flex",
                 "float": "left",
@@ -123,6 +135,7 @@ function App() {
 
             "typography": {
 
+                "color": CONFIG1.typographyColorUsual,
                 "fontFamily": "Oswald",
                 //"fontSize": `${(15/1366)*100}vw`,
                 "fontSizeRatio": 1.1, // 1500/1366
@@ -139,7 +152,6 @@ function App() {
 
                 "alignItems": "center",
                 "background": "linear-gradient(to bottom ,rgb(153, 33, 91), rgb(80, 17, 56))",
-                "color": "white",
                 "clipPath": "polygon(100% 0%, 10% 0%, 0% 100%, 86% 100%)",
                 "display": "flex",
                 "flexDirection": "column",
@@ -154,6 +166,7 @@ function App() {
             "name": {
 
                 "alignItems": "center",
+                "color": CONFIG1.typographyColorUsual,
                 "display": "flex",
                 "fontFamily": "Oswald",
                 //"fontSize": `${(15/1366)*100}vw`,
@@ -169,6 +182,7 @@ function App() {
             "value": {
 
                 "alignItems": "center",
+                "color": CONFIG1.typographyColorUsual,
                 "display": "flex",
                 "fontFamily": "Oswald",
                 //"fontSize": `${(20/1366)*100}vw`,
@@ -228,12 +242,13 @@ function App() {
 
             "typography": {
 
-                "color": "white",
+                "color": CONFIG1.typographyColorUsual,
                 "fontFamily": "Oswald",
                 //"fontSize": `${(15/1366)*100}vw`,
                 "fontSizeRatio": 1.1, // 1500/1366
                 "fontWeight": "400",
-                "marginLeft": "10%",
+                //"marginLeft": "10%",
+                "marginLeftRatio": 2.2, //3000/1366
                 "overflowWrap": "break-word",
                 "textShadow": "0 0 0.2vw black",
                 "textTransform": "uppercase"
@@ -247,7 +262,8 @@ function App() {
             "background": "linear-gradient(to bottom, rgb(111, 19, 56), rgb(63, 13, 49))",
             "borderColor": "rgba(58, 213, 208, 0.7)",
             "borderRightStyle": "solid",
-            "borderWidth": `${(35/1366)*100}vw`,
+            //"borderWidth": `${(35/1366)*100}vw`,
+            "borderWidthRatio": 2.56, // 3500/1366
             "clipPath": "polygon(100% 0%, 0% 0%, 4% 100%, 100% 100%)",
             "height": "80%",
             "position": "relative",
@@ -262,7 +278,6 @@ function App() {
 
                 "alignItems": "center", 
                 "backgroundColor": "black",
-                "color": "white",
                 "clip-path": "polygon(100% 0%, 3% 0%, 0% 100%, 100% 100%)",
                 "display": "flex",
                 "float": "right",
@@ -276,6 +291,7 @@ function App() {
 
             "typography": {
 
+                "color": CONFIG1.typographyColorUsual,
                 "fontFamily": "Oswald",
                 //"fontSize": `${(15/1366)*100}vw`,
                 "fontSizeRatio": 1.1, // 1500/1366
@@ -292,7 +308,6 @@ function App() {
 
                 "alignItems": "center",
                 "background": "linear-gradient(to bottom ,rgb(153, 33, 91), rgb(80, 17, 56))",
-                "color": "white",
                 "clipPath": "polygon(89.4% 0%, 0% 0%, 13% 100%, 100% 100%)",
                 "display": "flex",
                 "flexDirection": "column",
@@ -310,12 +325,14 @@ function App() {
             "name": {
 
                 "alignItems": "center",
+                "color": CONFIG1.typographyColorUsual,
                 "display": "flex",
                 "fontFamily": "Oswald",
                 //"fontSize": `${(15/1366)*100}vw`,
                 "fontSizeRatio": 1.1, // 1500/1366
                 "height": "50%",
-                "paddingRight": "10%",
+                //"paddingRight": "25px",
+                "paddingRightRatio": 0.44, // 600/1366
                 "textShadow": "0 0 0.2vw black"
 
             },
@@ -323,6 +340,7 @@ function App() {
             "value": {
 
                 "alignItems": "center",
+                "color": CONFIG1.typographyColorUsual,
                 "display": "flex",
                 "fontFamily": "Oswald",
                 //"fontSize": `${(20/1366)*100}vw`,
@@ -401,7 +419,7 @@ function App() {
 
         "typography": {
 
-            "color": "rgb(252, 252, 252)",
+            "color": CONFIG1.typographyColorUsual,
             "fontFamily": "Oswald",
             // "fontSize": `${(36/1366)*100}vw`,
             "fontSizeRatio": 2.63, // 3600/1366
@@ -412,7 +430,7 @@ function App() {
 
     }
 
-    const CONFIGPlayingTeamsAndMatchNameAndBackDropContainer = {
+    const CONFIGPlayingTeamsAndMatchNameAndBackDrop = {
 
         "container": {
 
@@ -429,39 +447,30 @@ function App() {
 
         "matchNameBackDrop": {
 
-            "color": "white",
-            "fontFamily": "Oswald",
-            //"fontSize": `${(22/1366)*100}vw`,
-            "fontSizeRatio": 1.61, // 2200/1366
-            "fontWeight": "600",
             "height": "100%",
-            "textAlign": "center",
-            "textTransform": "uppercase",
             "width": "31.6%"
 
         },
 
-        "playingTeamsAndMatchNameContainer": {
+        "playingTeamsAndMatchName": {
 
             "container": {
 
                 "alignItems": "center",
-                "color": "white",
                 "display": "flex",
                 "flexDirection": "row",
                 "gap": "5.7%",
                 "height": "14%",
                 "justifyContent": "center",
                 "position": "absolute",
-                //"top": "0",
-                "topRatio": "0", // 0/1366
+                "top": "0",
                 "width": "100%"
 
             },
 
             "matchNameTypography": {
 
-                "color": "white",
+                "color": CONFIG1.typographyColorUsual,
                 "fontFamily": "Oswald",
                 //"fontSize": `${(22/1366)*100}vw`,
                 "fontSizeRatio": 1.61, // 2200/1366
@@ -474,7 +483,7 @@ function App() {
 
             "teamATypography": {
 
-                "color": "white",
+                "color": CONFIG1.typographyColorUsual,
                 "fontFamily": "Oswald",
                 //"fontSize": `${(18/1366)*100}vw`,
                 "fontSizeRatio": 1.32, // 1800/1366
@@ -487,7 +496,7 @@ function App() {
 
             "teamBTypography": {
 
-                "color": "white",
+                "color": CONFIG1.typographyColorUsual,
                 "fontFamily": "Oswald",
                 //"fontSize": `${(18/1366)*100}vw`,
                 "fontSizeRatio": 1.32, // 1800/1366
@@ -503,10 +512,7 @@ function App() {
         "teamABackDrop": {
 
             "background": "linear-gradient(to right, #a50055, transparent)",
-            "color": "white",
             "height": "100%",
-            "textAlign": "center",
-            "textTransform": "uppercase",
             "width": "22.8%"
 
         },
@@ -514,10 +520,7 @@ function App() {
         "teamBBackDrop": {
 
             "background": "linear-gradient(to left, #3caeaa, transparent)",
-            "color": "white",
             "height": "100%",
-            "textAlign": "center",
-            "textTransform": "uppercase",
             "width": "22.8%"
 
         }
@@ -535,13 +538,15 @@ function App() {
             //"borderRadius": `${(9/1366)*100}vw`,
             "borderRadiusRatio": 0.66, // 900/1366
             "borderStyle": "solid",
-            "borderWidth": `${(4.7/768)*100}vh`,
+            //"borderWidth": `${(4.7/768)*100}vh`,
+            "borderWidthRatio": 0.61, // 470/768
             // "borderWidth": `${(5/1366)*100}vw`,
             "display": "flex",
             "gap": "5.7%",
             "height": "12%",
             "justifyContent": "center",
-            "marginTop": `${(84/768)*100}vh`,
+            //"marginTop": `${(84/768)*100}vh`,
+            "marginTopRatio": 10.94, // 8400/768
             "width": "90%",
             "zIndex": "50"
 
@@ -549,7 +554,7 @@ function App() {
 
         "name": {
 
-            "color": "black",
+            "color": CONFIG1.typographyColorPrimaryScoreTypeName,
             "fontFamily": "Bebas Neue",
             //"fontSize": `${(33/1366)*100}vw`,
             "fontSizeRatio": 2.41, // 3300/1366
@@ -565,7 +570,7 @@ function App() {
 
             "alignItems": "center",
             "background": "linear-gradient(to bottom, #b0025c, #6e0e4c 80%)",
-            "color": "white",
+            "color": CONFIG1.typographyColorUsual,
             "display": "flex",
             "fontFamily": "'Bebas Neue'",
             //"fontSize": `${(52/1366)*100}vw`,
@@ -582,7 +587,7 @@ function App() {
 
             "alignItems": "center",
             "background": "linear-gradient(to bottom, #3ad5d0,#268a8a 80%)",
-            "color": "white",
+            "color": CONFIG1.typographyColorUsual,
             "display": "flex",
             "fontFamily": "Bebas Neue",
             //"fontSize": `${(52/1366)*100}vw`,
@@ -653,7 +658,7 @@ function App() {
 
     }
 
-    const CONFIGSecondaryScoreTypePointsIndividualContainer = {
+    const CONFIGSecondaryScoreTypePointsIndividual = {
 
         "container": {
 
@@ -673,7 +678,7 @@ function App() {
 
         "pointsTypography": {
 
-            "color": "white",
+            "color": CONFIG1.typographyColorUsual,
             "fontFamily": "Oswald",
             //"fontSize": `${(23/1366)*100}vw`,
             "fontSizeRatio": 1.68, // 2300/1366
@@ -688,12 +693,12 @@ function App() {
 
             "alignItems": "center",
             "background": "linear-gradient(to bottom, #b0025c, #6e0e4c 80%)",
-            "color": "white",
+            "color": CONFIG1.typographyColorUsual,
             "display": "flex",
             "fontFamily": "'Bebas Neue'", 
-            "fontWeight": "600",
             //"fontSize": `${(30/1366)*100}vw`,
             "fontSizeRatio": 2.2, // 3000/1366
+            "fontWeight": "600",
             "height": "100%",
             "justifyContent": "center",
             "width": "22.8%"
@@ -704,12 +709,12 @@ function App() {
 
             "alignItems": "center",
             "background": "linear-gradient(to bottom, #3ad5d0,#268a8a 80%)",
-            "color": "white",
+            "color": CONFIG1.typographyColorUsual,
             "display": "flex",
             "fontFamily": "'Bebas Neue'", 
-            "fontWeight": "600",
             //"fontSize": `${(30/1366)*100}vw`,
             "fontSizeRatio": 2.2, // 3000/1366
+            "fontWeight": "600",
             "height": "100%",
             "justifyContent": "center",
             "width": "22.8%"
@@ -788,11 +793,11 @@ function App() {
 			"CONFIGBestPlayersContainer": {...CONFIGBestPlayersContainer},
 			"CONFIGMainContainer": {...CONFIGMainContainer},
 			"CONFIGMatchSummary": {...CONFIGMatchSummary},
-			"CONFIGPlayingTeamsAndMatchNameAndBackDropContainer": {...CONFIGPlayingTeamsAndMatchNameAndBackDropContainer},
+			"CONFIGPlayingTeamsAndMatchNameAndBackDrop": {...CONFIGPlayingTeamsAndMatchNameAndBackDrop},
 			"CONFIGPrimaryScoreTypePoints": {...CONFIGPrimaryScoreTypePoints},
 			"CONFIGScoreBoard": {...CONFIGScoreBoard},
 			"CONFIGSecondaryScoreTypePointsContainer": {...CONFIGSecondaryScoreTypePointsContainer},
-			"CONFIGSecondaryScoreTypePointsIndividualContainer": {...CONFIGSecondaryScoreTypePointsIndividualContainer},
+			"CONFIGSecondaryScoreTypePointsIndividual": {...CONFIGSecondaryScoreTypePointsIndividual},
 			"CONFIGTeamALogo": {...CONFIGTeamALogo},
 			"CONFIGTeamBLogo": {...CONFIGTeamBLogo}
 		}
@@ -870,44 +875,42 @@ function App() {
                 <Box 
                     id="playingTeamsAndMatchNameAndBackDropContainer" 
                     style={{
-                        ...tournamentData.style.CONFIGPlayingTeamsAndMatchNameAndBackDropContainer.container
+                        ...tournamentData.style.CONFIGPlayingTeamsAndMatchNameAndBackDrop.container
                     }}
                 >
                     <Box
-                        id="teamANameTypography"
+                        id="teamABackdropContainer"
                         style={{
-                            ...tournamentData.style.CONFIGPlayingTeamsAndMatchNameAndBackDropContainer.teamABackDrop,
-                            
+                            ...tournamentData.style.CONFIGPlayingTeamsAndMatchNameAndBackDrop.teamABackDrop,
+
                         }}
                     >
                     </Box>
                     <Box
-                        id="matchNameTypography"
+                        id="matchNameBackdropContainer"
                         style={{
-                            ...tournamentData.style.CONFIGPlayingTeamsAndMatchNameAndBackDropContainer.matchNameBackDrop,
-                            fontSize: `${tournamentData.style.CONFIGPlayingTeamsAndMatchNameAndBackDropContainer.matchNameBackDrop.fontSizeRatio}vw`
+                            ...tournamentData.style.CONFIGPlayingTeamsAndMatchNameAndBackDrop.matchNameBackDrop,
                         }}
                     >
                     </Box>
                     <Box
-                        id="teamBNameTypography"
+                        id="teamBBackdropContainer"
                         style={{
-                            ...tournamentData.style.CONFIGPlayingTeamsAndMatchNameAndBackDropContainer.teamBBackDrop
+                            ...tournamentData.style.CONFIGPlayingTeamsAndMatchNameAndBackDrop.teamBBackDrop
                         }}
                     >
                     </Box>
                     <Box
                         id="playingTeamsAndMatchNameContainer"
                         style={{
-                            ...tournamentData.style.CONFIGPlayingTeamsAndMatchNameAndBackDropContainer.playingTeamsAndMatchNameContainer.container,
-                            top: `${tournamentData.style.CONFIGPlayingTeamsAndMatchNameAndBackDropContainer.playingTeamsAndMatchNameContainer.container.topRatio}vh`
+                            ...tournamentData.style.CONFIGPlayingTeamsAndMatchNameAndBackDrop.playingTeamsAndMatchName.container,
                         }}
                     >
                         <Typography
                             id="teamATypography"
                             style={{
-                                ...tournamentData.style.CONFIGPlayingTeamsAndMatchNameAndBackDropContainer.playingTeamsAndMatchNameContainer.teamATypography,
-                                fontSize: `${tournamentData.style.CONFIGPlayingTeamsAndMatchNameAndBackDropContainer.playingTeamsAndMatchNameContainer.teamATypography.fontSizeRatio}vw`
+                                ...tournamentData.style.CONFIGPlayingTeamsAndMatchNameAndBackDrop.playingTeamsAndMatchName.teamATypography,
+                                fontSize: `${tournamentData.style.CONFIGPlayingTeamsAndMatchNameAndBackDrop.playingTeamsAndMatchName.teamATypography.fontSizeRatio}vw`
                             }}
                         >
                             MANCHESTER UNITED
@@ -915,8 +918,8 @@ function App() {
                         <Typography
                             id="matchNameTypography"
                             style={{
-                                ...tournamentData.style.CONFIGPlayingTeamsAndMatchNameAndBackDropContainer.playingTeamsAndMatchNameContainer.matchNameTypography,
-                                fontSize: `${tournamentData.style.CONFIGPlayingTeamsAndMatchNameAndBackDropContainer.playingTeamsAndMatchNameContainer.matchNameTypography.fontSizeRatio}vw`
+                                ...tournamentData.style.CONFIGPlayingTeamsAndMatchNameAndBackDrop.playingTeamsAndMatchName.matchNameTypography,
+                                fontSize: `${tournamentData.style.CONFIGPlayingTeamsAndMatchNameAndBackDrop.playingTeamsAndMatchName.matchNameTypography.fontSizeRatio}vw`
                             }}
                         >
                             LEAGUE MATCH
@@ -924,8 +927,8 @@ function App() {
                         <Typography
                             id="teamBTypography"
                             style={{
-                                ...tournamentData.style.CONFIGPlayingTeamsAndMatchNameAndBackDropContainer.playingTeamsAndMatchNameContainer.teamBTypography,
-                                fontSize: `${tournamentData.style.CONFIGPlayingTeamsAndMatchNameAndBackDropContainer.playingTeamsAndMatchNameContainer.teamBTypography.fontSizeRatio}vw`
+                                ...tournamentData.style.CONFIGPlayingTeamsAndMatchNameAndBackDrop.playingTeamsAndMatchName.teamBTypography,
+                                fontSize: `${tournamentData.style.CONFIGPlayingTeamsAndMatchNameAndBackDrop.playingTeamsAndMatchName.teamBTypography.fontSizeRatio}vw`
                             }}
                         >
                             CHELSEA
@@ -937,7 +940,9 @@ function App() {
                     id="primaryScoreTypePointsContainer" 
                     style={{
                         ...tournamentData.style.CONFIGPrimaryScoreTypePoints.container,
-                        borderRadius: `${CONFIGPrimaryScoreTypePoints.container.borderRadiusRatio}vw`
+                        borderRadius: `${CONFIGPrimaryScoreTypePoints.container.borderRadiusRatio}vw`,
+                        borderWidth: `${CONFIGPrimaryScoreTypePoints.container.borderWidthRatio}vh`,
+                        marginTop: `${CONFIGPrimaryScoreTypePoints.container.marginTopRatio}vh`
                     }}
                 >
                     <Typography 
@@ -979,37 +984,37 @@ function App() {
                     }}
                 >
                     <Box 
-                        id="score1Container"
+                        id="secondaryScoreTypeOnePointsContainer"
                         style={{
-                            ...tournamentData.style.CONFIGSecondaryScoreTypePointsIndividualContainer.container,
-                            borderRadius: `${tournamentData.style.CONFIGSecondaryScoreTypePointsIndividualContainer.container.borderRadiusRatio}vw`
+                            ...tournamentData.style.CONFIGSecondaryScoreTypePointsIndividual.container,
+                            borderRadius: `${tournamentData.style.CONFIGSecondaryScoreTypePointsIndividual.container.borderRadiusRatio}vw`
                         }}
                     >
                         <Typography 
-                            id="teamAscore1ValueTypography" 
+                            id="teamASecondaryScoreTypeOnePointsValueTypography" 
                             style={{
-                                ...tournamentData.style.CONFIGSecondaryScoreTypePointsIndividualContainer.teamAPoints,
-                                fontSize: `${tournamentData.style.CONFIGSecondaryScoreTypePointsIndividualContainer.teamAPoints.fontSizeRatio}vw`
+                                ...tournamentData.style.CONFIGSecondaryScoreTypePointsIndividual.teamAPoints,
+                                fontSize: `${tournamentData.style.CONFIGSecondaryScoreTypePointsIndividual.teamAPoints.fontSizeRatio}vw`
                             }}
                         >
                             {/* 16 */}
                             20
                         </Typography>
                         <Typography 
-                            id="score1Typography" 
+                            id="secondaryScoreTypeOnePointsNameTypography" 
                             style={{
-                                ...tournamentData.style.CONFIGSecondaryScoreTypePointsIndividualContainer.pointsTypography,
-                                fontSize: `${tournamentData.style.CONFIGSecondaryScoreTypePointsIndividualContainer.pointsTypography.fontSizeRatio}vw`
+                                ...tournamentData.style.CONFIGSecondaryScoreTypePointsIndividual.pointsTypography,
+                                fontSize: `${tournamentData.style.CONFIGSecondaryScoreTypePointsIndividual.pointsTypography.fontSizeRatio}vw`
                             }}
                         >
                             {/* RAID POINTS */}
                             SHOTS
                         </Typography>
                         <Typography 
-                            id="teamBscore1ValueTypography" 
+                            id="teamBSecondaryScoreTypeOnePointsValueTypography" 
                             style={{
-                                ...tournamentData.style.CONFIGSecondaryScoreTypePointsIndividualContainer.teamBPoints,
-                                fontSize: `${tournamentData.style.CONFIGSecondaryScoreTypePointsIndividualContainer.teamBPoints.fontSizeRatio}vw`
+                                ...tournamentData.style.CONFIGSecondaryScoreTypePointsIndividual.teamBPoints,
+                                fontSize: `${tournamentData.style.CONFIGSecondaryScoreTypePointsIndividual.teamBPoints.fontSizeRatio}vw`
                             }}
                         >
                             {/* 11 */}
@@ -1017,37 +1022,37 @@ function App() {
                         </Typography>
                     </Box>
                     <Box 
-                        id="score2Container"
+                        id="secondaryScoreTypeTwoPointsContainer"
                         style={{
-                            ...tournamentData.style.CONFIGSecondaryScoreTypePointsIndividualContainer.container,
-                            borderRadius: `${tournamentData.style.CONFIGSecondaryScoreTypePointsIndividualContainer.container.borderRadiusRatio}vw`
+                            ...tournamentData.style.CONFIGSecondaryScoreTypePointsIndividual.container,
+                            borderRadius: `${tournamentData.style.CONFIGSecondaryScoreTypePointsIndividual.container.borderRadiusRatio}vw`
                         }}
                     >
                         <Typography 
-                            id="teamAscore2ValueTypography" 
+                            id="teamASecondaryScoreTypeTwoPointsValueTypography" 
                             style={{
-                                ...tournamentData.style.CONFIGSecondaryScoreTypePointsIndividualContainer.teamAPoints,
-                                fontSize: `${tournamentData.style.CONFIGSecondaryScoreTypePointsIndividualContainer.teamAPoints.fontSizeRatio}vw`
+                                ...tournamentData.style.CONFIGSecondaryScoreTypePointsIndividual.teamAPoints,
+                                fontSize: `${tournamentData.style.CONFIGSecondaryScoreTypePointsIndividual.teamAPoints.fontSizeRatio}vw`
                             }}
                         >
                             {/* 11 */}
                             15
                         </Typography>
                         <Typography 
-                            id="score2Typography" 
+                            id="secondaryScoreTypeTwoPointsNameTypography" 
                             style={{
-                                ...tournamentData.style.CONFIGSecondaryScoreTypePointsIndividualContainer.pointsTypography,
-                                fontSize: `${tournamentData.style.CONFIGSecondaryScoreTypePointsIndividualContainer.pointsTypography.fontSizeRatio}vw`
+                                ...tournamentData.style.CONFIGSecondaryScoreTypePointsIndividual.pointsTypography,
+                                fontSize: `${tournamentData.style.CONFIGSecondaryScoreTypePointsIndividual.pointsTypography.fontSizeRatio}vw`
                             }}
                         >
                             {/* TACKLE POINTS */}
                             SHOTS ON TARGET
                         </Typography>
                         <Typography 
-                            id="teamBscore1ValueTypography" 
+                            id="teamBSecondaryScoreTypeTwoPointsValueTypography" 
                             style={{
-                                ...tournamentData.style.CONFIGSecondaryScoreTypePointsIndividualContainer.teamBPoints,
-                                fontSize: `${tournamentData.style.CONFIGSecondaryScoreTypePointsIndividualContainer.teamBPoints.fontSizeRatio}vw`
+                                ...tournamentData.style.CONFIGSecondaryScoreTypePointsIndividual.teamBPoints,
+                                fontSize: `${tournamentData.style.CONFIGSecondaryScoreTypePointsIndividual.teamBPoints.fontSizeRatio}vw`
                             }}
                         >
                             {/* 7 */}
@@ -1055,74 +1060,74 @@ function App() {
                         </Typography>
                     </Box>
                     <Box 
-                        id="score3Container"
+                        id="secondaryScoreTypeThreePointsContainer"
                         style={{
-                            ...tournamentData.style.CONFIGSecondaryScoreTypePointsIndividualContainer.container,
-				            borderRadius: `${tournamentData.style.CONFIGSecondaryScoreTypePointsIndividualContainer.container.borderRadiusRatio}vw`
+                            ...tournamentData.style.CONFIGSecondaryScoreTypePointsIndividual.container,
+				            borderRadius: `${tournamentData.style.CONFIGSecondaryScoreTypePointsIndividual.container.borderRadiusRatio}vw`
                         }}
                     >
                         <Typography 
-                            id="teamAscore3ValueTypography" 
+                            id="teamASecondaryScoreTypeThreePointsValueTypography" 
                             style={{
-                                ...tournamentData.style.CONFIGSecondaryScoreTypePointsIndividualContainer.teamAPoints,
-							    fontSize: `${tournamentData.style.CONFIGSecondaryScoreTypePointsIndividualContainer.teamAPoints.fontSizeRatio}vw`
+                                ...tournamentData.style.CONFIGSecondaryScoreTypePointsIndividual.teamAPoints,
+							    fontSize: `${tournamentData.style.CONFIGSecondaryScoreTypePointsIndividual.teamAPoints.fontSizeRatio}vw`
                             }}
                         >
                             {/* 2 */}
                             5
                         </Typography>
                         <Typography 
-                            id="score3Typography" 
+                            id="secondaryScoreTypeThreePointsNameTypography" 
                             style={{
-                                ...tournamentData.style.CONFIGSecondaryScoreTypePointsIndividualContainer.pointsTypography,
-								fontSize: `${tournamentData.style.CONFIGSecondaryScoreTypePointsIndividualContainer.pointsTypography.fontSizeRatio}vw`
+                                ...tournamentData.style.CONFIGSecondaryScoreTypePointsIndividual.pointsTypography,
+								fontSize: `${tournamentData.style.CONFIGSecondaryScoreTypePointsIndividual.pointsTypography.fontSizeRatio}vw`
                             }}
                         >
                             {/* ALL OUT POINTS */}
                             SHOTS OFF TARGET
                         </Typography>
                         <Typography 
-                            id="teamBscore3ValueTypography" 
+                            id="teamBSecondaryScoreTypeThreePointsValueTypography" 
                             style={{
-                                ...tournamentData.style.CONFIGSecondaryScoreTypePointsIndividualContainer.teamBPoints,
-								fontSize: `${tournamentData.style.CONFIGSecondaryScoreTypePointsIndividualContainer.teamBPoints.fontSizeRatio}vw`
+                                ...tournamentData.style.CONFIGSecondaryScoreTypePointsIndividual.teamBPoints,
+								fontSize: `${tournamentData.style.CONFIGSecondaryScoreTypePointsIndividual.teamBPoints.fontSizeRatio}vw`
                             }}
                         >
                             6
                         </Typography>
                     </Box>
                     <Box 
-                        id="score4Container"
+                        id="secondaryScoreTypeFourPointsContainer"
                         style={{
-                            ...tournamentData.style.CONFIGSecondaryScoreTypePointsIndividualContainer.container,
-							borderRadius: `${tournamentData.style.CONFIGSecondaryScoreTypePointsIndividualContainer.container.borderRadiusRatio}vw`
+                            ...tournamentData.style.CONFIGSecondaryScoreTypePointsIndividual.container,
+							borderRadius: `${tournamentData.style.CONFIGSecondaryScoreTypePointsIndividual.container.borderRadiusRatio}vw`
                         }}
                     >
                         <Typography 
-                            id="teamAscore4ValueTypography" 
+                            id="teamASecondaryScoreTypeFourPointsValueTypography" 
                             style={{
-                                ...tournamentData.style.CONFIGSecondaryScoreTypePointsIndividualContainer.teamAPoints,
-								fontSize: `${tournamentData.style.CONFIGSecondaryScoreTypePointsIndividualContainer.teamAPoints.fontSizeRatio}vw`
+                                ...tournamentData.style.CONFIGSecondaryScoreTypePointsIndividual.teamAPoints,
+								fontSize: `${tournamentData.style.CONFIGSecondaryScoreTypePointsIndividual.teamAPoints.fontSizeRatio}vw`
                             }}
                         >
                             {/* 1 */}
                             10
                         </Typography>
                         <Typography 
-                            id="score4Typography" 
+                            id="secondaryScoreTypeFourPointsNameTypography" 
                             style={{
-                                ...tournamentData.style.CONFIGSecondaryScoreTypePointsIndividualContainer.pointsTypography,
-								fontSize: `${tournamentData.style.CONFIGSecondaryScoreTypePointsIndividualContainer.pointsTypography.fontSizeRatio}vw`
+                                ...tournamentData.style.CONFIGSecondaryScoreTypePointsIndividual.pointsTypography,
+								fontSize: `${tournamentData.style.CONFIGSecondaryScoreTypePointsIndividual.pointsTypography.fontSizeRatio}vw`
                             }}
                         >
                             {/* EXTRAS */}
                             SAVES
                         </Typography>
                         <Typography 
-                            id="teamBscore4ValueTypography" 
+                            id="teamBSecondaryScoreTypeFourPointsValueTypography" 
                             style={{
-                                ...tournamentData.style.CONFIGSecondaryScoreTypePointsIndividualContainer.teamBPoints,
-								fontSize: `${tournamentData.style.CONFIGSecondaryScoreTypePointsIndividualContainer.teamBPoints.fontSizeRatio}vw`
+                                ...tournamentData.style.CONFIGSecondaryScoreTypePointsIndividual.teamBPoints,
+								fontSize: `${tournamentData.style.CONFIGSecondaryScoreTypePointsIndividual.teamBPoints.fontSizeRatio}vw`
                             }}
                         >
                             {/* 0 */}
@@ -1130,37 +1135,37 @@ function App() {
                         </Typography>
                     </Box>
                     <Box 
-                        id="score5Container"
+                        id="secondaryScoreTypeFivePointsContainer"
                         style={{
-                            ...tournamentData.style.CONFIGSecondaryScoreTypePointsIndividualContainer.container,
-                            borderRadius: `${tournamentData.style.CONFIGSecondaryScoreTypePointsIndividualContainer.container.borderRadiusRatio}vw`
+                            ...tournamentData.style.CONFIGSecondaryScoreTypePointsIndividual.container,
+                            borderRadius: `${tournamentData.style.CONFIGSecondaryScoreTypePointsIndividual.container.borderRadiusRatio}vw`
                         }}
                     >
                         <Typography
-                            id="teamAscore5ValueTypography" 
+                            id="teamASecondaryScoreTypeFivePointsValueTypography" 
                             style={{
-                                ...tournamentData.style.CONFIGSecondaryScoreTypePointsIndividualContainer.teamAPoints,
-								fontSize: `${tournamentData.style.CONFIGSecondaryScoreTypePointsIndividualContainer.teamAPoints.fontSizeRatio}vw`
+                                ...tournamentData.style.CONFIGSecondaryScoreTypePointsIndividual.teamAPoints,
+								fontSize: `${tournamentData.style.CONFIGSecondaryScoreTypePointsIndividual.teamAPoints.fontSizeRatio}vw`
                             }}
                         >
                             {/* 0 */}
                             55%
                         </Typography>
                         <Typography 
-                            id="score5Typography" 
+                            id="secondaryScoreTypeFivePointsNameTypography" 
                             style={{
-                                ...tournamentData.style.CONFIGSecondaryScoreTypePointsIndividualContainer.pointsTypography,
-								fontSize: `${tournamentData.style.CONFIGSecondaryScoreTypePointsIndividualContainer.pointsTypography.fontSizeRatio}vw`
+                                ...tournamentData.style.CONFIGSecondaryScoreTypePointsIndividual.pointsTypography,
+								fontSize: `${tournamentData.style.CONFIGSecondaryScoreTypePointsIndividual.pointsTypography.fontSizeRatio}vw`
                             }}
                         >
                             {/* SUPER RAIDS */}
                             POSSESSION
                         </Typography>
                         <Typography 
-                            id="teamBscore5ValueTypography" 
+                            id="teamBSecondaryScoreTypeFivePointsValueTypography" 
                             style={{
-                                ...tournamentData.style.CONFIGSecondaryScoreTypePointsIndividualContainer.teamBPoints,
-								fontSize: `${tournamentData.style.CONFIGSecondaryScoreTypePointsIndividualContainer.teamBPoints.fontSizeRatio}vw`
+                                ...tournamentData.style.CONFIGSecondaryScoreTypePointsIndividual.teamBPoints,
+								fontSize: `${tournamentData.style.CONFIGSecondaryScoreTypePointsIndividual.teamBPoints.fontSizeRatio}vw`
                             }}
                         >
                             {/* 1 */}
@@ -1168,37 +1173,37 @@ function App() {
                         </Typography>
                     </Box>
                     <Box 
-                        id="score6Container"
+                        id="secondaryScoreTypeSixPointsContainer"
                         style={{
-                            ...tournamentData.style.CONFIGSecondaryScoreTypePointsIndividualContainer.container,
-                            borderRadius: `${tournamentData.style.CONFIGSecondaryScoreTypePointsIndividualContainer.container.borderRadiusRatio}vw`
+                            ...tournamentData.style.CONFIGSecondaryScoreTypePointsIndividual.container,
+                            borderRadius: `${tournamentData.style.CONFIGSecondaryScoreTypePointsIndividual.container.borderRadiusRatio}vw`
                         }}
                     >
                         <Typography 
-                            id="teamAscore6ValueTypography" 
+                            id="teamASecondaryScoreTypeSixPointsValueTypography" 
                             style={{
-                                ...tournamentData.style.CONFIGSecondaryScoreTypePointsIndividualContainer.teamAPoints,
-								fontSize: `${tournamentData.style.CONFIGSecondaryScoreTypePointsIndividualContainer.teamAPoints.fontSizeRatio}vw`
+                                ...tournamentData.style.CONFIGSecondaryScoreTypePointsIndividual.teamAPoints,
+								fontSize: `${tournamentData.style.CONFIGSecondaryScoreTypePointsIndividual.teamAPoints.fontSizeRatio}vw`
                             }}
                         >
                             {/* 1 */}
                             3
                         </Typography>
                         <Typography 
-                            id="score6Typography" 
+                            id="secondaryScoreTypeSixPointsNameTypography" 
                             style={{                                
-                                ...tournamentData.style.CONFIGSecondaryScoreTypePointsIndividualContainer.pointsTypography,
-                                fontSize: `${tournamentData.style.CONFIGSecondaryScoreTypePointsIndividualContainer.pointsTypography.fontSizeRatio}vw`
+                                ...tournamentData.style.CONFIGSecondaryScoreTypePointsIndividual.pointsTypography,
+                                fontSize: `${tournamentData.style.CONFIGSecondaryScoreTypePointsIndividual.pointsTypography.fontSizeRatio}vw`
                             }}
                         >
                             {/* SUPER TACKLES */}
                             YELLOW CARDS
                         </Typography>
                         <Typography 
-                            id="teamBscore6ValueTypography" 
+                            id="teamBSecondaryScoreTypeSixPointsValueTypography" 
                             style={{
-                                ...tournamentData.style.CONFIGSecondaryScoreTypePointsIndividualContainer.teamBPoints,
-								fontSize: `${tournamentData.style.CONFIGSecondaryScoreTypePointsIndividualContainer.teamBPoints.fontSizeRatio}vw`
+                                ...tournamentData.style.CONFIGSecondaryScoreTypePointsIndividual.teamBPoints,
+								fontSize: `${tournamentData.style.CONFIGSecondaryScoreTypePointsIndividual.teamBPoints.fontSizeRatio}vw`
                             }}
                         >
                             {/* 0 */}
@@ -1295,7 +1300,8 @@ function App() {
                     <Box 
                         id="bestPlayerANameAndRoleContainer"
                         style={{
-                            ...tournamentData.style.CONFIGBestPlayerA.playerNameAndRoleContainer
+                            ...tournamentData.style.CONFIGBestPlayerA.playerNameAndRoleContainer,
+                            borderWidth: `${tournamentData.style.CONFIGBestPlayerA.playerNameAndRoleContainer.borderWidthRatio}vw`
                         }}
                     >
                         <Box
@@ -1308,7 +1314,8 @@ function App() {
                                 id="bestPlayerANameTypography"
                                 style={{
                                     ...tournamentData.style.CONFIGBestPlayerA.playerName.typography,
-                                    fontSize: `${tournamentData.style.CONFIGBestPlayerA.playerName.typography.fontSizeRatio}vw`
+                                    fontSize: `${tournamentData.style.CONFIGBestPlayerA.playerName.typography.fontSizeRatio}vw`,
+                                    marginRight: `${tournamentData.style.CONFIGBestPlayerA.playerName.typography.marginRightRatio}vw`
                                 }}
                             >
                                 {/* S.MUKESHKANNAN */}
@@ -1401,7 +1408,8 @@ function App() {
                     <Box 
                         id="bestPlayerBNameAndRoleContainer"
                         style={{
-                            ...tournamentData.style.CONFIGBestPlayerB.playerNameAndRoleContainer
+                            ...tournamentData.style.CONFIGBestPlayerB.playerNameAndRoleContainer,
+                            borderWidth: `${tournamentData.style.CONFIGBestPlayerB.playerNameAndRoleContainer.borderWidthRatio}vw`
                         }}
                     >
                         <Box
@@ -1414,7 +1422,8 @@ function App() {
                                 id="bestPlayerBNameTypography"
                                 style={{
                                     ...tournamentData.style.CONFIGBestPlayerB.playerName.typography,
-                                    fontSize: `${tournamentData.style.CONFIGBestPlayerB.playerName.typography.fontSizeRatio}vw`
+                                    fontSize: `${tournamentData.style.CONFIGBestPlayerB.playerName.typography.fontSizeRatio}vw`,
+                                    marginLeft: `${tournamentData.style.CONFIGBestPlayerB.playerName.typography.marginLeftRatio}vw`,
                                 }}
                             >
                                 {/* PURUSHOTHAMAN PALANIVELU */}
@@ -1425,7 +1434,7 @@ function App() {
                             id="bestPlayerBRoleContainer" 
                             style={{
                                 ...tournamentData.style.CONFIGBestPlayerB.playerRole.container,
-                                paddingRight: `${tournamentData.style.CONFIGBestPlayerA.playerRole.container.paddingRightRatio}vw`
+                                paddingLeft: `${tournamentData.style.CONFIGBestPlayerB.playerRole.container.paddingLeftRatio}vw`
                             }}
                         >
                             <Typography 
