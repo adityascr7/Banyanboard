@@ -1,3 +1,4 @@
+
 import React, { useState, useEffect, useCallback } from 'react';
 import { useMediaQuery } from '@mui/material';
 import Box from '@mui/material/Box';
@@ -869,142 +870,277 @@ function App() {
 
     }
 
-    function colorNameForScoreBoard(colorA, colorB, alpha = 1) {
+    function borderColorNameForBestPlayerIndividualContainer(colorB, alpha = 1){
 
-        const rgb1 = colors[colorA];
-        const rgb2 = colors[colorB];
-        if (!rgb1 || !rgb2) {
-          throw new Error(`Unknown color name: ${colorA} or ${colorB}`);
+        const rgb = colors[colorB];
+        if (!rgb) {
+            throw new Error(`Unknown color name: ${colorB}`);
         }
 
-        return `linear-gradient(
-                    to right, 
-                    rgba(${rgb1[0]}, ${rgb1[1]}, ${rgb1[2]}, ${alpha}), 
-                    black, 
-                    black, 
-                    rgba(${rgb2[0]}, ${rgb2[1]}, ${rgb2[2]}, ${alpha})
-                )`;
+        return `rgba(${rgb[0]}, ${rgb[1]}, ${rgb[2]}, ${alpha})`;
 
     }
 
-    function colorNameForTeamABackdrop(colorA, colorB, alpha = 1){
+    function colorNameForBestPlayerIndividualContainer(colorA, alpha = 1){
+
+        const rgb1 = colors[colorA];
+        const rgb2 = colors[colorA];
+        if (!rgb2 || !rgb2) {
+            throw new Error(`Unknown color name: ${colorA}`);
+        }
+
+        /* The values added or subtracted from the new color are taken from the master color.
+        The backdrop colors are chosen as the base color. 
+        When considering the master color and comparing the backdrop color with the background-color of 
+        BestPlayerIndividualContainer, for example, 
+        there are some differences in their RGB values. 
+        These values are taken into account and added or subtracted to the RGB values of the new color. */
+
+        let rgba1 = `rgba(${rgb1[0] - 49}, ${rgb1[1] + 19}, ${rgb1[2] - 29}, ${alpha})`;
+        let rgba2 = `rgba(${rgb2[0] - 97}, ${rgb2[1] + 13}, ${rgb2[2] - 36}, ${alpha})`;
+
+        /* Since the RGB values cannot exceed 255 or fall below 0, these algorithms are created. */
+
+        if(rgb1[0]<49 && rgb1[1]>236 && rgb1[2]<29){
+
+            rgba1 = `rgba(49, 255, 29, ${alpha})`;
+
+        }else if(rgb1[0]<49 && rgb1[1]>236){
+
+            rgba1 = `rgba(49, 255, ${rgb1[2] - 29}, ${alpha})`;
+
+        }else if(rgb1[1]>236 && rgb1[2]<29){
+
+            rgba1 = `rgba(${rgb1[0] - 49}, 255, 29, ${alpha})`;
+
+        }else if(rgb1[0]<49 && rgb1[2]<29){
+
+            rgba1 = `rgba(49, ${rgb1[1] + 19}, 29, ${alpha})`;
+
+        }else if(rgb1[0]<49){
+
+            rgba1 = `rgba(49, ${rgb1[1] + 19}, ${rgb1[2] - 29}, ${alpha})`;
+
+        }else if(rgb1[1]>236){
+
+            rgba1 = `rgba(${rgb1[0] - 49}, 255, ${rgb1[2] - 29}, ${alpha})`;
+            
+        }else if(rgb1[2]<29){
+
+            rgba1 = `rgba(${rgb1[0] - 49}, ${rgb1[1] + 19}, 29, ${alpha})`;
+
+        }
+
+        if(rgb2[0]<97 && rgb2[1]>242 && rgb2[2]<36){
+
+            rgba2 = `rgba(97, 255, 36, ${alpha})`;
+
+        }else if(rgb2[0]<97 && rgb2[1]>242){
+
+            rgba2 = `rgba(97, 255, ${rgb2[2] - 36}, ${alpha})`;
+
+        }else if(rgb2[1]>242 && rgb2[2]<36){
+
+            rgba2 = `rgba(${rgb2[0] - 97}, 255, 36, ${alpha})`;
+
+        }else if(rgb2[0]<97 && rgb2[2]<36){
+
+            rgba2 = `rgba(97, ${rgb2[1] + 13}, 36, ${alpha})`;
+
+        }else if(rgb2[0]<97){
+
+            rgba2 = `rgba(97, ${rgb2[1] + 13}, ${rgb2[2] - 36}, ${alpha})`;
+
+        }else if(rgb2[1]>242){
+
+            rgba2 = `rgba(${rgb2[0] - 97}, 255, ${rgb2[2] - 36}, ${alpha})`;
+
+        }else if(rgb2[2]<36){
+
+            rgba2 = `rgba(${rgb2[0] - 97}, ${rgb2[1] + 13}, 0, ${alpha})`;
+
+        }
+
+        return `linear-gradient(${rgba1}, ${rgba2})`;
+
+    }
+
+    function colorNameForBestPlayerIndividualPointsContainer(colorA, alpha = 1){
+
+        const rgb1 = colors[colorA];
+        const rgb2 = colors[colorA];
+        if (!rgb2 || !rgb2) {
+            throw new Error(`Unknown color name: ${colorA}`);
+        }
+
+        /* The values added or subtracted from the new color are taken from the master color.
+        The backdrop colors are chosen as the base color. 
+        When considering the master color and comparing the backdrop color with the background-color of 
+        BestPlayerIndividualPointsContainer, for example, 
+        there are some differences in their RGB values. 
+        These values are taken into account and added or subtracted to the RGB values of the new color. */
+
+        let rgba1 = `rgba(${rgb1[0] - 7}, ${rgb1[1] + 33}, ${rgb1[2] - 6}, ${alpha})`;
+        let rgba2 = `rgba(${rgb2[0] - 80}, ${rgb2[1] + 17}, ${rgb2[2] - 29}, ${alpha})`;
+
+        /* Since the RGB values cannot exceed 255 or fall below 0, these algorithms are created. */
+
+        if(rgb1[0]<7 && rgb1[1]>222 && rgb1[2]<6){
+
+            rgba1 = `rgba(7, 255, 6, ${alpha})`;
+
+        }else if(rgb1[0]<7 && rgb1[1]>222){
+
+            rgba1 = `rgba(7, 255, ${rgb1[2] - 6}, ${alpha})`;
+
+        }else if(rgb1[1]>222 && rgb1[2]<6){
+
+            rgba1 = `rgba(${rgb1[0] - 7}, 255, 6, ${alpha})`;
+
+        }else if(rgb1[0]<7 && rgb1[2]<6){
+            
+            rgba1 = `rgba(7, ${rgb1[1] + 33}, 6, ${alpha})`;
+
+        }else if(rgb1[0]<7){
+
+            rgba1 = `rgba(7, ${rgb1[1] + 33}, ${rgb1[2] - 6}, ${alpha})`;
+
+        }else if(rgb1[1]>222){
+
+            rgba1 = `rgba(${rgb1[0] - 7}, 255, ${rgb1[2] - 6}, ${alpha})`;
+
+        }else if(rgb1[2]<6){
+
+            rgba1 = `rgba(${rgb1[0] - 7}, ${rgb1[1] + 33}, 6, ${alpha})`;
+
+        }
+
+        if(rgb2[0]<80 && rgb2[1]>238 && rgb2[2]<29){
+
+            rgba2 = `rgba(80, 255, 29, ${alpha})`;
+
+        }else if(rgb2[0]<80 && rgb2[1]>238){
+
+            rgba2 = `rgba(80, 255, ${rgb2[2] - 29}, ${alpha})`;
+
+        }else if(rgb2[1]>238 && rgb2[2]<29){
+
+            rgba2 = `rgba(${rgb2[0] - 80}, 255, 29, ${alpha})`;
+
+        }else if(rgb2[0]<80 && rgb2[2]<29){
+
+            rgba2 = `rgba(80, ${rgb2[1] + 17}, 29, ${alpha})`;
+
+        }else if(rgb2[0]<80){
+
+            rgba2 = `rgba(80, ${rgb2[1] + 17}, ${rgb2[2] - 29}, ${alpha})`;
+
+        }else if(rgb1[1]>222){
+
+            rgba2 = `rgba(${rgb2[0] - 80}, 255, ${rgb2[2] - 29}, ${alpha})`;
+
+        }else if(rgb2[2]<29){
+            rgba2 = `rgba(${rgb2[0] - 80}, ${rgb2[1] + 17}, 29, ${alpha})`;
+        }
+
+        return `linear-gradient(${rgba1}, ${rgba2})`;
+
+    }
+
+    function colorNameForLeftNarrowEmptyContainer(colorA, alpha = 1){
 
         const rgb = colors[colorA];
         if (!rgb) {
           throw new Error(`Unknown color name: ${colorA}`);
         }
 
-        return `linear-gradient(
-                to right, 
-                rgba(${rgb[0]}, ${rgb[1]}, ${rgb[2]}, ${alpha}), 
-                transparent
-            )`;
+        return `rgba(${rgb[0]}, ${rgb[1]}, ${rgb[2]}, ${alpha})`;
 
     }
 
-    function colorNameForTeamBBackdrop(colorB, alpha = 1){
-
-        const rgb = colors[colorB];
-        if (!rgb) {
-          throw new Error(`Unknown color name: ${colorB}`);
-        }
-
-        return `linear-gradient(
-                to left, 
-                rgba(${rgb[0]}, ${rgb[1]}, ${rgb[2]}, ${alpha}), 
-                transparent
-            )`;
-
-    }
-
-    function colorNameForSecondaryScoreTypePointsIndividualContainer(colorA, colorB, alpha = 1){
+    function colorNameForMatchSummaryInsideContainer(colorA, alpha = 1){
     
         const rgb1 = colors[colorA];
-        const rgb2 = colors[colorB];
+        const rgb2 = colors[colorA];
         if (!rgb1 || !rgb2) {
-            throw new Error(`Unknown color name: ${colorA} or ${colorB}`);
+            throw new Error(`Unknown color name: ${colorA}`);
         }
 
         /* The values added or subtracted from the new color are taken from the master color.
         The backdrop colors are chosen as the base color. 
         When considering the master color and comparing the backdrop color with the background-color of 
-        SecondaryScoreTypePointsIndividualContainer, for example, 
+        MatchSummaryInsideContainer, for example, 
         there are some differences in their RGB values. 
         These values are taken into account and added or subtracted to the RGB values of the new color. */
 
-        let rgba1 = `rgba(${rgb1[0] + 16}, ${rgb1[1] + 2 }, ${rgb1[2] + 7}, ${alpha})`;
-        let rgba2 = `rgba(${rgb2[0] - 2}, ${rgb2[1] + 39}, ${rgb2[2] + 38}, ${alpha})`;
+        let rgba1 = `rgba(${rgb1[0] - 69}, ${rgb1[1] + 8}, ${rgb1[2] - 25}, ${alpha})`;
+        let rgba2 = `rgba(${rgb2[0] - 78}, ${rgb2[1] + 13}, ${rgb2[2] - 27}, ${alpha})`;
 
         /* Since the RGB values cannot exceed 255 or fall below 0, these algorithms are created. */
 
-        if(rgb1[0]>239 && rgb1[1]>233 && rgb1[2]>248){
+        if(rgb1[0]<69 && rgb1[1]>247 && rgb1[2]<25){
 
-            rgba1 = `rgba(255, 255, 255, ${alpha})`;
+            rgba1 = `rgba(0, 255, 0, ${alpha})`;
 
-        }else if(rgb1[0]>239 && rgb1[1]>233){
+        }else if(rgb1[0]<69 && rgb1[1]>247){
 
-            rgba1 = `rgba(255, 255, ${rgb1[2] + 7}, ${alpha})`;
+            rgba1 = `rgba(69, 255, ${rgb1[2] - 25}, ${alpha})`;
 
-        }else if(rgb1[1]>233 && rgb1[2]>248){
+        }else if(rgb1[1]>247 && rgb1[2]<25){
 
-            const rgba1 = `rgba(${rgb1[0] + 16}, 255, 255, ${alpha})`;
+            rgba1 = `rgba(${rgb1[0] - 69}, 255, 25, ${alpha})`;
 
-        }else if(rgb1[0]>239 && rgb1[2]>248){
+        }else if(rgb1[0]<69 && rgb1[2]<25){
 
-            rgba1 = `rgba(255, ${rgb1[1] + 2}, 255, ${alpha})`;
+            rgba1 = `rgba(0, ${rgb1[1] + 8}, 25, ${alpha})`;
 
-        }else if(rgb1[0]>239){
+        }else if(rgb1[0]<69){
 
-            rgba1 = `rgba(255, ${rgb1[1] + 2 }, ${rgb1[2] + 7}, ${alpha})`;
+            rgba1 = `rgba(0, ${rgb1[1] + 8}, ${rgb1[2] - 25}, ${alpha})`;
 
-        }else if(rgb1[1]>233){
+        }else if(rgb1[1]>247){
 
-            rgba1 = `rgba(${rgb1[0] + 16}, 255, ${rgb1[2] + 7}, ${alpha})`;
+            rgba1 = `rgba(${rgb1[0] - 69}, 255, ${rgb1[2] - 25}, ${alpha})`;
 
-        }else if(rgb1[2]>248){
+        }else if(rgb1[2]<25){
 
-            rgba1 = `rgba(${rgb1[0] + 16}, ${rgb1[1] + 2 }, 255, ${alpha})`;
+            rgba1 = `rgba(${rgb1[0] - 69}, ${rgb1[1] + 8}, 0, ${alpha})`;
 
         }
 
-        if(rgb2[0]<2 && rgb2[1]>216 && rgb2[2]>217){
+        if(rgb2[0]<78 && rgb2[1]>242 && rgb2[2]<27){
 
-            rgba2 = `rgba(255, 255, 255, ${alpha})`;
+            rgba2 = `rgba(0, 255, 27, ${alpha})`;
 
-        }else if(rgb2[0]<2 && rgb2[1]>216){
-            
-            rgba2 = `rgba(0, 255, ${rgb2[2] + 38}, ${alpha})`;
+        }else if(rgb2[0]<78 && rgb2[1]>242){
 
-        }else if(rgb2[1]>216 && rgb2[2]>217){
+            rgba2 = `rgba(78, 255, ${rgb2[2] - 27}, ${alpha})`;
 
-            rgba2 = `rgba(${rgb2[0]- 2}, 255, 255, ${alpha})`;
+        }else if(rgb2[1]>242 && rgb2[2]<27){
 
-        }else if(rgb2[0]<2 && rgb2[2]>217){
+            rgba2 = `rgba(${rgb2[0] - 78}, 255, 27, ${alpha})`;
 
-            rgba2 = `rgba(0, ${rgb2[1] + 39}, 255, ${alpha})`;
+        }else if(rgb2[0]<78 && rgb2[2]<27){
 
-        }else if(rgb2[0]<2){
+            rgba2 = `rgba(78, ${rgb2[1] + 13}, 27, ${alpha})`;
 
-            rgba2 = `rgba(0, ${rgb2[1] + 39}, ${rgb2[2] + 38}, ${alpha})`;
+        }else if(rgb2[0]<78){
 
-        }else if(rgb2[1]>216){
+            rgba1 = `rgba(78, ${rgb1[1] + 8}, ${rgb1[2] - 25}, ${alpha})`;
 
-            rgba2 = `rgba(${rgb2[0] - 2}, 255, ${rgb2[2] + 38}, ${alpha})`;
+        }else if(rgb2[1]>242){
 
-        }else if(rgb2[2]>217){
+            rgba2 = `rgba(${rgb2[0] - 78}, 255, ${rgb2[2] - 27}, ${alpha})`;
 
-            rgba2 = `rgba(${rgb2[0] - 2}, ${rgb2[1] + 39}, 255, ${alpha})`;
-            
+        }else if(rgb2[2]<27){
+            rgba2 = `rgba(${rgb2[0] - 78}, ${rgb2[1] + 13}, 27, ${alpha})`;
         }
 
         return `linear-gradient(
-                to right, 
+                to bottom,
                 ${rgba1}, 
-                transparent 40%, 
-                transparent 60%, 
                 ${rgba2}
             )`;
-                
     }
 
     function colorNameForPrimaryScoreTypeAndSecondaryScoreTypePointsTeamAPoints(colorA, alpha = 1){
@@ -1181,89 +1317,138 @@ function App() {
 
     }
 
-    function colorNameForMatchSummaryInsideContainer(colorA, alpha = 1){
+    function colorNameForRightNarrowEmptyContainer(colorB, alpha = 1){
+
+        const rgb = colors[colorB];
+        if (!rgb) {
+          throw new Error(`Unknown color name: ${colorB}`);
+        }
+
+        return `rgba(${rgb[0]}, ${rgb[1]}, ${rgb[2]}, ${alpha})`;
+
+    }
+
+    function colorNameForScoreBoard(colorA, colorB, alpha = 1) {
+
+        const rgb1 = colors[colorA];
+        const rgb2 = colors[colorB];
+        if (!rgb1 || !rgb2) {
+          throw new Error(`Unknown color name: ${colorA} or ${colorB}`);
+        }
+
+        return `linear-gradient(
+                    to right, 
+                    rgba(${rgb1[0]}, ${rgb1[1]}, ${rgb1[2]}, ${alpha}), 
+                    black, 
+                    black, 
+                    rgba(${rgb2[0]}, ${rgb2[1]}, ${rgb2[2]}, ${alpha})
+                )`;
+
+    }
+
+    function colorNameForSecondaryScoreTypePointsIndividualContainer(colorA, colorB, alpha = 1){
     
         const rgb1 = colors[colorA];
-        const rgb2 = colors[colorA];
+        const rgb2 = colors[colorB];
         if (!rgb1 || !rgb2) {
-            throw new Error(`Unknown color name: ${colorA}`);
+            throw new Error(`Unknown color name: ${colorA} or ${colorB}`);
         }
 
         /* The values added or subtracted from the new color are taken from the master color.
         The backdrop colors are chosen as the base color. 
         When considering the master color and comparing the backdrop color with the background-color of 
-        MatchSummaryInsideContainer, for example, 
+        SecondaryScoreTypePointsIndividualContainer, for example, 
         there are some differences in their RGB values. 
         These values are taken into account and added or subtracted to the RGB values of the new color. */
 
-        let rgba1 = `rgba(${rgb1[0] - 69}, ${rgb1[1] + 8}, ${rgb1[2] - 25}, ${alpha})`;
-        let rgba2 = `rgba(${rgb2[0] - 78}, ${rgb2[1] + 13}, ${rgb2[2] - 27}, ${alpha})`;
+        let rgba1 = `rgba(${rgb1[0] + 16}, ${rgb1[1] + 2 }, ${rgb1[2] + 7}, ${alpha})`;
+        let rgba2 = `rgba(${rgb2[0] - 2}, ${rgb2[1] + 39}, ${rgb2[2] + 38}, ${alpha})`;
 
         /* Since the RGB values cannot exceed 255 or fall below 0, these algorithms are created. */
 
-        if(rgb1[0]<69 && rgb1[1]>247 && rgb1[2]<25){
+        if(rgb1[0]>239 && rgb1[1]>233 && rgb1[2]>248){
 
-            rgba1 = `rgba(0, 255, 0, ${alpha})`;
+            rgba1 = `rgba(255, 255, 255, ${alpha})`;
 
-        }else if(rgb1[0]<69 && rgb1[1]>247){
+        }else if(rgb1[0]>239 && rgb1[1]>233){
 
-            rgba1 = `rgba(69, 255, ${rgb1[2] - 25}, ${alpha})`;
+            rgba1 = `rgba(255, 255, ${rgb1[2] + 7}, ${alpha})`;
 
-        }else if(rgb1[1]>247 && rgb1[2]<25){
+        }else if(rgb1[1]>233 && rgb1[2]>248){
 
-            rgba1 = `rgba(${rgb1[0] - 69}, 255, 25, ${alpha})`;
+            const rgba1 = `rgba(${rgb1[0] + 16}, 255, 255, ${alpha})`;
 
-        }else if(rgb1[0]<69 && rgb1[2]<25){
+        }else if(rgb1[0]>239 && rgb1[2]>248){
 
-            rgba1 = `rgba(0, ${rgb1[1] + 8}, 25, ${alpha})`;
+            rgba1 = `rgba(255, ${rgb1[1] + 2}, 255, ${alpha})`;
 
-        }else if(rgb1[0]<69){
+        }else if(rgb1[0]>239){
 
-            rgba1 = `rgba(0, ${rgb1[1] + 8}, ${rgb1[2] - 25}, ${alpha})`;
+            rgba1 = `rgba(255, ${rgb1[1] + 2 }, ${rgb1[2] + 7}, ${alpha})`;
 
-        }else if(rgb1[1]>247){
+        }else if(rgb1[1]>233){
 
-            rgba1 = `rgba(${rgb1[0] - 69}, 255, ${rgb1[2] - 25}, ${alpha})`;
+            rgba1 = `rgba(${rgb1[0] + 16}, 255, ${rgb1[2] + 7}, ${alpha})`;
 
-        }else if(rgb1[2]<25){
+        }else if(rgb1[2]>248){
 
-            rgba1 = `rgba(${rgb1[0] - 69}, ${rgb1[1] + 8}, 0, ${alpha})`;
+            rgba1 = `rgba(${rgb1[0] + 16}, ${rgb1[1] + 2 }, 255, ${alpha})`;
 
         }
 
-        if(rgb2[0]<78 && rgb2[1]>242 && rgb2[2]<27){
+        if(rgb2[0]<2 && rgb2[1]>216 && rgb2[2]>217){
 
-            rgba2 = `rgba(0, 255, 27, ${alpha})`;
+            rgba2 = `rgba(255, 255, 255, ${alpha})`;
 
-        }else if(rgb2[0]<78 && rgb2[1]>242){
+        }else if(rgb2[0]<2 && rgb2[1]>216){
+            
+            rgba2 = `rgba(0, 255, ${rgb2[2] + 38}, ${alpha})`;
 
-            rgba2 = `rgba(78, 255, ${rgb2[2] - 27}, ${alpha})`;
+        }else if(rgb2[1]>216 && rgb2[2]>217){
 
-        }else if(rgb2[1]>242 && rgb2[2]<27){
+            rgba2 = `rgba(${rgb2[0]- 2}, 255, 255, ${alpha})`;
 
-            rgba2 = `rgba(${rgb2[0] - 78}, 255, 27, ${alpha})`;
+        }else if(rgb2[0]<2 && rgb2[2]>217){
 
-        }else if(rgb2[0]<78 && rgb2[2]<27){
+            rgba2 = `rgba(0, ${rgb2[1] + 39}, 255, ${alpha})`;
 
-            rgba2 = `rgba(78, ${rgb2[1] + 13}, 27, ${alpha})`;
+        }else if(rgb2[0]<2){
 
-        }else if(rgb2[0]<78){
+            rgba2 = `rgba(0, ${rgb2[1] + 39}, ${rgb2[2] + 38}, ${alpha})`;
 
-            rgba1 = `rgba(78, ${rgb1[1] + 8}, ${rgb1[2] - 25}, ${alpha})`;
+        }else if(rgb2[1]>216){
 
-        }else if(rgb2[1]>242){
+            rgba2 = `rgba(${rgb2[0] - 2}, 255, ${rgb2[2] + 38}, ${alpha})`;
 
-            rgba2 = `rgba(${rgb2[0] - 78}, 255, ${rgb2[2] - 27}, ${alpha})`;
+        }else if(rgb2[2]>217){
 
-        }else if(rgb2[2]<27){
-            rgba2 = `rgba(${rgb2[0] - 78}, ${rgb2[1] + 13}, 27, ${alpha})`;
+            rgba2 = `rgba(${rgb2[0] - 2}, ${rgb2[1] + 39}, 255, ${alpha})`;
+            
         }
 
         return `linear-gradient(
-                to bottom,
+                to right, 
                 ${rgba1}, 
+                transparent 40%, 
+                transparent 60%, 
                 ${rgba2}
             )`;
+                
+    }
+
+    function colorNameForTeamABackdrop(colorA, colorB, alpha = 1){
+
+        const rgb = colors[colorA];
+        if (!rgb) {
+          throw new Error(`Unknown color name: ${colorA}`);
+        }
+
+        return `linear-gradient(
+                to right, 
+                rgba(${rgb[0]}, ${rgb[1]}, ${rgb[2]}, ${alpha}), 
+                transparent
+            )`;
+
     }
 
     function colorNameForTeamALogoContainer(colorA, alpha = 1){
@@ -1279,6 +1464,21 @@ function App() {
 
     }
 
+    function colorNameForTeamBBackdrop(colorB, alpha = 1){
+
+        const rgb = colors[colorB];
+        if (!rgb) {
+          throw new Error(`Unknown color name: ${colorB}`);
+        }
+
+        return `linear-gradient(
+                to left, 
+                rgba(${rgb[0]}, ${rgb[1]}, ${rgb[2]}, ${alpha}), 
+                transparent
+            )`;
+
+    }
+
     function colorNameForTeamBLogoContainer(colorB, alpha = 1){
     
         const rgb = colors[colorB];
@@ -1289,205 +1489,6 @@ function App() {
         let rgba = `rgba(${rgb[0]}, ${rgb[1]}, ${rgb[2]}, ${alpha})`
 
         return `${rgba}`;
-
-    }
-
-    function colorNameForLeftNarrowEmptyContainer(colorA, alpha = 1){
-
-        const rgb = colors[colorA];
-        if (!rgb) {
-          throw new Error(`Unknown color name: ${colorA}`);
-        }
-
-        return `rgba(${rgb[0]}, ${rgb[1]}, ${rgb[2]}, ${alpha})`;
-
-    }
-
-    function colorNameForRightNarrowEmptyContainer(colorB, alpha = 1){
-
-        const rgb = colors[colorB];
-        if (!rgb) {
-          throw new Error(`Unknown color name: ${colorB}`);
-        }
-
-        return `rgba(${rgb[0]}, ${rgb[1]}, ${rgb[2]}, ${alpha})`;
-
-    }
-
-    function colorNameForBestPlayerIndividualContainer(colorA, alpha = 1){
-
-        const rgb1 = colors[colorA];
-        const rgb2 = colors[colorA];
-        if (!rgb2 || !rgb2) {
-            throw new Error(`Unknown color name: ${colorA}`);
-        }
-
-        /* The values added or subtracted from the new color are taken from the master color.
-        The backdrop colors are chosen as the base color. 
-        When considering the master color and comparing the backdrop color with the background-color of 
-        BestPlayerIndividualContainer, for example, 
-        there are some differences in their RGB values. 
-        These values are taken into account and added or subtracted to the RGB values of the new color. */
-
-        let rgba1 = `rgba(${rgb1[0] - 49}, ${rgb1[1] + 19}, ${rgb1[2] - 29}, ${alpha})`;
-        let rgba2 = `rgba(${rgb2[0] - 97}, ${rgb2[1] + 13}, ${rgb2[2] - 36}, ${alpha})`;
-
-        /* Since the RGB values cannot exceed 255 or fall below 0, these algorithms are created. */
-
-        if(rgb1[0]<49 && rgb1[1]>236 && rgb1[2]<29){
-
-            rgba1 = `rgba(49, 255, 29, ${alpha})`;
-
-        }else if(rgb1[0]<49 && rgb1[1]>236){
-
-            rgba1 = `rgba(49, 255, ${rgb1[2] - 29}, ${alpha})`;
-
-        }else if(rgb1[1]>236 && rgb1[2]<29){
-
-            rgba1 = `rgba(${rgb1[0] - 49}, 255, 29, ${alpha})`;
-
-        }else if(rgb1[0]<49 && rgb1[2]<29){
-
-            rgba1 = `rgba(49, ${rgb1[1] + 19}, 29, ${alpha})`;
-
-        }else if(rgb1[0]<49){
-
-            rgba1 = `rgba(49, ${rgb1[1] + 19}, ${rgb1[2] - 29}, ${alpha})`;
-
-        }else if(rgb1[1]>236){
-
-            rgba1 = `rgba(${rgb1[0] - 49}, 255, ${rgb1[2] - 29}, ${alpha})`;
-            
-        }else if(rgb1[2]<29){
-
-            rgba1 = `rgba(${rgb1[0] - 49}, ${rgb1[1] + 19}, 29, ${alpha})`;
-
-        }
-
-        if(rgb2[0]<97 && rgb2[1]>242 && rgb2[2]<36){
-
-            rgba2 = `rgba(97, 255, 36, ${alpha})`;
-
-        }else if(rgb2[0]<97 && rgb2[1]>242){
-
-            rgba2 = `rgba(97, 255, ${rgb2[2] - 36}, ${alpha})`;
-
-        }else if(rgb2[1]>242 && rgb2[2]<36){
-
-            rgba2 = `rgba(${rgb2[0] - 97}, 255, 36, ${alpha})`;
-
-        }else if(rgb2[0]<97 && rgb2[2]<36){
-
-            rgba2 = `rgba(97, ${rgb2[1] + 13}, 36, ${alpha})`;
-
-        }else if(rgb2[0]<97){
-
-            rgba2 = `rgba(97, ${rgb2[1] + 13}, ${rgb2[2] - 36}, ${alpha})`;
-
-        }else if(rgb2[1]>242){
-
-            rgba2 = `rgba(${rgb2[0] - 97}, 255, ${rgb2[2] - 36}, ${alpha})`;
-
-        }else if(rgb2[2]<36){
-
-            rgba2 = `rgba(${rgb2[0] - 97}, ${rgb2[1] + 13}, 0, ${alpha})`;
-
-        }
-
-        return `linear-gradient(${rgba1}, ${rgba2})`;
-
-    }
-    
-    function colorNameForBestPlayerIndividualPointsContainer(colorA, alpha = 1){
-
-        const rgb1 = colors[colorA];
-        const rgb2 = colors[colorA];
-        if (!rgb2 || !rgb2) {
-            throw new Error(`Unknown color name: ${colorA}`);
-        }
-
-        /* The values added or subtracted from the new color are taken from the master color.
-        The backdrop colors are chosen as the base color. 
-        When considering the master color and comparing the backdrop color with the background-color of 
-        BestPlayerIndividualPointsContainer, for example, 
-        there are some differences in their RGB values. 
-        These values are taken into account and added or subtracted to the RGB values of the new color. */
-
-        let rgba1 = `rgba(${rgb1[0] - 7}, ${rgb1[1] + 33}, ${rgb1[2] - 6}, ${alpha})`;
-        let rgba2 = `rgba(${rgb2[0] - 80}, ${rgb2[1] + 17}, ${rgb2[2] - 29}, ${alpha})`;
-
-        /* Since the RGB values cannot exceed 255 or fall below 0, these algorithms are created. */
-
-        if(rgb1[0]<7 && rgb1[1]>222 && rgb1[2]<6){
-
-            rgba1 = `rgba(7, 255, 6, ${alpha})`;
-
-        }else if(rgb1[0]<7 && rgb1[1]>222){
-
-            rgba1 = `rgba(7, 255, ${rgb1[2] - 6}, ${alpha})`;
-
-        }else if(rgb1[1]>222 && rgb1[2]<6){
-
-            rgba1 = `rgba(${rgb1[0] - 7}, 255, 6, ${alpha})`;
-
-        }else if(rgb1[0]<7 && rgb1[2]<6){
-            
-            rgba1 = `rgba(7, ${rgb1[1] + 33}, 6, ${alpha})`;
-
-        }else if(rgb1[0]<7){
-
-            rgba1 = `rgba(7, ${rgb1[1] + 33}, ${rgb1[2] - 6}, ${alpha})`;
-
-        }else if(rgb1[1]>222){
-
-            rgba1 = `rgba(${rgb1[0] - 7}, 255, ${rgb1[2] - 6}, ${alpha})`;
-
-        }else if(rgb1[2]<6){
-
-            rgba1 = `rgba(${rgb1[0] - 7}, ${rgb1[1] + 33}, 6, ${alpha})`;
-
-        }
-
-        if(rgb2[0]<80 && rgb2[1]>238 && rgb2[2]<29){
-
-            rgba2 = `rgba(80, 255, 29, ${alpha})`;
-
-        }else if(rgb2[0]<80 && rgb2[1]>238){
-
-            rgba2 = `rgba(80, 255, ${rgb2[2] - 29}, ${alpha})`;
-
-        }else if(rgb2[1]>238 && rgb2[2]<29){
-
-            rgba2 = `rgba(${rgb2[0] - 80}, 255, 29, ${alpha})`;
-
-        }else if(rgb2[0]<80 && rgb2[2]<29){
-
-            rgba2 = `rgba(80, ${rgb2[1] + 17}, 29, ${alpha})`;
-
-        }else if(rgb2[0]<80){
-
-            rgba2 = `rgba(80, ${rgb2[1] + 17}, ${rgb2[2] - 29}, ${alpha})`;
-
-        }else if(rgb1[1]>222){
-
-            rgba2 = `rgba(${rgb2[0] - 80}, 255, ${rgb2[2] - 29}, ${alpha})`;
-
-        }else if(rgb2[2]<29){
-            rgba2 = `rgba(${rgb2[0] - 80}, ${rgb2[1] + 17}, 29, ${alpha})`;
-        }
-
-        return `linear-gradient(${rgba1}, ${rgba2})`;
-
-    }
-
-    function borderColorNameForBestPlayerIndividualContainer(colorB, alpha = 1){
-
-        const rgb = colors[colorB];
-        if (!rgb) {
-            throw new Error(`Unknown color name: ${colorB}`);
-        }
-
-        return `rgba(${rgb[0]}, ${rgb[1]}, ${rgb[2]}, ${alpha})`;
 
     }
 
