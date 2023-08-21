@@ -676,7 +676,7 @@ function App() {
             "fontFamily": "'Bebas Neue'",
             "fontSizeRatio": 3.81, // 5200/1366
             "fontWeight": "600",
-            "height": "114%",
+            "height": "113%",
             "justifyContent": "center",
             "width": "23.2%",
             "zIndex": "100"
@@ -692,7 +692,7 @@ function App() {
             "fontFamily": "Bebas Neue",
             "fontSizeRatio": 3.81, // 5200/1366
             "fontWeight": "600",
-            "height": "114%",
+            "height": "113%",
             "justifyContent": "center",
             "width": "23.2%",
             "zIndex": "100"
