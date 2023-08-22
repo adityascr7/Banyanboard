@@ -163,8 +163,8 @@ function App() {
 		"smallScreenFactor": 2,
         //"teamAColor": Object.keys(colors)[0],
         //"teamBColor": Object.keys(colors)[1],
-        "teamAColor": "crimson",
-        "teamBColor": "lightslategray",
+        "teamAColor": "teal",
+        "teamBColor": "chocolate",
 		"transitionDelay1": "0ms",
 		"transitionDelay2": "500ms",
 		"transitionDelay3": "1000ms",
@@ -276,6 +276,7 @@ function App() {
                 "background": colorNameForBestPlayerIndividualPointsContainer(CONFIG1.teamAColor, 1),
                 "clipPath": "polygon(100% 0%, 10% 0%, 0% 100%, 86% 100%)",
                 "display": "flex",
+                "filter": "brightness(1.3)",
                 "flexDirection": "column",
                 "height": "80%",
                 "justifyContent": "center",
@@ -424,6 +425,7 @@ function App() {
                 "background": colorNameForBestPlayerIndividualPointsContainer(CONFIG1.teamAColor, 1),
                 "clipPath": "polygon(90% 0%, 0% 0%, 14% 100%, 100% 100%)",
                 "display": "flex",
+                "filter": "brightness(1.3)",
                 "flexDirection": "column",
                 "height": "80%",
                 "justifyContent": "center",
@@ -885,83 +887,24 @@ function App() {
 
         const rgb1 = colors[colorA];
         const rgb2 = colors[colorA];
-        if (!rgb2 || !rgb2) {
+        if (!rgb1 || !rgb2) {
             throw new Error(`Unknown color name: ${colorA}`);
         }
 
-        /* The values added or subtracted from the new color are taken from the master color.
-        The backdrop colors are chosen as the base color. 
-        When considering the master color and comparing the backdrop color with the background-color of 
-        BestPlayerIndividualContainer, for example, 
-        there are some differences in their RGB values. 
-        These values are taken into account and added or subtracted to the RGB values of the new color. */
+        /* The values multiplied with the new color are derived from the master color. 
+        The backdrop colors serve as the base color. 
+        For instance, when examining the master color and comparing it with the background-color of the 
+        BestPlayerIndividualContainer, differences in their RGB values become apparent. 
+        The factors of these RGB values are then multiplied with the new color. */
 
-        let rgba1 = `rgba(${rgb1[0] - 49}, ${rgb1[1] + 19}, ${rgb1[2] - 29}, ${alpha})`;
-        let rgba2 = `rgba(${rgb2[0] - 97}, ${rgb2[1] + 13}, ${rgb2[2] - 36}, ${alpha})`;
+        let rgba1 = `rgba(${rgb1[0]*0.7}, ${Math.min(255, rgb1[1]*0.7 + 20)}, ${rgb1[2]*0.7}, ${alpha})`;
+        let rgba2 = `rgba(${rgb2[0]*0.5}, ${rgb2[1]*0.5}, ${rgb2[2]*0.5}, ${alpha})`;
 
-        /* Since the RGB values cannot exceed 255 or fall below 0, these algorithms are created. */
-
-        if(rgb1[0]<49 && rgb1[1]>236 && rgb1[2]<29){
-
-            rgba1 = `rgba(49, 255, 29, ${alpha})`;
-
-        }else if(rgb1[0]<49 && rgb1[1]>236){
-
-            rgba1 = `rgba(49, 255, ${rgb1[2] - 29}, ${alpha})`;
-
-        }else if(rgb1[1]>236 && rgb1[2]<29){
-
-            rgba1 = `rgba(${rgb1[0] - 49}, 255, 29, ${alpha})`;
-
-        }else if(rgb1[0]<49 && rgb1[2]<29){
-
-            rgba1 = `rgba(49, ${rgb1[1] + 19}, 29, ${alpha})`;
-
-        }else if(rgb1[0]<49){
-
-            rgba1 = `rgba(49, ${rgb1[1] + 19}, ${rgb1[2] - 29}, ${alpha})`;
-
-        }else if(rgb1[1]>236){
-
-            rgba1 = `rgba(${rgb1[0] - 49}, 255, ${rgb1[2] - 29}, ${alpha})`;
-            
-        }else if(rgb1[2]<29){
-
-            rgba1 = `rgba(${rgb1[0] - 49}, ${rgb1[1] + 19}, 29, ${alpha})`;
-
-        }
-
-        if(rgb2[0]<97 && rgb2[1]>242 && rgb2[2]<36){
-
-            rgba2 = `rgba(97, 255, 36, ${alpha})`;
-
-        }else if(rgb2[0]<97 && rgb2[1]>242){
-
-            rgba2 = `rgba(97, 255, ${rgb2[2] - 36}, ${alpha})`;
-
-        }else if(rgb2[1]>242 && rgb2[2]<36){
-
-            rgba2 = `rgba(${rgb2[0] - 97}, 255, 36, ${alpha})`;
-
-        }else if(rgb2[0]<97 && rgb2[2]<36){
-
-            rgba2 = `rgba(97, ${rgb2[1] + 13}, 36, ${alpha})`;
-
-        }else if(rgb2[0]<97){
-
-            rgba2 = `rgba(97, ${rgb2[1] + 13}, ${rgb2[2] - 36}, ${alpha})`;
-
-        }else if(rgb2[1]>242){
-
-            rgba2 = `rgba(${rgb2[0] - 97}, 255, ${rgb2[2] - 36}, ${alpha})`;
-
-        }else if(rgb2[2]<36){
-
-            rgba2 = `rgba(${rgb2[0] - 97}, ${rgb2[1] + 13}, 0, ${alpha})`;
-
-        }
-
-        return `linear-gradient(${rgba1}, ${rgba2})`;
+        return `linear-gradient(
+                to bottom,
+                ${rgba1}, 
+                ${rgba2}
+            )`;
 
     }
 
@@ -973,75 +916,14 @@ function App() {
             throw new Error(`Unknown color name: ${colorA}`);
         }
 
-        /* The values added or subtracted from the new color are taken from the master color.
-        The backdrop colors are chosen as the base color. 
-        When considering the master color and comparing the backdrop color with the background-color of 
-        BestPlayerIndividualPointsContainer, for example, 
-        there are some differences in their RGB values. 
-        These values are taken into account and added or subtracted to the RGB values of the new color. */
+        /* The values multiplied with the new color are derived from the master color. 
+        The backdrop colors serve as the base color. 
+        For instance, when examining the master color and comparing it with the background-color of the 
+        BestPlayerIndividualPointsContainer, differences in their RGB values become apparent. 
+        The factors of these RGB values are then multiplied with the new color. */
 
-        let rgba1 = `rgba(${rgb1[0] - 7}, ${rgb1[1] + 33}, ${rgb1[2] - 6}, ${alpha})`;
-        let rgba2 = `rgba(${rgb2[0] - 80}, ${rgb2[1] + 17}, ${rgb2[2] - 29}, ${alpha})`;
-
-        /* Since the RGB values cannot exceed 255 or fall below 0, these algorithms are created. */
-
-        if(rgb1[0]<7 && rgb1[1]>222 && rgb1[2]<6){
-
-            rgba1 = `rgba(7, 255, 6, ${alpha})`;
-
-        }else if(rgb1[0]<7 && rgb1[1]>222){
-
-            rgba1 = `rgba(7, 255, ${rgb1[2] - 6}, ${alpha})`;
-
-        }else if(rgb1[1]>222 && rgb1[2]<6){
-
-            rgba1 = `rgba(${rgb1[0] - 7}, 255, 6, ${alpha})`;
-
-        }else if(rgb1[0]<7 && rgb1[2]<6){
-            
-            rgba1 = `rgba(7, ${rgb1[1] + 33}, 6, ${alpha})`;
-
-        }else if(rgb1[0]<7){
-
-            rgba1 = `rgba(7, ${rgb1[1] + 33}, ${rgb1[2] - 6}, ${alpha})`;
-
-        }else if(rgb1[1]>222){
-
-            rgba1 = `rgba(${rgb1[0] - 7}, 255, ${rgb1[2] - 6}, ${alpha})`;
-
-        }else if(rgb1[2]<6){
-
-            rgba1 = `rgba(${rgb1[0] - 7}, ${rgb1[1] + 33}, 6, ${alpha})`;
-
-        }
-
-        if(rgb2[0]<80 && rgb2[1]>238 && rgb2[2]<29){
-
-            rgba2 = `rgba(80, 255, 29, ${alpha})`;
-
-        }else if(rgb2[0]<80 && rgb2[1]>238){
-
-            rgba2 = `rgba(80, 255, ${rgb2[2] - 29}, ${alpha})`;
-
-        }else if(rgb2[1]>238 && rgb2[2]<29){
-
-            rgba2 = `rgba(${rgb2[0] - 80}, 255, 29, ${alpha})`;
-
-        }else if(rgb2[0]<80 && rgb2[2]<29){
-
-            rgba2 = `rgba(80, ${rgb2[1] + 17}, 29, ${alpha})`;
-
-        }else if(rgb2[0]<80){
-
-            rgba2 = `rgba(80, ${rgb2[1] + 17}, ${rgb2[2] - 29}, ${alpha})`;
-
-        }else if(rgb1[1]>222){
-
-            rgba2 = `rgba(${rgb2[0] - 80}, 255, ${rgb2[2] - 29}, ${alpha})`;
-
-        }else if(rgb2[2]<29){
-            rgba2 = `rgba(${rgb2[0] - 80}, ${rgb2[1] + 17}, 29, ${alpha})`;
-        }
+        let rgba1 = `rgba(${rgb1[0]*0.7}, ${Math.min(255, rgb1[1]*0.7 + 20)}, ${rgb1[2]*0.7}, ${alpha})`;
+        let rgba2 = `rgba(${rgb2[0]*0.5}, ${rgb2[1]*0.5}, ${rgb2[2]*0.5}, ${alpha})`;
 
         return `linear-gradient(${rgba1}, ${rgba2})`;
 
@@ -1066,75 +948,14 @@ function App() {
             throw new Error(`Unknown color name: ${colorA}`);
         }
 
-        /* The values added or subtracted from the new color are taken from the master color.
-        The backdrop colors are chosen as the base color. 
-        When considering the master color and comparing the backdrop color with the background-color of 
-        MatchSummaryInsideContainer, for example, 
-        there are some differences in their RGB values. 
-        These values are taken into account and added or subtracted to the RGB values of the new color. */
+        /* The values multiplied with the new color are derived from the master color. 
+        The backdrop colors serve as the base color. 
+        For instance, when examining the master color and comparing it with the background-color of the 
+        MatchSummaryInsideContainer, differences in their RGB values become apparent. 
+        The factors of these RGB values are then multiplied with the new color. */
 
-        let rgba1 = `rgba(${rgb1[0] - 69}, ${rgb1[1] + 8}, ${rgb1[2] - 25}, ${alpha})`;
-        let rgba2 = `rgba(${rgb2[0] - 78}, ${rgb2[1] + 13}, ${rgb2[2] - 27}, ${alpha})`;
-
-        /* Since the RGB values cannot exceed 255 or fall below 0, these algorithms are created. */
-
-        if(rgb1[0]<69 && rgb1[1]>247 && rgb1[2]<25){
-
-            rgba1 = `rgba(0, 255, 0, ${alpha})`;
-
-        }else if(rgb1[0]<69 && rgb1[1]>247){
-
-            rgba1 = `rgba(69, 255, ${rgb1[2] - 25}, ${alpha})`;
-
-        }else if(rgb1[1]>247 && rgb1[2]<25){
-
-            rgba1 = `rgba(${rgb1[0] - 69}, 255, 25, ${alpha})`;
-
-        }else if(rgb1[0]<69 && rgb1[2]<25){
-
-            rgba1 = `rgba(0, ${rgb1[1] + 8}, 25, ${alpha})`;
-
-        }else if(rgb1[0]<69){
-
-            rgba1 = `rgba(0, ${rgb1[1] + 8}, ${rgb1[2] - 25}, ${alpha})`;
-
-        }else if(rgb1[1]>247){
-
-            rgba1 = `rgba(${rgb1[0] - 69}, 255, ${rgb1[2] - 25}, ${alpha})`;
-
-        }else if(rgb1[2]<25){
-
-            rgba1 = `rgba(${rgb1[0] - 69}, ${rgb1[1] + 8}, 0, ${alpha})`;
-
-        }
-
-        if(rgb2[0]<78 && rgb2[1]>242 && rgb2[2]<27){
-
-            rgba2 = `rgba(0, 255, 27, ${alpha})`;
-
-        }else if(rgb2[0]<78 && rgb2[1]>242){
-
-            rgba2 = `rgba(78, 255, ${rgb2[2] - 27}, ${alpha})`;
-
-        }else if(rgb2[1]>242 && rgb2[2]<27){
-
-            rgba2 = `rgba(${rgb2[0] - 78}, 255, 27, ${alpha})`;
-
-        }else if(rgb2[0]<78 && rgb2[2]<27){
-
-            rgba2 = `rgba(78, ${rgb2[1] + 13}, 27, ${alpha})`;
-
-        }else if(rgb2[0]<78){
-
-            rgba1 = `rgba(78, ${rgb1[1] + 8}, ${rgb1[2] - 25}, ${alpha})`;
-
-        }else if(rgb2[1]>242){
-
-            rgba2 = `rgba(${rgb2[0] - 78}, 255, ${rgb2[2] - 27}, ${alpha})`;
-
-        }else if(rgb2[2]<27){
-            rgba2 = `rgba(${rgb2[0] - 78}, ${rgb2[1] + 13}, 27, ${alpha})`;
-        }
+        let rgba1 = `rgba(${rgb1[0]*0.7}, ${rgb1[1]*0.7}, ${rgb1[2]*0.7}, ${alpha})`;
+        let rgba2 = `rgba(${rgb2[0]*0.5}, ${rgb2[1]*0.5}, ${rgb2[2]*0.5}, ${alpha})`;
 
         return `linear-gradient(
                 to bottom,
@@ -1151,77 +972,14 @@ function App() {
             throw new Error(`Unknown color name: ${colorA}`);
         }
 
-        /* The values added or subtracted from the new color are taken from the master color.
-        The backdrop colors are chosen as the base color. 
-        When considering the master color and comparing the backdrop color with the background-color of 
-        PrimaryScoreTypeAndSecondaryScoreTypePointsTeamAPoints, for example, 
-        there are some differences in their RGB values. 
-        These values are taken into account and added or subtracted to the RGB values of the new color. */
+        /* The values multiplied with the new color are derived from the master color. 
+        The backdrop colors serve as the base color. 
+        For instance, when examining the master color and comparing it with the background-color of the 
+        PrimaryScoreTypeAndSecondaryScoreTypePointsTeamAPointsContainer, differences in their RGB values become apparent. 
+        The factors of these RGB values are then multiplied with the new color. */
 
-        let rgba1 = `rgba(${rgb1[0] + 16}, ${rgb1[1] + 2 }, ${rgb1[2] + 7}, ${alpha})`;
-        let rgba2 = `rgba(${rgb2[0] - 50}, ${rgb2[1] + 14}, ${rgb2[2] - 9}, ${alpha})`;
-
-        /* Since the RGB values cannot exceed 255 or fall below 0, these algorithms are created. */
-
-        if(rgb1[0]>239 && rgb1[1]>253 && rgb1[2]>248){
-
-            rgba1 = `rgba(255, 255, 255, ${alpha})`;
-
-        }else if(rgb1[0]>239 && rgb1[1]>253){
-
-            rgba1 = `rgba(255, 255, ${rgb1[2] + 7}, ${alpha})`;
-
-        }else if(rgb1[1]>253 && rgb1[2]>248){
-
-            rgba1 = `rgba(${rgb1[0] + 16}, 255, 255, ${alpha})`;
-
-        }else if(rgb1[0]>239 && rgb1[2]>248){
-
-            rgba1 = `rgba(255, ${rgb1[1] + 2}, 255, ${alpha})`;
-
-        }else if(rgb1[0]>239){
-
-            rgba1 = `rgba(255, ${rgb1[1] + 2 }, ${rgb1[2] + 7}, ${alpha})`;
-
-        }else if(rgb1[1]>253){
-
-            rgba1 = `rgba(${rgb1[0] + 16}, 255, ${rgb1[2] + 7}, ${alpha})`;
-
-        }else if(rgb1[2]>248){
-
-            rgba1 = `rgba(${rgb1[0] + 16}, ${rgb1[1] + 2 }, 255, ${alpha})`;
-
-        }
-
-        if(rgb2[0]<50 && rgb2[1]>241 && rgb2[2]<9){
-
-            rgba2 = `rgba(50, 255, 9, ${alpha})`;
-
-        }else if(rgb2[0]<50 && rgb2[1]>241){
-
-            rgba2 = `rgba(50, 255, ${rgb2[2] - 9}, ${alpha})`;
-
-        }else if(rgb2[1]>241 && rgb2[2]<9){
-
-            rgba2 = `rgba(${rgb2[0] - 50}, 255, 9, ${alpha})`;
-
-        }else if(rgb2[0]<50 && rgb2[2]<9){
-
-            rgba2 = `rgba(50, ${rgb2[1] + 14}, 9, ${alpha})`;
-
-        }else if(rgb2[0]<50){
-
-            rgba2 = `rgba(50, ${rgb2[1] + 14}, 9, ${alpha})`;
-
-        }else if(rgb2[1]>241){
-
-            rgba2 = `rgba(${rgb2[0] - 50}, 255, ${rgb2[2] - 9}, ${alpha})`;
-
-        }else if(rgb2[2]<9){
-
-            rgba2 = `rgba(${rgb2[0] - 50}, ${rgb2[1] + 14}, 9, ${alpha})`;
-            
-        }
+        let rgba1 = `rgba(${rgb1[0]*1.1}, ${rgb1[1]*1}, ${rgb1[2]*1.08}, ${alpha})`;
+        let rgba2 = `rgba(${rgb1[0]*0.82}, ${rgb2[1]*0.75}, ${rgb2[2]*0.59}, ${alpha})`;
 
         return `linear-gradient(
                 ${rgba1}, 
@@ -1238,77 +996,14 @@ function App() {
             throw new Error(`Unknown color name: ${colorB}`);
         }
 
-        /* The values added or subtracted from the new color are taken from the master color.
-        The backdrop colors are chosen as the base color. 
-        When considering the master color and comparing the backdrop color with the background-color of 
-        PrimaryScoreTypeAndSecondaryScoreTypePointsTeamBPoints, for example, 
-        there are some differences in their RGB values. 
-        These values are taken into account and added or subtracted to the RGB values of the new color. */
+        /* The values multiplied with the new color are derived from the master color. 
+        The backdrop colors serve as the base color. 
+        For instance, when examining the master color and comparing it with the background-color of the 
+        PrimaryScoreTypeAndSecondaryScoreTypePointsTeamBPointsContainer, differences in their RGB values become apparent. 
+        The factors of these RGB values are then multiplied with the new color. */
 
-        let rgba1 = `rgba(${rgb1[0] - 2}, ${rgb1[1] + 39}, ${rgb1[2] + 38}, ${alpha})`;
-        let rgba2 = `rgba(${rgb2[0] - 22}, ${rgb2[1] - 36}, ${rgb2[2] - 32}, ${alpha})`;
-
-        /* Since the RGB values cannot exceed 255 or fall below 0, these algorithms are created. */
-
-        if(rgb1[0]<2 && rgb1[1]>216 && rgb1[2]>217){
-
-            rgba1 = `rgba(2, 255, 255, ${alpha})`;
-
-        }else if(rgb1[0]<2 && rgb1[1]>216){
-
-            rgba1 = `rgba(2, 255, ${rgb1[2] + 38}, ${alpha})`;
-
-        }else if(rgb1[1]>216 && rgb1[2]>217){
-
-            rgba1 = `rgba(${rgb1[0] - 2}, 255, 255, ${alpha})`;
-
-        }else if(rgb1[0]<2 && rgb1[2]>217){
-
-            rgba1 = `rgba(2, ${rgb1[1] + 39}, 255, ${alpha})`;
-
-        }else if(rgb1[0]<2){
-
-            rgba1 = `rgba(2, ${rgb1[1] + 39}, ${rgb1[2] + 38}, ${alpha})`;
-
-        }else if(rgb1[1]>216){
-
-            rgba1 = `rgba(${rgb1[0] - 2}, 255, ${rgb1[2] + 38}, ${alpha})`;
-
-        }else if(rgb1[2]>217){
-
-            rgba1 = `rgba(${rgb1[0] - 2}, ${rgb1[1] + 39}, 255, ${alpha})`;
-
-        }
-
-        if(rgb2[0]<22 && rgb2[1]<36 && rgb2[2]<32){
-
-            rgba2 = `rgba(22, 36, 32, ${alpha})`;
-
-        }else if(rgb2[0]<22 && rgb2[1]<36){
-
-            rgba2 = `rgba(22, 36, ${rgb2[2] - 32}, ${alpha})`;
-
-        }else if(rgb2[1]<36 && rgb2[2]<32){
-
-            rgba2 = `rgba(${rgb2[0] - 22}, 36, 32, ${alpha})`;
-
-        }else if(rgb2[0]<22 && rgb2[2]<32){
-
-            rgba2 = `rgba(22, ${rgb2[1] - 36}, 32, ${alpha})`;
-
-        }else if(rgb2[0]<22){
-
-            rgba2 = `rgba(22, ${rgb2[1] - 36}, ${rgb2[2] - 32}, ${alpha})`;
-
-        }else if(rgb2[1]<36){
-
-            rgba2 = `rgba(${rgb2[0] - 22}, 36, ${rgb2[2] - 32}, ${alpha})`;
-
-        }else if(rgb2[2]<32){
-
-            rgba2 = `rgba(${rgb2[0] - 22}, ${rgb2[1] - 36}, 32, ${alpha})`;
-
-        }
+        let rgba1 = `rgba(${rgb1[0]*0.97}, ${rgb1[1]*1.224}, ${rgb1[2]*1.223}, ${alpha})`;
+        let rgba2 = `rgba(${rgb2[0]*0.63}, ${rgb2[1]*0.793}, ${rgb2[2]*0.81}, ${alpha})`;
 
         return `linear-gradient(
                 ${rgba1}, 
@@ -1354,77 +1049,14 @@ function App() {
             throw new Error(`Unknown color name: ${colorA} or ${colorB}`);
         }
 
-        /* The values added or subtracted from the new color are taken from the master color.
-        The backdrop colors are chosen as the base color. 
-        When considering the master color and comparing the backdrop color with the background-color of 
-        SecondaryScoreTypePointsIndividualContainer, for example, 
-        there are some differences in their RGB values. 
-        These values are taken into account and added or subtracted to the RGB values of the new color. */
+        /* The values multiplied with the new color are derived from the master color. 
+        The backdrop colors serve as the base color. 
+        For instance, when examining the master color and comparing it with the background-color of the 
+        SecondaryScoreTypePointsIndividualContainer, differences in their RGB values become apparent. 
+        The factors of these RGB values are then multiplied with the new color. */
 
-        let rgba1 = `rgba(${rgb1[0] + 16}, ${rgb1[1] + 2 }, ${rgb1[2] + 7}, ${alpha})`;
-        let rgba2 = `rgba(${rgb2[0] - 2}, ${rgb2[1] + 39}, ${rgb2[2] + 38}, ${alpha})`;
-
-        /* Since the RGB values cannot exceed 255 or fall below 0, these algorithms are created. */
-
-        if(rgb1[0]>239 && rgb1[1]>233 && rgb1[2]>248){
-
-            rgba1 = `rgba(255, 255, 255, ${alpha})`;
-
-        }else if(rgb1[0]>239 && rgb1[1]>233){
-
-            rgba1 = `rgba(255, 255, ${rgb1[2] + 7}, ${alpha})`;
-
-        }else if(rgb1[1]>233 && rgb1[2]>248){
-
-            const rgba1 = `rgba(${rgb1[0] + 16}, 255, 255, ${alpha})`;
-
-        }else if(rgb1[0]>239 && rgb1[2]>248){
-
-            rgba1 = `rgba(255, ${rgb1[1] + 2}, 255, ${alpha})`;
-
-        }else if(rgb1[0]>239){
-
-            rgba1 = `rgba(255, ${rgb1[1] + 2 }, ${rgb1[2] + 7}, ${alpha})`;
-
-        }else if(rgb1[1]>233){
-
-            rgba1 = `rgba(${rgb1[0] + 16}, 255, ${rgb1[2] + 7}, ${alpha})`;
-
-        }else if(rgb1[2]>248){
-
-            rgba1 = `rgba(${rgb1[0] + 16}, ${rgb1[1] + 2 }, 255, ${alpha})`;
-
-        }
-
-        if(rgb2[0]<2 && rgb2[1]>216 && rgb2[2]>217){
-
-            rgba2 = `rgba(255, 255, 255, ${alpha})`;
-
-        }else if(rgb2[0]<2 && rgb2[1]>216){
-            
-            rgba2 = `rgba(0, 255, ${rgb2[2] + 38}, ${alpha})`;
-
-        }else if(rgb2[1]>216 && rgb2[2]>217){
-
-            rgba2 = `rgba(${rgb2[0]- 2}, 255, 255, ${alpha})`;
-
-        }else if(rgb2[0]<2 && rgb2[2]>217){
-
-            rgba2 = `rgba(0, ${rgb2[1] + 39}, 255, ${alpha})`;
-
-        }else if(rgb2[0]<2){
-
-            rgba2 = `rgba(0, ${rgb2[1] + 39}, ${rgb2[2] + 38}, ${alpha})`;
-
-        }else if(rgb2[1]>216){
-
-            rgba2 = `rgba(${rgb2[0] - 2}, 255, ${rgb2[2] + 38}, ${alpha})`;
-
-        }else if(rgb2[2]>217){
-
-            rgba2 = `rgba(${rgb2[0] - 2}, ${rgb2[1] + 39}, 255, ${alpha})`;
-            
-        }
+        let rgba1 = `rgba(${rgb1[0]*1.1}, ${rgb1[1]*1}, ${rgb1[2]*1.08}, ${alpha})`;
+        let rgba2 = `rgba(${rgb2[0]*0.96}, ${rgb2[1]*1.224}, ${rgb2[2]*1.223}, ${alpha})`;
 
         return `linear-gradient(
                 to right, 
