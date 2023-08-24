@@ -163,8 +163,8 @@ function App() {
 		"smallScreenFactor": 2,
         //"teamAColor": Object.keys(colors)[0],
         //"teamBColor": Object.keys(colors)[1],
-        "teamAColor": "teal",
-        "teamBColor": "chocolate",
+        "teamAColor": "crimson",
+        "teamBColor": "lightslategray",
 		"transitionDelay1": "0ms",
 		"transitionDelay2": "500ms",
 		"transitionDelay3": "1000ms",
@@ -619,7 +619,7 @@ function App() {
 
         "teamABackDrop": {
 
-            "background": colorNameForTeamABackdrop(CONFIG1.teamAColor, CONFIG1.teamBColor, 1),
+            "background": colorNameForTeamABackdrop(CONFIG1.teamAColor, 1),
             "height": "100%",
             "width": "22.8%"
 
@@ -872,6 +872,12 @@ function App() {
 
     }
 
+    /**
+        * Reders specific color for BestPlayerIndividualContainer'sBorder
+        * @param    {String}    colorB  -string that contain rgb value of input colorB
+        * @param    {number}    alpha   -number that is responsible for opacity
+        * @return   {String}            -string that reders specific rgba color for BestPlayerIndividualContainer'sBorder
+    */
     function borderColorNameForBestPlayerIndividualContainer(colorB, alpha = 1){
 
         const rgb = colors[colorB];
@@ -883,6 +889,12 @@ function App() {
 
     }
 
+    /**
+        * Reders specific color for BestPlayerIndividualContainer
+        * @param    {String}    colorA  -string that contain rgb value of input colorA
+        * @param    {number}    alpha   -number that is responsible for opacity
+        * @return   {String}            -string that reders specific rgba color for BestPlayerIndividualContainer
+    */
     function colorNameForBestPlayerIndividualContainer(colorA, alpha = 1){
 
         const rgb1 = colors[colorA];
@@ -908,6 +920,12 @@ function App() {
 
     }
 
+    /**
+        * Reders specific color for BestPlayerIndividualPointsContainer
+        * @param    {String}    colorA  -string that contain rgb value of input colorA
+        * @param    {number}    alpha   -number that is responsible for opacity
+        * @return   {String}            -string that reders specific rgba color for BestPlayerIndividualPointsContainer
+    */
     function colorNameForBestPlayerIndividualPointsContainer(colorA, alpha = 1){
 
         const rgb1 = colors[colorA];
@@ -929,6 +947,12 @@ function App() {
 
     }
 
+    /**
+        * Reders specific color for LeftNarrowEmptyContainer
+        * @param    {String}    colorA  -string that contain rgb value of input colorA
+        * @param    {number}    alpha   -number that is responsible for opacity
+        * @return   {String}            -string that reders specific rgba color for LeftNarrowEmptyContainer
+    */
     function colorNameForLeftNarrowEmptyContainer(colorA, alpha = 1){
 
         const rgb = colors[colorA];
@@ -940,6 +964,12 @@ function App() {
 
     }
 
+    /**
+        * Reders specific color for MatchSummaryInsideContainer
+        * @param    {String}    colorA  -string that contain rgb value of input colorA
+        * @param    {number}    alpha   -number that is responsible for opacity
+        * @return   {String}            -string that reders specific rgba color for MatchSummaryInsideContainer
+    */
     function colorNameForMatchSummaryInsideContainer(colorA, alpha = 1){
     
         const rgb1 = colors[colorA];
@@ -964,6 +994,12 @@ function App() {
             )`;
     }
 
+    /**
+        * Reders specific color for PrimaryScoreTypeAndSecondaryScoreTypePointsTeamAPoints
+        * @param    {String}    colorA  -string that contain rgb value of input colorA
+        * @param    {number}    alpha   -number that is responsible for opacity
+        * @return   {String}            -string that reders specific rgba color for PrimaryScoreTypeAndSecondaryScoreTypePointsTeamAPoints
+    */
     function colorNameForPrimaryScoreTypeAndSecondaryScoreTypePointsTeamAPoints(colorA, alpha = 1){
     
         const rgb1 = colors[colorA];
@@ -988,6 +1024,12 @@ function App() {
 
     }
 
+    /**
+        * Reders specific color for PrimaryScoreTypeAndSecondaryScoreTypePointsTeamBPoints
+        * @param    {String}    colorB  -string that contain rgb value of input colorB
+        * @param    {number}    alpha   -number that is responsible for opacity
+        * @return   {String}            -string that reders specific rgba color for PrimaryScoreTypeAndSecondaryScoreTypePointsTeamBPoints
+    */
     function colorNameForPrimaryScoreTypeAndSecondaryScoreTypePointsTeamBPoints(colorB, alpha = 1){
     
         const rgb1 = colors[colorB];
@@ -1012,6 +1054,12 @@ function App() {
 
     }
 
+    /**
+        * Reders specific color for PrimaryScoreTypeAndSecondaryScoreTypePointsTeamBPoints
+        * @param    {String}    colorB  -string that contain rgb value of input colorB
+        * @param    {number}    alpha   -number that is responsible for opacity
+        * @return   {String}            -string that reders specific rgba color for PrimaryScoreTypeAndSecondaryScoreTypePointsTeamBPoints
+    */
     function colorNameForRightNarrowEmptyContainer(colorB, alpha = 1){
 
         const rgb = colors[colorB];
@@ -1023,6 +1071,13 @@ function App() {
 
     }
 
+    /**
+        * Reders specific color for ScoreBoard
+        * @param    {String}    colorA  -string that contain rgb value of input colorA
+        * @param    {String}    colorB  -string that contain rgb value of input colorB
+        * @param    {number}    alpha   -number that is responsible for opacity
+        * @return   {String}            -string that reders specific rgba color for ScoreBoard
+    */
     function colorNameForScoreBoard(colorA, colorB, alpha = 1) {
 
         const rgb1 = colors[colorA];
@@ -1041,6 +1096,13 @@ function App() {
 
     }
 
+    /**
+        * Reders specific color for ScoreBoard
+        * @param    {String}    colorA  -string that contain rgb value of input colorA
+        * @param    {String}    colorB  -string that contain rgb value of input colorB
+        * @param    {number}    alpha   -number that is responsible for opacity
+        * @return   {String}            -string that reders specific rgba color for ScoreBoard
+    */
     function colorNameForSecondaryScoreTypePointsIndividualContainer(colorA, colorB, alpha = 1){
     
         const rgb1 = colors[colorA];
@@ -1068,7 +1130,13 @@ function App() {
                 
     }
 
-    function colorNameForTeamABackdrop(colorA, colorB, alpha = 1){
+    /**
+        * Reders specific color for TeamABackdrop
+        * @param    {String}    colorA  -string that contain rgb value of input colorA
+        * @param    {number}    alpha   -number that is responsible for opacity
+        * @return   {String}            -string that reders specific rgba color for TeamABackdrop
+    */
+    function colorNameForTeamABackdrop(colorA, alpha = 1){
 
         const rgb = colors[colorA];
         if (!rgb) {
@@ -1083,6 +1151,12 @@ function App() {
 
     }
 
+    /**
+        * Reders specific color for TeamABackdrop
+        * @param    {String}    colorA  -string that contain rgb value of input colorA
+        * @param    {number}    alpha   -number that is responsible for opacity
+        * @return   {String}            -string that reders specific rgba color for TeamABackdrop
+    */
     function colorNameForTeamALogoContainer(colorA, alpha = 1){
     
         const rgb = colors[colorA];
@@ -1096,6 +1170,12 @@ function App() {
 
     }
 
+    /**
+        * Reders specific color for TeamBBackdrop
+        * @param    {String}    colorB  -string that contain rgb value of input colorB
+        * @param    {number}    alpha   -number that is responsible for opacity
+        * @return   {String}            -string that reders specific rgba color for TeamBBackdrop
+    */
     function colorNameForTeamBBackdrop(colorB, alpha = 1){
 
         const rgb = colors[colorB];
@@ -1111,6 +1191,12 @@ function App() {
 
     }
 
+    /**
+        * Reders specific color for TeamBLogoContainer
+        * @param    {String}    colorB  -string that contain rgb value of input colorB
+        * @param    {number}    alpha   -number that is responsible for opacity
+        * @return   {String}            -string that reders specific rgba color for TeamBLogoContainer
+    */
     function colorNameForTeamBLogoContainer(colorB, alpha = 1){
     
         const rgb = colors[colorB];
