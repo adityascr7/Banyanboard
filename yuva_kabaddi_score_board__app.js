@@ -163,8 +163,8 @@ function App() {
 		"smallScreenFactor": 2,
         //"teamAColor": Object.keys(colors)[0],
         //"teamBColor": Object.keys(colors)[1],
-        "teamAColor": "crimson",
-        "teamBColor": "lightslategray",
+        "teamAColor": "goldenrod",
+        "teamBColor": "teal",
 		"transitionDelay1": "0ms",
 		"transitionDelay2": "500ms",
 		"transitionDelay3": "1000ms",
@@ -1104,6 +1104,7 @@ function App() {
         * @return   {String}            -string that reders specific rgba color for ScoreBoard
     */
     function colorNameForSecondaryScoreTypePointsIndividualContainer(colorA, colorB, alpha = 1){
+        
     
         const rgb1 = colors[colorA];
         const rgb2 = colors[colorB];
