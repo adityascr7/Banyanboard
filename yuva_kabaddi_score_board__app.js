@@ -1,17 +1,19 @@
-
-import React, { useState, useEffect, useCallback } from 'react';
-import { useMediaQuery } from '@mui/material';
+import React, { useState, useEffect } from 'react';
 import Box from '@mui/material/Box';
-import Grid from '@mui/material/Grid';
 import Stack from '@mui/material/Stack';
 import Typography from '@mui/material/Typography';
 
-function App() {
+function App({
+
+    isMobileScreenProp,
+    isSmallScreenProp
+
+}) {
 
     const colors = {
         'customColorA': [160, 0, 85, 1],
         'customColorB': [60, 174, 170, 1],
-        
+
         'aliceblue': [240, 248, 255, 1],
         'antiquewhite': [250, 235, 215, 1],
         'aqua': [0, 255, 255, 1],
@@ -228,8 +230,8 @@ function App() {
 
         "playerNameAndRoleContainer": {
 
-            "background": colorNameForBestPlayerIndividualContainer(CONFIG1.teamAColor, 1),
-            "borderColor": borderColorNameForBestPlayerIndividualContainer(CONFIG1.teamBColor, 0.8),
+            "background": colorForBestPlayerIndividualContainer(CONFIG1.teamAColor),
+            "borderColor": borderColorForBestPlayerIndividualContainer(CONFIG1.teamBColor, 0.8),
             "borderLeftStyle": "solid",
             "borderWidthRatio": 2.56, // 3500/1366
             "clipPath": "polygon(100% 0%, 0% 0%, 0% 100%, 96.1% 100%)",
@@ -273,10 +275,10 @@ function App() {
             "container": {
 
                 "alignItems": "center",
-                "background": colorNameForBestPlayerIndividualPointsContainer(CONFIG1.teamAColor, 1),
+                "background": colorForBestPlayerIndividualPointsContainer(CONFIG1.teamAColor),
+                "filter": "brightness(1.3)",
                 "clipPath": "polygon(100% 0%, 10% 0%, 0% 100%, 86% 100%)",
                 "display": "flex",
-                "filter": "brightness(1.3)",
                 "flexDirection": "column",
                 "height": "80%",
                 "justifyContent": "center",
@@ -377,8 +379,8 @@ function App() {
 
         "playerNameAndRoleContainer": {
 
-            "background": colorNameForBestPlayerIndividualContainer(CONFIG1.teamAColor, 1),
-            "borderColor": borderColorNameForBestPlayerIndividualContainer(CONFIG1.teamBColor, 0.8),
+            "background": colorForBestPlayerIndividualContainer(CONFIG1.teamAColor),
+            "borderColor": borderColorForBestPlayerIndividualContainer(CONFIG1.teamBColor, 0.8),
             "borderRightStyle": "solid",
             "borderWidthRatio": 2.56, // 3500/1366
             "clipPath": "polygon(100% 0%, 0% 0%, 3.9% 100%, 100% 100%)",
@@ -422,10 +424,10 @@ function App() {
             "container": {
 
                 "alignItems": "center",
-                "background": colorNameForBestPlayerIndividualPointsContainer(CONFIG1.teamAColor, 1),
+                "background": colorForBestPlayerIndividualPointsContainer(CONFIG1.teamAColor),
+                "filter": "brightness(1.3)",
                 "clipPath": "polygon(90% 0%, 0% 0%, 14% 100%, 100% 100%)",
                 "display": "flex",
-                "filter": "brightness(1.3)",
                 "flexDirection": "column",
                 "height": "80%",
                 "justifyContent": "center",
@@ -507,7 +509,7 @@ function App() {
         "insideContainer": {
 
             "alignItems": "center",
-            "background": colorNameForMatchSummaryInsideContainer(CONFIG1.teamAColor, 1),
+            "background": colorForMatchSummaryInsideContainer(CONFIG1.teamAColor),
             "clipPath": "polygon(0% 0%, 100% 0%, 97% 100%, 3% 100%)",
             "display": "flex",
             "height": "97%",
@@ -584,7 +586,7 @@ function App() {
                 "color": CONFIG1.typographyColorUsual,
                 "fontFamily": "Oswald",
                 "fontSizeRatio": 1.61, // 2200/1366
-                "fontWeight": "600",
+                "fontWeight": "700",
                 "textAlign": "center",
                 "textTransform": "uppercase",
                 "width": "35.6%"
@@ -596,7 +598,7 @@ function App() {
                 "color": CONFIG1.typographyColorUsual,
                 "fontFamily": "Oswald",
                 "fontSizeRatio": 1.32, // 1800/1366
-                "fontWeight": "600",
+                "fontWeight": "700",
                 "textAlign": "center",
                 "textTransform": "uppercase",
                 "width": "23.2%"
@@ -608,7 +610,7 @@ function App() {
                 "color": CONFIG1.typographyColorUsual,
                 "fontFamily": "Oswald",
                 "fontSizeRatio": 1.32, // 1800/1366
-                "fontWeight": "600",
+                "fontWeight": "700",
                 "textAlign": "center",
                 "textTransform": "uppercase",
                 "width": "23.2%"
@@ -619,7 +621,7 @@ function App() {
 
         "teamABackDrop": {
 
-            "background": colorNameForTeamABackdrop(CONFIG1.teamAColor, 1),
+            "background": colorForTeamABackdrop(CONFIG1.teamAColor),
             "height": "100%",
             "width": "22.8%"
 
@@ -627,7 +629,7 @@ function App() {
 
         "teamBBackDrop": {
 
-            "background": colorNameForTeamBBackdrop(CONFIG1.teamBColor, 1),
+            "background": colorForTeamBBackdrop(CONFIG1.teamBColor),
             "height": "100%",
             "width": "22.8%"
 
@@ -672,7 +674,7 @@ function App() {
         "teamAPoints": {
 
             "alignItems": "center",
-            "background": colorNameForPrimaryScoreTypeAndSecondaryScoreTypePointsTeamAPoints(CONFIG1.teamAColor, 1),
+            "background": colorForPrimaryScoreTypeAndSecondaryScoreTypePointsTeamAPoints(CONFIG1.teamAColor),
             "color": CONFIG1.typographyColorUsual,
             "display": "flex",
             "fontFamily": "'Bebas Neue'",
@@ -688,7 +690,7 @@ function App() {
         "teamBPoints": {
 
             "alignItems": "center",
-            "background": colorNameForPrimaryScoreTypeAndSecondaryScoreTypePointsTeamBPoints(CONFIG1.teamBColor, 1),
+            "background": colorForPrimaryScoreTypeAndSecondaryScoreTypePointsTeamBPoints(CONFIG1.teamBColor),
             "color": CONFIG1.typographyColorUsual,
             "display": "flex",
             "fontFamily": "Bebas Neue",
@@ -703,12 +705,12 @@ function App() {
 
     }
 
-    const CONFIGScoreBoard = {
+    const CONFIGScoreboard = {
 
         "outermostContainer": {
 
             "alignItems": "center",
-            "background": colorNameForScoreBoard(CONFIG1.teamAColor, CONFIG1.teamBColor, 0.8),
+            "background": colorForScoreboard(CONFIG1.teamAColor, CONFIG1.teamBColor, 0.8),
             "boxShadow": "0vw 0vw 0.3vw white",
             "display": "flex",
             "flexDirection": "column",
@@ -721,7 +723,7 @@ function App() {
 
         "leftNarrowEmptyContainer": {
 
-            "backgroundColor": colorNameForLeftNarrowEmptyContainer(CONFIG1.teamAColor, 1),
+            "backgroundColor": colorForLeftNarrowEmptyContainer(CONFIG1.teamAColor),
             "borderRadiusRatio": 1.02, // 1400/1366
             "filter": "brightness(1.3)",
             "height": "100%",
@@ -734,7 +736,7 @@ function App() {
 
         "rightNarrowEmptyContainer": {
 
-            "backgroundColor": colorNameForRightNarrowEmptyContainer(CONFIG1.teamBColor, 1),
+            "backgroundColor": colorForRightNarrowEmptyContainer(CONFIG1.teamBColor),
             "borderRadiusRatio": 1.02, // 1400/1366
             "filter": "brightness(1.3)",
             "height": "100%",
@@ -764,7 +766,7 @@ function App() {
         "container": {
 
             "alignItems": "center",
-            "background": colorNameForSecondaryScoreTypePointsIndividualContainer(CONFIG1.teamAColor, CONFIG1.teamBColor, 0.8),
+            "background": colorForSecondaryScoreTypePointsIndividualContainer(CONFIG1.teamAColor, CONFIG1.teamBColor, 0.8),
             "borderRadiusRatio": 2.93, // 4000/1366
             "display": "flex",
             "flexDirection": "row",
@@ -781,7 +783,7 @@ function App() {
             "color": CONFIG1.typographyColorUsual,
             "fontFamily": "Oswald",
             "fontSizeRatio": 1.68, // 2300/1366
-            "fontWeight": "600",
+            "fontWeight": "700",
             "textAlign": "center",
             "textTransform": "uppercase",
             "width": "31.6%",
@@ -791,7 +793,7 @@ function App() {
         "teamAPoints": {
 
             "alignItems": "center",
-            "background": colorNameForPrimaryScoreTypeAndSecondaryScoreTypePointsTeamAPoints(CONFIG1.teamAColor, 1),
+            "background": colorForPrimaryScoreTypeAndSecondaryScoreTypePointsTeamAPoints(CONFIG1.teamAColor),
             "color": CONFIG1.typographyColorUsual,
             "display": "flex",
             "fontFamily": "'Bebas Neue'", 
@@ -806,7 +808,7 @@ function App() {
         "teamBPoints": {
 
             "alignItems": "center",
-            "background": colorNameForPrimaryScoreTypeAndSecondaryScoreTypePointsTeamBPoints(CONFIG1.teamBColor, 1),
+            "background": colorForPrimaryScoreTypeAndSecondaryScoreTypePointsTeamBPoints(CONFIG1.teamBColor),
             "color": CONFIG1.typographyColorUsual,
             "display": "flex",
             "fontFamily": "'Bebas Neue'", 
@@ -825,7 +827,7 @@ function App() {
         "container": {
 
             "alignItems": "center",
-            "backgroundColor": colorNameForTeamALogoContainer(CONFIG1.teamAColor, 0.5),
+            "backgroundColor": colorForTeamALogoContainer(CONFIG1.teamAColor, 0.5),
             "clipPath": "polygon(100% 20%, 0% 0%, 0% 100%, 100% 80%)",
             "display": "flex",
             "height": "100%",
@@ -848,7 +850,7 @@ function App() {
 
     const CONFIGTeamBLogo = {
 
-        "conntainer": {
+        "container": {
 
             "alignItems": "center",
             "backgroundColor": colorNameForTeamBLogoContainer(CONFIG1.teamBColor, 0.5),
@@ -872,30 +874,30 @@ function App() {
 
     }
 
+
     /**
-        * Reders specific color for BestPlayerIndividualContainer'sBorder
-        * @param    {String}    colorB  -string that contain rgb value of input colorB
-        * @param    {number}    alpha   -number that is responsible for opacity
-        * @return   {String}            -string that reders specific rgba color for BestPlayerIndividualContainer'sBorder
+        * Renders specific color for BestPlayerIndividualContainer's border
+        * @param    {String}    colorB              -string that contain rgb value of input colorB
+        * @param    {number}    defaultAlphaValue   -number that is responsible for opacity
+        * @return   {String}                        -string that reders specific rgba color for BestPlayerIndividualContainer's border
     */
-    function borderColorNameForBestPlayerIndividualContainer(colorB, alpha = 1){
+    function borderColorForBestPlayerIndividualContainer(colorB, defaultAlphaValue){
 
         const rgb = colors[colorB];
         if (!rgb) {
             throw new Error(`Unknown color name: ${colorB}`);
         }
 
-        return `rgba(${rgb[0]}, ${rgb[1]}, ${rgb[2]}, ${rgb[3]*alpha})`;
+        return `rgba(${rgb[0]}, ${rgb[1]}, ${rgb[2]}, ${rgb[3]*defaultAlphaValue})`;
 
     }
 
     /**
-        * Reders specific color for BestPlayerIndividualContainer
+        * Renders specific color for BestPlayerIndividualContainer
         * @param    {String}    colorA  -string that contain rgb value of input colorA
-        * @param    {number}    alpha   -number that is responsible for opacity
-        * @return   {String}            -string that reders specific rgba color for BestPlayerIndividualContainer
+        * @return   {String}            -string that renders specific rgba color for BestPlayerIndividualContainer
     */
-    function colorNameForBestPlayerIndividualContainer(colorA){
+    function colorForBestPlayerIndividualContainer(colorA){
 
         const rgb1 = colors[colorA];
         const rgb2 = colors[colorA];
@@ -903,11 +905,19 @@ function App() {
             throw new Error(`Unknown color name: ${colorA}`);
         }
 
-        /* The values multiplied with the new color are derived from the master color. 
+        /* The values used to multiply the new color, such as 0.7 and 0.5, are multiplication factors 
+        derived from the master color. 
         The backdrop colors serve as the base color. 
-        For instance, when examining the master color and comparing it with the background-color of the 
+        For instance, when examining the backdrop color and comparing it with the background-color of the 
         BestPlayerIndividualContainer, differences in their RGB values become apparent. 
-        The factors of these RGB values are then multiplied with the new color. */
+        The required background color for BestPlayerIndividualContainer is 
+        'linear-gradient(rgba(112, 20, 59, 1), rgba(80, 0, 43, 1))'. 
+        Here, the teamBbackdrop color from the master color is rgba(160, 0, 85, 1), which corresponds to 
+        rgba(${rgb2[0]}, ${rgb2[1]}, ${rgb2[2]}, ${rgb2[3]}). 
+        When the teamBbackdrop color 'rgba(160, 0, 85, 1)' is compared to rgba(80, 0, 43, 1), 
+        the differences in their RGB values become apparent, and their ratio is taken, 
+        which is then multiplied by the teamBbackdrop color 'rgba(160, 0, 85, 1)' to get 
+        rgba2, i.e., 'rgba(80, 0, 43, 1)'.*/
 
         let rgba1 = `rgba(${rgb1[0]*0.7}, ${Math.min(255, rgb1[1]*0.7 + 20)}, ${rgb1[2]*0.7}, ${rgb2[3]})`;
         let rgba2 = `rgba(${rgb2[0]*0.5}, ${rgb2[1]*0.5}, ${rgb2[2]*0.5}, ${rgb2[3]})`;
@@ -921,12 +931,11 @@ function App() {
     }
 
     /**
-        * Reders specific color for BestPlayerIndividualPointsContainer
+        * Renders specific color for BestPlayerIndividualPointsContainer
         * @param    {String}    colorA  -string that contain rgb value of input colorA
-        * @param    {number}    alpha   -number that is responsible for opacity
-        * @return   {String}            -string that reders specific rgba color for BestPlayerIndividualPointsContainer
+        * @return   {String}            -string that renders specific rgba color for BestPlayerIndividualPointsContainer
     */
-    function colorNameForBestPlayerIndividualPointsContainer(colorA){
+    function colorForBestPlayerIndividualPointsContainer(colorA){
 
         const rgb1 = colors[colorA];
         const rgb2 = colors[colorA];
@@ -934,55 +943,69 @@ function App() {
             throw new Error(`Unknown color name: ${colorA}`);
         }
 
-        /* The values multiplied with the new color are derived from the master color. 
+        /* The values used to multiply the new color, such as 0.7 and 0.5, are multiplication factors 
+        derived from the master color. 
         The backdrop colors serve as the base color. 
-        For instance, when examining the master color and comparing it with the background-color of the 
+        For instance, when examining the backdrop color and comparing it with the background-color of the 
         BestPlayerIndividualPointsContainer, differences in their RGB values become apparent. 
-        The factors of these RGB values are then multiplied with the new color. */
+        The required background color for BestPlayerIndividualPointsContainer is 
+        'linear-gradient(rgba(112, 20, 59, 1), rgba(80, 0, 43, 1))'. 
+        Here, the teamBbackdrop color from the master color is rgba(160, 0, 85, 1), which corresponds to 
+        rgba(${rgb2[0]}, ${rgb2[1]}, ${rgb2[2]}, ${rgb2[3]}). 
+        When the teamBbackdrop color 'rgba(160, 0, 85, 1)' is compared to rgba(80, 0, 43, 1), 
+        the differences in their RGB values become apparent, and their ratio is taken, 
+        which is then multiplied by the teamBbackdrop color 'rgba(160, 0, 85, 1)' to get 
+        rgba2, i.e., 'rgba(80, 0, 43, 1)'.*/
 
         let rgba1 = `rgba(${rgb1[0]*0.7}, ${Math.min(255, rgb1[1]*0.7 + 20)}, ${rgb1[2]*0.7}, ${rgb1[3]})`;
         let rgba2 = `rgba(${rgb2[0]*0.5}, ${rgb2[1]*0.5}, ${rgb2[2]*0.5}, ${rgb2[3]})`;
 
-        return `linear-gradient(${rgba1}, ${rgba2})`;
+        return `linear-gradient(to bottom, ${rgba1}, ${rgba2})`;
 
     }
 
-    /**
-        * Reders specific color for LeftNarrowEmptyContainer
-        * @param    {String}    colorA  -string that contain rgb value of input colorA
-        * @param    {number}    alpha   -number that is responsible for opacity
-        * @return   {String}            -string that reders specific rgba color for LeftNarrowEmptyContainer
+    /** 
+        * Renders specific color for LeftNarrowEmptyContainer
+        * @param   {string}    colorA                - String that contains the rgb values of the input colorA
+        * @return  {string}                          - String that renders specific rgba color for LeftNarrowEmptyContainer
     */
-    function colorNameForLeftNarrowEmptyContainer(colorA, alpha = 1){
+    function colorForLeftNarrowEmptyContainer(colorA){
 
         const rgb = colors[colorA];
         if (!rgb) {
           throw new Error(`Unknown color name: ${colorA}`);
         }
 
-        return `rgba(${rgb[0]}, ${rgb[1]}, ${rgb[2]}, ${rgb[3]*alpha})`;
+        return `rgba(${rgb[0]}, ${rgb[1]}, ${rgb[2]}, ${rgb[3]})`;
 
     }
 
     /**
-        * Reders specific color for MatchSummaryInsideContainer
+        * Renders specific color for MatchSummaryInsideContainer
         * @param    {String}    colorA  -string that contain rgb value of input colorA
-        * @param    {number}    alpha   -number that is responsible for opacity
-        * @return   {String}            -string that reders specific rgba color for MatchSummaryInsideContainer
+        * @return   {String}            -string that renders specific rgba color for MatchSummaryInsideContainer
     */
-    function colorNameForMatchSummaryInsideContainer(colorA){
-    
+    function colorForMatchSummaryInsideContainer(colorA){
+
         const rgb1 = colors[colorA];
         const rgb2 = colors[colorA];
         if (!rgb1 || !rgb2) {
             throw new Error(`Unknown color name: ${colorA}`);
         }
 
-        /* The values multiplied with the new color are derived from the master color. 
+        /* The values used to multiply the new color, such as 0.7 and 0.5, are multiplication factors 
+        derived from the master color. 
         The backdrop colors serve as the base color. 
-        For instance, when examining the master color and comparing it with the background-color of the 
+        For instance, when examining the backdrop color and comparing it with the background-color of the 
         MatchSummaryInsideContainer, differences in their RGB values become apparent. 
-        The factors of these RGB values are then multiplied with the new color. */
+        The required background color for MatchSummaryInsideContainer is 
+        'linear-gradient(rgba(112, 20, 59, 1), rgba(80, 0, 43, 1))'. 
+        Here, the teamBbackdrop color from the master color is rgba(160, 0, 85, 1), which corresponds to 
+        rgba(${rgb2[0]}, ${rgb2[1]}, ${rgb2[2]}, ${rgb2[3]}). 
+        When the teamBbackdrop color 'rgba(160, 0, 85, 1)' is compared to rgba(80, 0, 43, 1), 
+        the differences in their RGB values become apparent, and their ratio is taken, 
+        which is then multiplied by the teamBbackdrop color 'rgba(160, 0, 85, 1)' to get 
+        rgba2, i.e., 'rgba(80, 0, 43, 1)'.*/
 
         let rgba1 = `rgba(${rgb1[0]*0.7}, ${rgb1[1]*0.7}, ${rgb1[2]*0.7}, ${rgb1[3]})`;
         let rgba2 = `rgba(${rgb2[0]*0.5}, ${rgb2[1]*0.5}, ${rgb2[2]*0.5}, ${rgb2[3]})`;
@@ -995,24 +1018,31 @@ function App() {
     }
 
     /**
-        * Reders specific color for PrimaryScoreTypeAndSecondaryScoreTypePointsTeamAPoints
+        * Renders specific color for PrimaryScoreTypeAndSecondaryScoreTypePointsTeamAPoints
         * @param    {String}    colorA  -string that contain rgb value of input colorA
-        * @param    {number}    alpha   -number that is responsible for opacity
-        * @return   {String}            -string that reders specific rgba color for PrimaryScoreTypeAndSecondaryScoreTypePointsTeamAPoints
+        * @return   {String}            -string that renders specific rgba color for PrimaryScoreTypeAndSecondaryScoreTypePointsTeamAPoints
     */
-    function colorNameForPrimaryScoreTypeAndSecondaryScoreTypePointsTeamAPoints(colorA){
-    
+    function colorForPrimaryScoreTypeAndSecondaryScoreTypePointsTeamAPoints(colorA){
+
         const rgb1 = colors[colorA];
         const rgb2 = colors[colorA];
         if (!rgb1 || !rgb2) {
             throw new Error(`Unknown color name: ${colorA}`);
         }
 
-        /* The values multiplied with the new color are derived from the master color. 
+        /* The values used to multiply the new color, such as 0.7 and 0.5, are multiplication factors 
+        derived from the master color. 
         The backdrop colors serve as the base color. 
-        For instance, when examining the master color and comparing it with the background-color of the 
-        PrimaryScoreTypeAndSecondaryScoreTypePointsTeamAPointsContainer, differences in their RGB values become apparent. 
-        The factors of these RGB values are then multiplied with the new color. */
+        For instance, when examining the backdrop color and comparing it with the background-color of the 
+        PrimaryScoreTypeAndSecondaryScoreTypePointsTeamAPoints, differences in their RGB values become apparent. 
+        The required background color for PrimaryScoreTypeAndSecondaryScoreTypePointsTeamAPoints is 
+        'linear-gradient(rgba(176, 0, 92, 1), rgba(131, 0, 50, 1) 80%)'. 
+        Here, the teamBbackdrop color from the master color is rgba(160, 0, 85, 1), which corresponds to 
+        rgba(${rgb2[0]}, ${rgb2[1]}, ${rgb2[2]}, ${rgb2[3]}). 
+        When the teamBbackdrop color 'rgba(160, 0, 85, 1)' is compared to rgba(131, 0, 50, 1), 
+        the differences in their RGB values become apparent, and their ratio is taken, 
+        which is then multiplied by the teamBbackdrop color 'rgba(160, 0, 85, 1)' to get 
+        rgba2, i.e., 'rgba(80, 0, 43, 1)'.*/
 
         let rgba1 = `rgba(${rgb1[0]*1.1}, ${rgb1[1]*1}, ${rgb1[2]*1.08}, ${rgb1[3]})`;
         let rgba2 = `rgba(${rgb1[0]*0.82}, ${rgb2[1]*0.75}, ${rgb2[2]*0.59}, ${rgb2[3]})`;
@@ -1025,24 +1055,31 @@ function App() {
     }
 
     /**
-        * Reders specific color for PrimaryScoreTypeAndSecondaryScoreTypePointsTeamBPoints
+        * Renders specific color for PrimaryScoreTypeAndSecondaryScoreTypePointsTeamBPoints
         * @param    {String}    colorB  -string that contain rgb value of input colorB
-        * @param    {number}    alpha   -number that is responsible for opacity
-        * @return   {String}            -string that reders specific rgba color for PrimaryScoreTypeAndSecondaryScoreTypePointsTeamBPoints
+        * @return   {String}            -string that renders specific rgba color for PrimaryScoreTypeAndSecondaryScoreTypePointsTeamBPoints
     */
-    function colorNameForPrimaryScoreTypeAndSecondaryScoreTypePointsTeamBPoints(colorB){
-    
+    function colorForPrimaryScoreTypeAndSecondaryScoreTypePointsTeamBPoints(colorB){
+
         const rgb1 = colors[colorB];
         const rgb2 = colors[colorB];
         if (!rgb1 || !rgb2) {
             throw new Error(`Unknown color name: ${colorB}`);
         }
 
-        /* The values multiplied with the new color are derived from the master color. 
+        /* The values used to multiply the new color, such as 0.7 and 0.5, are multiplication factors 
+        derived from the master color. 
         The backdrop colors serve as the base color. 
-        For instance, when examining the master color and comparing it with the background-color of the 
-        PrimaryScoreTypeAndSecondaryScoreTypePointsTeamBPointsContainer, differences in their RGB values become apparent. 
-        The factors of these RGB values are then multiplied with the new color. */
+        For instance, when examining the backdrop color and comparing it with the background-color of the 
+        PrimaryScoreTypeAndSecondaryScoreTypePointsTeamBPoints, differences in their RGB values become apparent. 
+        The required background color for PrimaryScoreTypeAndSecondaryScoreTypePointsTeamBPoints is 
+        'linear-gradient(rgba(58, 213, 208, 1), rgba(38, 138, 138, 1) 80%)'. 
+        Here, the teamBbackdrop color from the master color is rgba(160, 0, 85, 1), which corresponds to 
+        rgba(${rgb2[0]}, ${rgb2[1]}, ${rgb2[2]}, ${rgb2[3]}). 
+        When the teamBbackdrop color 'rgba(160, 0, 85, 1)' is compared to 'rgba(38, 138, 138, 1)', 
+        the differences in their RGB values become apparent, and their ratio is taken, 
+        which is then multiplied by the teamBbackdrop color 'rgba(160, 0, 85, 1)' to get 
+        rgba2, i.e., 'rgba(38, 138, 138, 1)'.*/
 
         let rgba1 = `rgba(${rgb1[0]*0.97}, ${rgb1[1]*1.224}, ${rgb1[2]*1.223}, ${rgb1[3]})`;
         let rgba2 = `rgba(${rgb2[0]*0.63}, ${rgb2[1]*0.793}, ${rgb2[2]*0.81}, ${rgb2[3]})`;
@@ -1055,30 +1092,29 @@ function App() {
     }
 
     /**
-        * Reders specific color for PrimaryScoreTypeAndSecondaryScoreTypePointsTeamBPoints
+        * Renders specific color for PrimaryScoreTypeAndSecondaryScoreTypePointsTeamBPoints
         * @param    {String}    colorB  -string that contain rgb value of input colorB
-        * @param    {number}    alpha   -number that is responsible for opacity
-        * @return   {String}            -string that reders specific rgba color for PrimaryScoreTypeAndSecondaryScoreTypePointsTeamBPoints
+        * @return   {String}            -string that renders specific rgba color for PrimaryScoreTypeAndSecondaryScoreTypePointsTeamBPoints
     */
-    function colorNameForRightNarrowEmptyContainer(colorB, alpha = 1){
+    function colorForRightNarrowEmptyContainer(colorB){
 
         const rgb = colors[colorB];
         if (!rgb) {
           throw new Error(`Unknown color name: ${colorB}`);
         }
 
-        return `rgba(${rgb[0]}, ${rgb[1]}, ${rgb[2]}, ${rgb[3]*alpha})`;
+        return `rgba(${rgb[0]}, ${rgb[1]}, ${rgb[2]}, ${rgb[3]})`;
 
     }
 
     /**
-        * Reders specific color for ScoreBoard
-        * @param    {String}    colorA  -string that contain rgb value of input colorA
-        * @param    {String}    colorB  -string that contain rgb value of input colorB
-        * @param    {number}    alpha   -number that is responsible for opacity
-        * @return   {String}            -string that reders specific rgba color for ScoreBoard
+        * Renders specific color for Scoreboard
+        * @param    {String}    colorA              -string that contain rgb value of input colorA
+        * @param    {String}    colorB              -string that contain rgb value of input colorB
+        * @param    {number}    defaultAlphaValue   -number that is responsible for opacity
+        * @return   {String}                        -string that renders specific rgba color for Scoreboard
     */
-    function colorNameForScoreBoard(colorA, colorB, alpha = 1) {
+    function colorForScoreboard(colorA, colorB, defaultAlphaValue) {
 
         const rgb1 = colors[colorA];
         const rgb2 = colors[colorB];
@@ -1087,39 +1123,46 @@ function App() {
         }
 
         return `linear-gradient(
-                    to right, 
-                    rgba(${rgb1[0]}, ${rgb1[1]}, ${rgb1[2]}, ${rgb1[3]*alpha}), 
-                    black, 
-                    black, 
-                    rgba(${rgb2[0]}, ${rgb2[1]}, ${rgb2[2]}, ${rgb2[3]*alpha})
-                )`;
+                to right, 
+                rgba(${rgb1[0]}, ${rgb1[1]}, ${rgb1[2]}, ${rgb1[3]*defaultAlphaValue}), 
+                black, 
+                black, 
+                rgba(${rgb2[0]}, ${rgb2[1]}, ${rgb2[2]}, ${rgb2[3]*defaultAlphaValue})
+            )`;
 
     }
 
     /**
-        * Reders specific color for ScoreBoard
-        * @param    {String}    colorA  -string that contain rgb value of input colorA
-        * @param    {String}    colorB  -string that contain rgb value of input colorB
-        * @param    {number}    alpha   -number that is responsible for opacity
-        * @return   {String}            -string that reders specific rgba color for ScoreBoard
+        * Renders specific color for Scoreboard
+        * @param    {String}    colorA              -string that contain rgb value of input colorA
+        * @param    {String}    colorB              -string that contain rgb value of input colorB
+        * @param    {number}    defaultAlphaValue   -number that is responsible for opacity
+        * @return   {String}                        -string that renders specific rgba color for Scoreboard
     */
-    function colorNameForSecondaryScoreTypePointsIndividualContainer(colorA, colorB, alpha = 1){
-        
-    
+    function colorForSecondaryScoreTypePointsIndividualContainer(colorA, colorB, defaultAlphaValue){
+
         const rgb1 = colors[colorA];
         const rgb2 = colors[colorB];
         if (!rgb1 || !rgb2) {
             throw new Error(`Unknown color name: ${colorA} or ${colorB}`);
         }
 
-        /* The values multiplied with the new color are derived from the master color. 
+        /* The values used to multiply the new color, such as 0.7 and 0.5, are multiplication factors 
+        derived from the master color. 
         The backdrop colors serve as the base color. 
-        For instance, when examining the master color and comparing it with the background-color of the 
+        For instance, when examining the backdrop color and comparing it with the background-color of the 
         SecondaryScoreTypePointsIndividualContainer, differences in their RGB values become apparent. 
-        The factors of these RGB values are then multiplied with the new color. */
+        The required background color for SecondaryScoreTypePointsIndividualContainer is 
+        'linear-gradient(to right, rgba(176, 0, 92, 0.8), transparent 40%, transparent 60%, rgba(58, 213, 208, 0.8))'. 
+        Here, the teamBbackdrop color from the master color is rgba(160, 0, 85, 1), which corresponds to 
+        rgba(${rgb2[0]}, ${rgb2[1]}, ${rgb2[2]}, ${rgb2[3]}). 
+        When the teamBbackdrop color 'rgba(160, 0, 85, 1)' is compared to 'rgba(58, 213, 208, 0.8)', 
+        the differences in their RGB values become apparent, and their ratio is taken, 
+        which is then multiplied by the teamBbackdrop color 'rgba(160, 0, 85, 1)' to get 
+        rgba2, i.e., 'rgba(58, 213, 208, 0.8)'.*/
 
-        let rgba1 = `rgba(${rgb1[0]*1.1}, ${rgb1[1]*1}, ${rgb1[2]*1.08}, ${rgb1[3]*alpha})`;
-        let rgba2 = `rgba(${rgb2[0]*0.96}, ${rgb2[1]*1.224}, ${rgb2[2]*1.223}, ${rgb2[3]*alpha})`;
+        let rgba1 = `rgba(${rgb1[0]*1.1}, ${rgb1[1]*1}, ${rgb1[2]*1.08}, ${rgb1[3]*defaultAlphaValue})`;
+        let rgba2 = `rgba(${rgb2[0]*0.96}, ${rgb2[1]*1.224}, ${rgb2[2]*1.223}, ${rgb2[3]*defaultAlphaValue})`;
 
         return `linear-gradient(
                 to right, 
@@ -1128,16 +1171,15 @@ function App() {
                 transparent 60%, 
                 ${rgba2}
             )`;
-                
+
     }
 
     /**
-        * Reders specific color for TeamABackdrop
+        * Renders specific color for TeamABackdrop
         * @param    {String}    colorA  -string that contain rgb value of input colorA
-        * @param    {number}    alpha   -number that is responsible for opacity
-        * @return   {String}            -string that reders specific rgba color for TeamABackdrop
+        * @return   {String}            -string that renders specific rgba color for TeamABackdrop
     */
-    function colorNameForTeamABackdrop(colorA){
+    function colorForTeamABackdrop(colorA){
 
         const rgb = colors[colorA];
         if (!rgb) {
@@ -1153,31 +1195,30 @@ function App() {
     }
 
     /**
-        * Reders specific color for TeamABackdrop
-        * @param    {String}    colorA  -string that contain rgb value of input colorA
-        * @param    {number}    alpha   -number that is responsible for opacity
-        * @return   {String}            -string that reders specific rgba color for TeamABackdrop
+        * Renders specific color for TeamABackdrop
+        * @param    {String}    colorA              -string that contain rgb value of input colorA
+        * @param    {number}    defaultAlphaValue   -number that is responsible for opacity
+        * @return   {String}                        -string that renders specific rgba color for TeamABackdrop
     */
-    function colorNameForTeamALogoContainer(colorA, alpha = 1){
-    
+    function colorForTeamALogoContainer(colorA, defaultAlphaValue){
+
         const rgb = colors[colorA];
         if (!rgb) {
             throw new Error(`Unknown color name: ${colorA}`);
         }
 
-        let rgba = `rgba(${rgb[0]}, ${rgb[1]}, ${rgb[2]}, ${rgb[3]*alpha})`;
+        let rgba = `rgba(${rgb[0]}, ${rgb[1]}, ${rgb[2]}, ${rgb[3]*defaultAlphaValue})`;
 
         return `${rgba}`;
 
     }
 
     /**
-        * Reders specific color for TeamBBackdrop
+        * Renders specific color for TeamBBackdrop
         * @param    {String}    colorB  -string that contain rgb value of input colorB
-        * @param    {number}    alpha   -number that is responsible for opacity
-        * @return   {String}            -string that reders specific rgba color for TeamBBackdrop
+        * @return   {String}            -string that renders specific rgba color for TeamBBackdrop
     */
-    function colorNameForTeamBBackdrop(colorB){
+    function colorForTeamBBackdrop(colorB){
 
         const rgb = colors[colorB];
         if (!rgb) {
@@ -1193,19 +1234,19 @@ function App() {
     }
 
     /**
-        * Reders specific color for TeamBLogoContainer
-        * @param    {String}    colorB  -string that contain rgb value of input colorB
-        * @param    {number}    alpha   -number that is responsible for opacity
-        * @return   {String}            -string that reders specific rgba color for TeamBLogoContainer
+        * Renders specific color for TeamBLogoContainer
+        * @param    {String}    colorB              -string that contain rgb value of input colorB
+        * @param    {number}    defaultAlphaValue   -number that is responsible for opacity
+        * @return   {String}                        -string that renders specific rgba color for TeamBLogoContainer
     */
-    function colorNameForTeamBLogoContainer(colorB, alpha = 1){
-    
+    function colorNameForTeamBLogoContainer(colorB, defaultAlphaValue){
+
         const rgb = colors[colorB];
         if (!rgb) {
             throw new Error(`Unknown color name: ${colorB}`);
         }
 
-        let rgba = `rgba(${rgb[0]}, ${rgb[1]}, ${rgb[2]}, ${rgb[3]*alpha})`
+        let rgba = `rgba(${rgb[0]}, ${rgb[1]}, ${rgb[2]}, ${rgb[3]*defaultAlphaValue})`
 
         return `${rgba}`;
 
@@ -1224,7 +1265,7 @@ function App() {
 			"CONFIGMatchSummary": {...CONFIGMatchSummary},
 			"CONFIGPlayingTeamsAndMatchNameAndBackDrop": {...CONFIGPlayingTeamsAndMatchNameAndBackDrop},
 			"CONFIGPrimaryScoreTypePoints": {...CONFIGPrimaryScoreTypePoints},
-			"CONFIGScoreBoard": {...CONFIGScoreBoard},
+			"CONFIGScoreboard": {...CONFIGScoreboard},
 			"CONFIGSecondaryScoreTypePointsContainer": {...CONFIGSecondaryScoreTypePointsContainer},
 			"CONFIGSecondaryScoreTypePointsIndividual": {...CONFIGSecondaryScoreTypePointsIndividual},
 			"CONFIGTeamALogo": {...CONFIGTeamALogo},
@@ -1235,7 +1276,11 @@ function App() {
     // const isMobileScreen = useMediaQuery(useTheme().breakpoints.down('md'));
 	// const isSmallScreen = useMediaQuery(useTheme().breakpoints.down('sm'));
 
-    // Get font size based on screen width
+    /** 
+        * Get font size based on screen width
+        * @param   {number}     fontSizeNumber    - selected asset (video) object
+        * @return  {number}     fontSizeNumber    - none
+    */
 	function getFontSize(fontSizeNumber){
 
 		// if (isMobileScreen) {
@@ -1294,10 +1339,10 @@ function App() {
 
             {/* Scoreboard container (loacted at centre of the screen) */}
             <Stack 
-                id="scoreBoardContainer"
+                id="scoreboardContainer"
                 style={{
-                    ...tournamentData.style.CONFIGScoreBoard.outermostContainer,
-                    marginTop: `${tournamentData.style.CONFIGScoreBoard.leftNarrowEmptyContainer.marginTopRatio}vh`
+                    ...tournamentData.style.CONFIGScoreboard.outermostContainer,
+                    marginTop: `${tournamentData.style.CONFIGScoreboard.leftNarrowEmptyContainer.marginTopRatio}vh`
                 }}
             >
                 {/* Best players A and B container (located at bottom of the screen) */}
@@ -1371,7 +1416,7 @@ function App() {
                         ...tournamentData.style.CONFIGPrimaryScoreTypePoints.container,
                         borderRadius: `${tournamentData.style.CONFIGPrimaryScoreTypePoints.container.borderRadiusRatio}vw`,
                         borderWidth: `${tournamentData.style.CONFIGPrimaryScoreTypePoints.container.borderWidthRatio}vh`,
-                        marginTop: `${getFontSize(tournamentData.style.CONFIG1.fontSizeFactor*tournamentData.style.CONFIGPrimaryScoreTypePoints.container.marginTopRatio)}vh`
+                        marginTop: `${tournamentData.style.CONFIGPrimaryScoreTypePoints.container.marginTopRatio}vh`
                     }}
                 >
                     <Typography 
@@ -1624,9 +1669,9 @@ function App() {
                 <Box 
                     id="leftNarrowEmptyContainer"
                     style={{
-                        ...tournamentData.style.CONFIGScoreBoard.leftNarrowEmptyContainer,
-                        borderRadius: `${tournamentData.style.CONFIGScoreBoard.leftNarrowEmptyContainer.borderRadiusRatio}vh`,
-                        marginTop: `${tournamentData.style.CONFIGScoreBoard.leftNarrowEmptyContainer.marginTopRatio}vh`
+                        ...tournamentData.style.CONFIGScoreboard.leftNarrowEmptyContainer,
+                        borderRadius: `${tournamentData.style.CONFIGScoreboard.leftNarrowEmptyContainer.borderRadiusRatio}vh`,
+                        marginTop: `${tournamentData.style.CONFIGScoreboard.leftNarrowEmptyContainer.marginTopRatio}vh`
                     }}
                 >
                 </Box>
@@ -1634,9 +1679,9 @@ function App() {
                 <Box 
                     id="rightNarrowEmptyContainer"
                     style={{
-                        ...tournamentData.style.CONFIGScoreBoard.rightNarrowEmptyContainer,
-                        borderRadius: `${tournamentData.style.CONFIGScoreBoard.leftNarrowEmptyContainer.borderRadiusRatio}vh`,
-                        marginTop: `${tournamentData.style.CONFIGScoreBoard.rightNarrowEmptyContainer.marginTopRatio}vh`
+                        ...tournamentData.style.CONFIGScoreboard.rightNarrowEmptyContainer,
+                        borderRadius: `${tournamentData.style.CONFIGScoreboard.leftNarrowEmptyContainer.borderRadiusRatio}vh`,
+                        marginTop: `${tournamentData.style.CONFIGScoreboard.rightNarrowEmptyContainer.marginTopRatio}vh`
                     }}
                 >
                 </Box>
@@ -1663,7 +1708,7 @@ function App() {
             <Box
                 id="teamBLogoContainer"
                 style={{
-                    ...tournamentData.style.CONFIGTeamBLogo.conntainer
+                    ...tournamentData.style.CONFIGTeamBLogo.container
                 }}
             >
                 <img 
@@ -1741,7 +1786,7 @@ function App() {
                                 id="bestPlayerARoleTypography"
                                 style={{
                                     ...tournamentData.style.CONFIGBestPlayerA.playerRole.typography,
-                                    fontSize: `${getFontSize(tournamentData.style.CONFIG1.fontSizeFactor*tournamentData.style.CONFIGBestPlayerA.playerRole.typography.fontSizeRatio)}vw`
+                                    fontSize: `${getFontSize(tournamentData.style.CONFIG1.fontSizeFactor*tournamentData.style.CONFIGBestPlayerA.playerRole.typography.fontSizeRatio)}vw`    
                                 }}
                             >
                                 BEST ATTACKER
