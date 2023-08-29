@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import Box from '@mui/material/Box';
 import Stack from '@mui/material/Stack';
 import Typography from '@mui/material/Typography';
+import { useLocation } from "react-router-dom";
 
 function App({
 
@@ -10,10 +11,16 @@ function App({
 
 }) {
 
-    const colors = {
-        'customColorA': [160, 0, 85, 1],
-        'customColorB': [60, 174, 170, 1],
+    // Query parameters used in this component
+    // ?teamAColor=rgba(110,234,32,1)
+    // &teamBColor=rgba(210,134,232,1)
+    // &scoreTypeName=GOALS,SHOTS,SHOTS ON TARGET,YELLOW CARDS
 
+    //let query = useQuery();
+
+    const colors = {
+        'customColorA': [160, 0, 85, 1], //query.get("teamAColor") ? rgbaStringToArray(query.get("teamAColor")) : [160, 0, 85, 1],
+        'customColorB': [60, 174, 170, 1], //query.get("teamAColor") ? rgbaStringToArray(query.get("teamBColor")) : [60, 174, 170, 1],
         'aliceblue': [240, 248, 255, 1],
         'antiquewhite': [250, 235, 215, 1],
         'aqua': [0, 255, 255, 1],
@@ -165,8 +172,8 @@ function App({
 		"smallScreenFactor": 2,
         //"teamAColor": Object.keys(colors)[0],
         //"teamBColor": Object.keys(colors)[1],
-        "teamAColor": "goldenrod",
-        "teamBColor": "teal",
+        "teamAColor": "crimson",
+        "teamBColor": "lightslategray",
 		"transitionDelay1": "0ms",
 		"transitionDelay2": "500ms",
 		"transitionDelay3": "1000ms",
@@ -874,12 +881,19 @@ function App({
 
     }
 
+    const DATACONFIG = {
+
+        scoreTypeName: ["GOALS", "SHOTS", "SHOTS ON TARGET", "SHOTS OFF TARGET", "SAVES", "POSSESSION", "YELLOW CARDS"],
+        teamNames: ["MANCHESTER UNITED", "LEAGUE MATCH", "CHELSEA"],
+        teamLogos: ["https://www.pngall.com/wp-content/uploads/12/Manchester-United-F.C.-Logo-PNG-Image.png", "https://assets.stickpng.com/images/580b57fcd9996e24bc43c4e1.png"]
+
+    }
 
     /**
         * Renders specific color for BestPlayerIndividualContainer's border
         * @param    {String}    colorB              -string that contain rgb value of input colorB
         * @param    {number}    defaultAlphaValue   -number that is responsible for opacity
-        * @return   {String}                        -string that reders specific rgba color for BestPlayerIndividualContainer's border
+        * @return   {String}                        -string that renders specific rgba color for BestPlayerIndividualContainer's border
     */
     function borderColorForBestPlayerIndividualContainer(colorB, defaultAlphaValue){
 
@@ -979,14 +993,14 @@ function App({
         return `rgba(${rgb[0]}, ${rgb[1]}, ${rgb[2]}, ${rgb[3]})`;
 
     }
-
+    
     /**
         * Renders specific color for MatchSummaryInsideContainer
         * @param    {String}    colorA  -string that contain rgb value of input colorA
         * @return   {String}            -string that renders specific rgba color for MatchSummaryInsideContainer
     */
     function colorForMatchSummaryInsideContainer(colorA){
-
+    
         const rgb1 = colors[colorA];
         const rgb2 = colors[colorA];
         if (!rgb1 || !rgb2) {
@@ -1023,7 +1037,7 @@ function App({
         * @return   {String}            -string that renders specific rgba color for PrimaryScoreTypeAndSecondaryScoreTypePointsTeamAPoints
     */
     function colorForPrimaryScoreTypeAndSecondaryScoreTypePointsTeamAPoints(colorA){
-
+    
         const rgb1 = colors[colorA];
         const rgb2 = colors[colorA];
         if (!rgb1 || !rgb2) {
@@ -1054,13 +1068,14 @@ function App({
 
     }
 
+
     /**
         * Renders specific color for PrimaryScoreTypeAndSecondaryScoreTypePointsTeamBPoints
         * @param    {String}    colorB  -string that contain rgb value of input colorB
         * @return   {String}            -string that renders specific rgba color for PrimaryScoreTypeAndSecondaryScoreTypePointsTeamBPoints
     */
     function colorForPrimaryScoreTypeAndSecondaryScoreTypePointsTeamBPoints(colorB){
-
+    
         const rgb1 = colors[colorB];
         const rgb2 = colors[colorB];
         if (!rgb1 || !rgb2) {
@@ -1140,7 +1155,7 @@ function App({
         * @return   {String}                        -string that renders specific rgba color for Scoreboard
     */
     function colorForSecondaryScoreTypePointsIndividualContainer(colorA, colorB, defaultAlphaValue){
-
+    
         const rgb1 = colors[colorA];
         const rgb2 = colors[colorB];
         if (!rgb1 || !rgb2) {
@@ -1171,7 +1186,7 @@ function App({
                 transparent 60%, 
                 ${rgba2}
             )`;
-
+                
     }
 
     /**
@@ -1201,7 +1216,7 @@ function App({
         * @return   {String}                        -string that renders specific rgba color for TeamABackdrop
     */
     function colorForTeamALogoContainer(colorA, defaultAlphaValue){
-
+    
         const rgb = colors[colorA];
         if (!rgb) {
             throw new Error(`Unknown color name: ${colorA}`);
@@ -1240,7 +1255,7 @@ function App({
         * @return   {String}                        -string that renders specific rgba color for TeamBLogoContainer
     */
     function colorNameForTeamBLogoContainer(colorB, defaultAlphaValue){
-
+    
         const rgb = colors[colorB];
         if (!rgb) {
             throw new Error(`Unknown color name: ${colorB}`);
@@ -1251,7 +1266,7 @@ function App({
         return `${rgba}`;
 
     }
-
+    
     const [
         tournamentData,
         setTournamentData
@@ -1278,8 +1293,8 @@ function App({
 
     /** 
         * Get font size based on screen width
-        * @param   {number}     fontSizeNumber    - selected asset (video) object
-        * @return  {number}     fontSizeNumber    - none
+        * @param   {number}     fontSizeNumber    - takes in the fontSizeNumber
+        * @return  {number}     fontSizeNumber    - returns the fontSizeNumber
     */
 	function getFontSize(fontSizeNumber){
 
@@ -1293,6 +1308,39 @@ function App({
 		// }
 
         return fontSizeNumber
+
+	}
+
+    function queryStringToArray(queryString) {
+
+        let newArray = queryString.split(",");
+        return newArray;
+
+    }
+
+    function rgbaStringToArray(rgbaString) {
+
+        // Check if the input is a valid rgba string
+        // if (!/^rgba\(\d{1,3}, \d{1,3}, \d{1,3}, (\d(\.\d+)?|\.\d+)\)$/.test(rgbaString)) {
+        //     throw new Error('Invalid RGBA string format.');
+        // }
+        // Remove the 'rgba(' at the beginning and the ')' at the end, then split by commas
+        const values = rgbaString.slice(5, -1).split(',').map(str => str.trim());
+        // Convert the string values to numbers
+        return [
+            parseInt(values[0], 10),
+            parseInt(values[1], 10),
+            parseInt(values[2], 10),
+            parseFloat(values[3])
+        ];
+
+    }
+
+    // Custom hook to get the query parameters from URL
+	function useQuery() {
+
+		const { search } = useLocation();
+		return React.useMemo(() => new URLSearchParams(search), [search]);
 
 	}
 
@@ -1355,15 +1403,14 @@ function App({
                     <Box
                         id="teamABackdropContainer"
                         style={{
-                            ...tournamentData.style.CONFIGPlayingTeamsAndMatchNameAndBackDrop.teamABackDrop,
-
+                            ...tournamentData.style.CONFIGPlayingTeamsAndMatchNameAndBackDrop.teamABackDrop
                         }}
                     >
                     </Box>
                     <Box
                         id="matchNameBackdropContainer"
                         style={{
-                            ...tournamentData.style.CONFIGPlayingTeamsAndMatchNameAndBackDrop.matchNameBackDrop,
+                            ...tournamentData.style.CONFIGPlayingTeamsAndMatchNameAndBackDrop.matchNameBackDrop
                         }}
                     >
                     </Box>
@@ -1387,7 +1434,7 @@ function App({
                                 fontSize: `${getFontSize(tournamentData.style.CONFIG1.fontSizeFactor*tournamentData.style.CONFIGPlayingTeamsAndMatchNameAndBackDrop.playingTeamsAndMatchName.teamATypography.fontSizeRatio)}vw`
                             }}
                         >
-                            MANCHESTER UNITED
+                            {DATACONFIG.teamNames[0]}
                         </Typography>
                         <Typography
                             id="matchNameTypography"
@@ -1396,7 +1443,7 @@ function App({
                                 fontSize: `${getFontSize(tournamentData.style.CONFIG1.fontSizeFactor*tournamentData.style.CONFIGPlayingTeamsAndMatchNameAndBackDrop.playingTeamsAndMatchName.matchNameTypography.fontSizeRatio)}vw`
                             }}
                         >
-                            LEAGUE MATCH
+                            {DATACONFIG.teamNames[1]}
                         </Typography>
                         <Typography
                             id="teamBTypography"
@@ -1405,7 +1452,7 @@ function App({
                                 fontSize: `${getFontSize(tournamentData.style.CONFIG1.fontSizeFactor*tournamentData.style.CONFIGPlayingTeamsAndMatchNameAndBackDrop.playingTeamsAndMatchName.teamBTypography.fontSizeRatio)}vw`
                             }}
                         >
-                            CHELSEA
+                            {DATACONFIG.teamNames[2]}
                         </Typography>
                     </Box>
                 </Box>
@@ -1435,7 +1482,7 @@ function App({
                             fontSize: `${getFontSize(tournamentData.style.CONFIG1.fontSizeFactor*tournamentData.style.CONFIGPrimaryScoreTypePoints.name.fontSizeRatio)}vw`
                         }}
                     >
-                        GOALS
+                        {DATACONFIG.scoreTypeName[0]}
                     </Typography>
                     <Typography
                         id="teamBPrimaryScoreTypePointsTypography" 
@@ -1477,7 +1524,7 @@ function App({
                                 fontSize: `${getFontSize(tournamentData.style.CONFIG1.fontSizeFactor*tournamentData.style.CONFIGSecondaryScoreTypePointsIndividual.pointsTypography.fontSizeRatio)}vw`
                             }}
                         >
-                            SHOTS
+                            {DATACONFIG.scoreTypeName[1]}
                         </Typography>
                         <Typography 
                             id="teamBSecondaryScoreTypeOnePointsValueTypography" 
@@ -1512,7 +1559,7 @@ function App({
                                 fontSize: `${getFontSize(tournamentData.style.CONFIG1.fontSizeFactor*tournamentData.style.CONFIGSecondaryScoreTypePointsIndividual.pointsTypography.fontSizeRatio)}vw`
                             }}
                         >
-                            SHOTS ON TARGET
+                            {DATACONFIG.scoreTypeName[2]}
                         </Typography>
                         <Typography 
                             id="teamBSecondaryScoreTypeTwoPointsValueTypography" 
@@ -1547,7 +1594,7 @@ function App({
 								fontSize: `${getFontSize(tournamentData.style.CONFIG1.fontSizeFactor*tournamentData.style.CONFIGSecondaryScoreTypePointsIndividual.pointsTypography.fontSizeRatio)}vw`
                             }}
                         >
-                            SHOTS OFF TARGET
+                            {DATACONFIG.scoreTypeName[3]}
                         </Typography>
                         <Typography 
                             id="teamBSecondaryScoreTypeThreePointsValueTypography" 
@@ -1582,7 +1629,7 @@ function App({
 								fontSize: `${getFontSize(tournamentData.style.CONFIG1.fontSizeFactor*tournamentData.style.CONFIGSecondaryScoreTypePointsIndividual.pointsTypography.fontSizeRatio)}vw`
                             }}
                         >
-                            SAVES
+                            {DATACONFIG.scoreTypeName[4]}
                         </Typography>
                         <Typography 
                             id="teamBSecondaryScoreTypeFourPointsValueTypography" 
@@ -1617,7 +1664,7 @@ function App({
 								fontSize: `${getFontSize(tournamentData.style.CONFIG1.fontSizeFactor*tournamentData.style.CONFIGSecondaryScoreTypePointsIndividual.pointsTypography.fontSizeRatio)}vw`
                             }}
                         >
-                            POSSESSION
+                            {DATACONFIG.scoreTypeName[5]}
                         </Typography>
                         <Typography 
                             id="teamBSecondaryScoreTypeFivePointsValueTypography" 
@@ -1652,7 +1699,7 @@ function App({
                                 fontSize: `${getFontSize(tournamentData.style.CONFIG1.fontSizeFactor*tournamentData.style.CONFIGSecondaryScoreTypePointsIndividual.pointsTypography.fontSizeRatio)}vw`
                             }}
                         >
-                            YELLOW CARDS
+                           {DATACONFIG.scoreTypeName[6]}
                         </Typography>
                         <Typography 
                             id="teamBSecondaryScoreTypeSixPointsValueTypography" 
@@ -1696,7 +1743,7 @@ function App({
             >
                 <img 
                     id="teamALogo" 
-                    src="https://www.pngall.com/wp-content/uploads/12/Manchester-United-F.C.-Logo-PNG-Image.png"
+                    src={DATACONFIG.teamLogos[0]}
                     style={{
                         ...tournamentData.style.CONFIGTeamALogo.logo
                     }}
@@ -1713,7 +1760,7 @@ function App({
             >
                 <img 
                     id="teamBLogo"
-                    src="https://assets.stickpng.com/images/580b57fcd9996e24bc43c4e1.png"
+                    src={DATACONFIG.teamLogos[1]}
                     style={{
                         ...tournamentData.style.CONFIGTeamBLogo.logo
                     }}
