@@ -884,8 +884,15 @@ function App({
     const DATACONFIG = {
 
         scoreTypeName: ["GOALS", "SHOTS", "SHOTS ON TARGET", "SHOTS OFF TARGET", "SAVES", "POSSESSION", "YELLOW CARDS"],
-        teamNames: ["MANCHESTER UNITED", "LEAGUE MATCH", "CHELSEA"],
-        teamLogos: ["https://www.pngall.com/wp-content/uploads/12/Manchester-United-F.C.-Logo-PNG-Image.png", "https://assets.stickpng.com/images/580b57fcd9996e24bc43c4e1.png"]
+        teamNames: ["MANCHESTER UNITED", "CHELSEA"],
+        matchName: ["LEAGUE MATCH"],
+        teamLogos: ["https://www.pngall.com/wp-content/uploads/12/Manchester-United-F.C.-Logo-PNG-Image.png", "https://assets.stickpng.com/images/580b57fcd9996e24bc43c4e1.png"],
+        bestPlayerTeamLogos: ["https://www.pngall.com/wp-content/uploads/12/Manchester-United-F.C.-Logo-PNG-Image.png", "https://assets.stickpng.com/images/580b57fcd9996e24bc43c4e1.png"],
+        bestPlayerType: ["BEST ATTACKER", "BEST DEFENDER"],
+        bestPlayerScoreType: ["GOALS SCORED", "SHOTS BLOCKED"],
+        bestPlayerScoreTypeScoreValue: ["3", "5"],
+        bestPlayerName: ["MARCUS RASHFORD", "LISANDRO MARTINEZ"],
+        scoreBoardTitle: ["MATCH SUMMARY", "GAME SUMMARY"]
 
     }
 
@@ -1380,7 +1387,7 @@ function App({
                             fontSize: `${getFontSize(tournamentData.style.CONFIG1.fontSizeFactor*tournamentData.style.CONFIGMatchSummary.typography.fontSizeRatio)}vw`
                         }}
                     >
-                        MATCH SUMMARY
+                        {DATACONFIG.scoreBoardTitle[0]}
                     </Typography>
                 </Box>
             </Box>
@@ -1443,7 +1450,7 @@ function App({
                                 fontSize: `${getFontSize(tournamentData.style.CONFIG1.fontSizeFactor*tournamentData.style.CONFIGPlayingTeamsAndMatchNameAndBackDrop.playingTeamsAndMatchName.matchNameTypography.fontSizeRatio)}vw`
                             }}
                         >
-                            {DATACONFIG.teamNames[1]}
+                            {DATACONFIG.matchName[0]}
                         </Typography>
                         <Typography
                             id="teamBTypography"
@@ -1452,7 +1459,7 @@ function App({
                                 fontSize: `${getFontSize(tournamentData.style.CONFIG1.fontSizeFactor*tournamentData.style.CONFIGPlayingTeamsAndMatchNameAndBackDrop.playingTeamsAndMatchName.teamBTypography.fontSizeRatio)}vw`
                             }}
                         >
-                            {DATACONFIG.teamNames[2]}
+                            {DATACONFIG.teamNames[1]}
                         </Typography>
                     </Box>
                 </Box>
@@ -1784,7 +1791,7 @@ function App({
                 >
                     <img
                         id="bestPlayerATeamLogo" 
-                        src="https://www.pngall.com/wp-content/uploads/12/Manchester-United-F.C.-Logo-PNG-Image.png"
+                        src={DATACONFIG.bestPlayerTeamLogos[0]}
                         style={{
                             ...tournamentData.style.CONFIGBestPlayerA.teamLogo
                         }}
@@ -1819,7 +1826,7 @@ function App({
                                     marginRight: `${tournamentData.style.CONFIGBestPlayerA.playerName.typography.marginRightRatio}vw`
                                 }}
                             >
-                                MARCUS RASHFORD
+                                {DATACONFIG.bestPlayerName[0]}
                             </Typography>
                         </Box>
                         <Box
@@ -1836,7 +1843,7 @@ function App({
                                     fontSize: `${getFontSize(tournamentData.style.CONFIG1.fontSizeFactor*tournamentData.style.CONFIGBestPlayerA.playerRole.typography.fontSizeRatio)}vw`    
                                 }}
                             >
-                                BEST ATTACKER
+                                {DATACONFIG.bestPlayerType[0]}
                             </Typography>
                         </Box>
                     </Box>
@@ -1854,7 +1861,7 @@ function App({
                                 paddingLeft: `${tournamentData.style.CONFIGBestPlayerA.points.name.paddingLeftRatio}vw`
                             }}
                         >
-                            GOALS SCORED
+                            {DATACONFIG.bestPlayerScoreType[0]}
                         </Typography>
                         <Typography
                             id="bestPlayerAPointsValueTypography"
@@ -1863,7 +1870,7 @@ function App({
                                 fontSize: `${getFontSize(tournamentData.style.CONFIG1.fontSizeFactor*tournamentData.style.CONFIGBestPlayerA.points.value.fontSizeRatio)}vw`
                             }}
                         >
-                            3
+                            {DATACONFIG.bestPlayerScoreTypeScoreValue[0]}
                         </Typography>
                     </Box>
                 </Box>
@@ -1888,7 +1895,7 @@ function App({
                                 paddingRight: `${tournamentData.style.CONFIGBestPlayerB.points.name.paddingRightRatio}vw`
                             }}
                         >
-                            SHOTS BLOCKED
+                            {DATACONFIG.bestPlayerScoreType[0]}
                         </Typography>
                         <Typography
                             id="bestPlayerBPointsValueTypography" 
@@ -1897,7 +1904,7 @@ function App({
                                 fontSize: `${getFontSize(tournamentData.style.CONFIG1.fontSizeFactor*tournamentData.style.CONFIGBestPlayerB.points.value.fontSizeRatio)}vw`
                             }}
                         >
-                            5
+                            {DATACONFIG.bestPlayerScoreTypeScoreValue[1]}
                         </Typography>
                     </Box>
                     <Box 
@@ -1921,7 +1928,7 @@ function App({
                                     marginLeft: `${tournamentData.style.CONFIGBestPlayerB.playerName.typography.marginLeftRatio}vw`,
                                 }}
                             >
-                                LISANDRO MARTINEZ
+                                {DATACONFIG.bestPlayerName[1]}
                             </Typography>
                         </Box>
                         <Box
@@ -1938,7 +1945,7 @@ function App({
                                     fontSize: `${getFontSize(tournamentData.style.CONFIG1.fontSizeFactor*tournamentData.style.CONFIGBestPlayerB.playerRole.typography.fontSizeRatio)}vw`
                                 }}
                             >
-                                BEST DEFENDER
+                                {DATACONFIG.bestPlayerType[1]}
                             </Typography>
                         </Box>
                     </Box>
@@ -1952,7 +1959,7 @@ function App({
                     </img>
                     <img
                         id="bestPlayerBTeamLogo" 
-                        src="https://www.pngall.com/wp-content/uploads/12/Manchester-United-F.C.-Logo-PNG-Image.png"
+                        src={DATACONFIG.bestPlayerTeamLogos[0]}
                         style={{
                             ...tournamentData.style.CONFIGBestPlayerB.teamLogo
                         }}
